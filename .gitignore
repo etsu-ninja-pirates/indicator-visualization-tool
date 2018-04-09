@@ -1,5 +1,5 @@
 # Production keys
-mysqlpw.txt
+database_password.txt
 secret_key.txt
 
 # Local development databases

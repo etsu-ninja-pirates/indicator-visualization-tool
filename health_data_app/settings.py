@@ -11,6 +11,12 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+import socket
+
+FORCE_DEBUG = False
+HOSTNAME = socket.gethostname()
+ON_CSCI5910 = HOSTNAME == 'cs5910'
+DEBUG = (not ON_CSCI5910) or FORCE_DEBUG
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -21,9 +27,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'e#8$=*gicerm51p_5k5u1%%dcv0y6$u#k7fsa7zhxn8ab&r^ul'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -127,3 +130,24 @@ STATIC_URL = '/static/'
 # so we can also put files in "<project>/static/" if the file is used by
 # several different apps
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+# static files that are not wen assets (e.g. user uploads)
+# will be served from this URL; the web server (e.g. nginx)
+# should be configured to serve requests to this URL from
+# the MEDIA_ROOT directory specified below
+MEDIA_URL = '/media/'
+
+# when using the django development server, files are uploaded 
+# to and  served from a 'media' folder in the project root 
+# (so add that to .gitignore!)
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# "Production" settings:
+# Rather than use this boolean in functions and have everything in one file,
+# we'll see if it's simpler to just have all the production stuff in its own
+# file that overwrites the variables in here as necessary:
+if ON_CSCI5910:
+    from .settings_oncs5910 import *
+
+# This is not the fanciest or most flexible way to do this; here's a whole
+# thread on the subject: https://code.djangoproject.com/wiki/SplitSettings
