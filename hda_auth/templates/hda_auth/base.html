@@ -1,12 +1,12 @@
 {% load staticfiles %}
-
+{%block header %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{%block title%}Health Indicators{%endblock%}</title>
+    <title>{%block title%}{%endblock%}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 	<meta name="layout" content="main"/>
@@ -18,6 +18,7 @@
     <link href="{% static 'css/customize-template.css'%}" type="text/css" media="screen, projection" rel="stylesheet" />
 </head>
 
+{% endblock %}
 
 <body>
     {% block nav %}                       
