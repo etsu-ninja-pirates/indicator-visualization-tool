@@ -1,18 +1,51 @@
-<!--
-
-The body of the login will need styling. It is currently stripped of all the styling
-When the design is selected, the bootstrap tags will be applied accordingly
-
--->
+{% extends 'hda_auth/base.html' %}
 
 {% block content %}
-    <h1>Log-in</h1>
-        <form action="{% url 'login' %}" method="post">
-             {% csrf_token %}
-            {{ form.as_p }}
-                <button type="submit">Login</button>
-        </form>
+<div id="body-container">
+    <div id="body-content">       
+<div class='container'>
+
+<div class="signin-row row">
+    <div class="span4"></div>
+    <div class="span8">
+        <div class="container-signin">
+            <legend>Please Login</legend>
+            <form action="{% url 'login' %}" method='POST' id='loginForm' class='form-signin' autocomplete='off'>
+                {% csrf_token %}
+                {% for hidden_field in form.hidden_fields %}
+                    {{ hidden_field }}
+                {% endfor %}
+                <div class="form-inner">
+                <!-- loop through the form to generate the username and password field -->    
+
+                {% for field in form.visible_fields %}
+                    <div class="input-prepend">
+                        {{ field.label_tag }}
+                        
+                        {{ field }}
+                        
+                        {% if field.help_text %}
+                          <small class="form-text text-muted">{{ field.help_text }}</small>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+
+                <!-- End of loop -->
+
+                <label class="checkbox" for='remember_me'>Remember me
+                <input type='checkbox' id='remember_me'/>
+                </label>
+                </div>
+                <footer class="signin-actions">
+                    <input class="btn btn-primary" type='submit' id="submit" value='Login'/>
+                </footer>
+            </form>
+        </div>
+    </div>
+    <div class="span3"></div>
+</div>               
+</div>
+
+</div>
+</div>	 
 {% endblock %}
-
-
-
