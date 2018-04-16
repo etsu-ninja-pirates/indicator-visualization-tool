@@ -35,6 +35,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'hda_auth',
+    'hda_createHMetrix',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -151,3 +152,4 @@ if ON_CSCI5910:
 
 # This is not the fanciest or most flexible way to do this; here's a whole
 # thread on the subject: https://code.djangoproject.com/wiki/SplitSettings
+

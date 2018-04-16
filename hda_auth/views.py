@@ -35,3 +35,6 @@ def user_login(request):
 
 def dashboard(request):
     return render(request,'hda_auth/dashboard.html', context= None)
+
+def createMetrix(request):
+    return render(request, 'templates/createMI.html', args)
