@@ -131,7 +131,7 @@ STATIC_URL = '/static/'
 # several different apps
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-# static files that are not wen assets (e.g. user uploads)
+# static files that are not assets (e.g. user uploads)
 # will be served from this URL; the web server (e.g. nginx)
 # should be configured to serve requests to this URL from
 # the MEDIA_ROOT directory specified below
