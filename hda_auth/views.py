@@ -1,6 +1,9 @@
 from django.contrib.auth import authenticate, login
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
+from django.urls import reverse
 from django.shortcuts import render
+from django.template import Context
+from django.template.loader import get_template
 
 from hda_auth.form import LoginForm
 
@@ -28,3 +31,7 @@ def user_login(request):
         form = LoginForm()
         args = {'form': form}
     return render(request, 'hda_auth/login.html',args)
+
+
+def dashboard(request):
+    return render(request,'hda_auth/dashboard.html', context= None)
