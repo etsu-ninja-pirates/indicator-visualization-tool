@@ -1,8 +1,9 @@
-from django.conf.urls import url
+from django.urls import path
 
 
 from . import views
 
 urlpatterns = [
-        url('^$', views.user_login, name='login'),
+        path('', views.user_login, name='login'),
+        path('dashboard/', views.dashboard,  name='dashboard'),
 ]
