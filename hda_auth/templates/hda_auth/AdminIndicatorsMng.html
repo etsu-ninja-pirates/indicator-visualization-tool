@@ -1,275 +1,109 @@
-<<<<<<< Updated upstream
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Admin Indicator Management</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta name="layout" content="main"/>
-    
-    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
-
-    <script src="../static/js/jquery-1.8.2.min.js" type="text/javascript" ></script>
-    <link href="../static/css/customize-template.css" type="text/css" media="screen, projection" rel="stylesheet" />
-
-    <style>
-        #body-content { padding-top: 40px;}
-    </style>
-</head>
-    <body>
-        <div class="navbar navbar-fixed-top">
-            <div class="navbar-inner">				
-                <div class="container">
-				<div class="span7">
-                    <a href="https://www.etsu.edu/cph/" class="brand">ETSU College of Public Health</a>
-                </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="body-container">
-            <div id="body-content">                
-                    <div class="body-nav body-nav-horizontal">
-                        <div class="container">
-							                <div class="span7">
-                    <header class="page-header">
-                        <h3 style="color:white"><small>Indicator Management</small>
-                        </h3>
-                    </header>
-                </div>
-                            <ul style="float:right">
-                                <li>
-                                    <a href="#">
-                                        <i class="icon-copy icon-large"></i> Manage Files
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="icon-cogs icon-large"></i> Indicators
-                                    </a>
-                                </li>
-								                                <li>
-                                    <a href="#">
-                                        <i class="icon-user icon-large"></i> Manage Profile
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="icon-signout icon-large"></i> Logout
-                                    </a>
-                                </li>                                
-                            </ul>
-                        </div>
-                    </div>	
-    <section class="page container">
-        <div class="row">            
-            <div class="span16">                
-                    <div class="span8">
-					      <div class="input-prepend">                                        
-							<span class="add-on"><i class="btn-icon-only icon-plus" style="min-width:50px;"> Add Indicator</i></span>
-							<input type='password' class='span4' id='password'/>
-                          </div>
-						  <div></br></div>
-                        <div class="box pattern pattern-sandstone">
-                            <div class="box-header">
-                                <i class="icon-table"></i>
-                                <h5>
-                                    Health Indicators
-                                </h5>
-                            </div>
-                            <div class="box-content box-table">
-                                <table id="sample-table" class="table table-hover table-bordered tablesorter">
-                                    <tbody>
-                                        <tr>
-                                            <td>Obesity</td>
-                                            
-                                            <td class="td-actions">
-                                                <a href="javascript:;" class="btn btn-small btn-info">
-                                                    <i class="btn-icon-only icon-edit" style="min-width:50px;"> Edit</i>
-                                                </a>
-                                                <a href="javascript:;" class="btn btn-small btn-danger">
-                                                    <i class="btn-icon-only icon-remove" style="min-width:50px;"> Delete</i>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Some college</td>
-                                           
-                                             <td class="td-actions">
-                                                <a href="javascript:;" class="btn btn-small btn-info">
-                                                    <i class="btn-icon-only icon-edit" style="min-width:50px;"> Edit</i>
-                                                </a>
-                                                <a href="javascript:;" class="btn btn-small btn-danger">
-                                                    <i class="btn-icon-only icon-remove" style="min-width:50px;"> Delete</i>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Life Expectancy</td>
-                                            
-                                             <td class="td-actions">
-                                                <a href="javascript:;" class="btn btn-small btn-info">
-                                                    <i class="btn-icon-only icon-edit" style="min-width:50px;"> Edit</i>
-                                                </a>
-                                                <a href="javascript:;" class="btn btn-small btn-danger">
-                                                    <i class="btn-icon-only icon-remove" style="min-width:50px;"> Delete</i>
-                                                </a>
-                                            </td>
-                                        </tr>                                      
-                                        
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>          
-    </section>
- </div>
-        
-
-        <div id="spinner" class="spinner" style="display:none;">
-            Loading&hellip;
-        </div>       
-        
-        <script src="../static/js/bootstrap/bootstrap-transition.js" type="text/javascript" ></script>
-        <script src="../static/js/bootstrap/bootstrap-alert.js" type="text/javascript" ></script>
-        <script src="../static/js/bootstrap/bootstrap-modal.js" type="text/javascript" ></script>
-        <script src="../static/js/bootstrap/bootstrap-dropdown.js" type="text/javascript" ></script>
-        <script src="../static/js/bootstrap/bootstrap-scrollspy.js" type="text/javascript" ></script>
-        <script src="../static/js/bootstrap/bootstrap-tab.js" type="text/javascript" ></script>
-        <script src="../static/js/bootstrap/bootstrap-tooltip.js" type="text/javascript" ></script>
-        <script src="../static/js/bootstrap/bootstrap-popover.js" type="text/javascript" ></script>
-        <script src="../static/js/bootstrap/bootstrap-button.js" type="text/javascript" ></script>
-        <script src="../static/js/bootstrap/bootstrap-collapse.js" type="text/javascript" ></script>
-        <script src="../static/js/bootstrap/bootstrap-carousel.js" type="text/javascript" ></script>
-        <script src="../static/js/bootstrap/bootstrap-typeahead.js" type="text/javascript" ></script>
-        <script src="../static/js/bootstrap/bootstrap-affix.js" type="text/javascript" ></script>
-        <script src="../static/js/bootstrap/bootstrap-datepicker.js" type="text/javascript" ></script>
-        <script src="../static/js/jquery/jquery-tablesorter.js" type="text/javascript" ></script>
-        <script src="../static/js/jquery/jquery-chosen.js" type="text/javascript" ></script>
-        <script src="../static/js/jquery/virtual-tour.js" type="text/javascript" ></script>
-        <script type="text/javascript">
-        $(function() {
-            $('#sample-table').tablesorter();
-            $('#datepicker').datepicker();
-            $(".chosen").chosen();
-        });
-    </script>
-
-    </body>
-</html>
-=======
 {% extends 'hda_auth/base.html' %}
 
 {%block title%}Indicator Management{%endblock%}
 
 {% block content %}
 
-        <div id="body-container">
-            <div id="body-content">                
-                    <div class="body-nav body-nav-horizontal">
-                        <div class="container">
-							                <div class="span7">
-                    <header class="page-header">
-                        <h3 style="color:white"><small>Indicator Management</small>
-                        </h3>
-                    </header>
-                </div>
-                            <ul style="float:right">
-                                <li>
-                                    <a href="#">
-                                        <i class="icon-copy icon-large"></i> Manage Files
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="icon-cogs icon-large"></i> Indicators
-                                    </a>
-                                </li>
-								                                <li>
-                                    <a href="#">
-                                        <i class="icon-user icon-large"></i> Manage Profile
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="icon-signout icon-large"></i> Logout
-                                    </a>
-                                </li>                                
-                            </ul>
-                        </div>
-                    </div>	
-    <section class="page container">
-        <div class="row">            
-            <div class="span16">                
-                    <div class="span8">
-					      <div class="input-prepend">                                        
+		<div id="body-container">
+			<div id="body-content">
+					<div class="body-nav body-nav-horizontal">
+						<div class="container">
+											<div class="span7">
+					<header class="page-header">
+						<h3 style="color:white"><small>Indicator Management</small>
+						</h3>
+					</header>
+				</div>
+							<ul style="float:right">
+								<li>
+									<a href="#">
+										<i class="icon-copy icon-large"></i> Manage Files
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="icon-cogs icon-large"></i> Indicators
+									</a>
+								</li>
+																<li>
+									<a href="#">
+										<i class="icon-user icon-large"></i> Manage Profile
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="icon-signout icon-large"></i> Logout
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+	<section class="page container">
+		<div class="row">
+			<div class="span16">
+					<div class="span8">
+						  <div class="input-prepend">
 							<span class="add-on"><i class="btn-icon-only icon-plus" style="min-width:50px;"> Add Indicator</i></span>
 							<input type='password' class='span4' id='password'/>
-                          </div>
+						  </div>
 						  <div></br></div>
-                        <div class="box pattern pattern-sandstone">
-                            <div class="box-header">
-                                <i class="icon-table"></i>
-                                <h5>
-                                    Health Indicators
-                                </h5>
-                            </div>
-                            <div class="box-content box-table">
-                                <table id="sample-table" class="table table-hover table-bordered tablesorter">
-                                    <tbody>
-                                        <tr>
-                                            <td>Obesity</td>
-                                            
-                                            <td class="td-actions">
-                                                <a href="javascript:;" class="btn btn-small btn-info">
-                                                    <i class="btn-icon-only icon-edit" style="min-width:50px;"> Edit</i>
-                                                </a>
-                                                <a href="javascript:;" class="btn btn-small btn-danger">
-                                                    <i class="btn-icon-only icon-remove" style="min-width:50px;"> Delete</i>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Some college</td>
-                                           
-                                             <td class="td-actions">
-                                                <a href="javascript:;" class="btn btn-small btn-info">
-                                                    <i class="btn-icon-only icon-edit" style="min-width:50px;"> Edit</i>
-                                                </a>
-                                                <a href="javascript:;" class="btn btn-small btn-danger">
-                                                    <i class="btn-icon-only icon-remove" style="min-width:50px;"> Delete</i>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Life Expectancy</td>
-                                            
-                                             <td class="td-actions">
-                                                <a href="javascript:;" class="btn btn-small btn-info">
-                                                    <i class="btn-icon-only icon-edit" style="min-width:50px;"> Edit</i>
-                                                </a>
-                                                <a href="javascript:;" class="btn btn-small btn-danger">
-                                                    <i class="btn-icon-only icon-remove" style="min-width:50px;"> Delete</i>
-                                                </a>
-                                            </td>
-                                        </tr>                                      
-                                        
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>          
-    </section>
- </div>
-        
+						<div class="box pattern pattern-sandstone">
+							<div class="box-header">
+								<i class="icon-table"></i>
+								<h5>
+									Health Indicators
+								</h5>
+							</div>
+							<div class="box-content box-table">
+								<table id="sample-table" class="table table-hover table-bordered tablesorter">
+									<tbody>
+										<tr>
+											<td>Obesity</td>
 
-       {% endblock %}
->>>>>>> Stashed changes
+											<td class="td-actions">
+												<a href="javascript:;" class="btn btn-small btn-info">
+													<i class="btn-icon-only icon-edit" style="min-width:50px;"> Edit</i>
+												</a>
+												<a href="javascript:;" class="btn btn-small btn-danger">
+													<i class="btn-icon-only icon-remove" style="min-width:50px;"> Delete</i>
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td>Some college</td>
+
+											 <td class="td-actions">
+												<a href="javascript:;" class="btn btn-small btn-info">
+													<i class="btn-icon-only icon-edit" style="min-width:50px;"> Edit</i>
+												</a>
+												<a href="javascript:;" class="btn btn-small btn-danger">
+													<i class="btn-icon-only icon-remove" style="min-width:50px;"> Delete</i>
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td>Life Expectancy</td>
+
+											 <td class="td-actions">
+												<a href="javascript:;" class="btn btn-small btn-info">
+													<i class="btn-icon-only icon-edit" style="min-width:50px;"> Edit</i>
+												</a>
+												<a href="javascript:;" class="btn btn-small btn-danger">
+													<i class="btn-icon-only icon-remove" style="min-width:50px;"> Delete</i>
+												</a>
+											</td>
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+ </div>
+
+
+{% endblock %}
