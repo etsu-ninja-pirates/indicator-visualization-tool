@@ -4398,6 +4398,187 @@ input[type="submit"].btn.btn-mini {
 .navbar-inverse .btn-navbar.active {
   background-color: #000000 \9;
 }
+
+@media(min-width: 320px){
+  select#indicator.span4{
+    margin-left: 52px;
+    margin-top: -28px;
+    width: 220px;
+    float: left;
+  }
+
+  select#year.span2{
+    margin-left: 51px;
+    margin-top: -18px;
+    width: 220px;
+  }
+  
+  input.form-control{
+    margin-left: 19px; 
+  }
+}
+
+@media(min-width: 375px){
+  select#indicator.span4{
+    float: left;
+    margin-left: 81px;
+    margin-top: -28px;
+    width: 220px;
+  }
+
+  select#year.span2{
+    margin-top: -18px;
+    width: 220px;
+    float: right;
+    margin-right: 74px;
+  }
+  
+  input.form-control{
+    margin-left: 22px; 
+  }
+
+  div.table-view{
+    margin-left: 29px;
+  }
+
+}
+
+@media(min-width: 425px){
+  select#indicator.span4{
+float: left;
+    margin-left: 101px;
+    margin-top: -30px;
+    width: 220px;
+  }
+
+  select#year.span2{
+    margin-top: -22px;
+    width: 220px;
+    float: right;
+    margin-right: 104px;
+  }
+  
+  input.form-control{
+    margin-left: 15px; 
+  }
+
+  div.table-view{
+    margin-left: 52px;
+  }
+
+}
+
+
+@media(min-width: 768px){
+  select#indicator.span4{
+    margin-left: 210px;
+    margin-top: -68px;
+    width: 203px;
+  }
+
+  select#year.span2{
+    margin-top: -58px;
+    width: 202px;
+    margin-bottom: 0;
+    margin-right: 0px;
+  }
+  
+  input.form-control{
+    margin-left: -215px;
+    width: 168px;
+  }
+
+  div.table-view{
+    float: left;
+    margin-top: -106px;
+    margin-left: 446px;
+  }
+
+}
+
+@media(min-width: 979px){
+  select#indicator.span4{
+    margin-left: -214px;
+    margin-top: 0px;
+    width: 203px;
+  }
+
+  select#year.span2{
+    margin-top: -59px;
+    width: 202px;
+    margin-bottom: 0;
+    margin-right: 210px;
+  }
+  
+  input.form-control{
+    margin-left: -215px;
+    width: 168px;
+  }
+
+  div.table-view{
+    float: left;
+    margin-top: -88px;
+    margin-left: 659px;
+  }
+
+}
+
+
+@media(min-width: 1024px){
+  select#indicator.span4{
+    margin-left: 195px;
+    margin-top: -69px;
+    width: 216px;
+  }
+
+  select#year.span2{
+    margin-top: -99px;
+    width: 202px;
+    margin-bottom: 0;
+    margin-right: -89px;
+  }
+  
+  input.form-control{
+    margin-left: -374px;
+    width: 168px
+  }
+
+  div.table-view{
+    float: left;
+    margin-top: -128px;
+    margin-left: 652px;
+  }
+
+}
+
+@media(min-width: 1440px){
+  select#indicator.span4{
+    margin-left: 203px;
+    margin-top: -70px;
+    width: 216px;
+  }
+
+  select#year.span2{
+    margin-top: -100px;
+    width: 202px;
+    margin-bottom: 0;
+    margin-right: 2px;
+  }
+  
+  input.form-control{
+    margin-left: -506px;
+    width: 168px;
+  }
+
+  div.table-view{
+    float: left;
+    margin-top: -126px;
+    margin-left: 865px;
+  }
+
+}
+
+
 .breadcrumb {
   padding: 8px 15px;
   margin: 0 0 20px;
@@ -7724,7 +7905,7 @@ table.tablesorter .headerSortUp:after {
 .body-nav.body-nav-horizontal ul li {
   border-left: 1px solid #101f29;
   border-right: 1px solid #101f29;
-  width: 80px;
+  width: 78px;
   float: left;
 }
 .body-nav.body-nav-horizontal ul li a,
@@ -7801,7 +7982,7 @@ body > #body-container {
   background-color: #fcfcfc;
   z-index: 900;
   height: 100px;
-  margin-top: -100px;
+  /* margin-top: -100px; */
   clear: both;
   position: relative;
 }

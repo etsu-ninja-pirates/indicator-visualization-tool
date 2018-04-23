@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 	<meta name="layout" content="main"/>
-	<link href="{% static 'css/base_bootstrap.css'%}" rel="stylesheet">
+	<!-- <link href="{% static 'css/base_bootstrap.css'%}" rel="stylesheet"> -->
 	    
     <script type="text/javascript" src="http://www.google.com/jsapi"></script>
 
@@ -26,9 +26,9 @@
 	 <div class="container">
 	 <!-- icons found at https://fontawesome.com/v3.2.1/icons/ -->
          <ul>
-			 <li style="border:none">							
+						
 				<div id="acct-verify-row" class="span9">																
-					<div class="control-group" style="float:left; width:25">									
+					<div class="control-group">									
 						<div class="input-group">
 							</br>
 							<input type="text" class="form-control" placeholder="Find County" aria-describedby="basic-addon1">
@@ -36,13 +36,11 @@
 						</div>
 					</div>	
 				</div>
-			</li>
-			<li></li>
-			<li></li>
-			<li  style="border:none">							
+
+						
 				<div id="acct-verify-row" class="span9">																
 					<div class="control-group">										
-						<div class="controls" style="float:left; width:25" vertical-align="center">
+						<div class="controls" vertical-align="center">
 							</br>
 							<select id="indicator" class="span4">
 								<option value="">-- Select a Health Indicator --</option>
@@ -59,14 +57,11 @@
 						</div>
 					</div>	
 				</div>
-			</li>
-			<li></li>
-			<li></li>
-			<li></li>							
-			<li  style="border:none">							
+						
+						
 				<div id="acct-verify-row" class="span9">																
 					<div class="control-group">										
-						<div class="controls" style="float:left; width:25" vertical-align="center">
+						<div class="controls" vertical-align="center">
 							</br>
 							<select id="year" class="span2">
 								<option value="">-- Select Year --</option>
@@ -83,8 +78,8 @@
 						</div>
 					</div>
 				</div>
-			</li>
-			<div style="float:right">
+
+			<div class="table-view">
 			<!--Give user table or chart view option-->
 			<li>
 			   <a href="#">
