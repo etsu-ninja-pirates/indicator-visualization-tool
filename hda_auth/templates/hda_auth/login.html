@@ -4,7 +4,7 @@
 
 {% block content %}
 <div id="body-container">
-    <div id="body-content">       
+    <div id="body-content">
 <div class='container'>
 
 <div class="signin-row row">
@@ -18,14 +18,14 @@
                     {{ hidden_field }}
                 {% endfor %}
                 <div class="form-inner">
-                <!-- loop through the form to generate the username and password field -->    
+                <!-- loop through the form to generate the username and password field -->
 
                 {% for field in form.visible_fields %}
                     <div class="input-prepend">
                         {{ field.label_tag }}
-                        
+
                         {{ field }}
-                        
+
                         {% if field.help_text %}
                           <small class="form-text text-muted">{{ field.help_text }}</small>
                         {% endif %}
@@ -45,9 +45,9 @@
         </div>
     </div>
     <div class="span3"></div>
-</div>               
+</div>
 </div>
 
 </div>
-</div>	 
+</div>
 {% endblock %}
