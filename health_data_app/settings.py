@@ -36,6 +36,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'hda_auth',
     'hda_createHMetrix',
+    'hda_public',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -138,8 +139,8 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # the MEDIA_ROOT directory specified below
 MEDIA_URL = '/media/'
 
-# when using the django development server, files are uploaded 
-# to and  served from a 'media' folder in the project root 
+# when using the django development server, files are uploaded
+# to and  served from a 'media' folder in the project root
 # (so add that to .gitignore!)
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 

@@ -18,6 +18,7 @@ from django.urls import path
 from django.urls import path, include
 
 urlpatterns = [
+    path('', include('hda_public.urls')),
     path('auth/', include('hda_auth.urls')),
     path('createMI/', include('hda_createHMetrix.urls')),
     path('admin/', admin.site.urls),
