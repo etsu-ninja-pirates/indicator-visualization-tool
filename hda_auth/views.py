@@ -31,7 +31,3 @@ def user_login(request):
         form = LoginForm()
         args = {'form': form}
     return render(request, 'hda_auth/login.html',args)
-
-
-def dashboard(request):
-    return render(request,'hda_auth/dashboard.html', context= None)
