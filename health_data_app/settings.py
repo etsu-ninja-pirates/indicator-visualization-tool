@@ -34,8 +34,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'hda_auth',
-    'hda_createHMetrix',
+    'hda_privileged',
     'hda_public',
     'django.contrib.admin',
     'django.contrib.auth',
