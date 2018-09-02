@@ -1,52 +1,52 @@
-{% extends 'hda_auth/base.html' %}
+{% extends 'hda_privileged/base.html' %}
 
 {%block title%}Indicator Management{%endblock%}
 
 {% block content %}
 
-		<div id="body-container">
-			<div id="body-content">
-					<div class="body-nav body-nav-horizontal">
-						<div class="container">
-											<div class="span7">
+<div id="body-container">
+	<div id="body-content">
+		<div class="body-nav body-nav-horizontal">
+			<div class="container">
+				<div class="span7">
 					<header class="page-header">
 						<h3 style="color:white"><small>Indicator Management</small>
 						</h3>
 					</header>
 				</div>
-							<ul style="float:right">
-								<li>
-									<a href="#">
-										<i class="icon-copy icon-large"></i> Manage Files
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<i class="icon-cogs icon-large"></i> Indicators
-									</a>
-								</li>
-																<li>
-									<a href="#">
-										<i class="icon-user icon-large"></i> Manage Profile
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<i class="icon-signout icon-large"></i> Logout
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-	<section class="page container">
-		<div class="row">
-			<div class="span16">
+				<ul style="float:right">
+					<li>
+						<a href="#">
+							<i class="icon-copy icon-large"></i> Manage Files
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="icon-cogs icon-large"></i> Indicators
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="icon-user icon-large"></i> Manage Profile
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="icon-signout icon-large"></i> Logout
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<section class="page container">
+			<div class="row">
+				<div class="span16">
 					<div class="span8">
-						  <div class="input-prepend">
+						<div class="input-prepend">
 							<span class="add-on"><i class="btn-icon-only icon-plus" style="min-width:50px;"> Add Indicator</i></span>
 							<input type='password' class='span4' id='password'/>
-						  </div>
-						  <div></br></div>
+						</div>
+						<div></br></div>
 						<div class="box pattern pattern-sandstone">
 							<div class="box-header">
 								<i class="icon-table"></i>
@@ -72,7 +72,7 @@
 										<tr>
 											<td>Some college</td>
 
-											 <td class="td-actions">
+											<td class="td-actions">
 												<a href="javascript:;" class="btn btn-small btn-info">
 													<i class="btn-icon-only icon-edit" style="min-width:50px;"> Edit</i>
 												</a>
@@ -84,7 +84,7 @@
 										<tr>
 											<td>Life Expectancy</td>
 
-											 <td class="td-actions">
+											<td class="td-actions">
 												<a href="javascript:;" class="btn btn-small btn-info">
 													<i class="btn-icon-only icon-edit" style="min-width:50px;"> Edit</i>
 												</a>
@@ -103,7 +103,7 @@
 			</div>
 		</div>
 	</section>
- </div>
+</div>
 
 
 {% endblock %}

@@ -1,6 +1,3 @@
-{% extends 'posts/layout.html' %}
-
-{% block content %}
 
 #subscribe,
 #login{
@@ -21,13 +18,13 @@
 }
 
 .roboto{
-    font-family: 'Roboto', sans-serif !important; 
+    font-family: 'Roboto', sans-serif !important;
 }
 
 /* custom background for panel  */
-.container{ 
+.container{
     padding-top: 50px !important;
-    background-color: #f5f5f5 !important;  
+    background-color: #f5f5f5 !important;
 }
 
 /* custom background header panel */
@@ -53,6 +50,3 @@
     background: #d86016 !important;
     color: white !important;
 }
-
-{% endblock %}
-

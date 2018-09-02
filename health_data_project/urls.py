@@ -1,4 +1,4 @@
-"""Health_Data_App URL Configuration
+"""Health_Data_Project URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.0/topics/http/urls/
@@ -19,7 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('hda_public.urls')),
-    path('auth/', include('hda_auth.urls')),
-    path('createMI/', include('hda_createHMetrix.urls')),
+    path('priv/', include('hda_privileged.urls')),
     path('admin/', admin.site.urls),
 ]

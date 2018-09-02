@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.template import Context
 from django.template.loader import get_template
 
-from hda_auth.form import LoginForm
+from hda_privileged.forms import LoginForm
 
 #------------------------------------------------
 #The user_log-in function will handle the log in
@@ -30,4 +30,10 @@ def user_login(request):
     else:
         form = LoginForm()
         args = {'form': form}
-    return render(request, 'hda_auth/login.html',args)
+    return render(request, 'hda_privileged/login.html', args)
+
+def create_metric(request):
+    return render(request, 'hda_privileged/create_metric.html')
+
+def manage_metrics(request):
+    return render(request, 'hda_privileged/manage_metrics.html')
