@@ -9,7 +9,7 @@ class Indicators(models. Model):
 class Data_Set(models.Model):
     data_id = models.BigIntegerField(primary_key=True)
     year = models.DateField()
-    auther = models.CharField(max_length=200)
+    author = models.CharField(max_length=200)
     
     indicator_id = models.ForeignKey(Indicators, on_delete=models.CASCADE)
 
@@ -29,7 +29,7 @@ class US_Counties(models.Model):
 class Data_Point(models.Model):
     point_id = models.BigIntegerField(primary_key=True)
     value = models.IntegerField(default= 0)
-    precentile = models.FloatField(default= 0)
+    percentile = models.FloatField(default= 0)
     source = models.CharField(max_length=200)
     interval = models.CharField(max_length=200)
 
