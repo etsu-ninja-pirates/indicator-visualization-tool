@@ -60,12 +60,17 @@
           <ul class="nav navbar-nav">
             <!-- First dropdown code -->
             <li class="dropdown">
-              <a href="https://www.jquery-az.com/bootstrap-tips-tutorials/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Health Indicator <span class="caret"></span></a>
+              <a href="#"
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false">Health Indicator <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="https://www.jquery-az.com/bootstrap-carousel-5-single-multiple-horizontal-and-vertical-sliding-demos/">Obesity</a></li>
-                <li><a href="https://www.jquery-az.com/bootstrap-form-customized-styles-6-online-examples/">Education</a></li>
+                <li><a href="#">Obesity</a></li>
+                <li><a href="#">Education</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="https://www.jquery-az.com/bootstrap-select-5-beautiful-styles/">Select</a></li>
+                <li><a href="#">Select</a></li>
               </ul>
             </li>
           </ul>
@@ -83,14 +88,14 @@
 
           <!-- Right-aligned region of nav bar -->
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="https://www.jquery-az.com/jquery-tips/">Placeholder</a></li>
+            <li><a href="#">Placeholder</a></li>
             <!-- Second dropdown code -->
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="https://www.jquery-az.com/about-us/">Table</a></li>
-                <li><a href="https://www.jquery-az.com/contact/">Chart</a></li>
-                <li><a href="https://www.jquery-az.com/contact/">Clear</a></li>
+                <li><a href="#">Table</a></li>
+                <li><a href="#">Chart</a></li>
+                <li><a href="#">Clear</a></li>
               </ul>
             </li>
           </ul>
@@ -110,7 +115,7 @@
   {% block footer %}
   <footer class="application-footer">
     <div class="container" style="bottom:0">
-      <a href="#" style="float:right; color:MidnightBlue"><i class="fas fa-user"></i> Admin</a>
+      <a href="{% url 'login' %}" style="float:right; color:MidnightBlue"><i class="fas fa-user"></i> Admin</a>
       <p style="float:left; font-size:10px">ETSU College of Public Health | 104 Lamb Hall | Box 70623 | Johnson City, TN 37614 | Tel.: 423-439-4243 | Fax.: 423-439-5238</p>
     </div>
   </footer>
