@@ -2,7 +2,7 @@ from csv import DictReader
 import csv
 from datetime import datetime
 from django.core.management import BaseCommand
-from hda_privileged.models import US_States, US_Counties
+from hda_privileged.models import US_State, US_County
 from pytz import UTC 
 
 DATETIME_FORMAT = '%m/%d/%Y %H:%M'
@@ -25,28 +25,41 @@ class Command(BaseCommand):
     
     
     def handle(self, *args, **options):
-        if US_States.objects.exists(): 
+        if US_State.objects.exists(): 
             print('US States data is already in the Database. ')
             print(ALREADY_LOADED_ERROR_MESSAGE)
 
-        elif US_Counties.objects.exists(): 
+        elif US_County.objects.exists(): 
             print('US County data is already in the Database. ')
             print(ALREADY_LOADED_ERROR_MESSAGE)
             return
 
         print("Loading US State Data ")
-
+        mystate = US_State()
+        mycounty = US_County()
         for row in csv.DictReader(open('./data.csv')):           
-            mystate = US_States()
-            mystate.state_name   = row['state_name']
-            mystate.abbreviation = row['abbreviation']
-            mystate.s_fips       = row['s_fips']
+            mystate.full   = row['full']
+            mystate.short = row['short']
+            mystate.fips       = row['fips']
             mystate.save()
             
-        for row in csv.DictReader(open('./counties.csv')):           
-            mycounty = US_Counties()
-            mycounty.s_fips   = row['s_fips']
-            mycounty.abbreviation = row['abbreviation']
-            mycounty.county_name  = row['county_name']
-            mycounty.c_fips  = row['c_fips']
-            mycounty.save()
+        for row in csv.DictReader(open('./counties.csv', 'r')):           
+            mystate = US_State.objects.filter(pk=row['state_id']).values
+            for m in mystate: 
+                # print(m.get('short'))
+                
+                # mycounty.state_id = m.get
+                # print(m) 
+                if m.get('short') == US_County.objects.filter(state_id=row['state_id']):
+                #     # mstate.mycounty_set.create(name=row['name'], fips=row['fips'])
+                #     mycounty.state_id = US_State.objects.filter(pk=row['state_id']).values()
+                #     mycounty.fips = row['fips']
+                #     mycounty.name = row['name']
+                    print(m.get('short'))
+                # mycounty.save()
+                # print(US_County.objects.filter(state_id=row['state_id']).values()) 
+                    
+
+
+            
+        
