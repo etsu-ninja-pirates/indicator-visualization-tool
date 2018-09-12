@@ -1,0 +1,3146 @@
+fips,name,state_id
+01,Autauga,AL
+03,Baldwin,AL
+05,Barbour,AL
+07,Bibb,AL
+09,Blount,AL
+11,Bullock,AL
+13,Butler,AL
+15,Calhoun,AL
+17,Chambers,AL
+19,Cherokee,AL
+21,Chilton,AL
+23,Choctaw,AL
+25,Clarke,AL
+27,Clay,AL
+29,Cleburne,AL
+31,Coffee,AL
+33,Colbert,AL
+35,Conecuh,AL
+37,Coosa,AL
+39,Covington,AL
+41,Crenshaw,AL
+43,Cullman,AL
+45,Dale,AL
+47,Dallas,AL
+49,Dekalb,AL
+51,Elmore,AL
+53,Escambia,AL
+55,Etowah,AL
+57,Fayette,AL
+59,Franklin,AL
+61,Geneva,AL
+63,Greene,AL
+65,Hale,AL
+67,Henry,AL
+69,Houston,AL
+71,Jackson,AL
+73,Jefferson,AL
+75,Lamar,AL
+77,Lauderdale,AL
+79,Lawrence,AL
+81,Lee,AL
+83,Limestone,AL
+85,Lowndes,AL
+87,Macon,AL
+89,Madison,AL
+91,Marengo,AL
+93,Marion,AL
+95,Marshall,AL
+97,Mobile,AL
+99,Monroe,AL
+101,Montgomery,AL
+103,Morgan,AL
+105,Perry,AL
+107,Pickens,AL
+109,Pike,AL
+111,Randolph,AL
+113,Russell,AL
+115,St. Clair,AL
+117,Shelby,AL
+119,Sumter,AL
+121,Talladega,AL
+123,Tallapoosa,AL
+125,Tuscaloosa,AL
+127,Walker,AL
+129,Washington,AL
+131,Wilcox,AL
+133,Winston,AL
+13,Aleutians East Borough,AK
+,Aleutians West Census Area,AK
+20,Anchorage,AK
+,Bethel Census Area,AK
+60,Bristol Bay Borough,AK
+68,Denali Borough,AK
+,Dillingham Census Area,AK
+,Fairbanks North Star Borough,AK
+100,Haines Borough,AK
+,Hoonah - Angoon Census Area,AK
+110,Juneau,AK
+122,Kenai Peninsula Borough,AK
+130,Ketchikan Gateway Borough,AK
+150,Kodiak Island Borough,AK
+164,Lake and Penninsula Borough,AK
+170,Matanuska- Susitna Borough,AK
+,Nome Census Area,AK
+185,North Slope Borough,AK
+188,Northwest Arctic Borough,AK
+195,Petersburg Borough,AK
+,Prince of Wales- Hyder Census Area,AK
+220,Sitka,AK
+230,Skagway,AK
+,Southeast Fairbanks Census Area,AK
+,Valdez- Corodova Census Area,AK
+,Kusilvak Census Area,AK
+275,Wrangell,AK
+285,Yakutat,AK
+,Yukon-Koyukuk,AK
+1,Apache County,AZ
+3,Cochise County,AZ
+5,Coconino County,AZ
+7,Gila County,AZ
+9,Graham County,AZ
+11,Greenlee County,AZ
+12,La Paz County,AZ
+13,Marciopa County,AZ
+15,Mohave County,AZ
+17,Navajo County,AZ
+19,Pima County,AZ
+21,Pinal County,AZ
+23,Santa Cruz County,AZ
+25,Yavapai County,AZ
+27,Yuma County,AZ
+1,Arkansas County,AR
+3,Ashley County,AR
+5,Baxter County,AR
+7,Benton County,AR
+9,Boone County,AR
+11,Bradley County,AR
+13,Calhoun County,AR
+15,Carroll County,AR
+17,Chicot County,AR
+19,Clark County,AR
+21,Clay County,AR
+23,Cleburne County,AR
+25,Cleveland County,AR
+27,Columbia County,AR
+29,Conway County,AR
+31,Craighead County,AR
+33,Crawford County,AR
+35,Crittenden County,AR
+37,Cross County,AR
+39,Dallas County,AR
+41,Desha County,AR
+43,Drew County,AR
+45,Faulkner County,AR
+47,Franklin County,AR
+49,Fulton County,AR
+51,Garland County,AR
+53,Grant County,AR
+55,Greene County,AR
+57,Hempstead County,AR
+59,Hot Spring County,AR
+61,Howard County,AR
+63,Independence County,AR
+65,Izard County,AR
+67,Jackson County,AR
+69,Jefferson County,AR
+71,Johnson County,AR
+73,Lafayette County,AR
+75,Lawrence County,AR
+77,Lee County,AR
+79,Lincoln County,AR
+81,Little River County,AR
+83,Logan County,AR
+85,Lonoke County,AR
+87,Madison County,AR
+89,Marion County,AR
+91,Miller County,AR
+93,Mississpi County,AR
+95,Monroe County,AR
+97,Montgomery County,AR
+99,Nevada County,AR
+101,Newton County,AR
+103,Ouachita County,AR
+105,Perry County,AR
+107,Phillips County,AR
+109,Pike County,AR
+111,Poinsett County,AR
+113,Polk County,AR
+115,Pope County,AR
+117,Prairie County,AR
+119,Pulaski County,AR
+121,Randolph County,AR
+123,St. Francis County,AR
+125,Saline County,AR
+127,Scott County,AR
+129,Searcy County,AR
+131,Sebastian County,AR
+133,Sevier County,AR
+135,Sharp County,AR
+137,Stone County,AR
+139,Union County,AR
+141,Van Buren County,AR
+143,Washington County,AR
+145,White County,AR
+147,Woodruff County,AR
+149,Yell County,AR
+1,Alameda County,CA
+3,Alpine County,CA
+5,Amador County,CA
+7,Butte County,CA
+9,Calaveras County,CA
+11,Colusa County,CA
+13,Contra Costa County,CA
+15,Del Norte County,CA
+17,El Dorado County,CA
+19,Fresno County,CA
+21,Glenn County,CA
+23,Humboldt County,CA
+25,Imperial County,CA
+27,Inyo County,CA
+29,Kern County,CA
+31,Kings County,CA
+33,Lake County,CA
+35,Lassen County,CA
+37,Los Angeles County,CA
+39,Madera County,CA
+41,Marin County,CA
+43,Mariposa County,CA
+45,Mendocino County,CA
+47,Merced County,CA
+49,Modoc County,CA
+51,Mono County,CA
+53,Monterey County,CA
+55,Napa County,CA
+57,Neveda County,CA
+59,Orange County,CA
+61,Placer County,CA
+63,Plumas County,CA
+65,Riverside County,CA
+67,Sacramento County,CA
+69,San Benito County,CA
+71,San Bernardino County,CA
+73,San Diego County,CA
+75,San Francisco ,CA
+77,San Joaquin County,CA
+79,San Luis Obispo County,CA
+81,San Mateo County,CA
+83,Santa Barbara County,CA
+85,Santa Clara County,CA
+87,Santa Cruz County,CA
+89,Shasta County,CA
+91,Sierra County,CA
+93,Siskiyou County,CA
+95,Solano County,CA
+97,Sonoma County,CA
+99,Stanislaus County,CA
+101,Sutter County,CA
+103,Tehama County,CA
+105,Trinty County,CA
+107,Tulare County,CA
+109,Tuolumne County,CA
+111,Ventura County,CA
+113,Yolo County,CA
+115,Yuba County,CA
+1,Adams County,CO
+3,Alamosa County,CO
+5,Arapahoe County,CO
+7,Archuleta County,CO
+9,Baca County,CO
+11,Bent County,CO
+13,Boulder County,CO
+14,Broomfield,CO
+15,Chaffee County,CO
+17,Cheyenne County,CO
+19,Clear Creek County,CO
+21,Conejos County,CO
+23,Costilla County,CO
+25,Crowley County,CO
+27,Custer County,CO
+29,Delta County,CO
+31,Denver,CO
+33,Dolores County,CO
+35,Douglas County,CO
+37,Eagle County,CO
+41,Elbert County,CO
+39,El Paso County,CO
+43,Fremont County,CO
+45,Garfield County,CO
+47,Gilpin County,CO
+49,Grand County,CO
+51,Gunnison County,CO
+53,Hinsdale County,CO
+55,Huerfano County,CO
+57,Jackson County,CO
+59,Jefferson County,CO
+61,Kiowa County,CO
+63,Kit Carson County,CO
+65,Lake County,CO
+67,La Plata County,CO
+69,Larimer County,CO
+71,Las Animas County,CO
+73,Lincoln County,CO
+75,Logan County,CO
+77,Mesa County,CO
+79,Mineral County,CO
+81,Moffat County,CO
+83,Montezuma County,CO
+85,Montrose County,CO
+87,Morgan County,CO
+89,Otero County,CO
+91,Ouray County,CO
+93,Park County,CO
+95,Phillips County,CO
+97,Pitkin County,CO
+99,Prowers County,CO
+101,Pueblo County,CO
+103,Rio Blanco County,CO
+105,Rio Grande County,CO
+107,Routt County,CO
+109,Saguache County,CO
+111,San Juan County,CO
+113,San Miguel County,CO
+115,Sedgwick County,CO
+117,Summit County,CO
+119,Teller County,CO
+121,Washington County,CO
+123,Weld County,CO
+125,Yuma County,CO
+1,Fairfield County,CT
+3,Hartford County,CT
+5,Litchfield County,CT
+7,Middlesex County,CT
+9,New Haven County,CT
+11,New London County,CT
+13,Tolland County,CT
+15,Windham County,CT
+1,Kent County,DE
+3,New Castle County,DE
+5,Sussex County,DE
+,District of Columbia,DC
+1,Alachua County,FL
+3,Baker County,FL
+5,Bay County,FL
+7,Bradford County,FL
+9,Brevard County,FL
+11,Broward County,FL
+13,Calhoun County,FL
+15,Charlotte County,FL
+17,Citrus County,FL
+19,Clay County,FL
+21,Collier County,FL
+23,Columbia County,FL
+27,DeSoto County,FL
+29,Dixie County,FL
+31,Duval County,FL
+33,Escambia County,FL
+35,Flagler County,FL
+37,Franklin County,FL
+39,Gadsden County,FL
+41,Gilchrist County,FL
+43,Glades County,FL
+45,Gulf County,FL
+47,Hamilton County,FL
+49,Hardee County,FL
+51,Hendry County,FL
+53,Hernando County,FL
+55,Highlands County,FL
+57,Hillsborough County,FL
+59,Holmes County,FL
+61,Indian River County,FL
+63,Jackson County,FL
+65,Jefferson County,FL
+67,Lafayette County,FL
+69,Lake County,FL
+71,Lee County,FL
+73,Leon County,FL
+75,Levy County,FL
+77,Liberty County,FL
+79,Madison County,FL
+81,Manatee County,FL
+83,Marion County,FL
+85,Martin County,FL
+86,Miami-Dade County,FL
+87,Monroe County,FL
+89,Nassau County,FL
+91,Okaloosa County,FL
+93,Okeechobee County,FL
+95,Orange County,FL
+97,Osceola County,FL
+99,Palm Beach County,FL
+101,Pasco County,FL
+103,Pinellas County,FL
+105,Polk County,FL
+107,Putnam County,FL
+109,St. Johns County,FL
+111,St. Lucie County,FL
+113,Santa Rosa County,FL
+115,Sarasota County,FL
+117,Seminole County,FL
+119,Sumter County,FL
+121,Suwannee County,FL
+123,Taylor County,FL
+125,Union County,FL
+127,Volusia County,FL
+129,Wakulla County,FL
+131,Walton County,FL
+133,Washington County,FL
+1,Appling County,GA
+3,Atkinson County,GA
+5,Bacon County,GA
+7,Baker County,GA
+9,Baldwin County,GA
+11,Banks County,GA
+13,Barrow County,GA
+15,Bartow County,GA
+17,Ben Hill County,GA
+19,Berrien County,GA
+21,Bibb County,GA
+23,Bleckley County,GA
+25,Brantley County,GA
+27,Brooks County,GA
+29,Bryan County,GA
+31,Bulloch County,GA
+33,Burke County,GA
+35,Butts County,GA
+37,Calhoun County,GA
+39,Camden County,GA
+43,Candler County,GA
+45,Carroll County,GA
+47,Catoosa County,GA
+49,Charlton County,GA
+51,Chatham County,GA
+53,Chattahoochee County,GA
+55,Chattooga County,GA
+57,Cherokee County,GA
+59,Clarke County,GA
+61,Clay County,GA
+63,Clayton County,GA
+65,Clinch County,GA
+67,Cobb County,GA
+69,Coffee County,GA
+71,Colquitt County,GA
+73,Columbia County,GA
+75,Cook County,GA
+77,Coweta County,GA
+79,Crawford County,GA
+81,Crisp County,GA
+83,Dade County,GA
+85,Dawson County,GA
+87,Decatur County,GA
+89,DeKalb County,GA
+91,Dodge County,GA
+93,Dooly County,GA
+95,Dougherty County,GA
+97,Douglas County,GA
+99,Early County,GA
+101,Echols County,GA
+103,Effingham County,GA
+105,Elbert County,GA
+107,Emanuel County,GA
+109,Evans County,GA
+111,Fannin County,GA
+113,Fayette County,GA
+115,Floyd County,GA
+117,Forsyth County,GA
+119,Franklin County,GA
+121,Fulton County,GA
+123,Gilmer County,GA
+125,Glascock County,GA
+127,Glynn County,GA
+129,Gordon County,GA
+131,Grady County,GA
+133,Greene County,GA
+135,Gwinnett County,GA
+137,Habersham County,GA
+139,Hall County,GA
+141,Hancock County,GA
+143,Haralson County,GA
+145,Harris County,GA
+147,Hart County,GA
+149,Heard County,GA
+151,Henry County,GA
+153,Houston County,GA
+155,Irwin County,GA
+157,Jackson County,GA
+159,Jasper County,GA
+161,Jeff Davis County,GA
+163,Jefferson County,GA
+165,Jenkins County,GA
+167,Johnson County,GA
+169,Jones County,GA
+171,Lamar County,GA
+173,Lanier County,GA
+175,Laurens County,GA
+177,Lee County,GA
+179,Liberty County,GA
+181,Lincoln County,GA
+183,Long County,GA
+185,Lowndes County,GA
+187,Lumpkin County,GA
+189,McDuffie County,GA
+191,McIntosh County,GA
+193,Macon County,GA
+195,Madison County,GA
+197,Marion County,GA
+199,Meriwether County,GA
+201,Miller County,GA
+205,Mitchell County,GA
+207,Monroe County,GA
+209,Montgomery County,GA
+211,Morgan County,GA
+213,Murray County,GA
+215,Muscogee County,GA
+217,Newton County,GA
+219,Oconee County,GA
+221,Oglethorpe County,GA
+223,Paulding County,GA
+225,Peach County,GA
+227,Pickens County,GA
+229,Pierce County,GA
+231,Pike County,GA
+233,Polk County,GA
+235,Pulaski County,GA
+237,Putnam County,GA
+239,Quitman County,GA
+241,Rabun County,GA
+243,Randolph County,GA
+245,Richmond County,GA
+247,Rockdale County,GA
+249,Schley County,GA
+251,Screven County,GA
+253,Seminole County,GA
+255,Spalding County,GA
+257,Stephens County,GA
+259,Stewart County,GA
+261,Sumter County,GA
+263,Talbot County,GA
+265,Taliaferro County,GA
+267,Tattnall County,GA
+269,Taylor County,GA
+271,Telfair County,GA
+273,Terrell County,GA
+275,Thomas County,GA
+277,Tift County,GA
+279,Toombs County,GA
+281,Towns County,GA
+283,Treutlen County,GA
+285,Troup County,GA
+287,Turner County,GA
+289,Twiggs County,GA
+291,Union County,GA
+293,Upson County,GA
+295,Walker County,GA
+297,Walton County,GA
+299,Ware County,GA
+301,Warren County,GA
+303,Washington County,GA
+305,Wayne County,GA
+307,Webster County,GA
+309,Wheeler County,GA
+311,White County,GA
+313,Whitfield County,GA
+315,Wilcox County,GA
+317,Wilkes County,GA
+319,Wilkinson County,GA
+321,Worth County,GA
+1,Hawai?i,HI
+3,Honolulu,HI
+5,Kalawao County,HI
+7,Kauai County,HI
+9,Maui County,HI
+1,Ada County,ID
+3,Adams County,ID
+5,Bannock County,ID
+7,Bear Lake County,ID
+9,Benewah County,ID
+11,Bingham County,ID
+13,Blaine County,ID
+15,Boise County,ID
+17,Bonner County,ID
+19,Bonneville County,ID
+21,Boundary County,ID
+23,Butte County,ID
+25,Camas County,ID
+27,Canyon County,ID
+29,Caribou County,ID
+31,Cassia County,ID
+33,Clark County,ID
+35,Clearwater County,ID
+37,Custer County,ID
+39,Elmore County,ID
+41,Franklin County,ID
+43,Fremont County,ID
+45,Gem County,ID
+47,Gooding County,ID
+49,Idaho County,ID
+51,Jefferson County,ID
+53,Jerome County,ID
+55,Kootenai County,ID
+55,Latah County,ID
+57,Lemhi County,ID
+59,Lewis County,ID
+61,Lincoln County,ID
+63,Madison County,ID
+65,Minidoka County,ID
+67,Nez Perce County,ID
+69,Oneida County,ID
+71,Owyhee County,ID
+73,Payette County,ID
+75,Power County,ID
+77,Shoshone County,ID
+81,Teton County,ID
+83,Twin Falls County,ID
+85,Valley County,ID
+87,Washington County,ID
+1,Adams County,IL
+3,Alexander County,IL
+5,Bond County,IL
+7,Boone County,IL
+9,Brown County,IL
+11,Bureau County,IL
+13,Calhoun County,IL
+15,Carroll County,IL
+17,Cass County,IL
+19,Champaign County,IL
+21,Christian County,IL
+23,Clark County,IL
+25,Clay County,IL
+27,Clinton County,IL
+29,Coles County,IL
+31,Cook County,IL
+33,Crawford County,IL
+35,Cumberland County,IL
+37,DeKalb County,IL
+39,De Witt County,IL
+41,Douglas County,IL
+43,DuPage County,IL
+45,Edgar County,IL
+47,Edwards County,IL
+49,Effingham County,IL
+51,Fayette County,IL
+53,Ford County,IL
+55,Franklin County,IL
+57,Fulton County,IL
+59,Gallatin County,IL
+61,Greene County,IL
+63,Grundy County,IL
+65,Hamilton County,IL
+67,Hancock County,IL
+69,Hardin County,IL
+71,Henderson County,IL
+73,Henry County,IL
+75,Iroquois County,IL
+77,Jackson County,IL
+79,Jasper County,IL
+81,Jefferson County,IL
+83,Jersey County,IL
+85,Jo Daviess County,IL
+87,Johnson County,IL
+89,Kane County,IL
+91,Kankakee County,IL
+93,Kendall County,IL
+95,Knox County,IL
+97,Lake County,IL
+99,LaSalle County,IL
+101,Lawrence County,IL
+103,Lee County,IL
+105,Livingston County,IL
+107,Logan County,IL
+109,McDonough County,IL
+111,McHenry County,IL
+113,McLean County,IL
+115,Macon County,IL
+117,Macoupin County,IL
+119,Madison County,IL
+121,Marion County,IL
+123,Marshall County,IL
+125,Mason County,IL
+127,Massac County,IL
+129,Menard County,IL
+131,Mercer County,IL
+133,Monroe County,IL
+135,Montgomery County,IL
+137,Morgan County,IL
+139,Moultrie County,IL
+141,Ogle County,IL
+143,Peoria County,IL
+145,Perry County,IL
+147,Piatt County,IL
+149,Pike County,IL
+151,Pope County,IL
+153,Pulaski County,IL
+155,Putnam County,IL
+157,Randolph County,IL
+159,Richland County,IL
+161,Rock Island County,IL
+163,St. Clair County,IL
+165,Saline County,IL
+167,Sangamon County,IL
+169,Schuyler County,IL
+171,Scott County,IL
+173,Shelby County,IL
+175,Stark County,IL
+177,Stephenson County,IL
+179,Tazewell County,IL
+181,Union County,IL
+183,Vermilion County,IL
+185,Wabash County,IL
+187,Warren County,IL
+189,Washington County,IL
+191,Wayne County,IL
+193,White County,IL
+195,Whiteside County,IL
+197,Will County,IL
+199,Williamson County,IL
+201,Winnebago County,IL
+203,Woodford County,IL
+1,Adams County,IN
+3,Allen County,IN
+5,Bartholomew County,IN
+7,Benton County,IN
+9,Blackford County,IN
+11,Boone County,IN
+13,Brown County,IN
+15,Carroll County,IN
+17,Cass County,IN
+19,Clark County,IN
+21,Clay County,IN
+23,Clinton County,IN
+25,Crawford County,IN
+27,Daviess County,IN
+29,Dearborn County,IN
+31,Decatur County,IN
+33,DeKalb County,IN
+35,Delaware County,IN
+37,Dubois County,IN
+39,Elkhart County,IN
+41,Fayette County,IN
+43,Floyd County,IN
+45,Fountain County,IN
+47,Franklin County,IN
+49,Fulton County,IN
+51,Gibson County,IN
+53,Grant County,IN
+55,Greene County,IN
+57,Hamilton County,IN
+59,Hancock County,IN
+61,Harrison County,IN
+63,Hendricks County,IN
+65,Henry County,IN
+67,Howard County,IN
+69,Huntington County,IN
+71,Jackson County,IN
+73,Jasper County,IN
+75,Jay County,IN
+77,Jefferson County,IN
+79,Jennings County,IN
+81,Johnson County,IN
+83,Knox County,IN
+85,Kosciusko County,IN
+87,LaGrange County,IN
+89,Lake County,IN
+91,LaPorte County,IN
+93,Lawrence County,IN
+95,Madison County,IN
+97,Marion County,IN
+99,Marshall County,IN
+101,Martin County,IN
+103,Miami County,IN
+105,Monroe County,IN
+107,Montgomery County,IN
+109,Morgan County,IN
+111,Newton County,IN
+113,Noble County,IN
+115,Ohio County,IN
+117,Orange County,IN
+119,Owen County,IN
+121,Parke County,IN
+123,Perry County,IN
+125,Pike County,IN
+127,Porter County,IN
+129,Posey County,IN
+131,Pulaski County,IN
+133,Putnam County,IN
+135,Randolph County,IN
+137,Ripley County,IN
+139,Rush County,IN
+141,St. Joseph County,IN
+143,Scott County,IN
+145,Shelby County,IN
+147,Spencer County,IN
+149,Starke County,IN
+151,Steuben County,IN
+153,Sullivan County,IN
+155,Switzerland County,IN
+157,Tippecanoe County,IN
+159,Tipton County,IN
+161,Union County,IN
+163,Vanderburgh County,IN
+165,Vermillion County,IN
+167,Vigo County,IN
+169,Wabash County,IN
+171,Warren County,IN
+173,Warrick County,IN
+175,Washington County,IN
+177,Wayne County,IN
+179,Wells County,IN
+181,White County,IN
+183,Whitley County,IN
+1,Adair County,IA
+3,Adams County,IA
+5,Allamakee County,IA
+7,Appanoose County,IA
+9,Audubon County,IA
+11,Benton County,IA
+13,Black Hawk County,IA
+15,Boone County,IA
+17,Bremer County,IA
+19,Buchanan County,IA
+21,Buena Vista County,IA
+23,Butler County,IA
+25,Calhoun County,IA
+27,Carroll County,IA
+29,Cass County,IA
+31,Cedar County,IA
+33,Cerro Gordo County,IA
+35,Cherokee County,IA
+37,Chickasaw County,IA
+39,Clarke County,IA
+41,Clay County,IA
+43,Clayton County,IA
+45,Clinton County,IA
+47,Crawford County,IA
+49,Dallas County,IA
+51,Davis County,IA
+53,Decatur County,IA
+55,Delaware County,IA
+57,Des Moines County,IA
+59,Dickinson County,IA
+61,Dubuque County,IA
+63,Emmet County,IA
+65,Fayette County,IA
+67,Floyd County,IA
+69,Franklin County,IA
+71,Fremont County,IA
+73,Greene County,IA
+75,Grundy County,IA
+77,Guthrie County,IA
+79,Hamilton County,IA
+81,Hancock County,IA
+83,Hardin County,IA
+85,Harrison County,IA
+87,Henry County,IA
+89,Howard County,IA
+91,Humboldt County,IA
+93,Ida County,IA
+95,Iowa County,IA
+97,Jackson County,IA
+99,Jasper County,IA
+101,Jefferson County,IA
+103,Johnson County,IA
+105,Jones County,IA
+107,Keokuk County,IA
+109,Kossuth County,IA
+111,Lee County,IA
+113,Linn County,IA
+115,Louisa County,IA
+117,Lucas County,IA
+119,Lyon County,IA
+121,Madison County,IA
+123,Mahaska County,IA
+125,Marion County,IA
+127,Marshall County,IA
+129,Mills County,IA
+131,Mitchell County,IA
+133,Monona County,IA
+135,Monroe County,IA
+137,Montgomery County,IA
+139,Muscatine County,IA
+141,O'Brien County,IA
+143,Osceola County,IA
+145,Page County,IA
+147,Palo Alto County,IA
+149,Plymouth County,IA
+151,Pocahontas County,IA
+153,Polk County,IA
+155,Pottawattamie County,IA
+157,Poweshiek County,IA
+159,Ringgold County,IA
+161,Sac County,IA
+163,Scott County,IA
+165,Shelby County,IA
+167,Sioux County,IA
+169,Story County,IA
+171,Tama County,IA
+173,Taylor County,IA
+175,Union County,IA
+177,Van Buren County,IA
+179,Wapello County,IA
+181,Warren County,IA
+183,Washington County,IA
+185,Wayne County,IA
+187,Webster County,IA
+189,Winnebago County,IA
+191,Winneshiek County,IA
+193,Woodbury County,IA
+195,Worth County,IA
+197,Wright County,IA
+1,Allen County,KS
+3,Anderson County,KS
+5,Atchison County,KS
+7,Barber County,KS
+9,Barton County,KS
+11,Bourbon County,KS
+13,Brown County,KS
+15,Butler County,KS
+17,Chase County,KS
+19,Chautauqua County,KS
+21,Cherokee County,KS
+23,Cheyenne County,KS
+25,Clark County,KS
+27,Clay County,KS
+29,Cloud County,KS
+31,Coffey County,KS
+33,Comanche County,KS
+35,Cowley County,KS
+37,Crawford County,KS
+39,Decatur County,KS
+41,Dickinson County,KS
+43,Doniphan County,KS
+45,Douglas County,KS
+47,Edwards County,KS
+49,Elk County,KS
+51,Ellis County,KS
+53,Ellsworth County,KS
+55,Finney County,KS
+57,Ford County,KS
+59,Franklin County,KS
+61,Geary County,KS
+63,Gove County,KS
+65,Graham County,KS
+67,Grant County,KS
+69,Gray County,KS
+71,Greeley County,KS
+73,Greenwood County,KS
+75,Hamilton County,KS
+77,Harper County,KS
+79,Harvey County,KS
+81,Haskell County,KS
+83,Hodgeman County,KS
+85,Jackson County,KS
+87,Jefferson County,KS
+89,Jewell County,KS
+91,Johnson County,KS
+93,Kearny County,KS
+95,Kingman County,KS
+97,Kiowa County,KS
+99,Labette County,KS
+101,Lane County,KS
+103,Leavenworth County,KS
+105,Lincoln County,KS
+107,Linn County,KS
+109,Logan County,KS
+111,Lyon County,KS
+113,McPherson County,KS
+115,Marion County,KS
+117,Marshall County,KS
+119,Meade County,KS
+121,Miami County,KS
+123,Mitchell County,KS
+125,Montgomery County,KS
+127,Morris County,KS
+129,Morton County,KS
+131,Nemaha County,KS
+133,Neosho County,KS
+135,Ness County,KS
+137,Norton County,KS
+139,Osage County,KS
+141,Osborne County,KS
+143,Ottawa County,KS
+145,Pawnee County,KS
+147,Phillips County,KS
+149,Pottawatomie County,KS
+151,Pratt County,KS
+153,Rawlins County,KS
+155,Reno County,KS
+157,Republic County,KS
+159,Rice County,KS
+161,Riley County,KS
+163,Rooks County,KS
+165,Rush County,KS
+167,Russell County,KS
+169,Saline County,KS
+171,Scott County,KS
+173,Sedgwick County,KS
+175,Seward County,KS
+177,Shawnee County,KS
+179,Sheridan County,KS
+181,Sherman County,KS
+183,Smith County,KS
+185,Stafford County,KS
+187,Stanton County,KS
+189,Stevens County,KS
+191,Sumner County,KS
+193,Thomas County,KS
+195,Trego County,KS
+197,Wabaunsee County,KS
+199,Wallace County,KS
+201,Washington County,KS
+203,Wichita County,KS
+205,Wilson County,KS
+207,Woodson County,KS
+209,Wyandotte County,KS
+1,Adair County,KY
+3,Allen County,KY
+5,Anderson County,KY
+7,Ballard County,KY
+9,Barren County,KY
+11,Bath County,KY
+13,Bell County,KY
+15,Boone County,KY
+17,Bourbon County,KY
+19,Boyd County,KY
+21,Boyle County,KY
+23,Bracken County,KY
+25,Breathitt County,KY
+27,Breckinridge County,KY
+29,Bullitt County,KY
+31,Butler County,KY
+33,Caldwell County,KY
+35,Calloway County,KY
+37,Campbell County,KY
+39,Carlisle County,KY
+41,Carroll County,KY
+43,Carter County,KY
+45,Casey County,KY
+47,Christian County,KY
+49,Clark County,KY
+51,Clay County,KY
+53,Clinton County,KY
+55,Crittenden County,KY
+57,Cumberland County,KY
+59,Daviess County,KY
+61,Edmonson County,KY
+63,Elliott County,KY
+65,Estill County,KY
+67,Fayette County,KY
+69,Fleming County,KY
+71,Floyd County,KY
+73,Franklin County,KY
+75,Fulton County,KY
+77,Gallatin County,KY
+79,Garrard County,KY
+81,Grant County,KY
+83,Graves County,KY
+85,Grayson County,KY
+87,Green County,KY
+89,Greenup County,KY
+91,Hancock County,KY
+93,Hardin County,KY
+95,Harlan County,KY
+97,Harrison County,KY
+99,Hart County,KY
+101,Henderson County,KY
+103,Henry County,KY
+105,Hickman County,KY
+107,Hopkins County,KY
+109,Jackson County,KY
+111,Jefferson County,KY
+113,Jessamine County,KY
+115,Johnson County,KY
+117,Kenton County,KY
+119,Knott County,KY
+121,Knox County,KY
+123,LaRue County,KY
+125,Laurel County,KY
+127,Lawrence County,KY
+129,Lee County,KY
+131,Leslie County,KY
+133,Letcher County,KY
+135,Lewis County,KY
+137,Lincoln County,KY
+139,Livingston County,KY
+141,Logan County,KY
+143,Lyon County,KY
+145,McCracken County,KY
+147,McCreary County,KY
+149,McLean County,KY
+151,Madison County,KY
+153,Magoffin County,KY
+155,Marion County,KY
+157,Marshall County,KY
+159,Martin County,KY
+161,Mason County,KY
+163,Meade County,KY
+165,Menifee County,KY
+167,Mercer County,KY
+169,Metcalfe County,KY
+171,Monroe County,KY
+173,Montgomery County,KY
+175,Morgan County,KY
+177,Muhlenberg County,KY
+179,Nelson County,KY
+181,Nicholas County,KY
+183,Ohio County,KY
+185,Oldham County,KY
+187,Owen County,KY
+189,Owsley County,KY
+191,Pendleton County,KY
+193,Perry County,KY
+195,Pike County,KY
+197,Powell County,KY
+199,Pulaski County,KY
+201,Robertson County,KY
+203,Rockcastle County,KY
+205,Rowan County,KY
+207,Russell County,KY
+209,Scott County,KY
+211,Shelby County,KY
+213,Simpson County,KY
+215,Spencer County,KY
+217,Taylor County,KY
+219,Todd County,KY
+221,Trigg County,KY
+223,Trimble County,KY
+225,Union County,KY
+227,Warren County,KY
+229,Washington County,KY
+231,Wayne County,KY
+233,Webster County,KY
+235,Whitley County,KY
+237,Wolfe County,KY
+239,Woodford County,KY
+1,Acadia Parish,LA
+3,Allen Parish,LA
+5,Ascension Parish,LA
+7,Assumption Parish,LA
+9,Avoyelles Parish,LA
+11,Beauregard Parish,LA
+13,Bienville Parish,LA
+15,Bossier Parish,LA
+17,Caddo Parish,LA
+19,Calcasieu Parish,LA
+21,Caldwell Parish,LA
+23,Cameron Parish,LA
+25,Catahoula Parish,LA
+27,Claiborne Parish,LA
+29,Concordia Parish,LA
+31,De Soto Parish,LA
+33,East Baton Rouge Parish,LA
+35,East Carroll Parish,LA
+37,East Feliciana Parish,LA
+39,Evangeline Parish,LA
+41,Franklin Parish,LA
+43,Grant Parish,LA
+45,Iberia Parish,LA
+47,Iberville Parish,LA
+49,Jackson Parish,LA
+51,Jefferson Parish,LA
+53,Jefferson Davis Parish,LA
+55,Lafayette Parish,LA
+57,Lafourche Parish,LA
+59,LaSalle Parish,LA
+61,Lincoln Parish,LA
+63,Livingston Parish,LA
+65,Madison Parish,LA
+67,Morehouse Parish,LA
+69,Natchitoches Parish,LA
+71,Orleans Parish[16],LA
+73,Ouachita Parish,LA
+75,Plaquemines Parish,LA
+77,Pointe Coupee Parish,LA
+79,Rapides Parish,LA
+81,Red River Parish,LA
+83,Richland Parish,LA
+85,Sabine Parish,LA
+87,St. Bernard Parish,LA
+89,St. Charles Parish,LA
+91,St. Helena Parish,LA
+93,St. James Parish,LA
+95,St. John the Baptist Parish,LA
+97,St. Landry Parish,LA
+99,St. Martin Parish,LA
+101,St. Mary Parish,LA
+103,St. Tammany Parish,LA
+105,Tangipahoa Parish,LA
+107,Tensas Parish,LA
+109,Terrebonne Parish,LA
+111,Union Parish,LA
+113,Vermilion Parish,LA
+115,Vernon Parish,LA
+117,Washington Parish,LA
+119,Webster Parish,LA
+121,West Baton Rouge Parish,LA
+123,West Carroll Parish,LA
+125,West Feliciana Parish,LA
+127,Winn Parish,LA
+1,Androscoggin County,ME
+3,Aroostook County,ME
+5,Cumberland County,ME
+7,Franklin County,ME
+9,Hancock County,ME
+11,Kennebec County,ME
+13,Knox County,ME
+15,Lincoln County,ME
+17,Oxford County,ME
+19,Penobscot County,ME
+21,Piscataquis County,ME
+23,Sagadahoc County,ME
+25,Somerset County,ME
+27,Waldo County,ME
+29,Washington County,ME
+31,York County,ME
+1,Allegany County,MD
+3,Anne Arundel County,MD
+5,Baltimore County,MD
+9,Calvert County,MD
+11,Caroline County,MD
+13,Carroll County,MD
+15,Cecil County,MD
+17,Charles County,MD
+19,Dorchester County,MD
+21,Frederick County,MD
+23,Garrett County,MD
+25,Harford County,MD
+27,Howard County,MD
+29,Kent County,MD
+31,Montgomery County,MD
+33,Prince George's County,MD
+35,Queen Anne's County,MD
+37,St. Mary's County,MD
+39,Somerset County,MD
+41,Talbot County,MD
+43,Washington County,MD
+45,Wicomico County,MD
+47,Worcester County,MD
+510,Baltimore City,MD
+1,Barnstable County,MA
+3,Berkshire County,MA
+5,Bristol County,MA
+7,Dukes County,MA
+9,Essex County,MA
+11,Franklin County,MA
+13,Hampden County,MA
+15,Hampshire County,MA
+17,Middlesex County,MA
+19,Nantucket,MA
+21,Norfolk County,MA
+23,Plymouth County,MA
+25,Suffolk County,MA
+27,Worcester County,MA
+1,Alcona County,MI
+3,Alger County,MI
+5,Allegan County,MI
+7,Alpena County,MI
+9,Antrim County,MI
+11,Arenac County,MI
+13,Baraga County,MI
+15,Barry County,MI
+17,Bay County,MI
+19,Benzie County,MI
+21,Berrien County,MI
+23,Branch County,MI
+25,Calhoun County,MI
+27,Cass County,MI
+29,Charlevoix County,MI
+31,Cheboygan County,MI
+33,Chippewa County,MI
+35,Clare County,MI
+37,Clinton County,MI
+39,Crawford County,MI
+41,Delta County,MI
+43,Dickinson County,MI
+45,Eaton County,MI
+47,Emmet County,MI
+49,Genesee County,MI
+51,Gladwin County,MI
+53,Gogebic County,MI
+55,Grand Traverse County,MI
+57,Gratiot County,MI
+59,Hillsdale County,MI
+61,Houghton County,MI
+63,Huron County,MI
+65,Ingham County,MI
+67,Ionia County,MI
+69,Iosco County,MI
+71,Iron County,MI
+73,Isabella County,MI
+75,Jackson County,MI
+77,Kalamazoo County,MI
+79,Kalkaska County,MI
+81,Kent County,MI
+83,Keweenaw County,MI
+85,Lake County,MI
+87,Lapeer County,MI
+89,Leelanau County,MI
+91,Lenawee County,MI
+93,Livingston County,MI
+95,Luce County,MI
+97,Mackinac County,MI
+99,Macomb County,MI
+101,Manistee County,MI
+103,Marquette County,MI
+105,Mason County,MI
+107,Mecosta County,MI
+109,Menominee County,MI
+111,Midland County,MI
+113,Missaukee County,MI
+115,Monroe County,MI
+117,Montcalm County,MI
+119,Montmorency County,MI
+121,Muskegon County,MI
+123,Newaygo County,MI
+125,Oakland County,MI
+127,Oceana County,MI
+129,Ogemaw County,MI
+131,Ontonagon County,MI
+133,Osceola County,MI
+135,Oscoda County,MI
+137,Otsego County,MI
+139,Ottawa County,MI
+141,Presque Isle County,MI
+143,Roscommon County,MI
+145,Saginaw County,MI
+147,St. Clair County,MI
+149,St. Joseph County,MI
+151,Sanilac County,MI
+153,Schoolcraft County,MI
+155,Shiawassee County,MI
+157,Tuscola County,MI
+159,Van Buren County,MI
+161,Washtenaw County,MI
+163,Wayne County,MI
+165,Wexford County,MI
+1,Aitkin County,MN
+3,Anoka County,MN
+5,Becker County,MN
+7,Beltrami County,MN
+9,Benton County,MN
+11,Big Stone County,MN
+13,Blue Earth County,MN
+15,Brown County,MN
+17,Carlton County,MN
+19,Carver County,MN
+21,Cass County,MN
+23,Chippewa County,MN
+25,Chisago County,MN
+27,Clay County,MN
+29,Clearwater County,MN
+31,Cook County,MN
+33,Cottonwood County,MN
+35,Crow Wing County,MN
+37,Dakota County,MN
+39,Dodge County,MN
+41,Douglas County,MN
+43,Faribault County,MN
+45,Fillmore County,MN
+47,Freeborn County,MN
+49,Goodhue County,MN
+51,Grant County,MN
+53,Hennepin County,MN
+55,Houston County,MN
+57,Hubbard County,MN
+59,Isanti County,MN
+61,Itasca County,MN
+63,Jackson County,MN
+65,Kanabec County,MN
+67,Kandiyohi County,MN
+69,Kittson County,MN
+71,Koochiching County,MN
+73,Lac qui Parle County,MN
+75,Lake County,MN
+77,Lake of the Woods County,MN
+79,Le Sueur County,MN
+81,Lincoln County,MN
+83,Lyon County,MN
+85,McLeod County,MN
+87,Mahnomen County,MN
+89,Marshall County,MN
+91,Martin County,MN
+93,Meeker County,MN
+95,Mille Lacs County,MN
+97,Morrison County,MN
+99,Mower County,MN
+101,Murray County,MN
+103,Nicollet County,MN
+105,Nobles County,MN
+107,Norman County,MN
+109,Olmsted County,MN
+111,Otter Tail County,MN
+113,Pennington County,MN
+115,Pine County,MN
+117,Pipestone County,MN
+119,Polk County,MN
+121,Pope County,MN
+123,Ramsey County,MN
+125,Red Lake County,MN
+127,Redwood County,MN
+129,Renville County,MN
+131,Rice County,MN
+133,Rock County,MN
+135,Roseau County,MN
+137,St. Louis County,MN
+139,Scott County,MN
+141,Sherburne County,MN
+143,Sibley County,MN
+145,Stearns County,MN
+147,Steele County,MN
+149,Stevens County,MN
+151,Swift County,MN
+153,Todd County,MN
+155,Traverse County,MN
+157,Wabasha County,MN
+159,Wadena County,MN
+161,Waseca County,MN
+163,Washington County,MN
+165,Watonwan County,MN
+167,Wilkin County,MN
+169,Winona County,MN
+171,Wright County,MN
+173,Yellow Medicine County,MN
+1,Adams County,MS
+3,Alcorn County,MS
+5,Amite County,MS
+7,Attala County,MS
+9,Benton County,MS
+11,Bolivar County,MS
+13,Calhoun County,MS
+15,Carroll County,MS
+17,Chickasaw County,MS
+19,Choctaw County,MS
+21,Claiborne County,MS
+23,Clarke County,MS
+25,Clay County,MS
+27,Coahoma County,MS
+29,Copiah County,MS
+31,Covington County,MS
+33,DeSoto County,MS
+35,Forrest County,MS
+37,Franklin County,MS
+39,George County,MS
+41,Greene County,MS
+43,Grenada County,MS
+45,Hancock County,MS
+47,Harrison County,MS
+49,Hinds County,MS
+51,Holmes County,MS
+53,Humphreys County,MS
+55,Issaquena County,MS
+57,Itawamba County,MS
+59,Jackson County,MS
+61,Jasper County,MS
+63,Jefferson County,MS
+65,Jefferson Davis County,MS
+67,Jones County,MS
+69,Kemper County,MS
+71,Lafayette County,MS
+73,Lamar County,MS
+75,Lauderdale County,MS
+77,Lawrence County,MS
+79,Leake County,MS
+81,Lee County,MS
+83,Leflore County,MS
+85,Lincoln County,MS
+87,Lowndes County,MS
+89,Madison County,MS
+91,Marion County,MS
+93,Marshall County,MS
+95,Monroe County,MS
+97,Montgomery County,MS
+99,Neshoba County,MS
+101,Newton County,MS
+103,Noxubee County,MS
+105,Oktibbeha County,MS
+107,Panola County,MS
+109,Pearl River County,MS
+111,Perry County,MS
+113,Pike County,MS
+115,Pontotoc County,MS
+117,Prentiss County,MS
+119,Quitman County,MS
+121,Rankin County,MS
+123,Scott County,MS
+125,Sharkey County,MS
+127,Simpson County,MS
+129,Smith County,MS
+131,Stone County,MS
+133,Sunflower County,MS
+135,Tallahatchie County,MS
+137,Tate County,MS
+139,Tippah County,MS
+141,Tishomingo County,MS
+143,Tunica County,MS
+145,Union County,MS
+147,Walthall County,MS
+149,Warren County,MS
+151,Washington County,MS
+153,Wayne County,MS
+155,Webster County,MS
+157,Wilkinson County,MS
+159,Winston County,MS
+161,Yalobusha County,MS
+163,Yazoo County,MS
+1,Adair County,MO
+3,Andrew County,MO
+5,Atchison County,MO
+7,Audrain County,MO
+9,Barry County,MO
+11,Barton County,MO
+13,Bates County,MO
+15,Benton County,MO
+17,Bollinger County,MO
+19,Boone County,MO
+21,Buchanan County,MO
+23,Butler County,MO
+25,Caldwell County,MO
+27,Callaway County,MO
+29,Camden County,MO
+31,Cape Girardeau County,MO
+33,Carroll County,MO
+35,Carter County,MO
+37,Cass County,MO
+39,Cedar County,MO
+41,Chariton County,MO
+43,Christian County,MO
+45,Clark County,MO
+47,Clay County,MO
+49,Clinton County,MO
+51,Cole County,MO
+53,Cooper County,MO
+55,Crawford County,MO
+57,Dade County,MO
+59,Dallas County,MO
+61,Daviess County,MO
+63,DeKalb County,MO
+65,Dent County,MO
+67,Douglas County,MO
+69,Dunklin County,MO
+71,Franklin County,MO
+73,Gasconade County,MO
+75,Gentry County,MO
+77,Greene County,MO
+79,Grundy County,MO
+81,Harrison County,MO
+83,Henry County,MO
+85,Hickory County,MO
+87,Holt County,MO
+89,Howard County,MO
+91,Howell County,MO
+93,Iron County,MO
+95,Jackson County,MO
+97,Jasper County,MO
+99,Jefferson County,MO
+101,Johnson County,MO
+103,Knox County,MO
+105,Laclede County,MO
+107,Lafayette County,MO
+109,Lawrence County,MO
+111,Lewis County,MO
+113,Lincoln County,MO
+115,Linn County,MO
+117,Livingston County,MO
+119,McDonald County,MO
+121,Macon County,MO
+123,Madison County,MO
+125,Maries County,MO
+127,Marion County,MO
+129,Mercer County,MO
+131,Miller County,MO
+133,Mississippi County,MO
+135,Moniteau County,MO
+137,Monroe County,MO
+139,Montgomery County,MO
+141,Morgan County,MO
+143,New Madrid County,MO
+145,Newton County,MO
+147,Nodaway County,MO
+149,Oregon County,MO
+151,Osage County,MO
+153,Ozark County,MO
+155,Pemiscot County,MO
+157,Perry County,MO
+159,Pettis County,MO
+161,Phelps County,MO
+163,Pike County,MO
+165,Platte County,MO
+167,Polk County,MO
+169,Pulaski County,MO
+171,Putnam County,MO
+173,Ralls County,MO
+175,Randolph County,MO
+177,Ray County,MO
+179,Reynolds County,MO
+181,Ripley County,MO
+183,St. Charles County,MO
+185,St. Clair County,MO
+186,Ste. Genevieve County,MO
+187,St. Francois County,MO
+189,St. Louis County,MO
+195,Saline County,MO
+197,Schuyler County,MO
+199,Scotland County,MO
+201,Scott County,MO
+203,Shannon County,MO
+205,Shelby County,MO
+207,Stoddard County,MO
+209,Stone County,MO
+211,Sullivan County,MO
+213,Taney County,MO
+215,Texas County,MO
+217,Vernon County,MO
+219,Warren County,MO
+221,Washington County,MO
+223,Wayne County,MO
+225,Webster County,MO
+227,Worth County,MO
+229,Wright County,MO
+510,St. Louis County,MO
+1,Beaverhead County,MT
+3,Big Horn County,MT
+5,Blaine County,MT
+7,Broadwater County,MT
+9,Carbon County,MT
+11,Carter County,MT
+13,Cascade County,MT
+15,Chouteau County,MT
+17,Custer County,MT
+19,Daniels County,MT
+21,Dawson County,MT
+23,Deer Lodge County,MT
+25,Fallon County,MT
+27,Fergus County,MT
+29,Flathead County,MT
+31,Gallatin County,MT
+33,Garfield County,MT
+35,Glacier County,MT
+37,Golden Valley County,MT
+39,Granite County,MT
+41,Hill County,MT
+43,Jefferson County,MT
+45,Judith Basin County,MT
+47,Lake County,MT
+49,Lewis and Clark County,MT
+51,Liberty County,MT
+53,Lincoln County,MT
+55,McCone County,MT
+57,Madison County,MT
+59,Meagher County,MT
+61,Mineral County,MT
+63,Missoula County,MT
+65,Musselshell County,MT
+67,Park County,MT
+69,Petroleum County,MT
+71,Phillips County,MT
+73,Pondera County,MT
+75,Powder River County,MT
+77,Powell County,MT
+79,Prairie County,MT
+81,Ravalli County,MT
+83,Richland County,MT
+85,Roosevelt County,MT
+87,Rosebud County,MT
+89,Sanders County,MT
+91,Sheridan County,MT
+93,Silver Bow County,MT
+95,Stillwater County,MT
+97,Sweet Grass County,MT
+99,Teton County,MT
+101,Toole County,MT
+103,Treasure County,MT
+105,Valley County,MT
+107,Wheatland County,MT
+109,Wibaux County,MT
+111,Yellowstone County,MT
+1,Adams County,NE
+3,Antelope County,NE
+5,Arthur County,NE
+7,Banner County,NE
+9,Blaine County,NE
+11,Boone County,NE
+13,Box Butte County,NE
+15,Boyd County,NE
+17,Brown County,NE
+19,Buffalo County,NE
+21,Burt County,NE
+23,Butler County,NE
+25,Cass County,NE
+27,Cedar County,NE
+29,Chase County,NE
+31,Cherry County,NE
+33,Cheyenne County,NE
+35,Clay County,NE
+37,Colfax County,NE
+39,Cuming County,NE
+41,Custer County,NE
+43,Dakota County,NE
+45,Dawes County,NE
+47,Dawson County,NE
+49,Deuel County,NE
+51,Dixon County,NE
+53,Dodge County,NE
+55,Douglas County,NE
+57,Dundy County,NE
+59,Fillmore County,NE
+61,Franklin County,NE
+63,Frontier County,NE
+65,Furnas County,NE
+67,Gage County,NE
+69,Garden County,NE
+71,Garfield County,NE
+73,Gosper County,NE
+75,Grant County,NE
+77,Greeley County,NE
+79,Hall County,NE
+81,Hamilton County,NE
+83,Harlan County,NE
+85,Hayes County,NE
+87,Hitchcock County,NE
+89,Holt County,NE
+91,Hooker County,NE
+93,Howard County,NE
+95,Jefferson County,NE
+97,Johnson County,NE
+99,Kearney County,NE
+101,Keith County,NE
+103,Keya Paha County,NE
+105,Kimball County,NE
+107,Knox County,NE
+109,Lancaster County,NE
+111,Lincoln County,NE
+113,Logan County,NE
+115,Loup County,NE
+117,McPherson County,NE
+119,Madison County,NE
+121,Merrick County,NE
+123,Morrill County,NE
+125,Nance County,NE
+127,Nemaha County,NE
+129,Nuckolls County,NE
+131,Otoe County,NE
+133,Pawnee County,NE
+135,Perkins County,NE
+137,Phelps County,NE
+139,Pierce County,NE
+141,Platte County,NE
+143,Polk County,NE
+145,Red Willow County,NE
+147,Richardson County,NE
+149,Rock County,NE
+151,Saline County,NE
+153,Sarpy County,NE
+155,Saunders County,NE
+157,Scotts Bluff County,NE
+159,Seward County,NE
+161,Sheridan County,NE
+163,Sherman County,NE
+165,Sioux County,NE
+167,Stanton County,NE
+169,Thayer County,NE
+171,Thomas County,NE
+173,Thurston County,NE
+175,Valley County,NE
+177,Washington County,NE
+179,Wayne County,NE
+181,Webster County,NE
+183,Wheeler County,NE
+185,York County,NE
+1,Churchhill County,NV
+3,Clark County,NV
+5,Douglas County,NV
+7,Elko County,NV
+9,Esmeralda County,NV
+11,Eureka County,NV
+13,Humboldt County,NV
+15,Lander County,NV
+17,Lincoln County,NV
+19,Lyon County,NV
+21,Mineral County,NV
+23,Nye County,NV
+27,Pershing County,NV
+29,Storey County,NV
+31,Washoe County,NV
+33,White Pine County,NV
+510,Carson City,NV
+1,Belknap County,NH
+3,Carroll County,NH
+5,Cheshire County,NH
+7,Coos County,NH
+9,Grafton County,NH
+11,Hillsborough County,NH
+13,Merrimack County,NH
+15,Rockingham County,NH
+17,Strafford County,NH
+19,Sullivan County,NH
+1,Atlantic County,NJ
+3,Bergen County,NJ
+5,Burlington County,NJ
+7,Camden County,NJ
+9,Cape May County,NJ
+11,Cumberland County,NJ
+13,Essex County,NJ
+15,Gloucester County,NJ
+17,Hudson County,NJ
+19,Hunterdon County,NJ
+21,Mercer County,NJ
+23,Middlesex County,NJ
+25,Monmouth County,NJ
+27,Morris County,NJ
+29,Ocean County,NJ
+31,Passaic County,NJ
+33,Salem County,NJ
+35,Somerset County,NJ
+37,Sussex County,NJ
+39,Union County,NJ
+41,Warren County,NJ
+1,Bernalillo County,NM
+3,Catron County,NM
+5,Chaves County,NM
+6,Cibola County,NM
+7,Colfax County,NM
+9,Curry County,NM
+11,De Baca County,NM
+13,Do�a Ana County,NM
+15,Eddy County,NM
+17,Grant County,NM
+19,Guadalupe County,NM
+21,Harding County,NM
+23,Hidalgo County,NM
+25,Lea County,NM
+27,Lincoln County,NM
+28,Los Alamos County,NM
+29,Luna County,NM
+31,McKinley County,NM
+33,Mora County,NM
+35,Otero County,NM
+37,Quay County,NM
+39,Rio Arriba,NM
+41,Roosevelt,NM
+43,Sandoval,NM
+45,San Juan,NM
+47,San Miguel,NM
+49,Santa Fe,NM
+51,Sierra,NM
+53,Socorro,NM
+55,Taos,NM
+57,Torrance,NM
+59,Union,NM
+61,Valencia,NM
+1,Albany County,NY
+3,Allegany County,NY
+5,Bronx County,NY
+7,Broome County,NY
+9,Cattaraugus County,NY
+11,Cayuga County,NY
+13,Chautauqua County,NY
+15,Chemung County,NY
+17,Chenango County,NY
+19,Clinton County,NY
+21,Columbia County,NY
+23,Cortland County,NY
+25,Delaware County,NY
+27,Dutchess County,NY
+29,Erie County,NY
+31,Essex County,NY
+33,Franklin County,NY
+35,Fulton County,NY
+37,Genesee County,NY
+39,Greene County,NY
+41,Hamilton County,NY
+43,Herkimer County,NY
+45,Jefferson County,NY
+47,Kings County,NY
+49,Lewis County,NY
+51,Livingston County,NY
+53,Madison County,NY
+55,Monroe County,NY
+57,Montgomery County,NY
+59,Nassau County,NY
+61,New York County,NY
+63,Niagara County,NY
+65,Oneida County,NY
+67,Onondaga County,NY
+69,Ontario County,NY
+71,Orange County,NY
+73,Orleans County,NY
+75,Oswego County,NY
+77,Otsego County,NY
+79,Putnam County,NY
+81,Queens County,NY
+83,Rensselaer County,NY
+85,Richmond County,NY
+87,Rockland County,NY
+89,St. Lawrence County,NY
+91,Saratoga County,NY
+93,Schenectady County,NY
+95,Schoharie County,NY
+97,Schuyler County,NY
+99,Seneca County,NY
+101,Steuben County,NY
+103,Suffolk County,NY
+105,Sullivan County,NY
+107,Tioga County,NY
+109,Tompkins County,NY
+111,Ulster County,NY
+113,Warren County,NY
+115,Washington County,NY
+117,Wayne County,NY
+119,Westchester County,NY
+121,Wyoming County,NY
+123,Yates County,NY
+1,Alamance County,NC
+3,Alexander County,NC
+5,Alleghany County,NC
+7,Anson County,NC
+9,Ashe County,NC
+11,Avery County,NC
+13,Beaufort County,NC
+15,Bertie County,NC
+17,Bladen County,NC
+19,Brunswick County,NC
+21,Buncombe County,NC
+23,Burke County,NC
+25,Cabarrus County,NC
+27,Caldwell County,NC
+29,Camden County,NC
+31,Carteret County,NC
+33,Caswell County,NC
+35,Catawba County,NC
+37,Chatham County,NC
+39,Cherokee County,NC
+41,Chowan County,NC
+43,Clay County,NC
+45,Cleveland County,NC
+47,Columbus County,NC
+49,Craven County,NC
+51,Cumberland County,NC
+53,Currituck County,NC
+55,Dare County,NC
+57,Davidson County,NC
+59,Davie County,NC
+61,Duplin County,NC
+63,Durham County,NC
+65,Edgecombe County,NC
+67,Forsyth County,NC
+69,Franklin County,NC
+71,Gaston County,NC
+73,Gates County,NC
+75,Graham County,NC
+77,Granville County,NC
+79,Greene County,NC
+81,Guilford County,NC
+83,Halifax County,NC
+85,Harnett County,NC
+87,Haywood County,NC
+89,Henderson County,NC
+91,Hertford County,NC
+93,Hoke County,NC
+95,Hyde County,NC
+97,Iredell County,NC
+99,Jackson County,NC
+101,Johnston County,NC
+103,Jones County,NC
+105,Lee County,NC
+107,Lenoir County,NC
+109,Lincoln County,NC
+111,McDowell County,NC
+113,Macon County,NC
+115,Madison County,NC
+117,Martin County,NC
+119,Mecklenburg County,NC
+121,Mitchell County,NC
+123,Montgomery County,NC
+125,Moore County,NC
+127,Nash County,NC
+129,New Hanover County,NC
+131,Northampton County,NC
+133,Onslow County,NC
+135,Orange County,NC
+137,Pamlico County,NC
+139,Pasquotank County,NC
+141,Pender County,NC
+143,Perquimans County,NC
+145,Person County,NC
+147,Pitt County,NC
+149,Polk County,NC
+151,Randolph County,NC
+153,Richmond County,NC
+155,Robeson County,NC
+157,Rockingham County,NC
+159,Rowan County,NC
+161,Rutherford County,NC
+163,Sampson County,NC
+165,Scotland County,NC
+167,Stanly County,NC
+169,Stokes County,NC
+171,Surry County,NC
+173,Swain County,NC
+175,Transylvania County,NC
+177,Tyrrell County,NC
+179,Union County,NC
+181,Vance County,NC
+183,Wake County,NC
+185,Warren County,NC
+187,Washington County,NC
+189,Watauga County,NC
+191,Wayne County,NC
+193,Wilkes County,NC
+195,Wilson County,NC
+197,Yadkin County,NC
+199,Yancey County,NC
+1,Adams County,ND
+3,Barnes County,ND
+5,Benson County,ND
+7,Billings County,ND
+9,Bottineau County,ND
+11,Bowman County,ND
+13,Burke County,ND
+15,Burleigh County,ND
+17,Cass County,ND
+19,Cavalier County,ND
+21,Dickey County,ND
+23,Divide County,ND
+25,Dunn County,ND
+27,Eddy County,ND
+29,Emmons County,ND
+31,Foster County,ND
+33,Golden Valley County,ND
+35,Grand Forks County,ND
+37,Grant County,ND
+39,Griggs County,ND
+41,Hettinger County,ND
+43,Kidder County,ND
+45,LaMoure County,ND
+47,Logan County,ND
+49,McHenry County,ND
+51,McIntosh County,ND
+53,McKenzie County,ND
+55,McLean County,ND
+57,Mercer County,ND
+59,Morton County,ND
+61,Mountrail County,ND
+63,Nelson County,ND
+65,Oliver County,ND
+67,Pembina County,ND
+69,Pierce County,ND
+71,Ramsey County,ND
+73,Ransom County,ND
+75,Renville County,ND
+77,Richland County,ND
+79,Rolette County,ND
+81,Sargent County,ND
+83,Sheridan County,ND
+85,Sioux County,ND
+87,Slope County,ND
+89,Stark County,ND
+91,Steele County,ND
+93,Stutsman County,ND
+95,Towner County,ND
+97,Traill County,ND
+99,Walsh County,ND
+101,Ward County,ND
+103,Wells County,ND
+105,Williams County,ND
+1,Adams County,OH
+3,Allen County,OH
+5,Ashland County,OH
+7,Ashtabula County,OH
+9,Athens County,OH
+11,Auglaize County,OH
+13,Belmont County,OH
+15,Brown County,OH
+17,Butler County,OH
+19,Carroll County,OH
+21,Champaign County,OH
+23,Clark County,OH
+25,Clermont County,OH
+27,Clinton County,OH
+29,Columbiana County,OH
+31,Coshocton County,OH
+33,Crawford County,OH
+35,Cuyahoga County,OH
+37,Darke County,OH
+39,Defiance County,OH
+41,Delaware County,OH
+43,Erie County,OH
+45,Fairfield County,OH
+47,Fayette County,OH
+49,Franklin County,OH
+51,Fulton County,OH
+53,Gallia County,OH
+55,Geauga County,OH
+57,Greene County,OH
+59,Guernsey County,OH
+61,Hamilton County,OH
+63,Hancock County,OH
+65,Hardin County,OH
+67,Harrison County,OH
+69,Henry County,OH
+71,Highland County,OH
+73,Hocking County,OH
+75,Holmes County,OH
+77,Huron County,OH
+79,Jackson County,OH
+81,Jefferson County,OH
+83,Knox County,OH
+85,Lake County,OH
+87,Lawrence County,OH
+89,Licking County,OH
+91,Logan County,OH
+93,Lorain County,OH
+95,Lucas County,OH
+97,Madison County,OH
+99,Mahoning County,OH
+101,Marion County,OH
+103,Medina County,OH
+105,Meigs County,OH
+107,Mercer County,OH
+109,Miami County,OH
+111,Monroe County,OH
+113,Montgomery County,OH
+115,Morgan County,OH
+117,Morrow County,OH
+119,Muskingum County,OH
+121,Noble County,OH
+123,Ottawa County,OH
+125,Paulding County,OH
+127,Perry County,OH
+129,Pickaway County,OH
+131,Pike County,OH
+133,Portage County,OH
+135,Preble County,OH
+137,Putnam County,OH
+139,Richland County,OH
+141,Ross County,OH
+143,Sandusky County,OH
+145,Scioto County,OH
+147,Seneca County,OH
+149,Shelby County,OH
+151,Stark County,OH
+153,Summit County,OH
+155,Trumbull County,OH
+157,Tuscarawas County,OH
+159,Union County,OH
+161,Van Wert County,OH
+163,Vinton County,OH
+165,Warren County,OH
+167,Washington County,OH
+169,Wayne County,OH
+171,Williams County,OH
+173,Wood County,OH
+175,Wyandot County,OH
+1,Adair County,OK
+3,Alfalfa County,OK
+5,Atoka County,OK
+7,Beaver County,OK
+9,Beckham County,OK
+11,Blaine County,OK
+13,Bryan County,OK
+15,Caddo County,OK
+17,Canadian County,OK
+19,Carter County,OK
+21,Cherokee County,OK
+23,Choctaw County,OK
+25,Cimarron County,OK
+27,Cleveland County,OK
+29,Coal County,OK
+31,Comanche County,OK
+33,Cotton County,OK
+35,Craig County,OK
+37,Creek County,OK
+39,Custer County,OK
+41,Delaware County,OK
+43,Dewey County,OK
+45,Ellis County,OK
+47,Garfield County,OK
+49,Garvin County,OK
+51,Grady County,OK
+53,Grant County,OK
+55,Greer County,OK
+57,Harmon County,OK
+59,Harper County,OK
+61,Haskell County,OK
+63,Hughes County,OK
+65,Jackson County,OK
+67,Jefferson County,OK
+69,Johnston County,OK
+71,Kay County,OK
+73,Kingfisher County,OK
+75,Kiowa County,OK
+77,Latimer County,OK
+79,Le Flore County,OK
+81,Lincoln County,OK
+83,Logan County,OK
+85,Love County,OK
+87,McClain County,OK
+89,McCurtain County,OK
+91,McIntosh County,OK
+93,Major County,OK
+95,Marshall County,OK
+97,Mayes County,OK
+99,Murray County,OK
+101,Muskogee County,OK
+103,Noble County,OK
+105,Nowata County,OK
+107,Okfuskee County,OK
+109,Oklahoma County,OK
+111,Okmulgee County,OK
+113,Osage County,OK
+115,Ottawa County,OK
+117,Pawnee County,OK
+119,Payne County,OK
+121,Pittsburg County,OK
+123,Pontotoc County,OK
+125,Pottawatomie County,OK
+127,Pushmataha County,OK
+129,Roger Mills County,OK
+131,Rogers County,OK
+133,Seminole County,OK
+135,Sequoyah County,OK
+137,Stephens County,OK
+139,Texas County,OK
+141,Tillman County,OK
+143,Tulsa County,OK
+145,Wagoner County,OK
+147,Washington County,OK
+149,Washita County,OK
+151,Woods County,OK
+153,Woodward County,OK
+1,Baker County,OR
+3,Benton County,OR
+5,Clackamas County,OR
+7,Clatsop County,OR
+9,Columbia County,OR
+11,Coos County,OR
+13,Crook County,OR
+15,Curry County,OR
+17,Deschutes County,OR
+19,Douglas County,OR
+21,Gilliam County,OR
+23,Grant County,OR
+25,Harney County,OR
+27,Hood River County,OR
+29,Jackson County,OR
+31,Jefferson County,OR
+33,Josephine County,OR
+35,Klamath County,OR
+37,Lake County,OR
+39,Lane County,OR
+41,Lincoln County,OR
+43,Linn County,OR
+45,Malheur County,OR
+47,Marion County,OR
+49,Morrow County,OR
+51,Multnomah County,OR
+53,Polk County,OR
+55,Sherman County,OR
+57,Tillamook County,OR
+59,Umatilla County,OR
+61,Union County,OR
+63,Wallowa County,OR
+65,Wasco County,OR
+67,Washington County,OR
+69,Wheeler County,OR
+71,Yamhill County,OR
+1,Adams County,PA
+3,Allegheny County,PA
+5,Armstrong County,PA
+7,Beaver County,PA
+9,Bedford County,PA
+11,Berks County,PA
+13,Blair County,PA
+15,Bradford County,PA
+17,Bucks County,PA
+19,Butler County,PA
+21,Cambria County,PA
+23,Cameron County,PA
+25,Carbon County,PA
+27,Centre County,PA
+29,Chester County,PA
+31,Clarion County,PA
+33,Clearfield County,PA
+35,Clinton County,PA
+37,Columbia County,PA
+39,Crawford County,PA
+41,Cumberland County,PA
+43,Dauphin County,PA
+45,Delaware County,PA
+47,Elk County,PA
+49,Erie County,PA
+51,Fayette County,PA
+53,Forest County,PA
+55,Franklin County,PA
+57,Fulton County,PA
+59,Greene County,PA
+61,Huntingdon County,PA
+63,Indiana County,PA
+65,Jefferson County,PA
+67,Juniata County,PA
+69,Lackawanna County,PA
+71,Lancaster County,PA
+73,Lawrence County,PA
+75,Lebanon County,PA
+77,Lehigh County,PA
+79,Luzerne County,PA
+81,Lycoming County,PA
+83,McKean County,PA
+85,Mercer County,PA
+87,Mifflin County,PA
+89,Monroe County,PA
+91,Montgomery County,PA
+93,Montour County,PA
+95,Northampton County,PA
+97,Northumberland County,PA
+99,Perry County,PA
+101,Philadelphia County,PA
+103,Pike County,PA
+105,Potter County,PA
+107,Schuylkill County,PA
+109,Snyder County,PA
+111,Somerset County,PA
+113,Sullivan County,PA
+115,Susquehanna County,PA
+117,Tioga County,PA
+119,Union County,PA
+121,Venango County,PA
+123,Warren County,PA
+125,Washington County,PA
+127,Wayne County,PA
+129,Westmoreland County,PA
+131,Wyoming County,PA
+133,York County,PA
+1,Bristol County,RI
+3,Kent County,RI
+5,Newport County,RI
+7,Providence County,RI
+9,Washington County,RI
+1,Abbeville County,SC
+3,Aiken County,SC
+5,Allendale County,SC
+7,Anderson County,SC
+9,Bamberg County,SC
+11,Barnwell County,SC
+13,Beaufort County,SC
+15,Berkeley County,SC
+17,Calhoun County,SC
+19,Charleston County,SC
+21,Cherokee County,SC
+23,Chester County,SC
+25,Chesterfield County,SC
+27,Clarendon County,SC
+29,Colleton County,SC
+31,Darlington County,SC
+33,Dillon County,SC
+35,Dorchester County,SC
+37,Edgefield County,SC
+39,Fairfield County,SC
+41,Florence County,SC
+43,Georgetown County,SC
+45,Greenville County,SC
+47,Greenwood County,SC
+49,Hampton County,SC
+51,Horry County,SC
+53,Jasper County,SC
+55,Kershaw County,SC
+57,Lancaster County,SC
+59,Laurens County,SC
+61,Lee County,SC
+63,Lexington County,SC
+65,McCormick County,SC
+67,Marion County,SC
+69,Marlboro County,SC
+71,Newberry County,SC
+73,Oconee County,SC
+75,Orangeburg County,SC
+77,Pickens County,SC
+79,Richland County,SC
+81,Saluda County,SC
+83,Spartanburg County,SC
+85,Sumter County,SC
+87,Union County,SC
+89,Williamsburg County,SC
+91,York County,SC
+3,Aurora County,SD
+5,Beadle County,SD
+7,Bennett County,SD
+9,Bon Homme County,SD
+11,Brookings County,SD
+13,Brown County,SD
+15,Brule County,SD
+17,Buffalo County,SD
+19,Butte County,SD
+21,Campbell County,SD
+23,Charles Mix County,SD
+25,Clark County,SD
+27,Clay County,SD
+29,Codington County,SD
+31,Corson County,SD
+33,Custer County,SD
+35,Davison County,SD
+37,Day County,SD
+39,Deuel County,SD
+41,Dewey County,SD
+43,Douglas County,SD
+45,Edmunds County,SD
+47,Fall River County,SD
+49,Faulk County,SD
+51,Grant County,SD
+53,Gregory County,SD
+55,Haakon County,SD
+57,Hamlin County,SD
+59,Hand County,SD
+61,Hanson County,SD
+63,Harding County,SD
+65,Hughes County,SD
+67,Hutchinson County,SD
+69,Hyde County,SD
+71,Jackson County,SD
+73,Jerauld County,SD
+75,Jones County,SD
+77,Kingsbury County,SD
+79,Lake County,SD
+81,Lawrence County,SD
+83,Lincoln County,SD
+85,Lyman County,SD
+87,McCook County,SD
+89,McPherson County,SD
+91,Marshall County,SD
+93,Meade County,SD
+95,Mellette County,SD
+97,Miner County,SD
+99,Minnehaha County,SD
+101,Moody County,SD
+103,Oglala Lakota County,SD
+105,Pennington County,SD
+107,Perkins County,SD
+109,Potter County,SD
+111,Roberts County,SD
+113,Sanborn County,SD
+115,Spink County,SD
+117,Stanley County,SD
+119,Sully County,SD
+121,Todd County,SD
+123,Tripp County,SD
+125,Turner County,SD
+127,Union County,SD
+129,Walworth County,SD
+135,Yankton County,SD
+137,Ziebach County,SD
+1,Anderson County,TN
+3,Bedford County,TN
+5,Benton County,TN
+7,Bledsoe County,TN
+9,Blount County,TN
+11,Bradley County,TN
+13,Campbell County,TN
+15,Cannon County,TN
+17,Carroll County,TN
+19,Carter County,TN
+21,Cheatham County,TN
+23,Chester County,TN
+25,Claiborne County,TN
+27,Clay County,TN
+29,Cocke County,TN
+31,Coffee County,TN
+33,Crockett County,TN
+35,Cumberland County,TN
+37,Davidson County,TN
+39,Decatur County,TN
+41,DeKalb County,TN
+43,Dickson County,TN
+45,Dyer County,TN
+47,Fayette County,TN
+49,Fentress County,TN
+51,Franklin County,TN
+53,Gibson County,TN
+55,Giles County,TN
+57,Grainger County,TN
+59,Greene County,TN
+61,Grundy County,TN
+63,Hamblen County,TN
+65,Hamilton County,TN
+67,Hancock County,TN
+69,Hardeman County,TN
+71,Hardin County,TN
+73,Hawkins County,TN
+75,Haywood County,TN
+77,Henderson County,TN
+79,Henry County,TN
+81,Hickman County,TN
+83,Houston County,TN
+85,Humphreys County,TN
+87,Jackson County,TN
+89,Jefferson County,TN
+91,Johnson County,TN
+93,Knox County,TN
+95,Lake County,TN
+97,Lauderdale County,TN
+99,Lawrence County,TN
+101,Lewis County,TN
+103,Lincoln County,TN
+105,Loudon County,TN
+107,McMinn County,TN
+109,McNairy County,TN
+111,Macon County,TN
+113,Madison County,TN
+115,Marion County,TN
+117,Marshall County,TN
+119,Maury County,TN
+121,Meigs County,TN
+123,Monroe County,TN
+125,Montgomery County,TN
+127,Moore County,TN
+129,Morgan County,TN
+131,Obion County,TN
+133,Overton County,TN
+135,Perry County,TN
+137,Pickett County,TN
+139,Polk County,TN
+141,Putnam County,TN
+143,Rhea County,TN
+145,Roane County,TN
+147,Robertson County,TN
+149,Rutherford County,TN
+151,Scott County,TN
+153,Sequatchie County,TN
+155,Sevier County,TN
+157,Shelby County,TN
+159,Smith County,TN
+161,Stewart County,TN
+163,Sullivan County,TN
+165,Sumner County,TN
+167,Tipton County,TN
+169,Trousdale County,TN
+171,Unicoi County,TN
+173,Union County,TN
+175,Van Buren County,TN
+177,Warren County,TN
+179,Washington County,TN
+181,Wayne County,TN
+183,Weakley County,TN
+185,White County,TN
+187,Williamson County,TN
+189,Wilson County,TN
+1,Anderson County,TX
+3,Andrews County,TX
+5,Angelina County,TX
+7,Aransas County,TX
+9,Archer County,TX
+11,Armstrong County,TX
+13,Atascosa County,TX
+15,Austin County,TX
+17,Bailey County,TX
+19,Bandera County,TX
+21,Bastrop County,TX
+23,Baylor County,TX
+25,Bee County,TX
+27,Bell County,TX
+29,Bexar County,TX
+31,Blanco County,TX
+33,Borden County,TX
+35,Bosque County,TX
+37,Bowie County,TX
+39,Brazoria County,TX
+41,Brazos County,TX
+43,Brewster County,TX
+45,Briscoe County,TX
+47,Brooks County,TX
+49,Brown County,TX
+51,Burleson County,TX
+53,Burnet County,TX
+55,Caldwell County,TX
+57,Calhoun County,TX
+59,Callahan County,TX
+61,Cameron County,TX
+63,Camp County,TX
+65,Carson County,TX
+67,Cass County,TX
+69,Castro County,TX
+71,Chambers County,TX
+73,Cherokee County,TX
+75,Childress County,TX
+77,Clay County,TX
+79,Cochran County,TX
+81,Coke County,TX
+83,Coleman County,TX
+85,Collin County,TX
+87,Collingsworth County,TX
+89,Colorado County,TX
+91,Comal County,TX
+93,Comanche County,TX
+95,Concho County,TX
+97,Cooke County,TX
+99,Coryell County,TX
+101,Cottle County,TX
+103,Crane County,TX
+105,Crockett County,TX
+107,Crosby County,TX
+109,Culberson County,TX
+111,Dallam County,TX
+113,Dallas County,TX
+115,Dawson County,TX
+117,Deaf Smith County,TX
+119,Delta County,TX
+121,Denton County,TX
+123,DeWitt County,TX
+125,Dickens County,TX
+127,Dimmit County,TX
+129,Donley County,TX
+131,Duval County,TX
+133,Eastland County,TX
+135,Ector County,TX
+137,Edwards County,TX
+139,Ellis County,TX
+141,El Paso County,TX
+143,Erath County,TX
+145,Falls County,TX
+147,Fannin County,TX
+149,Fayette County,TX
+151,Fisher County,TX
+153,Floyd County,TX
+155,Foard County,TX
+157,Fort Bend County,TX
+159,Franklin County,TX
+161,Freestone County,TX
+163,Frio County,TX
+165,Gaines County,TX
+167,Galveston County,TX
+169,Garza County,TX
+171,Gillespie County,TX
+173,Glasscock County,TX
+175,Goliad County,TX
+177,Gonzales County,TX
+179,Gray County,TX
+181,Grayson County,TX
+183,Gregg County,TX
+185,Grimes County,TX
+187,Guadalupe County,TX
+189,Hale County,TX
+191,Hall County,TX
+193,Hamilton County,TX
+195,Hansford County,TX
+197,Hardeman County,TX
+199,Hardin County,TX
+201,Harris County,TX
+203,Harrison County,TX
+205,Hartley County,TX
+207,Haskell County,TX
+209,Hays County,TX
+211,Hemphill County,TX
+213,Henderson County,TX
+215,Hidalgo County,TX
+217,Hill County,TX
+219,Hockley County,TX
+221,Hood County,TX
+223,Hopkins County,TX
+225,Houston County,TX
+227,Howard County,TX
+229,Hudspeth County,TX
+231,Hunt County,TX
+233,Hutchinson County,TX
+235,Irion County,TX
+237,Jack County,TX
+239,Jackson County,TX
+241,Jasper County,TX
+243,Jeff Davis County,TX
+245,Jefferson County,TX
+247,Jim Hogg County,TX
+249,Jim Wells County,TX
+251,Johnson County,TX
+253,Jones County,TX
+255,Karnes County,TX
+257,Kaufman County,TX
+259,Kendall County,TX
+261,Kenedy County,TX
+263,Kent County,TX
+265,Kerr County,TX
+267,Kimble County,TX
+269,King County,TX
+271,Kinney County,TX
+273,Kleberg County,TX
+275,Knox County,TX
+277,Lamar County,TX
+279,Lamb County,TX
+281,Lampasas County,TX
+283,La Salle County,TX
+285,Lavaca County,TX
+287,Lee County,TX
+289,Leon County,TX
+291,Liberty County,TX
+293,Limestone County,TX
+295,Lipscomb County,TX
+297,Live Oak County,TX
+299,Llano County,TX
+301,Loving County,TX
+303,Lubbock County,TX
+305,Lynn County,TX
+307,McCulloch County,TX
+309,McLennan County,TX
+311,McMullen County,TX
+313,Madison County,TX
+315,Marion County,TX
+317,Martin County,TX
+319,Mason County,TX
+321,Matagorda County,TX
+323,Maverick County,TX
+325,Medina County,TX
+327,Menard County,TX
+329,Midland County,TX
+331,Milam County,TX
+333,Mills County,TX
+335,Mitchell County,TX
+337,Montague County,TX
+339,Montgomery County,TX
+341,Moore County,TX
+343,Morris County,TX
+345,Motley County,TX
+347,Nacogdoches County,TX
+349,Navarro County,TX
+351,Newton County,TX
+353,Nolan County,TX
+355,Nueces County,TX
+357,Ochiltree County,TX
+359,Oldham County,TX
+361,Orange County,TX
+363,Palo Pinto County,TX
+365,Panola County,TX
+367,Parker County,TX
+369,Parmer County,TX
+371,Pecos County,TX
+373,Polk County,TX
+375,Potter County,TX
+377,Presidio County,TX
+379,Rains County,TX
+381,Randall County,TX
+383,Reagan County,TX
+385,Real County,TX
+387,Red River County,TX
+389,Reeves County,TX
+391,Refugio County,TX
+393,Roberts County,TX
+395,Robertson County,TX
+397,Rockwall County,TX
+399,Runnels County,TX
+401,Rusk County,TX
+403,Sabine County,TX
+405,San Augustine County,TX
+407,San Jacinto County,TX
+409,San Patricio County,TX
+411,San Saba County,TX
+413,Schleicher County,TX
+415,Scurry County,TX
+417,Shackelford County,TX
+419,Shelby County,TX
+421,Sherman County,TX
+423,Smith County,TX
+425,Somervell County,TX
+427,Starr County,TX
+429,Stephens County,TX
+431,Sterling County,TX
+433,Stonewall County,TX
+435,Sutton County,TX
+437,Swisher County,TX
+439,Tarrant County,TX
+441,Taylor County,TX
+443,Terrell County,TX
+445,Terry County,TX
+447,Throckmorton County,TX
+449,Titus County,TX
+451,Tom Green County,TX
+453,Travis County,TX
+455,Trinity County,TX
+457,Tyler County,TX
+459,Upshur County,TX
+461,Upton County,TX
+463,Uvalde County,TX
+465,Val Verde County,TX
+467,Van Zandt County,TX
+469,Victoria County,TX
+471,Walker County,TX
+473,Waller County,TX
+475,Ward County,TX
+477,Washington County,TX
+479,Webb County,TX
+481,Wharton County,TX
+483,Wheeler County,TX
+485,Wichita County,TX
+487,Wilbarger County,TX
+489,Willacy County,TX
+491,Williamson County,TX
+493,Wilson County,TX
+495,Winkler County,TX
+497,Wise County,TX
+499,Wood County,TX
+501,Yoakum County,TX
+503,Young County,TX
+505,Zapata County,TX
+507,Zavala County,TX
+1,Beaver County,UT
+3,Box Elder County,UT
+5,Cache County,UT
+7,Carbon County,UT
+9,Daggett County,UT
+11,Davis County,UT
+13,Duchesne County,UT
+15,Emery County,UT
+17,Garfield County,UT
+19,Grand County,UT
+21,Iron County,UT
+23,Juab County,UT
+25,Kane County,UT
+27,Millard County,UT
+29,Morgan County,UT
+31,Piute County,UT
+33,Rich County,UT
+35,Salt Lake County,UT
+37,San Juan County,UT
+39,Sanpete County,UT
+41,Sevier County,UT
+43,Summit County,UT
+45,Tooele County,UT
+47,Uintah County,UT
+49,Utah County,UT
+51,Wasatch County,UT
+53,Washington County,UT
+55,Wayne County,UT
+57,Weber County,UT
+1,Addison County,VT
+3,Bennington County,VT
+5,Caledonia County,VT
+7,Chittenden County,VT
+9,Essex County,VT
+11,Franklin County,VT
+13,Grand Isle County,VT
+15,Lamoille County,VT
+17,Orange County,VT
+19,Orleans County,VT
+21,Rutland County,VT
+23,Washington County,VT
+25,Windham County,VT
+27,Windsor County,VT
+1,Accomack,VA
+3,Albemarle,VA
+5,Alleghany,VA
+7,Amelia,VA
+9,Amherst,VA
+11,Appomattox,VA
+13,Arlington,VA
+15,Augusta,VA
+17,Bath,VA
+19,Bedford,VA
+21,Bland,VA
+23,Botetourt,VA
+25,Brunswick,VA
+27,Buchanan,VA
+29,Buckingham,VA
+31,Campbell,VA
+33,Caroline,VA
+35,Carroll,VA
+36,Charles City,VA
+37,Charlotte,VA
+41,Chesterfield,VA
+43,Clarke,VA
+45,Craig,VA
+47,Culpeper,VA
+49,Cumberland,VA
+51,Dickenson,VA
+53,Dinwiddie,VA
+57,Essex,VA
+59,Fairfax,VA
+61,Fauquier,VA
+63,Floyd,VA
+65,Fluvanna,VA
+67,Franklin,VA
+69,Frederick,VA
+71,Giles,VA
+73,Gloucester,VA
+75,Goochland,VA
+77,Grayson,VA
+79,Greene,VA
+81,Greensville,VA
+83,Halifax,VA
+85,Hanover,VA
+87,Henrico,VA
+89,Henry,VA
+91,Highland,VA
+93,Isle of Wight,VA
+95,James City,VA
+97,King and Queen,VA
+99,King George,VA
+101,King William,VA
+103,Lancaster,VA
+105,Lee,VA
+107,Loudoun,VA
+109,Louisa,VA
+111,Lunenburg,VA
+113,Madison,VA
+115,Mathews,VA
+117,Mecklenburg,VA
+119,Middlesex,VA
+121,Montgomery,VA
+125,Nelson,VA
+127,New Kent,VA
+131,Northampton,VA
+133,Northumberland,VA
+135,Nottoway,VA
+137,Orange,VA
+139,Page,VA
+141,Patrick,VA
+143,Pittsylvania,VA
+145,Powhatan,VA
+147,Prince Edward,VA
+149,Prince George,VA
+153,Prince William,VA
+155,Pulaski,VA
+157,Rappahannock,VA
+159,Richmond,VA
+161,Roanoke,VA
+163,Rockbridge,VA
+165,Rockingham,VA
+167,Russell,VA
+169,Scott,VA
+171,Shenandoah,VA
+173,Smyth,VA
+175,Southampton,VA
+177,Spotsylvania,VA
+179,Stafford,VA
+181,Surry,VA
+183,Sussex,VA
+185,Tazewell,VA
+187,Warren,VA
+191,Washington,VA
+193,Westmoreland,VA
+195,Wise,VA
+197,Wythe,VA
+199,York,VA
+510,Alexandria City,VA
+515,Bedford City,VA
+520,Bristol City,VA
+530,Buena Vista City,VA
+540,Charlottesville City,VA
+550,Chesapeake City,VA
+560,Clifton Forge City,VA
+570,Colonial Heights City,VA
+580,Covington City,VA
+590,Danville City,VA
+595,Emporia City,VA
+600,Fairfax City,VA
+610,Falls Church City,VA
+620,Franklin City,VA
+630,Fredericksburg City,VA
+640,Galax City,VA
+650,Hampton City,VA
+660,Harrisonburg City,VA
+670,Hopewell City,VA
+678,Lexington City,VA
+680,Lynchburg City,VA
+683,Manassas City,VA
+685,Manassas Park City,VA
+690,Martinsville City,VA
+700,Newport News City,VA
+710,Norfolk City,VA
+720,Norton City,VA
+730,Petersburg City,VA
+735,Poquoson City,VA
+740,Portsmouth City,VA
+750,Radford,VA
+760,Richmond City,VA
+770,Roanoke City,VA
+775,Salem City,VA
+780,South Boston City,VA
+790,Staunton City,VA
+800,Suffolk City,VA
+810,Virginia Beach City,VA
+820,Waynesboro City,VA
+830,Williamsburg City,VA
+840,Winchester City,VA
+1,Adams County,WA
+3,Asotin County,WA
+5,Benton County,WA
+7,Chelan County,WA
+9,Clallam County,WA
+11,Clark County,WA
+13,Columbia County,WA
+15,Cowlitz County,WA
+17,Douglas County,WA
+19,Ferry County,WA
+21,Franklin County,WA
+23,Garfield County,WA
+25,Grant County,WA
+27,Grays Harbor County,WA
+29,Island County,WA
+31,Jefferson County,WA
+33,King County,WA
+35,Kitsap County,WA
+37,Kittitas County,WA
+39,Klickitat County,WA
+41,Lewis County,WA
+43,Lincoln County,WA
+45,Mason County,WA
+47,Okanogan County,WA
+49,Pacific County,WA
+51,Pend Oreille County,WA
+53,Pierce County,WA
+55,San Juan County,WA
+57,Skagit County,WA
+59,Skamania County,WA
+61,Snohomish County,WA
+63,Spokane County,WA
+65,Stevens County,WA
+67,Thurston County,WA
+69,Wahkiakum County,WA
+71,Walla Walla County,WA
+73,Whatcom County,WA
+75,Whitman County,WA
+77,Yakima County,WA
+1,Barbour County,WV
+3,Berkeley County,WV
+5,Boone County,WV
+7,Braxton County,WV
+9,Brooke County,WV
+11,Cabell County,WV
+13,Calhoun County,WV
+15,Clay County,WV
+17,Doddridge County,WV
+19,Fayette County,WV
+21,Gilmer County,WV
+23,Grant County,WV
+25,Greenbrier County,WV
+27,Hampshire County,WV
+29,Hancock County,WV
+31,Hardy County,WV
+33,Harrison County,WV
+35,Jackson County,WV
+37,Jefferson County,WV
+39,Kanawha County,WV
+41,Lewis County,WV
+43,Lincoln County,WV
+45,Logan County,WV
+47,McDowell County,WV
+49,Marion County,WV
+51,Marshall County,WV
+53,Mason County,WV
+55,Mercer County,WV
+57,Mineral County,WV
+59,Mingo County,WV
+61,Monongalia County,WV
+63,Monroe County,WV
+65,Morgan County,WV
+67,Nicholas County,WV
+69,Ohio County,WV
+71,Pendleton County,WV
+73,Pleasants County,WV
+75,Pocahontas County,WV
+77,Preston County,WV
+79,Putnam County,WV
+81,Raleigh County,WV
+83,Randolph County,WV
+85,Ritchie County,WV
+87,Roane County,WV
+89,Summers County,WV
+91,Taylor County,WV
+93,Tucker County,WV
+95,Tyler County,WV
+97,Upshur County,WV
+99,Wayne County,WV
+101,Webster County,WV
+103,Wetzel County,WV
+105,Wirt County,WV
+107,Wood County,WV
+109,Wyoming County,WV
+1,Adams County,WI
+3,Ashland County,WI
+5,Barron County,WI
+7,Bayfield County,WI
+9,Brown County,WI
+11,Buffalo County,WI
+13,Burnett County,WI
+15,Calumet County,WI
+17,Chippewa County,WI
+19,Clark County,WI
+21,Columbia County,WI
+23,Crawford County,WI
+25,Dane County,WI
+27,Dodge County,WI
+29,Door County,WI
+31,Douglas County,WI
+33,Dunn County,WI
+35,Eau Claire County,WI
+37,Florence County,WI
+39,Fond du Lac County,WI
+41,Forest County,WI
+43,Grant County,WI
+45,Green County,WI
+47,Green Lake County,WI
+49,Iowa County,WI
+51,Iron County,WI
+53,Jackson County,WI
+55,Jefferson County,WI
+57,Juneau County,WI
+59,Kenosha County,WI
+61,Kewaunee County,WI
+63,La Crosse County,WI
+65,Lafayette County,WI
+67,Langlade County,WI
+69,Lincoln County,WI
+71,Manitowoc County,WI
+73,Marathon County,WI
+75,Marinette County,WI
+77,Marquette County,WI
+78,Menominee County,WI
+79,Milwaukee County,WI
+81,Monroe County,WI
+83,Oconto County,WI
+85,Oneida County,WI
+87,Outagamie County,WI
+89,Ozaukee County,WI
+91,Pepin County,WI
+93,Pierce County,WI
+95,Polk County,WI
+97,Portage County,WI
+99,Price County,WI
+101,Racine County,WI
+103,Richland County,WI
+105,Rock County,WI
+107,Rusk County,WI
+109,St. Croix County,WI
+111,Sauk County,WI
+113,Sawyer County,WI
+115,Shawano County,WI
+117,Sheboygan County,WI
+119,Taylor County,WI
+121,Trempealeau County,WI
+123,Vernon County,WI
+125,Vilas County,WI
+127,Walworth County,WI
+129,Washburn County,WI
+131,Washington County,WI
+133,Waukesha County,WI
+135,Waupaca County,WI
+137,Waushara County,WI
+139,Winnebago County,WI
+141,Wood County,WI
+1,Albany County,WY
+3,Big Horn County,WY
+5,Campbell County,WY
+7,Carbon County,WY
+9,Converse County,WY
+11,Crook County,WY
+13,Fremont County,WY
+15,Goshen County,WY
+17,Hot Springs County,WY
+19,Johnson County,WY
+21,Laramie County,WY
+23,Lincoln County,WY
+25,Natrona County,WY
+27,Niobrara County,WY
+29,Park County,WY
+31,Platte County,WY
+33,Sheridan County,WY
+35,Sublette County,WY
+37,Sweetwater County,WY
+39,Teton County,WY
+41,Uinta County,WY
+43,Washakie County,WY
+45,Weston County,WY
