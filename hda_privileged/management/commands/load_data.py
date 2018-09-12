@@ -34,32 +34,36 @@ class Command(BaseCommand):
             print(ALREADY_LOADED_ERROR_MESSAGE)
             return
 
+
         print("Loading US State Data ")
-        mystate = US_State()
-        mycounty = US_County()
-        for row in csv.DictReader(open('./data.csv')):           
-            mystate.full   = row['full']
-            mystate.short = row['short']
-            mystate.fips       = row['fips']
-            mystate.save()
-            
-        for row in csv.DictReader(open('./counties.csv', 'r')):           
-            mystate = US_State.objects.filter(pk=row['state_id']).values
-            for m in mystate: 
-                # print(m.get('short'))
-                
-                # mycounty.state_id = m.get
-                # print(m) 
-                if m.get('short') == US_County.objects.filter(state_id=row['state_id']):
-                #     # mstate.mycounty_set.create(name=row['name'], fips=row['fips'])
-                #     mycounty.state_id = US_State.objects.filter(pk=row['state_id']).values()
-                #     mycounty.fips = row['fips']
-                #     mycounty.name = row['name']
-                    print(m.get('short'))
-                # mycounty.save()
-                # print(US_County.objects.filter(state_id=row['state_id']).values()) 
-                    
 
+        for row in csv.DictReader(open('./data.csv')):
+            # easier to make a brand new state object every iteration
+            a_state = US_State(
+                full=row['full'],
+                short=row['short'],
+                fips=row['fips']
+            )
+            a_state.save()
 
-            
-        
+        print("Loading US County Data ")
+
+        # TODO can we speed this up with some kind of bulk insert?
+        for row in csv.DictReader(open('./counties.csv')):
+            fips = row['fips']
+            name = row['name']
+            state = row['state_id']
+
+            # use whatever the primary key field of US_State is to
+            # get exactly one state object
+            # TODO error handling: what if the state code in the county
+            # CSV file is malformed?
+            # TODO this is slow for states with lots of counties;
+            # we could cache the state objects in a dictionary to speed it up?
+            associated_state = US_State.objects.get(short=state)
+
+            a_county = US_County(
+                fips=fips,
+                name=name,
+                state=associated_state)
+            a_county.save()

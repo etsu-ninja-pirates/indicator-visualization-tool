@@ -26,37 +26,7 @@ class US_State(models.Model):
 class US_County(models.Model):
     fips = models.CharField(max_length=3)
     name = models.CharField(max_length=200)
-    state = models.ForeignKey(US_State, related_name='state_id', on_delete=models.CASCADE)
+    state = models.ForeignKey(US_State, related_name='counties', on_delete=models.CASCADE)
     
     def __str__(self):
-        return self.fips + ' - '+ self.name +' - '+ self.state
-
-
-
-# class US_States(models.Model): 
-#     # state_id = models.BigIntegerField(primary_key=True)
-#     abbreviation = models.CharField(primary_key=True, max_length=2)
-#     state_name = models.CharField(max_length=20)
-#     s_fips = models.CharField(max_length=2, default="")
-    
-#     def __str__(self):
-#         return "%s  -  %s - %s" %(self.s_fips, self.abbreviation, self.state_name)
-
-# class US_Counties(models.Model):
-#     s_fips = models.CharField(max_length=2)
-#     abbreviation = models.ForeignKey(US_States, on_delete=models.CASCADE, null=True, blank=True)
-#     county_name = models.CharField(max_length=200)
-#     c_fips = models.CharField(primary_key=True, max_length=3,default="")
-
-    # def __str__(self):
-    #     return "%s -  %s - %s - %s" % (self.c_fips, self.county_name, self.abbreviation, self.s_fips)
-
-# class Data_Point(models.Model):
-#     point_id = models.BigIntegerField(primary_key=True)
-#     value = models.IntegerField(default= 0)
-#     percentile = models.FloatField(default= 0)
-#     source = models.CharField(max_length=200)
-#     interval = models.CharField(max_length=200)
-
-#     data_id = models.ForeignKey(Data_Set, on_delete=models.CASCADE)
-    # c_fips = models.ForeignKey(US_States, on_delete=models.CASCADE)
+        return self.fips + ' - '+ self.name +' - '+ self.state_id
