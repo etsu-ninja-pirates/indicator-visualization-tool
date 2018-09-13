@@ -1,0 +1,135 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+  <!-- Meta stuff, from: https://getbootstrap.com/docs/3.3/getting-started/#template -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--
+    Bootstrap's base CSS via CDN - previously we hosted this ourselves but
+    I think I've been converted: https://stackoverflow.com/q/24132951
+    NOTE that this is Bootstrap 3.3.x!
+    -->
+  <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+    <!-- FontAwesome icon fonts -->
+   <link rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css"
+    integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW"
+    crossorigin="anonymous">
+   <link rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css"
+    integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7"
+    crossorigin="anonymous">
+
+    <!-- Our CSS on top of Bootstrap -->
+   <link href="{% static 'css/theme.css'%}" rel="stylesheet">
+
+   <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+  <div class="container">
+    <h1>ETSU College of Public Health</h1>
+
+    {% block nav %}
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+
+          <!-- "Hamburger" that shows when collapsed -->
+        <div class="navbar-header">
+          <button type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+            aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <!-- Left region of nav bar -->
+          <ul class="nav navbar-nav">
+            <!-- First dropdown code -->
+            <li class="dropdown">
+              <a href="#"
+                class="dropdown-toggle"
+                data-toggle="dropdown"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false">Health Indicator <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Obesity</a></li>
+                <li><a href="#">Education</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Select</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- Search form area -->
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Find County">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Year">
+            </div>
+            <button type="submit" class="btn btn-info">Go</button>
+          </form>
+
+          <!-- Right-aligned region of nav bar -->
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Placeholder</a></li>
+            <!-- Second dropdown code -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Table</a></li>
+                <li><a href="#">Chart</a></li>
+                <li><a href="#">Clear</a></li>
+              </ul>
+            </li>
+          </ul>
+
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav><!-- /navbar-default -->
+    {% endblock %}
+  </div><!-- /container -->
+
+  <div class="container">
+    {% block content %}
+    {% endblock %}
+  </div>
+
+  <hr>
+  {% block footer %}
+  <footer class="application-footer">
+    <div class="container" style="bottom:0">
+      <a href="{% url 'login' %}" style="float:right; color:MidnightBlue"><i class="fas fa-user"></i> Admin</a>
+      <p style="float:left; font-size:10px">ETSU College of Public Health | 104 Lamb Hall | Box 70623 | Johnson City, TN 37614 | Tel.: 423-439-4243 | Fax.: 423-439-5238</p>
+    </div>
+  </footer>
+  {% endblock %}
+
+
+  <!-- Bootstrap's JS (again, note that this is 3.3.x) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+
+  <!-- Place for child pages to add more Javascript if needed -->
+  {% block extra_scripts %}
+  {% endblock %}
+</body>
+</html>

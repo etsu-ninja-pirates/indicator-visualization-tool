@@ -37,3 +37,6 @@ def create_metric(request):
 
 def manage_metrics(request):
     return render(request, 'hda_privileged/manage_metrics.html')
+
+def sampleNavBar(request):
+    return render(request, 'hda_privileged/sample.html')
