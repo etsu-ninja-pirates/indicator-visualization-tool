@@ -1,0 +1,3146 @@
+short,full,fips,name,fips,state_id,percentile
+AL,Alabama,01,Autauga,001,AL,51.4
+AL,Alabama,01,Baldwin,003,AL,41.8
+AL,Alabama,01,Barbour,005,AL,62.2
+AL,Alabama,01,Bibb,007,AL,46.8
+AL,Alabama,01,Blount,009,AL,64.8
+AL,Alabama,01,Bullock,011,AL,42.4
+AL,Alabama,01,Butler,013,AL,40.8
+AL,Alabama,01,Calhoun,015,AL,46.2
+AL,Alabama,01,Chambers,017,AL,67.4
+AL,Alabama,01,Cherokee,019,AL,43.4
+AL,Alabama,01,Chilton,021,AL,52.2
+AL,Alabama,01,Choctaw,023,AL,67.4
+AL,Alabama,01,Clarke,025,AL,65.6
+AL,Alabama,01,Clay,027,AL,77
+AL,Alabama,01,Cleburne,029,AL,38.6
+AL,Alabama,01,Coffee,031,AL,36.2
+AL,Alabama,01,Colbert,033,AL,72.6
+AL,Alabama,01,Conecuh,035,AL,62.6
+AL,Alabama,01,Coosa,037,AL,66.6
+AL,Alabama,01,Covington,039,AL,48.4
+AL,Alabama,01,Crenshaw,041,AL,46.2
+AL,Alabama,01,Cullman,043,AL,44.2
+AL,Alabama,01,Dale,045,AL,55.4
+AL,Alabama,01,Dallas,047,AL,48
+AL,Alabama,01,Dekalb,049,AL,32.4
+AL,Alabama,01,Elmore,051,AL,56
+AL,Alabama,01,Escambia,053,AL,59.8
+AL,Alabama,01,Etowah,055,AL,58.4
+AL,Alabama,01,Fayette,057,AL,56.8
+AL,Alabama,01,Franklin,059,AL,35.8
+AL,Alabama,01,Geneva,061,AL,46.8
+AL,Alabama,01,Greene,063,AL,37.4
+AL,Alabama,01,Hale,065,AL,39
+AL,Alabama,01,Henry,067,AL,65.8
+AL,Alabama,01,Houston,069,AL,47.8
+AL,Alabama,01,Jackson,071,AL,38
+AL,Alabama,01,Jefferson,073,AL,57.4
+AL,Alabama,01,Lamar,075,AL,51.4
+AL,Alabama,01,Lauderdale,077,AL,72.6
+AL,Alabama,01,Lawrence,079,AL,59
+AL,Alabama,01,Lee,081,AL,48.8
+AL,Alabama,01,Limestone,083,AL,52.2
+AL,Alabama,01,Lowndes,085,AL,23.6
+AL,Alabama,0,Macon,087,AL,66
+AL,Alabama,01,Madison,089,AL,64.6
+AL,Alabama,01,Marengo,091,AL,42.4
+AL,Alabama,01,Marion,093,AL,55.6
+AL,Alabama,01,Marshall,095,AL,45.6
+AL,Alabama,01,Mobile,097,AL,70.2
+AL,Alabama,01,Monroe,099,AL,78.4
+AL,Alabama,01,Montgomery,101,AL,49.6
+AL,Alabama,01,Morgan,103,AL,57.2
+AL,Alabama,01,Perry,105,AL,46.6
+AL,Alabama,01,Pickens,107,AL,41.8
+AL,Alabama,01,Pike,109,AL,36.8
+AL,Alabama,01,Randolph,111,AL,47
+AL,Alabama,01,Russell,113,AL,56.8
+AL,Alabama,01,St. Clair,115,AL,56.2
+AL,Alabama,01,Shelby,117,AL,47.4
+AL,Alabama,01,Sumter,119,AL,56.6
+AL,Alabama,01,Talladega,121,AL,46.2
+AL,Alabama,01,Tallapoosa,123,AL,26.2
+AL,Alabama,01,Tuscaloosa,125,AL,48.4
+AL,Alabama,01,Walker,127,AL,30
+AL,Alabama,01,Washington,129,AL,46.4
+AL,Alabama,01,Wilcox,131,AL,59.2
+AL,Alabama,01,Winston,133,AL,38
+AK,Alaska,02,Aleutians East Borough,013,AK,45.4
+AK,Alaska,02,Aleutians West Census Area,,AK,59.4
+AK,Alaska,02,Anchorage,020,AK,65
+AK,Alaska,02,Bethel Census Area,,AK,39.4
+AK,Alaska,02,Bristol Bay Borough,060,AK,46.2
+AK,Alaska,02,Denali Borough,068,AK,40.8
+AK,Alaska,02,Dillingham Census Area,,AK,63.6
+AK,Alaska,02,Fairbanks North Star Borough,,AK,38.8
+AK,Alaska,02,Haines Borough,100,AK,42.6
+AK,Alaska,02,Hoonah - Angoon Census Area,,AK,45.4
+AK,Alaska,02,Juneau,110,AK,47.6
+AK,Alaska,02,Kenai Peninsula Borough,122,AK,28
+AK,Alaska,02,Ketchikan Gateway Borough,130,AK,37.8
+AK,Alaska,02,Kodiak Island Borough,150,AK,43.4
+AK,Alaska,02,Lake and Penninsula Borough,164,AK,54.4
+AK,Alaska,02,Matanuska- Susitna Borough,170,AK,67.8
+AK,Alaska,02,Nome Census Area,,AK,61
+AK,Alaska,02,North Slope Borough,185,AK,53
+AK,Alaska,02,Northwest Arctic Borough,188,AK,47.4
+AK,Alaska,02,Petersburg Borough,195,AK,48.6
+AK,Alaska,02,Prince of Wales- Hyder Census Area,,AK,51.2
+AK,Alaska,02,Sitka,220,AK,45.2
+AK,Alaska,02,Skagway,230,AK,32
+AK,Alaska,02,Southeast Fairbanks Census Area,,AK,42.8
+AK,Alaska,02,Valdez- Corodova Census Area,,AK,57
+AK,Alaska,02,Kusilvak Census Area,,AK,52
+AK,Alaska,02,Wrangell,275,AK,27.8
+AK,Alaska,02,Yakutat,285,AK,61.6
+AK,Alaska,02,Yukon-Koyukuk,,AK,57.2
+AZ,Arizona,04,Apache County,001,AZ,63.4
+AZ,Arizona,04,Cochise County,003,AZ,29.8
+AZ,Arizona,04,Coconino County,005,AZ,65
+AZ,Arizona,04,Gila County,007,AZ,61.4
+AZ,Arizona,04,Graham County,009,AZ,47
+AZ,Arizona,04,Greenlee County,011,AZ,54
+AZ,Arizona,04,La Paz County,012,AZ,47.8
+AZ,Arizona,04,Marciopa County,013,AZ,47.4
+AZ,Arizona,04,Mohave County,015,AZ,58.4
+AZ,Arizona,04,Navajo County,017,AZ,41
+AZ,Arizona,04,Pima County,019,AZ,60
+AZ,Arizona,04,Pinal County,021,AZ,68
+AZ,Arizona,04,Santa Cruz County,023,AZ,40.2
+AZ,Arizona,04,Yavapai County,025,AZ,44.2
+AZ,Arizona,04,Yuma County,027,AZ,59.2
+AR,Arkansas,05,Arkansas County,001,AR,82.6
+AR,Arkansas,05,Ashley County,003,AR,69.2
+AR,Arkansas,05,Baxter County,005,AR,39.2
+AR,Arkansas,05,Benton County,007,AR,46
+AR,Arkansas,05,Boone County,009,AR,39.6
+AR,Arkansas,05,Bradley County,011,AR,54
+AR,Arkansas,05,Calhoun County,013,AR,36.8
+AR,Arkansas,05,Carroll County,015,AR,66.6
+AR,Arkansas,05,Chicot County,017,AR,67
+AR,Arkansas,05,Clark County,019,AR,32.4
+AR,Arkansas,05,Clay County,021,AR,61.4
+AR,Arkansas,05,Cleburne County,023,AR,58.2
+AR,Arkansas,05,Cleveland County,025,AR,40.8
+AR,Arkansas,05,Columbia County,027,AR,53
+AR,Arkansas,05,Conway County,029,AR,69.2
+AR,Arkansas,05,Craighead County,031,AR,61.4
+AR,Arkansas,05,Crawford County,033,AR,46
+AR,Arkansas,05,Crittenden County,035,AR,67.8
+AR,Arkansas,05,Cross County,037,AR,30.2
+AR,Arkansas,05,Dallas County,039,AR,43.2
+AR,Arkansas,05,Desha County,041,AR,78.6
+AR,Arkansas,05,Drew County,043,AR,47
+AR,Arkansas,05,Faulkner County,045,AR,25
+AR,Arkansas,05,Franklin County,047,AR,30.2
+AR,Arkansas,05,Fulton County,049,AR,43
+AR,Arkansas,05,Garland County,051,AR,61.8
+AR,Arkansas,05,Grant County,053,AR,68.6
+AR,Arkansas,05,Greene County,055,AR,52
+AR,Arkansas,05,Hempstead County,057,AR,45.4
+AR,Arkansas,05,Hot Spring County,059,AR,66.4
+AR,Arkansas,05,Howard County,061,AR,78.4
+AR,Arkansas,05,Independence County,063,AR,36.8
+AR,Arkansas,05,Izard County,065,AR,34.2
+AR,Arkansas,05,Jackson County,067,AR,51.8
+AR,Arkansas,05,Jefferson County,069,AR,49.8
+AR,Arkansas,05,Johnson County,071,AR,50.2
+AR,Arkansas,05,Lafayette County,073,AR,64.8
+AR,Arkansas,05,Lawrence County,075,AR,28.2
+AR,Arkansas,05,Lee County,077,AR,56
+AR,Arkansas,05,Lincoln County,079,AR,38
+AR,Arkansas,05,Little River County,081,AR,58.8
+AR,Arkansas,05,Logan County,083,AR,38.4
+AR,Arkansas,05,Lonoke County,085,AR,42.2
+AR,Arkansas,05,Madison County,087,AR,42.6
+AR,Arkansas,05,Marion County,089,AR,31.8
+AR,Arkansas,05,Miller County,091,AR,41
+AR,Arkansas,05,Mississpi County,093,AR,35.8
+AR,Arkansas,05,Monroe County,095,AR,74
+AR,Arkansas,05,Montgomery County,097,AR,42.8
+AR,Arkansas,05,Nevada County,099,AR,62.4
+AR,Arkansas,05,Newton County,101,AR,48.2
+AR,Arkansas,05,Ouachita County,103,AR,44.8
+AR,Arkansas,05,Perry County,105,AR,52
+AR,Arkansas,05,Phillips County,107,AR,28.4
+AR,Arkansas,05,Pike County,109,AR,64
+AR,Arkansas,05,Poinsett County,111,AR,24
+AR,Arkansas,05,Polk County,113,AR,61.4
+AR,Arkansas,05,Pope County,115,AR,36.6
+AR,Arkansas,05,Prairie County,117,AR,65.8
+AR,Arkansas,05,Pulaski County,119,AR,44
+AR,Arkansas,05,Randolph County,121,AR,42.4
+AR,Arkansas,05,St. Francis County,123,AR,60
+AR,Arkansas,05,Saline County,125,AR,63.2
+AR,Arkansas,05,Scott County,127,AR,66.2
+AR,Arkansas,05,Searcy County,129,AR,77.6
+AR,Arkansas,05,Sebastian County,131,AR,49.6
+AR,Arkansas,05,Sevier County,133,AR,25
+AR,Arkansas,05,Sharp County,135,AR,49.6
+AR,Arkansas,05,Stone County,137,AR,62.2
+AR,Arkansas,05,Union County,139,AR,66
+AR,Arkansas,05,Van Buren County,141,AR,46
+AR,Arkansas,05,Washington County,143,AR,55.8
+AR,Arkansas,05,White County,145,AR,48.6
+AR,Arkansas,05,Woodruff County,147,AR,59.6
+AR,Arkansas,05,Yell County,149,AR,63.2
+CA,California,06,Alameda County,001,CA,31
+CA,California,06,Alpine County,003,CA,47.8
+CA,California,06,Amador County,005,CA,63.8
+CA,California,06,Butte County,007,CA,73
+CA,California,06,Calaveras County,009,CA,55
+CA,California,06,Colusa County,011,CA,71.8
+CA,California,06,Contra Costa County,013,CA,48.2
+CA,California,06,Del Norte County,015,CA,47.2
+CA,California,06,El Dorado County,017,CA,68
+CA,California,06,Fresno County,019,CA,57.6
+CA,California,06,Glenn County,021,CA,22.8
+CA,California,06,Humboldt County,023,CA,69.8
+CA,California,06,Imperial County,025,CA,33.4
+CA,California,06,Inyo County,027,CA,53.4
+CA,California,06,Kern County,029,CA,52.4
+CA,California,06,Kings County,031,CA,59.4
+CA,California,06,Lake County,033,CA,64.6
+CA,California,06,Lassen County,035,CA,44.2
+CA,California,06,Los Angeles County,037,CA,46
+CA,California,06,Madera County,039,CA,51.6
+CA,California,06,Marin County,041,CA,61.4
+CA,California,06,Mariposa County,043,CA,62
+CA,California,06,Mendocino County,045,CA,47.2
+CA,California,06,Merced County,047,CA,64
+CA,California,06,Modoc County,049,CA,35.2
+CA,California,06,Mono County,051,CA,53
+CA,California,06,Monterey County,053,CA,43.6
+CA,California,06,Napa County,055,CA,47.2
+CA,California,06,Neveda County,057,CA,43.4
+CA,California,06,Orange County,059,CA,56.4
+CA,California,06,Placer County,061,CA,70.2
+CA,California,06,Plumas County,063,CA,18.6
+CA,California,06,Riverside County,065,CA,64
+CA,California,06,Sacramento County,067,CA,50.8
+CA,California,06,San Benito County,069,CA,48.2
+CA,California,06,San Bernardino County,071,CA,51.2
+CA,California,06,San Diego County,073,CA,45.8
+CA,California,06,San Francisco ,075,CA,52.8
+CA,California,06,San Joaquin County,077,CA,41.8
+CA,California,06,San Luis Obispo County,079,CA,59
+CA,California,06,San Mateo County,081,CA,46.6
+CA,California,06,Santa Barbara County,083,CA,41.6
+CA,California,06,Santa Clara County,085,CA,52
+CA,California,06,Santa Cruz County,087,CA,48.4
+CA,California,06,Shasta County,089,CA,52.2
+CA,California,06,Sierra County,091,CA,35.6
+CA,California,06,Siskiyou County,093,CA,35.4
+CA,California,06,Solano County,095,CA,53.4
+CA,California,06,Sonoma County,097,CA,87.2
+CA,California,06,Stanislaus County,099,CA,69.4
+CA,California,06,Sutter County,101,CA,71.8
+CA,California,06,Tehama County,103,CA,49.2
+CA,California,06,Trinty County,105,CA,45.2
+CA,California,06,Tulare County,107,CA,44.4
+CA,California,06,Tuolumne County,109,CA,46.6
+CA,California,06,Ventura County,111,CA,43.8
+CA,California,06,Yolo County,113,CA,29.2
+CA,California,06,Yuba County,115,CA,18.8
+CO,Colorado ,08,Adams County,001,CO,47.2
+CO,Colorado ,08,Alamosa County,003,CO,48.2
+CO,Colorado ,08,Arapahoe County,005,CO,44.6
+CO,Colorado ,08,Archuleta County,007,CO,25.6
+CO,Colorado ,08,Baca County,009,CO,65.8
+CO,Colorado ,08,Bent County,011,CO,72
+CO,Colorado ,08,Boulder County,013,CO,45.8
+CO,Colorado ,08,Broomfield,014,CO,51.6
+CO,Colorado ,08,Chaffee County,015,CO,57.8
+CO,Colorado ,08,Cheyenne County,017,CO,56.2
+CO,Colorado ,08,Clear Creek County,019,CO,44.4
+CO,Colorado ,08,Conejos County,021,CO,12.8
+CO,Colorado ,08,Costilla County,023,CO,33.2
+CO,Colorado ,08,Crowley County,025,CO,66.8
+CO,Colorado ,08,Custer County,027,CO,52
+CO,Colorado ,08,Delta County,029,CO,39.8
+CO,Colorado ,08,Denver,031,CO,58.4
+CO,Colorado ,08,Dolores County,033,CO,45
+CO,Colorado ,08,Douglas County,035,CO,35.8
+CO,Colorado ,08,Eagle County,037,CO,37.6
+CO,Colorado ,08,Elbert County,041,CO,65.8
+CO,Colorado ,08,El Paso County,039,CO,41
+CO,Colorado ,08,Fremont County,043,CO,42
+CO,Colorado ,08,Garfield County,045,CO,40.6
+CO,Colorado ,08,Gilpin County,047,CO,40.4
+CO,Colorado ,08,Grand County,049,CO,39.8
+CO,Colorado ,08,Gunnison County,051,CO,65.8
+CO,Colorado ,08,Hinsdale County,053,CO,43.8
+CO,Colorado ,08,Huerfano County,055,CO,63.2
+CO,Colorado ,08,Jackson County,057,CO,66.2
+CO,Colorado ,08,Jefferson County,059,CO,56
+CO,Colorado ,08,Kiowa County,061,CO,38.8
+CO,Colorado ,08,Kit Carson County,063,CO,49.2
+CO,Colorado ,08,Lake County,065,CO,48.8
+CO,Colorado ,08,La Plata County,067,CO,44.8
+CO,Colorado ,08,Larimer County,069,CO,33.2
+CO,Colorado ,08,Las Animas County,071,CO,64.8
+CO,Colorado ,08,Lincoln County,073,CO,52.6
+CO,Colorado ,08,Logan County,075,CO,39.6
+CO,Colorado ,08,Mesa County,077,CO,51
+CO,Colorado ,08,Mineral County,079,CO,56.8
+CO,Colorado ,08,Moffat County,081,CO,53.4
+CO,Colorado ,08,Montezuma County,083,CO,64.8
+CO,Colorado ,08,Montrose County,085,CO,66.2
+CO,Colorado ,08,Morgan County,087,CO,53.8
+CO,Colorado ,08,Otero County,089,CO,46.2
+CO,Colorado ,08,Ouray County,091,CO,36
+CO,Colorado ,08,Park County,093,CO,31.2
+CO,Colorado ,08,Phillips County,095,CO,42.8
+CO,Colorado ,08,Pitkin County,097,CO,50.4
+CO,Colorado ,08,Prowers County,099,CO,50
+CO,Colorado ,08,Pueblo County,101,CO,43
+CO,Colorado ,08,Rio Blanco County,103,CO,35.8
+CO,Colorado ,08,Rio Grande County,105,CO,60.8
+CO,Colorado ,08,Routt County,107,CO,67.2
+CO,Colorado ,08,Saguache County,109,CO,62.4
+CO,Colorado ,08,San Juan County,111,CO,61.6
+CO,Colorado ,08,San Miguel County,113,CO,50.8
+CO,Colorado ,08,Sedgwick County,115,CO,59.2
+CO,Colorado ,08,Summit County,117,CO,53.2
+CO,Colorado ,08,Teller County,119,CO,58.4
+CO,Colorado ,08,Washington County,121,CO,31.6
+CO,Colorado ,08,Weld County,123,CO,53.8
+CO,Colorado ,08,Yuma County,125,CO,53.8
+CT,Connecticut,09,Fairfield County,001,CT,62.4
+CT,Connecticut,09,Hartford County,003,CT,60.2
+CT,Connecticut,09,Litchfield County,005,CT,71.4
+CT,Connecticut,09,Middlesex County,007,CT,51.6
+CT,Connecticut,09,New Haven County,009,CT,66.8
+CT,Connecticut,09,New London County,011,CT,47.2
+CT,Connecticut,09,Tolland County,013,CT,49.2
+CT,Connecticut,09,Windham County,015,CT,34.2
+DE,Delaware,10,Kent County,001,DE,63
+DE,Delaware,10,New Castle County,003,DE,49
+DE,Delaware,10,Sussex County,005,DE,55.6
+DC,District of Columbia,11,District of Columbia,,DC,52.6
+FL,Florida,12,Alachua County,001,FL,53.4
+FL,Florida,12,Baker County,003,FL,64.6
+FL,Florida,12,Bay County,005,FL,47.4
+FL,Florida,12,Bradford County,007,FL,58
+FL,Florida,12,Brevard County,009,FL,60.6
+FL,Florida,12,Broward County,011,FL,53.2
+FL,Florida,12,Calhoun County,013,FL,38.8
+FL,Florida,12,Charlotte County,015,FL,55
+FL,Florida,12,Citrus County,017,FL,49
+FL,Florida,12,Clay County,019,FL,52.8
+FL,Florida,12,Collier County,021,FL,35.8
+FL,Florida,12,Columbia County,023,FL,48.4
+FL,Florida,12,DeSoto County,027,FL,50
+FL,Florida,12,Dixie County,029,FL,22.4
+FL,Florida,12,Duval County,031,FL,56
+FL,Florida,12,Escambia County,033,FL,75.6
+FL,Florida,12,Flagler County,035,FL,67
+FL,Florida,12,Franklin County,037,FL,65.6
+FL,Florida,12,Gadsden County,039,FL,62.4
+FL,Florida,12,Gilchrist County,041,FL,30.4
+FL,Florida,12,Glades County,043,FL,59.8
+FL,Florida,12,Gulf County,045,FL,54.2
+FL,Florida,12,Hamilton County,047,FL,74.4
+FL,Florida,12,Hardee County,049,FL,43.8
+FL,Florida,12,Hendry County,051,FL,56.8
+FL,Florida,12,Hernando County,053,FL,49.2
+FL,Florida,12,Highlands County,055,FL,68.4
+FL,Florida,12,Hillsborough County,057,FL,48.6
+FL,Florida,12,Holmes County,059,FL,61.8
+FL,Florida,12,Indian River County,061,FL,46
+FL,Florida,12,Jackson County,063,FL,39.8
+FL,Florida,12,Jefferson County,065,FL,49.8
+FL,Florida,12,Lafayette County,067,FL,43.6
+FL,Florida,12,Lake County,069,FL,40.6
+FL,Florida,12,Lee County,071,FL,22
+FL,Florida,12,Leon County,073,FL,56.4
+FL,Florida,12,Levy County,075,FL,52.8
+FL,Florida,12,Liberty County,077,FL,44.8
+FL,Florida,12,Madison County,079,FL,64.2
+FL,Florida,12,Manatee County,081,FL,48.6
+FL,Florida,12,Marion County,083,FL,30
+FL,Florida,12,Martin County,085,FL,33
+FL,Florida,12,Miami-Dade County,086,FL,58.6
+FL,Florida,12,Monroe County,087,FL,45.8
+FL,Florida,12,Nassau County,089,FL,36.8
+FL,Florida,12,Okaloosa County,091,FL,42
+FL,Florida,12,Okeechobee County,093,FL,63.8
+FL,Florida,12,Orange County,095,FL,56.2
+FL,Florida,12,Osceola County,097,FL,48.6
+FL,Florida,12,Palm Beach County,099,FL,40.6
+FL,Florida,12,Pasco County,101,FL,60.6
+FL,Florida,12,Pinellas County,103,FL,32.4
+FL,Florida,12,Polk County,105,FL,50.2
+FL,Florida,12,Putnam County,107,FL,45.8
+FL,Florida,12,St. Johns County,109,FL,59.4
+FL,Florida,12,St. Lucie County,111,FL,57.2
+FL,Florida,12,Santa Rosa County,113,FL,48
+FL,Florida,12,Sarasota County,115,FL,58.2
+FL,Florida,12,Seminole County,117,FL,55.4
+FL,Florida,12,Sumter County,119,FL,47
+FL,Florida,12,Suwannee County,121,FL,59.4
+FL,Florida,12,Taylor County,123,FL,71.2
+FL,Florida,12,Union County,125,FL,69.8
+FL,Florida,12,Volusia County,127,FL,37.8
+FL,Florida,12,Wakulla County,129,FL,46
+FL,Florida,12,Walton County,131,FL,45.4
+FL,Florida,12,Washington County,133,FL,50.8
+GA,Georgia,13,Appling County,001,GA,53.4
+GA,Georgia,13,Atkinson County,003,GA,59.2
+GA,Georgia,13,Bacon County,005,GA,36.2
+GA,Georgia,13,Baker County,007,GA,53
+GA,Georgia,13,Baldwin County,009,GA,60.4
+GA,Georgia,13,Banks County,011,GA,47.8
+GA,Georgia,13,Barrow County,013,GA,28.8
+GA,Georgia,13,Bartow County,015,GA,38
+GA,Georgia,13,Ben Hill County,017,GA,61.8
+GA,Georgia,13,Berrien County,019,GA,60
+GA,Georgia,13,Bibb County,021,GA,54.6
+GA,Georgia,13,Bleckley County,023,GA,52.8
+GA,Georgia,13,Brantley County,025,GA,44
+GA,Georgia,13,Brooks County,027,GA,24.2
+GA,Georgia,13,Bryan County,029,GA,33
+GA,Georgia,13,Bulloch County,031,GA,91.6
+GA,Georgia,13,Burke County,033,GA,61.4
+GA,Georgia,13,Butts County,035,GA,68
+GA,Georgia,13,Calhoun County,037,GA,35.8
+GA,Georgia,13,Camden County,039,GA,46.6
+GA,Georgia,13,Candler County,043,GA,58.2
+GA,Georgia,13,Carroll County,045,GA,67.8
+GA,Georgia,13,Catoosa County,047,GA,79.4
+GA,Georgia,13,Charlton County,049,GA,63.6
+GA,Georgia,13,Chatham County,051,GA,63.4
+GA,Georgia,13,Chattahoochee County,053,GA,57.8
+GA,Georgia,13,Chattooga County,055,GA,72.8
+GA,Georgia,13,Cherokee County,057,GA,43.2
+GA,Georgia,13,Clarke County,059,GA,52
+GA,Georgia,13,Clay County,061,GA,60.2
+GA,Georgia,13,Clayton County,063,GA,61
+GA,Georgia,13,Clinch County,065,GA,64.2
+GA,Georgia,13,Cobb County,067,GA,50.2
+GA,Georgia,13,Coffee County,069,GA,20.6
+GA,Georgia,13,Colquitt County,071,GA,60
+GA,Georgia,13,Columbia County,073,GA,76.2
+GA,Georgia,13,Cook County,075,GA,31
+GA,Georgia,13,Coweta County,077,GA,35
+GA,Georgia,13,Crawford County,079,GA,37.2
+GA,Georgia,13,Crisp County,081,GA,64.4
+GA,Georgia,13,Dade County,083,GA,39
+GA,Georgia,13,Dawson County,085,GA,63
+GA,Georgia,13,Decatur County,087,GA,33.8
+GA,Georgia,13,DeKalb County,089,GA,54.4
+GA,Georgia,13,Dodge County,091,GA,47.8
+GA,Georgia,13,Dooly County,093,GA,64.6
+GA,Georgia,13,Dougherty County,095,GA,57.8
+GA,Georgia,13,Douglas County,097,GA,69.8
+GA,Georgia,13,Early County,099,GA,49.2
+GA,Georgia,13,Echols County,101,GA,51.4
+GA,Georgia,13,Effingham County,103,GA,33.4
+GA,Georgia,13,Elbert County,105,GA,28.2
+GA,Georgia,13,Emanuel County,107,GA,51
+GA,Georgia,13,Evans County,109,GA,56.8
+GA,Georgia,13,Fannin County,111,GA,32.8
+GA,Georgia,13,Fayette County,113,GA,33.8
+GA,Georgia,13,Floyd County,115,GA,57.4
+GA,Georgia,13,Forsyth County,117,GA,52.2
+GA,Georgia,13,Franklin County,119,GA,58
+GA,Georgia,13,Fulton County,121,GA,47.4
+GA,Georgia,13,Gilmer County,123,GA,52
+GA,Georgia,13,Glascock County,125,GA,32.8
+GA,Georgia,13,Glynn County,127,GA,51.6
+GA,Georgia,13,Gordon County,129,GA,42.4
+GA,Georgia,13,Grady County,131,GA,54.4
+GA,Georgia,13,Greene County,133,GA,51.8
+GA,Georgia,13,Gwinnett County,135,GA,45.6
+GA,Georgia,13,Habersham County,137,GA,62.6
+GA,Georgia,13,Hall County,139,GA,46
+GA,Georgia,13,Hancock County,141,GA,63.6
+GA,Georgia,13,Haralson County,143,GA,52.4
+GA,Georgia,13,Harris County,145,GA,56.6
+GA,Georgia,13,Hart County,147,GA,47.6
+GA,Georgia,13,Heard County,149,GA,24.2
+GA,Georgia,13,Henry County,151,GA,32.8
+GA,Georgia,13,Houston County,153,GA,31.4
+GA,Georgia,13,Irwin County,155,GA,56.8
+GA,Georgia,13,Jackson County,157,GA,39.6
+GA,Georgia,13,Jasper County,159,GA,32.8
+GA,Georgia,13,Jeff Davis County,161,GA,58
+GA,Georgia,13,Jefferson County,163,GA,32
+GA,Georgia,13,Jenkins County,165,GA,57.4
+GA,Georgia,13,Johnson County,167,GA,48.4
+GA,Georgia,13,Jones County,169,GA,50.8
+GA,Georgia,13,Lamar County,171,GA,43.6
+GA,Georgia,13,Lanier County,173,GA,54.6
+GA,Georgia,13,Laurens County,175,GA,45.6
+GA,Georgia,13,Lee County,177,GA,65
+GA,Georgia,13,Liberty County,179,GA,51.4
+GA,Georgia,13,Lincoln County,181,GA,48.2
+GA,Georgia,13,Long County,183,GA,64.8
+GA,Georgia,13,Lowndes County,185,GA,39.2
+GA,Georgia,13,Lumpkin County,187,GA,48.8
+GA,Georgia,13,McDuffie County,189,GA,40.6
+GA,Georgia,13,McIntosh County,191,GA,37.6
+GA,Georgia,13,Macon County,193,GA,56.2
+GA,Georgia,13,Madison County,195,GA,51.8
+GA,Georgia,13,Marion County,197,GA,15.6
+GA,Georgia,13,Meriwether County,199,GA,58.8
+GA,Georgia,13,Miller County,201,GA,55.6
+GA,Georgia,13,Mitchell County,205,GA,79.6
+GA,Georgia,13,Monroe County,207,GA,49.6
+GA,Georgia,13,Montgomery County,209,GA,55
+GA,Georgia,13,Morgan County,211,GA,72.2
+GA,Georgia,13,Murray County,213,GA,42.6
+GA,Georgia,13,Muscogee County,215,GA,45.4
+GA,Georgia,13,Newton County,217,GA,45.2
+GA,Georgia,13,Oconee County,219,GA,29.8
+GA,Georgia,13,Oglethorpe County,221,GA,52.4
+GA,Georgia,13,Paulding County,223,GA,51
+GA,Georgia,13,Peach County,225,GA,29.4
+GA,Georgia,13,Pickens County,227,GA,44.2
+GA,Georgia,13,Pierce County,229,GA,47.8
+GA,Georgia,13,Pike County,231,GA,51.6
+GA,Georgia,13,Polk County,233,GA,54.4
+GA,Georgia,13,Pulaski County,235,GA,45.4
+GA,Georgia,13,Putnam County,237,GA,46.6
+GA,Georgia,13,Quitman County,239,GA,78.4
+GA,Georgia,13,Rabun County,241,GA,47.6
+GA,Georgia,13,Randolph County,243,GA,28.8
+GA,Georgia,13,Richmond County,245,GA,64.2
+GA,Georgia,13,Rockdale County,247,GA,55.6
+GA,Georgia,13,Schley County,249,GA,42.8
+GA,Georgia,13,Screven County,251,GA,41.4
+GA,Georgia,13,Seminole County,253,GA,39.2
+GA,Georgia,13,Spalding County,255,GA,59.8
+GA,Georgia,13,Stephens County,257,GA,45.2
+GA,Georgia,13,Stewart County,259,GA,37.8
+GA,Georgia,13,Sumter County,261,GA,77.6
+GA,Georgia,13,Talbot County,263,GA,44
+GA,Georgia,13,Taliaferro County,265,GA,32.8
+GA,Georgia,13,Tattnall County,267,GA,32.2
+GA,Georgia,13,Taylor County,269,GA,25.6
+GA,Georgia,13,Telfair County,271,GA,60.8
+GA,Georgia,13,Terrell County,273,GA,42.4
+GA,Georgia,13,Thomas County,275,GA,37.2
+GA,Georgia,13,Tift County,277,GA,45
+GA,Georgia,13,Toombs County,279,GA,49.6
+GA,Georgia,13,Towns County,281,GA,52.6
+GA,Georgia,13,Treutlen County,283,GA,36
+GA,Georgia,13,Troup County,285,GA,45.6
+GA,Georgia,13,Turner County,287,GA,40.4
+GA,Georgia,13,Twiggs County,289,GA,61.8
+GA,Georgia,13,Union County,291,GA,56.8
+GA,Georgia,13,Upson County,293,GA,39
+GA,Georgia,13,Walker County,295,GA,55.2
+GA,Georgia,13,Walton County,297,GA,62
+GA,Georgia,13,Ware County,299,GA,42
+GA,Georgia,13,Warren County,301,GA,55.2
+GA,Georgia,13,Washington County,303,GA,22
+GA,Georgia,13,Wayne County,305,GA,56.2
+GA,Georgia,13,Webster County,307,GA,24.8
+GA,Georgia,13,Wheeler County,309,GA,67.6
+GA,Georgia,13,White County,311,GA,62.4
+GA,Georgia,13,Whitfield County,313,GA,36
+GA,Georgia,13,Wilcox County,315,GA,19.4
+GA,Georgia,13,Wilkes County,317,GA,43.8
+GA,Georgia,13,Wilkinson County,319,GA,62.2
+GA,Georgia,13,Worth County,321,GA,36.8
+HI,Hawai'i,15,Hawai?i,001,HI,59.6
+HI,Hawai'i,15,Honolulu,003,HI,43.8
+HI,Hawai'i,15,Kalawao County,005,HI,56.8
+HI,Hawai'i,15,Kauai County,007,HI,47.4
+HI,Hawai'i,15,Maui County,009,HI,59.6
+ID,Idaho,16,Ada County,001,ID,47.2
+ID,Idaho,16,Adams County,003,ID,52.2
+ID,Idaho,16,Bannock County,005,ID,55
+ID,Idaho,16,Bear Lake County,007,ID,44.4
+ID,Idaho,16,Benewah County,009,ID,30.6
+ID,Idaho,16,Bingham County,011,ID,59.6
+ID,Idaho,16,Blaine County,013,ID,61
+ID,Idaho,16,Boise County,015,ID,54.8
+ID,Idaho,16,Bonner County,017,ID,44.8
+ID,Idaho,16,Bonneville County,019,ID,24.8
+ID,Idaho,16,Boundary County,021,ID,37.4
+ID,Idaho,16,Butte County,023,ID,63.8
+ID,Idaho,16,Camas County,025,ID,69.4
+ID,Idaho,16,Canyon County,027,ID,58.8
+ID,Idaho,16,Caribou County,029,ID,36.4
+ID,Idaho,16,Cassia County,031,ID,27.6
+ID,Idaho,16,Clark County,033,ID,60
+ID,Idaho,16,Clearwater County,035,ID,57.6
+ID,Idaho,16,Custer County,037,ID,57.8
+ID,Idaho,16,Elmore County,039,ID,49.4
+ID,Idaho,16,Franklin County,041,ID,47.4
+ID,Idaho,16,Fremont County,043,ID,53
+ID,Idaho,16,Gem County,045,ID,55.6
+ID,Idaho,16,Gooding County,047,ID,36.6
+ID,Idaho,16,Idaho County,049,ID,53.8
+ID,Idaho,16,Jefferson County,051,ID,41.4
+ID,Idaho,16,Jerome County,053,ID,53
+ID,Idaho,16,Kootenai County,055,ID,37.4
+ID,Idaho,16,Latah County,055,ID,27.6
+ID,Idaho,16,Lemhi County,057,ID,54.6
+ID,Idaho,16,Lewis County,059,ID,41
+ID,Idaho,16,Lincoln County,061,ID,69.8
+ID,Idaho,16,Madison County,063,ID,47.8
+ID,Idaho,16,Minidoka County,065,ID,33.2
+ID,Idaho,16,Nez Perce County,067,ID,57.6
+ID,Idaho,16,Oneida County,069,ID,22.4
+ID,Idaho,16,Owyhee County,071,ID,66.8
+ID,Idaho,16,Payette County,073,ID,62
+ID,Idaho,16,Power County,075,ID,75.4
+ID,Idaho,16,Shoshone County,077,ID,66.8
+ID,Idaho,16,Teton County,081,ID,38.6
+ID,Idaho,16,Twin Falls County,083,ID,43.6
+ID,Idaho,16,Valley County,085,ID,48.6
+ID,Idaho,16,Washington County,087,ID,59.6
+IL,Illinois,17,Adams County,001,IL,61
+IL,Illinois,17,Alexander County,003,IL,33
+IL,Illinois,17,Bond County,005,IL,65.8
+IL,Illinois,17,Boone County,007,IL,36.2
+IL,Illinois,17,Brown County,009,IL,75.4
+IL,Illinois,17,Bureau County,011,IL,48
+IL,Illinois,17,Calhoun County,013,IL,45.2
+IL,Illinois,17,Carroll County,015,IL,31
+IL,Illinois,17,Cass County,017,IL,53
+IL,Illinois,17,Champaign County,019,IL,69.8
+IL,Illinois,17,Christian County,021,IL,43.4
+IL,Illinois,17,Clark County,023,IL,60.2
+IL,Illinois,17,Clay County,025,IL,59
+IL,Illinois,17,Clinton County,027,IL,51
+IL,Illinois,17,Coles County,029,IL,25.2
+IL,Illinois,17,Cook County,031,IL,51.8
+IL,Illinois,17,Crawford County,033,IL,39
+IL,Illinois,17,Cumberland County,035,IL,43.4
+IL,Illinois,17,DeKalb County,037,IL,67.8
+IL,Illinois,17,De Witt County,039,IL,41.8
+IL,Illinois,17,Douglas County,041,IL,48
+IL,Illinois,17,DuPage County,043,IL,35.4
+IL,Illinois,17,Edgar County,045,IL,63.6
+IL,Illinois,17,Edwards County,047,IL,28.8
+IL,Illinois,17,Effingham County,049,IL,31.2
+IL,Illinois,17,Fayette County,051,IL,68.2
+IL,Illinois,17,Ford County,053,IL,70.8
+IL,Illinois,17,Franklin County,055,IL,38.6
+IL,Illinois,17,Fulton County,057,IL,48.8
+IL,Illinois,17,Gallatin County,059,IL,29.8
+IL,Illinois,17,Greene County,061,IL,58
+IL,Illinois,17,Grundy County,063,IL,56
+IL,Illinois,17,Hamilton County,065,IL,39.8
+IL,Illinois,17,Hancock County,067,IL,69.6
+IL,Illinois,17,Hardin County,069,IL,67.8
+IL,Illinois,17,Henderson County,071,IL,41
+IL,Illinois,17,Henry County,073,IL,38
+IL,Illinois,17,Iroquois County,075,IL,40.4
+IL,Illinois,17,Jackson County,077,IL,58.6
+IL,Illinois,17,Jasper County,079,IL,49.2
+IL,Illinois,17,Jefferson County,081,IL,52.2
+IL,Illinois,17,Jersey County,083,IL,57
+IL,Illinois,17,Jo Daviess County,085,IL,70.2
+IL,Illinois,17,Johnson County,087,IL,53.6
+IL,Illinois,17,Kane County,089,IL,44.4
+IL,Illinois,17,Kankakee County,091,IL,56.6
+IL,Illinois,17,Kendall County,093,IL,37
+IL,Illinois,17,Knox County,095,IL,52.2
+IL,Illinois,17,Lake County,097,IL,70.6
+IL,Illinois,17,LaSalle County,099,IL,32.8
+IL,Illinois,17,Lawrence County,101,IL,69.8
+IL,Illinois,17,Lee County,103,IL,76.2
+IL,Illinois,17,Livingston County,105,IL,29.4
+IL,Illinois,17,Logan County,107,IL,30.8
+IL,Illinois,17,McDonough County,109,IL,44
+IL,Illinois,17,McHenry County,111,IL,68.4
+IL,Illinois,17,McLean County,113,IL,39
+IL,Illinois,17,Macon County,115,IL,43.8
+IL,Illinois,17,Macoupin County,117,IL,53.2
+IL,Illinois,17,Madison County,119,IL,26
+IL,Illinois,17,Marion County,121,IL,40.4
+IL,Illinois,17,Marshall County,123,IL,55.6
+IL,Illinois,17,Mason County,125,IL,47.8
+IL,Illinois,17,Massac County,127,IL,38.4
+IL,Illinois,17,Menard County,129,IL,81.6
+IL,Illinois,17,Mercer County,131,IL,58.4
+IL,Illinois,17,Monroe County,133,IL,61.4
+IL,Illinois,17,Montgomery County,135,IL,86.8
+IL,Illinois,17,Morgan County,137,IL,45.4
+IL,Illinois,17,Moultrie County,139,IL,25.6
+IL,Illinois,17,Ogle County,141,IL,49.2
+IL,Illinois,17,Peoria County,143,IL,43.4
+IL,Illinois,17,Perry County,145,IL,38.2
+IL,Illinois,17,Piatt County,147,IL,60.8
+IL,Illinois,17,Pike County,149,IL,63.4
+IL,Illinois,17,Pope County,151,IL,31
+IL,Illinois,17,Pulaski County,153,IL,71.8
+IL,Illinois,17,Putnam County,155,IL,49.8
+IL,Illinois,17,Randolph County,157,IL,46
+IL,Illinois,17,Richland County,159,IL,55.4
+IL,Illinois,17,Rock Island County,161,IL,51
+IL,Illinois,17,St. Clair County,163,IL,43.6
+IL,Illinois,17,Saline County,165,IL,55.2
+IL,Illinois,17,Sangamon County,167,IL,62
+IL,Illinois,17,Schuyler County,169,IL,59
+IL,Illinois,17,Scott County,171,IL,51.4
+IL,Illinois,17,Shelby County,173,IL,36
+IL,Illinois,17,Stark County,175,IL,37
+IL,Illinois,17,Stephenson County,177,IL,51
+IL,Illinois,17,Tazewell County,179,IL,66
+IL,Illinois,17,Union County,181,IL,81
+IL,Illinois,17,Vermilion County,183,IL,45.4
+IL,Illinois,17,Wabash County,185,IL,71.4
+IL,Illinois,17,Warren County,187,IL,59.2
+IL,Illinois,17,Washington County,189,IL,28.6
+IL,Illinois,17,Wayne County,191,IL,52.6
+IL,Illinois,17,White County,193,IL,63.4
+IL,Illinois,17,Whiteside County,195,IL,57
+IL,Illinois,17,Will County,197,IL,37.2
+IL,Illinois,17,Williamson County,199,IL,44
+IL,Illinois,17,Winnebago County,201,IL,25.8
+IL,Illinois,17,Woodford County,203,IL,61.4
+IN,Indiana,18,Adams County,001,IN,47.4
+IN,Indiana,18,Allen County,003,IN,33.6
+IN,Indiana,18,Bartholomew County,005,IN,51.8
+IN,Indiana,18,Benton County,007,IN,52.2
+IN,Indiana,18,Blackford County,009,IN,47.8
+IN,Indiana,18,Boone County,011,IN,44.6
+IN,Indiana,18,Brown County,013,IN,40
+IN,Indiana,18,Carroll County,015,IN,52.4
+IN,Indiana,18,Cass County,017,IN,50.6
+IN,Indiana,18,Clark County,019,IN,47.8
+IN,Indiana,18,Clay County,021,IN,56
+IN,Indiana,18,Clinton County,023,IN,73
+IN,Indiana,18,Crawford County,025,IN,21.4
+IN,Indiana,18,Daviess County,027,IN,45.2
+IN,Indiana,18,Dearborn County,029,IN,40
+IN,Indiana,18,Decatur County,031,IN,53.6
+IN,Indiana,18,DeKalb County,033,IN,56.8
+IN,Indiana,18,Delaware County,035,IN,69.4
+IN,Indiana,18,Dubois County,037,IN,48
+IN,Indiana,18,Elkhart County,039,IN,67.2
+IN,Indiana,18,Fayette County,041,IN,53
+IN,Indiana,18,Floyd County,043,IN,57.4
+IN,Indiana,18,Fountain County,045,IN,36.2
+IN,Indiana,18,Franklin County,047,IN,42.2
+IN,Indiana,18,Fulton County,049,IN,74.8
+IN,Indiana,18,Gibson County,051,IN,31
+IN,Indiana,18,Grant County,053,IN,45
+IN,Indiana,18,Greene County,055,IN,45.2
+IN,Indiana,18,Hamilton County,057,IN,59.6
+IN,Indiana,18,Hancock County,059,IN,41.4
+IN,Indiana,18,Harrison County,061,IN,45.4
+IN,Indiana,18,Hendricks County,063,IN,43.4
+IN,Indiana,18,Henry County,065,IN,50.6
+IN,Indiana,18,Howard County,067,IN,25
+IN,Indiana,18,Huntington County,069,IN,61.2
+IN,Indiana,18,Jackson County,071,IN,55.2
+IN,Indiana,18,Jasper County,073,IN,49.8
+IN,Indiana,18,Jay County,075,IN,42.2
+IN,Indiana,18,Jefferson County,077,IN,50.8
+IN,Indiana,18,Jennings County,079,IN,42.4
+IN,Indiana,18,Johnson County,081,IN,38.4
+IN,Indiana,18,Knox County,083,IN,45.6
+IN,Indiana,18,Kosciusko County,085,IN,30.2
+IN,Indiana,18,LaGrange County,087,IN,44
+IN,Indiana,18,Lake County,089,IN,40.8
+IN,Indiana,18,LaPorte County,091,IN,61
+IN,Indiana,18,Lawrence County,093,IN,46.6
+IN,Indiana,18,Madison County,095,IN,32.2
+IN,Indiana,18,Marion County,097,IN,67
+IN,Indiana,18,Marshall County,099,IN,45.6
+IN,Indiana,18,Martin County,101,IN,68.4
+IN,Indiana,18,Miami County,103,IN,81.6
+IN,Indiana,18,Monroe County,105,IN,50.4
+IN,Indiana,18,Montgomery County,107,IN,26
+IN,Indiana,18,Morgan County,109,IN,43
+IN,Indiana,18,Newton County,111,IN,66.2
+IN,Indiana,18,Noble County,113,IN,27.8
+IN,Indiana,18,Ohio County,115,IN,42.8
+IN,Indiana,18,Orange County,117,IN,39
+IN,Indiana,18,Owen County,119,IN,52.4
+IN,Indiana,18,Parke County,121,IN,42.6
+IN,Indiana,18,Perry County,123,IN,51.8
+IN,Indiana,18,Pike County,125,IN,50.6
+IN,Indiana,18,Porter County,127,IN,54.8
+IN,Indiana,18,Posey County,129,IN,41.6
+IN,Indiana,18,Pulaski County,131,IN,50.2
+IN,Indiana,18,Putnam County,133,IN,27
+IN,Indiana,18,Randolph County,135,IN,46.4
+IN,Indiana,18,Ripley County,137,IN,52.2
+IN,Indiana,18,Rush County,139,IN,42
+IN,Indiana,18,St. Joseph County,141,IN,53.6
+IN,Indiana,18,Scott County,143,IN,49.6
+IN,Indiana,18,Shelby County,145,IN,41
+IN,Indiana,18,Spencer County,147,IN,63.6
+IN,Indiana,18,Starke County,149,IN,67.8
+IN,Indiana,18,Steuben County,151,IN,41.2
+IN,Indiana,18,Sullivan County,153,IN,62.2
+IN,Indiana,18,Switzerland County,155,IN,51.6
+IN,Indiana,18,Tippecanoe County,157,IN,36
+IN,Indiana,18,Tipton County,159,IN,64.4
+IN,Indiana,18,Union County,161,IN,49
+IN,Indiana,18,Vanderburgh County,163,IN,38.2
+IN,Indiana,18,Vermillion County,165,IN,53.2
+IN,Indiana,18,Vigo County,167,IN,50.6
+IN,Indiana,18,Wabash County,169,IN,44
+IN,Indiana,18,Warren County,171,IN,37.4
+IN,Indiana,18,Warrick County,173,IN,39.8
+IN,Indiana,18,Washington County,175,IN,65.2
+IN,Indiana,18,Wayne County,177,IN,65.4
+IN,Indiana,18,Wells County,179,IN,56.2
+IN,Indiana,18,White County,181,IN,60.2
+IN,Indiana,18,Whitley County,183,IN,46.8
+IA,Iowa,19,Adair County,001,IA,29.8
+IA,Iowa,19,Adams County,003,IA,47.2
+IA,Iowa,19,Allamakee County,005,IA,36.2
+IA,Iowa,19,Appanoose County,007,IA,52.2
+IA,Iowa,19,Audubon County,009,IA,44.4
+IA,Iowa,19,Benton County,011,IA,64
+IA,Iowa,19,Black Hawk County,013,IA,25.8
+IA,Iowa,19,Boone County,015,IA,77.6
+IA,Iowa,19,Bremer County,017,IA,59.6
+IA,Iowa,19,Buchanan County,019,IA,34.4
+IA,Iowa,19,Buena Vista County,021,IA,49.4
+IA,Iowa,19,Butler County,023,IA,41.8
+IA,Iowa,19,Calhoun County,025,IA,59.2
+IA,Iowa,19,Carroll County,027,IA,51.6
+IA,Iowa,19,Cass County,029,IA,50
+IA,Iowa,19,Cedar County,031,IA,70
+IA,Iowa,19,Cerro Gordo County,033,IA,39
+IA,Iowa,19,Cherokee County,035,IA,51
+IA,Iowa,19,Chickasaw County,037,IA,67.8
+IA,Iowa,19,Clarke County,039,IA,40
+IA,Iowa,19,Clay County,041,IA,49.4
+IA,Iowa,19,Clayton County,043,IA,27.4
+IA,Iowa,19,Clinton County,045,IA,28.8
+IA,Iowa,19,Crawford County,047,IA,19.6
+IA,Iowa,19,Dallas County,049,IA,39.2
+IA,Iowa,19,Davis County,051,IA,50.4
+IA,Iowa,19,Decatur County,053,IA,66.2
+IA,Iowa,19,Delaware County,055,IA,56.6
+IA,Iowa,19,Des Moines County,057,IA,41.8
+IA,Iowa,19,Dickinson County,059,IA,63
+IA,Iowa,19,Dubuque County,061,IA,53.8
+IA,Iowa,19,Emmet County,063,IA,52.6
+IA,Iowa,19,Fayette County,065,IA,57.2
+IA,Iowa,19,Floyd County,067,IA,65.2
+IA,Iowa,19,Franklin County,069,IA,43.2
+IA,Iowa,19,Fremont County,071,IA,30.8
+IA,Iowa,19,Greene County,073,IA,51.4
+IA,Iowa,19,Grundy County,075,IA,26.2
+IA,Iowa,19,Guthrie County,077,IA,48
+IA,Iowa,19,Hamilton County,079,IA,48.2
+IA,Iowa,19,Hancock County,081,IA,58
+IA,Iowa,19,Hardin County,083,IA,69.2
+IA,Iowa,19,Harrison County,085,IA,35.4
+IA,Iowa,19,Henry County,087,IA,44.6
+IA,Iowa,19,Howard County,089,IA,44.8
+IA,Iowa,19,Humboldt County,091,IA,44.4
+IA,Iowa,19,Ida County,093,IA,55.4
+IA,Iowa,19,Iowa County,095,IA,53.8
+IA,Iowa,19,Jackson County,097,IA,42.8
+IA,Iowa,19,Jasper County,099,IA,76.2
+IA,Iowa,19,Jefferson County,101,IA,35.4
+IA,Iowa,19,Johnson County,103,IA,31
+IA,Iowa,19,Jones County,105,IA,73
+IA,Iowa,19,Keokuk County,107,IA,75.4
+IA,Iowa,19,Kossuth County,109,IA,26.8
+IA,Iowa,19,Lee County,111,IA,42.6
+IA,Iowa,19,Linn County,113,IA,65
+IA,Iowa,19,Louisa County,115,IA,55.6
+IA,Iowa,19,Lucas County,117,IA,66.6
+IA,Iowa,19,Lyon County,119,IA,65.8
+IA,Iowa,19,Madison County,121,IA,58.8
+IA,Iowa,19,Mahaska County,123,IA,40
+IA,Iowa,19,Marion County,125,IA,48.8
+IA,Iowa,19,Marshall County,127,IA,59.4
+IA,Iowa,19,Mills County,129,IA,51.8
+IA,Iowa,19,Mitchell County,131,IA,54
+IA,Iowa,19,Monona County,133,IA,56.8
+IA,Iowa,19,Monroe County,135,IA,33.6
+IA,Iowa,19,Montgomery County,137,IA,28
+IA,Iowa,19,Muscatine County,139,IA,31
+IA,Iowa,19,O'Brien County,141,IA,50
+IA,Iowa,19,Osceola County,143,IA,48.6
+IA,Iowa,19,Page County,145,IA,44.8
+IA,Iowa,19,Palo Alto County,147,IA,24
+IA,Iowa,19,Plymouth County,149,IA,58.2
+IA,Iowa,19,Pocahontas County,151,IA,46.8
+IA,Iowa,19,Polk County,153,IA,55.4
+IA,Iowa,19,Pottawattamie County,155,IA,39.8
+IA,Iowa,19,Poweshiek County,157,IA,60
+IA,Iowa,19,Ringgold County,159,IA,37.4
+IA,Iowa,19,Sac County,161,IA,63.6
+IA,Iowa,19,Scott County,163,IA,45
+IA,Iowa,19,Shelby County,165,IA,66
+IA,Iowa,19,Sioux County,167,IA,69.2
+IA,Iowa,19,Story County,169,IA,46.6
+IA,Iowa,19,Tama County,171,IA,51.6
+IA,Iowa,19,Taylor County,173,IA,60
+IA,Iowa,19,Union County,175,IA,51
+IA,Iowa,19,Van Buren County,177,IA,51.8
+IA,Iowa,19,Wapello County,179,IA,48.8
+IA,Iowa,19,Warren County,181,IA,37.4
+IA,Iowa,19,Washington County,183,IA,43.8
+IA,Iowa,19,Wayne County,185,IA,78.6
+IA,Iowa,19,Webster County,187,IA,28.4
+IA,Iowa,19,Winnebago County,189,IA,42
+IA,Iowa,19,Winneshiek County,191,IA,77.2
+IA,Iowa,19,Woodbury County,193,IA,58.6
+IA,Iowa,19,Worth County,195,IA,52
+IA,Iowa,19,Wright County,197,IA,64.6
+KS,Kansas,20,Allen County,001,KS,60.2
+KS,Kansas,20,Anderson County,003,KS,73.6
+KS,Kansas,20,Atchison County,005,KS,36.8
+KS,Kansas,20,Barber County,007,KS,39
+KS,Kansas,20,Barton County,009,KS,66.6
+KS,Kansas,20,Bourbon County,011,KS,51.6
+KS,Kansas,20,Brown County,013,KS,61.4
+KS,Kansas,20,Butler County,015,KS,69.4
+KS,Kansas,20,Chase County,017,KS,54.4
+KS,Kansas,20,Chautauqua County,019,KS,51.4
+KS,Kansas,20,Cherokee County,021,KS,42
+KS,Kansas,20,Cheyenne County,023,KS,62.8
+KS,Kansas,20,Clark County,025,KS,62.6
+KS,Kansas,20,Clay County,027,KS,40
+KS,Kansas,20,Cloud County,029,KS,39.4
+KS,Kansas,20,Coffey County,031,KS,55.4
+KS,Kansas,20,Comanche County,033,KS,32.2
+KS,Kansas,20,Cowley County,035,KS,71.6
+KS,Kansas,20,Crawford County,037,KS,43
+KS,Kansas,20,Decatur County,039,KS,43.8
+KS,Kansas,20,Dickinson County,041,KS,35.4
+KS,Kansas,20,Doniphan County,043,KS,46.2
+KS,Kansas,20,Douglas County,045,KS,58.6
+KS,Kansas,20,Edwards County,047,KS,30.4
+KS,Kansas,20,Elk County,049,KS,47
+KS,Kansas,20,Ellis County,051,KS,43.6
+KS,Kansas,20,Ellsworth County,053,KS,43
+KS,Kansas,20,Finney County,055,KS,28.4
+KS,Kansas,20,Ford County,057,KS,58.6
+KS,Kansas,20,Franklin County,059,KS,30
+KS,Kansas,20,Geary County,061,KS,35
+KS,Kansas,20,Gove County,063,KS,56.4
+KS,Kansas,20,Graham County,065,KS,24.2
+KS,Kansas,20,Grant County,067,KS,60.6
+KS,Kansas,20,Gray County,069,KS,42.8
+KS,Kansas,20,Greeley County,071,KS,38.4
+KS,Kansas,20,Greenwood County,073,KS,42.2
+KS,Kansas,20,Hamilton County,075,KS,32.4
+KS,Kansas,20,Harper County,077,KS,74.4
+KS,Kansas,20,Harvey County,079,KS,41.4
+KS,Kansas,20,Haskell County,081,KS,36.8
+KS,Kansas,20,Hodgeman County,083,KS,42.6
+KS,Kansas,20,Jackson County,085,KS,45.6
+KS,Kansas,20,Jefferson County,087,KS,39.6
+KS,Kansas,20,Jewell County,089,KS,51.4
+KS,Kansas,20,Johnson County,091,KS,35.4
+KS,Kansas,20,Kearny County,093,KS,69.6
+KS,Kansas,20,Kingman County,095,KS,25.8
+KS,Kansas,20,Kiowa County,097,KS,47
+KS,Kansas,20,Labette County,099,KS,40.8
+KS,Kansas,20,Lane County,101,KS,50.6
+KS,Kansas,20,Leavenworth County,103,KS,45.2
+KS,Kansas,20,Lincoln County,105,KS,71.2
+KS,Kansas,20,Linn County,107,KS,52
+KS,Kansas,20,Logan County,109,KS,53.6
+KS,Kansas,20,Lyon County,111,KS,57.8
+KS,Kansas,20,McPherson County,113,KS,50.2
+KS,Kansas,20,Marion County,115,KS,79
+KS,Kansas,20,Marshall County,117,KS,43.2
+KS,Kansas,20,Meade County,119,KS,34.8
+KS,Kansas,20,Miami County,121,KS,58
+KS,Kansas,20,Mitchell County,123,KS,40.4
+KS,Kansas,20,Montgomery County,125,KS,33
+KS,Kansas,20,Morris County,127,KS,40.6
+KS,Kansas,20,Morton County,129,KS,75.6
+KS,Kansas,20,Nemaha County,131,KS,32.8
+KS,Kansas,20,Neosho County,133,KS,84.4
+KS,Kansas,20,Ness County,135,KS,31
+KS,Kansas,20,Norton County,137,KS,58.8
+KS,Kansas,20,Osage County,139,KS,48.2
+KS,Kansas,20,Osborne County,141,KS,33
+KS,Kansas,20,Ottawa County,143,KS,53
+KS,Kansas,20,Pawnee County,145,KS,35.8
+KS,Kansas,20,Phillips County,147,KS,49.8
+KS,Kansas,20,Pottawatomie County,149,KS,58.8
+KS,Kansas,20,Pratt County,151,KS,56.6
+KS,Kansas,20,Rawlins County,153,KS,55.6
+KS,Kansas,20,Reno County,155,KS,50.2
+KS,Kansas,20,Republic County,157,KS,51.8
+KS,Kansas,20,Rice County,159,KS,66.4
+KS,Kansas,20,Riley County,161,KS,57.8
+KS,Kansas,20,Rooks County,163,KS,72.6
+KS,Kansas,20,Rush County,165,KS,36.4
+KS,Kansas,20,Russell County,167,KS,56.6
+KS,Kansas,20,Saline County,169,KS,47.2
+KS,Kansas,20,Scott County,171,KS,51.2
+KS,Kansas,20,Sedgwick County,173,KS,53.2
+KS,Kansas,20,Seward County,175,KS,70.4
+KS,Kansas,20,Shawnee County,177,KS,37.6
+KS,Kansas,20,Sheridan County,179,KS,51
+KS,Kansas,20,Sherman County,181,KS,43.6
+KS,Kansas,20,Smith County,183,KS,65.2
+KS,Kansas,20,Stafford County,185,KS,38.2
+KS,Kansas,20,Stanton County,187,KS,35.4
+KS,Kansas,20,Stevens County,189,KS,68
+KS,Kansas,20,Sumner County,191,KS,52.8
+KS,Kansas,20,Thomas County,193,KS,71.6
+KS,Kansas,20,Trego County,195,KS,38.8
+KS,Kansas,20,Wabaunsee County,197,KS,65.4
+KS,Kansas,20,Wallace County,199,KS,59.2
+KS,Kansas,20,Washington County,201,KS,54
+KS,Kansas,20,Wichita County,203,KS,37.6
+KS,Kansas,20,Wilson County,205,KS,54.6
+KS,Kansas,20,Woodson County,207,KS,58.2
+KS,Kansas,20,Wyandotte County,209,KS,59.4
+KY,Kentucky,21,Adair County,001,KY,89.4
+KY,Kentucky,21,Allen County,003,KY,37.6
+KY,Kentucky,21,Anderson County,005,KY,43.8
+KY,Kentucky,21,Ballard County,007,KY,41.2
+KY,Kentucky,21,Barren County,009,KY,65.2
+KY,Kentucky,21,Bath County,011,KY,33
+KY,Kentucky,21,Bell County,013,KY,49
+KY,Kentucky,21,Boone County,015,KY,53.8
+KY,Kentucky,21,Bourbon County,017,KY,54.4
+KY,Kentucky,21,Boyd County,019,KY,39.4
+KY,Kentucky,21,Boyle County,021,KY,35.6
+KY,Kentucky,21,Bracken County,023,KY,67
+KY,Kentucky,21,Breathitt County,025,KY,57.2
+KY,Kentucky,21,Breckinridge County,027,KY,55.4
+KY,Kentucky,21,Bullitt County,029,KY,59.6
+KY,Kentucky,21,Butler County,031,KY,59
+KY,Kentucky,21,Caldwell County,033,KY,66.4
+KY,Kentucky,21,Calloway County,035,KY,61.8
+KY,Kentucky,21,Campbell County,037,KY,50.4
+KY,Kentucky,21,Carlisle County,039,KY,29.4
+KY,Kentucky,21,Carroll County,041,KY,35.8
+KY,Kentucky,21,Carter County,043,KY,38.8
+KY,Kentucky,21,Casey County,045,KY,54
+KY,Kentucky,21,Christian County,047,KY,28.8
+KY,Kentucky,21,Clark County,049,KY,53.4
+KY,Kentucky,21,Clay County,051,KY,71
+KY,Kentucky,21,Clinton County,053,KY,37.2
+KY,Kentucky,21,Crittenden County,055,KY,47.4
+KY,Kentucky,21,Cumberland County,057,KY,37.4
+KY,Kentucky,21,Daviess County,059,KY,16.4
+KY,Kentucky,21,Edmonson County,061,KY,73.6
+KY,Kentucky,21,Elliott County,063,KY,66.6
+KY,Kentucky,21,Estill County,065,KY,40.2
+KY,Kentucky,21,Fayette County,067,KY,44.4
+KY,Kentucky,21,Fleming County,069,KY,69.8
+KY,Kentucky,21,Floyd County,071,KY,56.2
+KY,Kentucky,21,Franklin County,073,KY,48.6
+KY,Kentucky,21,Fulton County,075,KY,52.6
+KY,Kentucky,21,Gallatin County,077,KY,23.6
+KY,Kentucky,21,Garrard County,079,KY,56.8
+KY,Kentucky,21,Grant County,081,KY,54.4
+KY,Kentucky,21,Graves County,083,KY,46.8
+KY,Kentucky,21,Grayson County,085,KY,31.4
+KY,Kentucky,21,Green County,087,KY,39.4
+KY,Kentucky,21,Greenup County,089,KY,55.2
+KY,Kentucky,21,Hancock County,091,KY,46.8
+KY,Kentucky,21,Hardin County,093,KY,43.6
+KY,Kentucky,21,Harlan County,095,KY,65.8
+KY,Kentucky,21,Harrison County,097,KY,31.8
+KY,Kentucky,21,Hart County,099,KY,65.4
+KY,Kentucky,21,Henderson County,101,KY,36.8
+KY,Kentucky,21,Henry County,103,KY,36
+KY,Kentucky,21,Hickman County,105,KY,58
+KY,Kentucky,21,Hopkins County,107,KY,63.2
+KY,Kentucky,21,Jackson County,109,KY,38
+KY,Kentucky,21,Jefferson County,111,KY,40.6
+KY,Kentucky,21,Jessamine County,113,KY,58.8
+KY,Kentucky,21,Johnson County,115,KY,52.4
+KY,Kentucky,21,Kenton County,117,KY,44.8
+KY,Kentucky,21,Knott County,119,KY,71.8
+KY,Kentucky,21,Knox County,121,KY,46.8
+KY,Kentucky,21,LaRue County,123,KY,78.8
+KY,Kentucky,21,Laurel County,125,KY,56.8
+KY,Kentucky,21,Lawrence County,127,KY,53.2
+KY,Kentucky,21,Lee County,129,KY,41
+KY,Kentucky,21,Leslie County,131,KY,41
+KY,Kentucky,21,Letcher County,133,KY,47.8
+KY,Kentucky,21,Lewis County,135,KY,51
+KY,Kentucky,21,Lincoln County,137,KY,33.8
+KY,Kentucky,21,Livingston County,139,KY,64.2
+KY,Kentucky,21,Logan County,141,KY,46.6
+KY,Kentucky,21,Lyon County,143,KY,48.6
+KY,Kentucky,21,McCracken County,145,KY,68.6
+KY,Kentucky,21,McCreary County,147,KY,54.6
+KY,Kentucky,21,McLean County,149,KY,41
+KY,Kentucky,21,Madison County,151,KY,37.8
+KY,Kentucky,21,Magoffin County,153,KY,42.6
+KY,Kentucky,21,Marion County,155,KY,51.2
+KY,Kentucky,21,Marshall County,157,KY,38.6
+KY,Kentucky,21,Martin County,159,KY,59
+KY,Kentucky,21,Mason County,161,KY,68.2
+KY,Kentucky,21,Meade County,163,KY,23.2
+KY,Kentucky,21,Menifee County,165,KY,73.6
+KY,Kentucky,21,Mercer County,167,KY,53.8
+KY,Kentucky,21,Metcalfe County,169,KY,51.4
+KY,Kentucky,21,Monroe County,171,KY,46.6
+KY,Kentucky,21,Montgomery County,173,KY,53.8
+KY,Kentucky,21,Morgan County,175,KY,56.8
+KY,Kentucky,21,Muhlenberg County,177,KY,50.8
+KY,Kentucky,21,Nelson County,179,KY,43.4
+KY,Kentucky,21,Nicholas County,181,KY,51.6
+KY,Kentucky,21,Ohio County,183,KY,63.4
+KY,Kentucky,21,Oldham County,185,KY,67.6
+KY,Kentucky,21,Owen County,187,KY,44.4
+KY,Kentucky,21,Owsley County,189,KY,70.2
+KY,Kentucky,21,Pendleton County,191,KY,32
+KY,Kentucky,21,Perry County,193,KY,57.8
+KY,Kentucky,21,Pike County,195,KY,46.4
+KY,Kentucky,21,Powell County,197,KY,48.4
+KY,Kentucky,21,Pulaski County,199,KY,69.4
+KY,Kentucky,21,Robertson County,201,KY,55
+KY,Kentucky,21,Rockcastle County,203,KY,70.8
+KY,Kentucky,21,Rowan County,205,KY,28.8
+KY,Kentucky,21,Russell County,207,KY,63.4
+KY,Kentucky,21,Scott County,209,KY,39.4
+KY,Kentucky,21,Shelby County,211,KY,38.6
+KY,Kentucky,21,Simpson County,213,KY,43.2
+KY,Kentucky,21,Spencer County,215,KY,30.6
+KY,Kentucky,21,Taylor County,217,KY,23
+KY,Kentucky,21,Todd County,219,KY,56
+KY,Kentucky,21,Trigg County,221,KY,60.8
+KY,Kentucky,21,Trimble County,223,KY,48.2
+KY,Kentucky,21,Union County,225,KY,55.8
+KY,Kentucky,21,Warren County,227,KY,65
+KY,Kentucky,21,Washington County,229,KY,68.2
+KY,Kentucky,21,Wayne County,231,KY,42.6
+KY,Kentucky,21,Webster County,233,KY,57
+KY,Kentucky,21,Whitley County,235,KY,32.4
+KY,Kentucky,21,Wolfe County,237,KY,45.4
+KY,Kentucky,21,Woodford County,239,KY,51.2
+LA,Louisiana,22,Acadia Parish,001,LA,38.8
+LA,Louisiana,22,Allen Parish,003,LA,56
+LA,Louisiana,22,Ascension Parish,005,LA,56.4
+LA,Louisiana,22,Assumption Parish,007,LA,55.8
+LA,Louisiana,22,Avoyelles Parish,009,LA,62
+LA,Louisiana,22,Beauregard Parish,011,LA,70.2
+LA,Louisiana,22,Bienville Parish,013,LA,45.6
+LA,Louisiana,22,Bossier Parish,015,LA,47.8
+LA,Louisiana,22,Caddo Parish,017,LA,22.6
+LA,Louisiana,22,Calcasieu Parish,019,LA,70.2
+LA,Louisiana,22,Caldwell Parish,021,LA,40.2
+LA,Louisiana,22,Cameron Parish,023,LA,40.2
+LA,Louisiana,22,Catahoula Parish,025,LA,49.2
+LA,Louisiana,22,Claiborne Parish,027,LA,55.8
+LA,Louisiana,22,Concordia Parish,029,LA,52
+LA,Louisiana,22,De Soto Parish,031,LA,40.4
+LA,Louisiana,22,East Baton Rouge Parish,033,LA,53.2
+LA,Louisiana,22,East Carroll Parish,035,LA,25.8
+LA,Louisiana,22,East Feliciana Parish,037,LA,40.4
+LA,Louisiana,22,Evangeline Parish,039,LA,44.6
+LA,Louisiana,22,Franklin Parish,041,LA,59.8
+LA,Louisiana,22,Grant Parish,043,LA,59.4
+LA,Louisiana,22,Iberia Parish,045,LA,37.8
+LA,Louisiana,22,Iberville Parish,047,LA,38
+LA,Louisiana,22,Jackson Parish,049,LA,61
+LA,Louisiana,22,Jefferson Parish,051,LA,42.8
+LA,Louisiana,22,Jefferson Davis Parish,053,LA,64.8
+LA,Louisiana,22,Lafayette Parish,055,LA,57.6
+LA,Louisiana,22,Lafourche Parish,057,LA,44.6
+LA,Louisiana,22,LaSalle Parish,059,LA,41.2
+LA,Louisiana,22,Lincoln Parish,061,LA,60.4
+LA,Louisiana,22,Livingston Parish,063,LA,46.2
+LA,Louisiana,22,Madison Parish,065,LA,69.2
+LA,Louisiana,22,Morehouse Parish,067,LA,44.2
+LA,Louisiana,22,Natchitoches Parish,069,LA,57.2
+LA,Louisiana,22,Orleans Parish[16],071,LA,60
+LA,Louisiana,22,Ouachita Parish,073,LA,38
+LA,Louisiana,22,Plaquemines Parish,075,LA,79.8
+LA,Louisiana,22,Pointe Coupee Parish,077,LA,60.4
+LA,Louisiana,22,Rapides Parish,079,LA,68.4
+LA,Louisiana,22,Red River Parish,081,LA,37
+LA,Louisiana,22,Richland Parish,083,LA,62.2
+LA,Louisiana,22,Sabine Parish,085,LA,30.2
+LA,Louisiana,22,St. Bernard Parish,087,LA,48.4
+LA,Louisiana,22,St. Charles Parish,089,LA,56.2
+LA,Louisiana,22,St. Helena Parish,091,LA,64
+LA,Louisiana,22,St. James Parish,093,LA,72.8
+LA,Louisiana,22,St. John the Baptist Parish,095,LA,48.8
+LA,Louisiana,22,St. Landry Parish,097,LA,39.6
+LA,Louisiana,22,St. Martin Parish,099,LA,53.6
+LA,Louisiana,22,St. Mary Parish,101,LA,57.6
+LA,Louisiana,22,St. Tammany Parish,103,LA,58
+LA,Louisiana,22,Tangipahoa Parish,105,LA,75
+LA,Louisiana,22,Tensas Parish,107,LA,47.8
+LA,Louisiana,22,Terrebonne Parish,109,LA,69.2
+LA,Louisiana,22,Union Parish,111,LA,71
+LA,Louisiana,22,Vermilion Parish,113,LA,60.4
+LA,Louisiana,22,Vernon Parish,115,LA,55
+LA,Louisiana,22,Washington Parish,117,LA,57.2
+LA,Louisiana,22,Webster Parish,119,LA,44.2
+LA,Louisiana,22,West Baton Rouge Parish,121,LA,53
+LA,Louisiana,22,West Carroll Parish,123,LA,29.6
+LA,Louisiana,22,West Feliciana Parish,125,LA,53.2
+LA,Louisiana,22,Winn Parish,127,LA,61.4
+ME,Maine,23,Androscoggin County,001,ME,28.6
+ME,Maine,23,Aroostook County,003,ME,74.4
+ME,Maine,23,Cumberland County,005,ME,35.6
+ME,Maine,23,Franklin County,007,ME,35.4
+ME,Maine,23,Hancock County,009,ME,38
+ME,Maine,23,Kennebec County,011,ME,46.8
+ME,Maine,23,Knox County,013,ME,56.8
+ME,Maine,23,Lincoln County,015,ME,59.8
+ME,Maine,23,Oxford County,017,ME,49.6
+ME,Maine,23,Penobscot County,019,ME,55.2
+ME,Maine,23,Piscataquis County,021,ME,32.8
+ME,Maine,23,Sagadahoc County,023,ME,59.8
+ME,Maine,23,Somerset County,025,ME,43.6
+ME,Maine,23,Waldo County,027,ME,36.4
+ME,Maine,23,Washington County,029,ME,45.2
+ME,Maine,23,York County,031,ME,36.4
+MD,Maryland,24,Allegany County,001,MD,50.8
+MD,Maryland,24,Anne Arundel County,003,MD,54.2
+MD,Maryland,24,Baltimore County,005,MD,61.8
+MD,Maryland,24,Calvert County,009,MD,41.8
+MD,Maryland,24,Caroline County,011,MD,47.8
+MD,Maryland,24,Carroll County,013,MD,82.4
+MD,Maryland,24,Cecil County,015,MD,76.6
+MD,Maryland,24,Charles County,017,MD,52.6
+MD,Maryland,24,Dorchester County,019,MD,39
+MD,Maryland,24,Frederick County,021,MD,33.2
+MD,Maryland,24,Garrett County,023,MD,66
+MD,Maryland,24,Harford County,025,MD,44.8
+MD,Maryland,24,Howard County,027,MD,73.8
+MD,Maryland,24,Kent County,029,MD,66.2
+MD,Maryland,24,Montgomery County,031,MD,66
+MD,Maryland,24,Prince George's County,033,MD,46.6
+MD,Maryland,24,Queen Anne's County,035,MD,46.2
+MD,Maryland,24,St. Mary's County,037,MD,65.8
+MD,Maryland,24,Somerset County,039,MD,54.8
+MD,Maryland,24,Talbot County,041,MD,57.6
+MD,Maryland,24,Washington County,043,MD,59.6
+MD,Maryland,24,Wicomico County,045,MD,55.8
+MD,Maryland,24,Worcester County,047,MD,25.8
+MD,Maryland,24,Baltimore City,510,MD,43.6
+MA,Massachusetts,25,Barnstable County,001,MA,68.2
+MA,Massachusetts,25,Berkshire County,003,MA,31.6
+MA,Massachusetts,25,Bristol County,005,MA,61.6
+MA,Massachusetts,25,Dukes County,007,MA,52.2
+MA,Massachusetts,25,Essex County,009,MA,48
+MA,Massachusetts,25,Franklin County,011,MA,41.8
+MA,Massachusetts,25,Hampden County,013,MA,35.8
+MA,Massachusetts,25,Hampshire County,015,MA,55.6
+MA,Massachusetts,25,Middlesex County,017,MA,44.8
+MA,Massachusetts,25,Nantucket,019,MA,56.8
+MA,Massachusetts,25,Norfolk County,021,MA,56
+MA,Massachusetts,25,Plymouth County,023,MA,40.4
+MA,Massachusetts,25,Suffolk County,025,MA,56.2
+MA,Massachusetts,25,Worcester County,027,MA,53.8
+MI,Michigan,26,Alcona County,001,MI,37
+MI,Michigan,26,Alger County,003,MI,56.2
+MI,Michigan,26,Allegan County,005,MI,46.8
+MI,Michigan,26,Alpena County,007,MI,18.6
+MI,Michigan,26,Antrim County,009,MI,58.2
+MI,Michigan,26,Arenac County,011,MI,48.4
+MI,Michigan,26,Baraga County,013,MI,48.4
+MI,Michigan,26,Barry County,015,MI,27
+MI,Michigan,26,Bay County,017,MI,69.4
+MI,Michigan,26,Benzie County,019,MI,47.2
+MI,Michigan,26,Berrien County,021,MI,62.2
+MI,Michigan,26,Branch County,023,MI,42
+MI,Michigan,26,Calhoun County,025,MI,35.8
+MI,Michigan,26,Cass County,027,MI,39.8
+MI,Michigan,26,Charlevoix County,029,MI,44
+MI,Michigan,26,Cheboygan County,031,MI,68.2
+MI,Michigan,26,Chippewa County,033,MI,40.6
+MI,Michigan,26,Clare County,035,MI,42.4
+MI,Michigan,26,Clinton County,037,MI,50.8
+MI,Michigan,26,Crawford County,039,MI,57.8
+MI,Michigan,26,Delta County,041,MI,26.6
+MI,Michigan,26,Dickinson County,043,MI,59.8
+MI,Michigan,26,Eaton County,045,MI,73.2
+MI,Michigan,26,Emmet County,047,MI,61
+MI,Michigan,26,Genesee County,049,MI,56.2
+MI,Michigan,26,Gladwin County,051,MI,47.4
+MI,Michigan,26,Gogebic County,053,MI,45.6
+MI,Michigan,26,Grand Traverse County,055,MI,70.6
+MI,Michigan,26,Gratiot County,057,MI,57.8
+MI,Michigan,26,Hillsdale County,059,MI,50.8
+MI,Michigan,26,Houghton County,061,MI,39.6
+MI,Michigan,26,Huron County,063,MI,52.2
+MI,Michigan,26,Ingham County,065,MI,43
+MI,Michigan,26,Ionia County,067,MI,51.8
+MI,Michigan,26,Iosco County,069,MI,46.4
+MI,Michigan,26,Iron County,071,MI,53.2
+MI,Michigan,26,Isabella County,073,MI,46.8
+MI,Michigan,26,Jackson County,075,MI,47.8
+MI,Michigan,26,Kalamazoo County,077,MI,57
+MI,Michigan,26,Kalkaska County,079,MI,55.4
+MI,Michigan,26,Kent County,081,MI,55.4
+MI,Michigan,26,Keweenaw County,083,MI,49
+MI,Michigan,26,Lake County,085,MI,44.8
+MI,Michigan,26,Lapeer County,087,MI,23.8
+MI,Michigan,26,Leelanau County,089,MI,74.8
+MI,Michigan,26,Lenawee County,091,MI,32.2
+MI,Michigan,26,Livingston County,093,MI,54.8
+MI,Michigan,26,Luce County,095,MI,41
+MI,Michigan,26,Mackinac County,097,MI,48.6
+MI,Michigan,26,Macomb County,099,MI,40.6
+MI,Michigan,26,Manistee County,101,MI,46.6
+MI,Michigan,26,Marquette County,103,MI,51.6
+MI,Michigan,26,Mason County,105,MI,41.4
+MI,Michigan,26,Mecosta County,107,MI,44.4
+MI,Michigan,26,Menominee County,109,MI,40.4
+MI,Michigan,26,Midland County,111,MI,59
+MI,Michigan,26,Missaukee County,113,MI,41.4
+MI,Michigan,26,Monroe County,115,MI,48.2
+MI,Michigan,26,Montcalm County,117,MI,54.2
+MI,Michigan,26,Montmorency County,119,MI,50
+MI,Michigan,26,Muskegon County,121,MI,27.4
+MI,Michigan,26,Newaygo County,123,MI,35.6
+MI,Michigan,26,Oakland County,125,MI,35.4
+MI,Michigan,26,Oceana County,127,MI,50.8
+MI,Michigan,26,Ogemaw County,129,MI,59.6
+MI,Michigan,26,Ontonagon County,131,MI,57.6
+MI,Michigan,26,Osceola County,133,MI,71.4
+MI,Michigan,26,Oscoda County,135,MI,35
+MI,Michigan,26,Otsego County,137,MI,37.8
+MI,Michigan,26,Ottawa County,139,MI,55.8
+MI,Michigan,26,Presque Isle County,141,MI,40
+MI,Michigan,26,Roscommon County,143,MI,29.6
+MI,Michigan,26,Saginaw County,145,MI,48.8
+MI,Michigan,26,St. Clair County,147,MI,50.2
+MI,Michigan,26,St. Joseph County,149,MI,48
+MI,Michigan,26,Sanilac County,151,MI,55.6
+MI,Michigan,26,Schoolcraft County,153,MI,36.2
+MI,Michigan,26,Shiawassee County,155,MI,33.4
+MI,Michigan,26,Tuscola County,157,MI,37.8
+MI,Michigan,26,Van Buren County,159,MI,50.2
+MI,Michigan,26,Washtenaw County,161,MI,53.2
+MI,Michigan,26,Wayne County,163,MI,45
+MI,Michigan,26,Wexford County,165,MI,77
+MN,Minnesota,27,Aitkin County,001,MN,37
+MN,Minnesota,27,Anoka County,003,MN,73.8
+MN,Minnesota,27,Becker County,005,MN,50.8
+MN,Minnesota,27,Beltrami County,007,MN,51
+MN,Minnesota,27,Benton County,009,MN,56
+MN,Minnesota,27,Big Stone County,011,MN,67.2
+MN,Minnesota,27,Blue Earth County,013,MN,33.8
+MN,Minnesota,27,Brown County,015,MN,55
+MN,Minnesota,27,Carlton County,017,MN,33.4
+MN,Minnesota,27,Carver County,019,MN,50.4
+MN,Minnesota,27,Cass County,021,MN,57
+MN,Minnesota,27,Chippewa County,023,MN,29.2
+MN,Minnesota,27,Chisago County,025,MN,44
+MN,Minnesota,27,Clay County,027,MN,49.6
+MN,Minnesota,27,Clearwater County,029,MN,43.4
+MN,Minnesota,27,Cook County,031,MN,44.8
+MN,Minnesota,27,Cottonwood County,033,MN,53.4
+MN,Minnesota,27,Crow Wing County,035,MN,35
+MN,Minnesota,27,Dakota County,037,MN,61
+MN,Minnesota,27,Dodge County,039,MN,54.8
+MN,Minnesota,27,Douglas County,041,MN,47
+MN,Minnesota,27,Faribault County,043,MN,29.8
+MN,Minnesota,27,Fillmore County,045,MN,38.6
+MN,Minnesota,27,Freeborn County,047,MN,50
+MN,Minnesota,27,Goodhue County,049,MN,47.6
+MN,Minnesota,27,Grant County,051,MN,40.6
+MN,Minnesota,27,Hennepin County,053,MN,49.2
+MN,Minnesota,27,Houston County,055,MN,67
+MN,Minnesota,27,Hubbard County,057,MN,35.4
+MN,Minnesota,27,Isanti County,059,MN,17
+MN,Minnesota,27,Itasca County,061,MN,43.4
+MN,Minnesota,27,Jackson County,063,MN,58.4
+MN,Minnesota,27,Kanabec County,065,MN,53.8
+MN,Minnesota,27,Kandiyohi County,067,MN,58.8
+MN,Minnesota,27,Kittson County,069,MN,66.2
+MN,Minnesota,27,Koochiching County,071,MN,43.4
+MN,Minnesota,27,Lac qui Parle County,073,MN,78.4
+MN,Minnesota,27,Lake County,075,MN,49
+MN,Minnesota,27,Lake of the Woods County,077,MN,36.2
+MN,Minnesota,27,Le Sueur County,079,MN,31.4
+MN,Minnesota,27,Lincoln County,081,MN,56.2
+MN,Minnesota,27,Lyon County,083,MN,50.6
+MN,Minnesota,27,McLeod County,085,MN,32.4
+MN,Minnesota,27,Mahnomen County,087,MN,37.6
+MN,Minnesota,27,Marshall County,089,MN,32
+MN,Minnesota,27,Martin County,091,MN,35
+MN,Minnesota,27,Meeker County,093,MN,57.6
+MN,Minnesota,27,Mille Lacs County,095,MN,52.6
+MN,Minnesota,27,Morrison County,097,MN,59
+MN,Minnesota,27,Mower County,099,MN,66.4
+MN,Minnesota,27,Murray County,101,MN,30.2
+MN,Minnesota,27,Nicollet County,103,MN,54.8
+MN,Minnesota,27,Nobles County,105,MN,24.6
+MN,Minnesota,27,Norman County,107,MN,44.4
+MN,Minnesota,27,Olmsted County,109,MN,43
+MN,Minnesota,27,Otter Tail County,111,MN,38
+MN,Minnesota,27,Pennington County,113,MN,47
+MN,Minnesota,27,Pine County,115,MN,38.6
+MN,Minnesota,27,Pipestone County,117,MN,54.2
+MN,Minnesota,27,Polk County,119,MN,71.8
+MN,Minnesota,27,Pope County,121,MN,59.6
+MN,Minnesota,27,Ramsey County,123,MN,67.8
+MN,Minnesota,27,Red Lake County,125,MN,51.6
+MN,Minnesota,27,Redwood County,127,MN,66.4
+MN,Minnesota,27,Renville County,129,MN,35.2
+MN,Minnesota,27,Rice County,131,MN,42.8
+MN,Minnesota,27,Rock County,133,MN,59.2
+MN,Minnesota,27,Roseau County,135,MN,43.4
+MN,Minnesota,27,St. Louis County,137,MN,41
+MN,Minnesota,27,Scott County,139,MN,61.4
+MN,Minnesota,27,Sherburne County,141,MN,30
+MN,Minnesota,27,Sibley County,143,MN,56.4
+MN,Minnesota,27,Stearns County,145,MN,58
+MN,Minnesota,27,Steele County,147,MN,26
+MN,Minnesota,27,Stevens County,149,MN,61.6
+MN,Minnesota,27,Swift County,151,MN,70.4
+MN,Minnesota,27,Todd County,153,MN,55
+MN,Minnesota,27,Traverse County,155,MN,37.6
+MN,Minnesota,27,Wabasha County,157,MN,54.4
+MN,Minnesota,27,Wadena County,159,MN,65.2
+MN,Minnesota,27,Waseca County,161,MN,34.8
+MN,Minnesota,27,Washington County,163,MN,36
+MN,Minnesota,27,Watonwan County,165,MN,68.8
+MN,Minnesota,27,Wilkin County,167,MN,57.6
+MN,Minnesota,27,Winona County,169,MN,45
+MN,Minnesota,27,Wright County,171,MN,49.8
+MN,Minnesota,27,Yellow Medicine County,173,MN,53.4
+MS,Mississippi,28,Adams County,001,MS,61
+MS,Mississippi,28,Alcorn County,003,MS,60.6
+MS,Mississippi,28,Amite County,005,MS,69
+MS,Mississippi,28,Attala County,007,MS,49.6
+MS,Mississippi,28,Benton County,009,MS,50.2
+MS,Mississippi,28,Bolivar County,011,MS,55.2
+MS,Mississippi,28,Calhoun County,013,MS,53
+MS,Mississippi,28,Carroll County,015,MS,49.2
+MS,Mississippi,28,Chickasaw County,017,MS,35.6
+MS,Mississippi,28,Choctaw County,019,MS,48.4
+MS,Mississippi,28,Claiborne County,021,MS,79.6
+MS,Mississippi,28,Clarke County,023,MS,46.2
+MS,Mississippi,28,Clay County,025,MS,64.2
+MS,Mississippi,28,Coahoma County,027,MS,54
+MS,Mississippi,28,Copiah County,029,MS,52
+MS,Mississippi,28,Covington County,031,MS,31.2
+MS,Mississippi,28,DeSoto County,033,MS,36.2
+MS,Mississippi,28,Forrest County,035,MS,42.8
+MS,Mississippi,28,Franklin County,037,MS,24.8
+MS,Mississippi,28,George County,039,MS,50.6
+MS,Mississippi,28,Greene County,041,MS,51.8
+MS,Mississippi,28,Grenada County,043,MS,55
+MS,Mississippi,28,Hancock County,045,MS,42.6
+MS,Mississippi,28,Harrison County,047,MS,46.2
+MS,Mississippi,28,Hinds County,049,MS,39.4
+MS,Mississippi,28,Holmes County,051,MS,64.6
+MS,Mississippi,28,Humphreys County,053,MS,55.4
+MS,Mississippi,28,Issaquena County,055,MS,54.8
+MS,Mississippi,28,Itawamba County,057,MS,50.6
+MS,Mississippi,28,Jackson County,059,MS,31.4
+MS,Mississippi,28,Jasper County,061,MS,53
+MS,Mississippi,28,Jefferson County,063,MS,58
+MS,Mississippi,28,Jefferson Davis County,065,MS,59.8
+MS,Mississippi,28,Jones County,067,MS,42.8
+MS,Mississippi,28,Kemper County,069,MS,20.2
+MS,Mississippi,28,Lafayette County,071,MS,44.4
+MS,Mississippi,28,Lamar County,073,MS,61.8
+MS,Mississippi,28,Lauderdale County,075,MS,65.6
+MS,Mississippi,28,Lawrence County,077,MS,74
+MS,Mississippi,28,Leake County,079,MS,34.6
+MS,Mississippi,28,Lee County,081,MS,63
+MS,Mississippi,28,Leflore County,083,MS,54
+MS,Mississippi,28,Lincoln County,085,MS,46.6
+MS,Mississippi,28,Lowndes County,087,MS,79
+MS,Mississippi,28,Madison County,089,MS,28.8
+MS,Mississippi,28,Marion County,091,MS,43.4
+MS,Mississippi,28,Marshall County,093,MS,37
+MS,Mississippi,28,Monroe County,095,MS,60.4
+MS,Mississippi,28,Montgomery County,097,MS,66.4
+MS,Mississippi,28,Neshoba County,099,MS,61.8
+MS,Mississippi,28,Newton County,101,MS,59.4
+MS,Mississippi,28,Noxubee County,103,MS,42
+MS,Mississippi,28,Oktibbeha County,105,MS,43.4
+MS,Mississippi,28,Panola County,107,MS,53.8
+MS,Mississippi,28,Pearl River County,109,MS,46.6
+MS,Mississippi,28,Perry County,111,MS,31.2
+MS,Mississippi,28,Pike County,113,MS,51.8
+MS,Mississippi,28,Pontotoc County,115,MS,32.8
+MS,Mississippi,28,Prentiss County,117,MS,54.4
+MS,Mississippi,28,Quitman County,119,MS,43.2
+MS,Mississippi,28,Rankin County,121,MS,36.6
+MS,Mississippi,28,Scott County,123,MS,57.6
+MS,Mississippi,28,Sharkey County,125,MS,58.2
+MS,Mississippi,28,Simpson County,127,MS,47
+MS,Mississippi,28,Smith County,129,MS,77.2
+MS,Mississippi,28,Stone County,131,MS,33.4
+MS,Mississippi,28,Sunflower County,133,MS,54.2
+MS,Mississippi,28,Tallahatchie County,135,MS,63.2
+MS,Mississippi,28,Tate County,137,MS,32.6
+MS,Mississippi,28,Tippah County,139,MS,53.4
+MS,Mississippi,28,Tishomingo County,141,MS,44
+MS,Mississippi,28,Tunica County,143,MS,57.4
+MS,Mississippi,28,Union County,145,MS,63.6
+MS,Mississippi,28,Walthall County,147,MS,66
+MS,Mississippi,28,Warren County,149,MS,52.2
+MS,Mississippi,28,Washington County,151,MS,23.6
+MS,Mississippi,28,Wayne County,153,MS,33.6
+MS,Mississippi,28,Webster County,155,MS,57.8
+MS,Mississippi,28,Wilkinson County,157,MS,46.2
+MS,Mississippi,28,Winston County,159,MS,51.2
+MS,Mississippi,28,Yalobusha County,161,MS,34.6
+MS,Mississippi,28,Yazoo County,163,MS,44.6
+MO,Missouri,29,Adair County,001,MO,54
+MO,Missouri,29,Andrew County,003,MO,58.4
+MO,Missouri,29,Atchison County,005,MO,37.4
+MO,Missouri,29,Audrain County,007,MO,45
+MO,Missouri,29,Barry County,009,MO,81
+MO,Missouri,29,Barton County,011,MO,54.2
+MO,Missouri,29,Bates County,013,MO,74.4
+MO,Missouri,29,Benton County,015,MO,82
+MO,Missouri,29,Bollinger County,017,MO,49.4
+MO,Missouri,29,Boone County,019,MO,56
+MO,Missouri,29,Buchanan County,021,MO,41.4
+MO,Missouri,29,Butler County,023,MO,64.2
+MO,Missouri,29,Caldwell County,025,MO,44
+MO,Missouri,29,Callaway County,027,MO,64.6
+MO,Missouri,29,Camden County,029,MO,45.8
+MO,Missouri,29,Cape Girardeau County,031,MO,58
+MO,Missouri,29,Carroll County,033,MO,45.2
+MO,Missouri,29,Carter County,035,MO,46.6
+MO,Missouri,29,Cass County,037,MO,59
+MO,Missouri,29,Cedar County,039,MO,38.6
+MO,Missouri,29,Chariton County,041,MO,32.8
+MO,Missouri,29,Christian County,043,MO,49.2
+MO,Missouri,29,Clark County,045,MO,44.2
+MO,Missouri,29,Clay County,047,MO,35.6
+MO,Missouri,29,Clinton County,049,MO,30.8
+MO,Missouri,29,Cole County,051,MO,35.2
+MO,Missouri,29,Cooper County,053,MO,36.2
+MO,Missouri,29,Crawford County,055,MO,65
+MO,Missouri,29,Dade County,057,MO,49.2
+MO,Missouri,29,Dallas County,059,MO,49.4
+MO,Missouri,29,Daviess County,061,MO,43.2
+MO,Missouri,29,DeKalb County,063,MO,62
+MO,Missouri,29,Dent County,065,MO,48.4
+MO,Missouri,29,Douglas County,067,MO,48.2
+MO,Missouri,29,Dunklin County,069,MO,22.6
+MO,Missouri,29,Franklin County,071,MO,21.8
+MO,Missouri,29,Gasconade County,073,MO,37.6
+MO,Missouri,29,Gentry County,075,MO,42.2
+MO,Missouri,29,Greene County,077,MO,58.6
+MO,Missouri,29,Grundy County,079,MO,36
+MO,Missouri,29,Harrison County,081,MO,44
+MO,Missouri,29,Henry County,083,MO,74.4
+MO,Missouri,29,Hickory County,085,MO,49
+MO,Missouri,29,Holt County,087,MO,58.8
+MO,Missouri,29,Howard County,089,MO,65.4
+MO,Missouri,29,Howell County,091,MO,29
+MO,Missouri,29,Iron County,093,MO,63.6
+MO,Missouri,29,Jackson County,095,MO,39.8
+MO,Missouri,29,Jasper County,097,MO,91
+MO,Missouri,29,Jefferson County,099,MO,72.2
+MO,Missouri,29,Johnson County,101,MO,48.8
+MO,Missouri,29,Knox County,103,MO,45.8
+MO,Missouri,29,Laclede County,105,MO,48.2
+MO,Missouri,29,Lafayette County,107,MO,38
+MO,Missouri,29,Lawrence County,109,MO,31.2
+MO,Missouri,29,Lewis County,111,MO,63.4
+MO,Missouri,29,Lincoln County,113,MO,40
+MO,Missouri,29,Linn County,115,MO,34.6
+MO,Missouri,29,Livingston County,117,MO,50.4
+MO,Missouri,29,McDonald County,119,MO,55.2
+MO,Missouri,29,Macon County,121,MO,32
+MO,Missouri,29,Madison County,123,MO,59.4
+MO,Missouri,29,Maries County,125,MO,56.2
+MO,Missouri,29,Marion County,127,MO,49.4
+MO,Missouri,29,Mercer County,129,MO,45
+MO,Missouri,29,Miller County,131,MO,46.6
+MO,Missouri,29,Mississippi County,133,MO,74
+MO,Missouri,29,Moniteau County,135,MO,74.4
+MO,Missouri,29,Monroe County,137,MO,31.8
+MO,Missouri,29,Montgomery County,139,MO,58.4
+MO,Missouri,29,Morgan County,141,MO,41
+MO,Missouri,29,New Madrid County,143,MO,80.4
+MO,Missouri,29,Newton County,145,MO,35.4
+MO,Missouri,29,Nodaway County,147,MO,61.6
+MO,Missouri,29,Oregon County,149,MO,56.8
+MO,Missouri,29,Osage County,151,MO,60.4
+MO,Missouri,29,Ozark County,153,MO,65
+MO,Missouri,29,Pemiscot County,155,MO,40
+MO,Missouri,29,Perry County,157,MO,60.6
+MO,Missouri,29,Pettis County,159,MO,63.6
+MO,Missouri,29,Phelps County,161,MO,58
+MO,Missouri,29,Pike County,163,MO,52.6
+MO,Missouri,29,Platte County,165,MO,45.8
+MO,Missouri,29,Polk County,167,MO,61.2
+MO,Missouri,29,Pulaski County,169,MO,45.6
+MO,Missouri,29,Putnam County,171,MO,50.4
+MO,Missouri,29,Ralls County,173,MO,53.2
+MO,Missouri,29,Randolph County,175,MO,37.6
+MO,Missouri,29,Ray County,177,MO,51.4
+MO,Missouri,29,Reynolds County,179,MO,59
+MO,Missouri,29,Ripley County,181,MO,56.8
+MO,Missouri,29,St. Charles County,183,MO,46.8
+MO,Missouri,29,St. Clair County,185,MO,46.6
+MO,Missouri,29,Ste. Genevieve County,186,MO,39.6
+MO,Missouri,29,St. Francois County,187,MO,68.8
+MO,Missouri,29,St. Louis County,189,MO,50.8
+MO,Missouri,29,Saline County,195,MO,38.6
+MO,Missouri,29,Schuyler County,197,MO,54.2
+MO,Missouri,29,Scotland County,199,MO,53
+MO,Missouri,29,Scott County,201,MO,47.6
+MO,Missouri,29,Shannon County,203,MO,33
+MO,Missouri,29,Shelby County,205,MO,59.8
+MO,Missouri,29,Stoddard County,207,MO,55.6
+MO,Missouri,29,Stone County,209,MO,25.6
+MO,Missouri,29,Sullivan County,211,MO,54.6
+MO,Missouri,29,Taney County,213,MO,72
+MO,Missouri,29,Texas County,215,MO,45.6
+MO,Missouri,29,Vernon County,217,MO,87.8
+MO,Missouri,29,Warren County,219,MO,71.4
+MO,Missouri,29,Washington County,221,MO,62.2
+MO,Missouri,29,Wayne County,223,MO,64.4
+MO,Missouri,29,Webster County,225,MO,83.2
+MO,Missouri,29,Worth County,227,MO,55.6
+MO,Missouri,29,Wright County,229,MO,61.2
+MO,Missouri,29,St. Louis County,510,MO,53.6
+MT,Montana,30,Beaverhead County,001,MT,73
+MT,Montana,30,Big Horn County,003,MT,33.4
+MT,Montana,30,Blaine County,005,MT,44.6
+MT,Montana,30,Broadwater County,007,MT,39.4
+MT,Montana,30,Carbon County,009,MT,58
+MT,Montana,30,Carter County,011,MT,66.4
+MT,Montana,30,Cascade County,013,MT,37.2
+MT,Montana,30,Chouteau County,015,MT,77.8
+MT,Montana,30,Custer County,017,MT,54.6
+MT,Montana,30,Daniels County,019,MT,47.6
+MT,Montana,30,Dawson County,021,MT,69.4
+MT,Montana,30,Deer Lodge County,023,MT,60.2
+MT,Montana,30,Fallon County,025,MT,32.8
+MT,Montana,30,Fergus County,027,MT,68.6
+MT,Montana,30,Flathead County,029,MT,70.6
+MT,Montana,30,Gallatin County,031,MT,57
+MT,Montana,30,Garfield County,033,MT,30.4
+MT,Montana,30,Glacier County,035,MT,56
+MT,Montana,30,Golden Valley County,037,MT,89.4
+MT,Montana,30,Granite County,039,MT,41.6
+MT,Montana,30,Hill County,041,MT,73.4
+MT,Montana,30,Jefferson County,043,MT,62
+MT,Montana,30,Judith Basin County,045,MT,48.4
+MT,Montana,30,Lake County,047,MT,54.6
+MT,Montana,30,Lewis and Clark County,049,MT,30.4
+MT,Montana,30,Liberty County,051,MT,50.2
+MT,Montana,30,Lincoln County,053,MT,36.6
+MT,Montana,30,McCone County,055,MT,56.4
+MT,Montana,30,Madison County,057,MT,45.8
+MT,Montana,30,Meagher County,059,MT,42.6
+MT,Montana,30,Mineral County,061,MT,47.6
+MT,Montana,30,Missoula County,063,MT,47.4
+MT,Montana,30,Musselshell County,065,MT,76.2
+MT,Montana,30,Park County,067,MT,38.8
+MT,Montana,30,Petroleum County,069,MT,57.6
+MT,Montana,30,Phillips County,071,MT,42.4
+MT,Montana,30,Pondera County,073,MT,48.4
+MT,Montana,30,Powder River County,075,MT,46.4
+MT,Montana,30,Powell County,077,MT,60.2
+MT,Montana,30,Prairie County,079,MT,62
+MT,Montana,30,Ravalli County,081,MT,50.2
+MT,Montana,30,Richland County,083,MT,67.6
+MT,Montana,30,Roosevelt County,085,MT,65
+MT,Montana,30,Rosebud County,087,MT,58.4
+MT,Montana,30,Sanders County,089,MT,47.2
+MT,Montana,30,Sheridan County,091,MT,55
+MT,Montana,30,Silver Bow County,093,MT,33.4
+MT,Montana,30,Stillwater County,095,MT,70.4
+MT,Montana,30,Sweet Grass County,097,MT,56.8
+MT,Montana,30,Teton County,099,MT,44.2
+MT,Montana,30,Toole County,101,MT,63.4
+MT,Montana,30,Treasure County,103,MT,45.4
+MT,Montana,30,Valley County,105,MT,64.4
+MT,Montana,30,Wheatland County,107,MT,27.2
+MT,Montana,30,Wibaux County,109,MT,45.2
+MT,Montana,30,Yellowstone County,111,MT,46.4
+NE,Nebraska,31,Adams County,001,NE,69.6
+NE,Nebraska,31,Antelope County,003,NE,50.4
+NE,Nebraska,31,Arthur County,005,NE,67.6
+NE,Nebraska,31,Banner County,007,NE,39.6
+NE,Nebraska,31,Blaine County,009,NE,47.4
+NE,Nebraska,31,Boone County,011,NE,54
+NE,Nebraska,31,Box Butte County,013,NE,65.2
+NE,Nebraska,31,Boyd County,015,NE,43
+NE,Nebraska,31,Brown County,017,NE,54.4
+NE,Nebraska,31,Buffalo County,019,NE,36.6
+NE,Nebraska,31,Burt County,021,NE,28
+NE,Nebraska,31,Butler County,023,NE,31
+NE,Nebraska,31,Cass County,025,NE,57.4
+NE,Nebraska,31,Cedar County,027,NE,58.6
+NE,Nebraska,31,Chase County,029,NE,54
+NE,Nebraska,31,Cherry County,031,NE,59.6
+NE,Nebraska,31,Cheyenne County,033,NE,59.6
+NE,Nebraska,31,Clay County,035,NE,66.4
+NE,Nebraska,31,Colfax County,037,NE,47.6
+NE,Nebraska,31,Cuming County,039,NE,59.8
+NE,Nebraska,31,Custer County,041,NE,44.8
+NE,Nebraska,31,Dakota County,043,NE,59.2
+NE,Nebraska,31,Dawes County,045,NE,76.4
+NE,Nebraska,31,Dawson County,047,NE,61.8
+NE,Nebraska,31,Deuel County,049,NE,23.8
+NE,Nebraska,31,Dixon County,051,NE,50.2
+NE,Nebraska,31,Dodge County,053,NE,55.8
+NE,Nebraska,31,Douglas County,055,NE,48
+NE,Nebraska,31,Dundy County,057,NE,51.8
+NE,Nebraska,31,Fillmore County,059,NE,71.4
+NE,Nebraska,31,Franklin County,061,NE,53.4
+NE,Nebraska,31,Frontier County,063,NE,14
+NE,Nebraska,31,Furnas County,065,NE,46.6
+NE,Nebraska,31,Gage County,067,NE,62.8
+NE,Nebraska,31,Garden County,069,NE,44.6
+NE,Nebraska,31,Garfield County,071,NE,54.4
+NE,Nebraska,31,Gosper County,073,NE,27.4
+NE,Nebraska,31,Grant County,075,NE,62.8
+NE,Nebraska,31,Greeley County,077,NE,55.2
+NE,Nebraska,31,Hall County,079,NE,40.2
+NE,Nebraska,31,Hamilton County,081,NE,51.8
+NE,Nebraska,31,Harlan County,083,NE,43.2
+NE,Nebraska,31,Hayes County,085,NE,44.6
+NE,Nebraska,31,Hitchcock County,087,NE,52.2
+NE,Nebraska,31,Holt County,089,NE,73.2
+NE,Nebraska,31,Hooker County,091,NE,44.6
+NE,Nebraska,31,Howard County,093,NE,59.6
+NE,Nebraska,31,Jefferson County,095,NE,45.2
+NE,Nebraska,31,Johnson County,097,NE,59.2
+NE,Nebraska,31,Kearney County,099,NE,42.8
+NE,Nebraska,31,Keith County,101,NE,37
+NE,Nebraska,31,Keya Paha County,103,NE,38.8
+NE,Nebraska,31,Kimball County,105,NE,51.2
+NE,Nebraska,31,Knox County,107,NE,72.2
+NE,Nebraska,31,Lancaster County,109,NE,59.8
+NE,Nebraska,31,Lincoln County,111,NE,38.8
+NE,Nebraska,31,Logan County,113,NE,48.8
+NE,Nebraska,31,Loup County,115,NE,44.4
+NE,Nebraska,31,McPherson County,117,NE,28.8
+NE,Nebraska,31,Madison County,119,NE,49.2
+NE,Nebraska,31,Merrick County,121,NE,65
+NE,Nebraska,31,Morrill County,123,NE,45.8
+NE,Nebraska,31,Nance County,125,NE,45.6
+NE,Nebraska,31,Nemaha County,127,NE,40.4
+NE,Nebraska,31,Nuckolls County,129,NE,68.4
+NE,Nebraska,31,Otoe County,131,NE,43.6
+NE,Nebraska,31,Pawnee County,133,NE,54.8
+NE,Nebraska,31,Perkins County,135,NE,49
+NE,Nebraska,31,Phelps County,137,NE,62.2
+NE,Nebraska,31,Pierce County,139,NE,56.8
+NE,Nebraska,31,Platte County,141,NE,46.4
+NE,Nebraska,31,Polk County,143,NE,65.8
+NE,Nebraska,31,Red Willow County,145,NE,39.6
+NE,Nebraska,31,Richardson County,147,NE,49.2
+NE,Nebraska,31,Rock County,149,NE,58.2
+NE,Nebraska,31,Saline County,151,NE,27.8
+NE,Nebraska,31,Sarpy County,153,NE,58.8
+NE,Nebraska,31,Saunders County,155,NE,42.6
+NE,Nebraska,31,Scotts Bluff County,157,NE,51.8
+NE,Nebraska,31,Seward County,159,NE,43.4
+NE,Nebraska,31,Sheridan County,161,NE,59.6
+NE,Nebraska,31,Sherman County,163,NE,69.8
+NE,Nebraska,31,Sioux County,165,NE,33.6
+NE,Nebraska,31,Stanton County,167,NE,57.8
+NE,Nebraska,31,Thayer County,169,NE,29
+NE,Nebraska,31,Thomas County,171,NE,41
+NE,Nebraska,31,Thurston County,173,NE,51.8
+NE,Nebraska,31,Valley County,175,NE,61.2
+NE,Nebraska,31,Washington County,177,NE,38.8
+NE,Nebraska,31,Wayne County,179,NE,56.8
+NE,Nebraska,31,Webster County,181,NE,53.2
+NE,Nebraska,31,Wheeler County,183,NE,43.8
+NE,Nebraska,31,York County,185,NE,32
+NV,Nevada,32,Churchhill County,001,NV,46.2
+NV,Nevada,32,Clark County,003,NV,32.2
+NV,Nevada,32,Douglas County,005,NV,45.6
+NV,Nevada,32,Elko County,007,NV,45.6
+NV,Nevada,32,Esmeralda County,009,NV,39.6
+NV,Nevada,32,Eureka County,011,NV,41.2
+NV,Nevada,32,Humboldt County,013,NV,54.2
+NV,Nevada,32,Lander County,015,NV,63.2
+NV,Nevada,32,Lincoln County,017,NV,62.4
+NV,Nevada,32,Lyon County,019,NV,70
+NV,Nevada,32,Mineral County,021,NV,57.2
+NV,Nevada,32,Nye County,023,NV,52.4
+NV,Nevada,32,Pershing County,027,NV,46.6
+NV,Nevada,32,Storey County,029,NV,42.4
+NV,Nevada,32,Washoe County,031,NV,38.6
+NV,Nevada,32,White Pine County,033,NV,31.6
+NV,Nevada,32,Carson City,510,NV,48.4
+NH,New Hampshire,33,Belknap County,001,NH,55.8
+NH,New Hampshire,33,Carroll County,003,NH,54.6
+NH,New Hampshire,33,Cheshire County,005,NH,42
+NH,New Hampshire,33,Coos County,007,NH,39.2
+NH,New Hampshire,33,Grafton County,009,NH,56.8
+NH,New Hampshire,33,Hillsborough County,011,NH,66.2
+NH,New Hampshire,33,Merrimack County,013,NH,56.4
+NH,New Hampshire,33,Rockingham County,015,NH,50.4
+NH,New Hampshire,33,Strafford County,017,NH,43
+NH,New Hampshire,33,Sullivan County,019,NH,30.4
+NJ,New Jersey,34,Atlantic County,001,NJ,49
+NJ,New Jersey,34,Bergen County,003,NJ,69.4
+NJ,New Jersey,34,Burlington County,005,NJ,44.2
+NJ,New Jersey,34,Camden County,007,NJ,50.4
+NJ,New Jersey,34,Cape May County,009,NJ,53.6
+NJ,New Jersey,34,Cumberland County,011,NJ,45.6
+NJ,New Jersey,34,Essex County,013,NJ,54.4
+NJ,New Jersey,34,Gloucester County,015,NJ,44.6
+NJ,New Jersey,34,Hudson County,017,NJ,37.6
+NJ,New Jersey,34,Hunterdon County,019,NJ,44
+NJ,New Jersey,34,Mercer County,021,NJ,66.4
+NJ,New Jersey,34,Middlesex County,023,NJ,69.6
+NJ,New Jersey,34,Monmouth County,025,NJ,65
+NJ,New Jersey,34,Morris County,027,NJ,50.2
+NJ,New Jersey,34,Ocean County,029,NJ,60.4
+NJ,New Jersey,34,Passaic County,031,NJ,47.8
+NJ,New Jersey,34,Salem County,033,NJ,54.2
+NJ,New Jersey,34,Somerset County,035,NJ,61.8
+NJ,New Jersey,34,Sussex County,037,NJ,55
+NJ,New Jersey,34,Union County,039,NJ,68.2
+NJ,New Jersey,34,Warren County,041,NJ,61.4
+NM,New Mexico,35,Bernalillo County,001,NM,58.8
+NM,New Mexico,35,Catron County,003,NM,65.4
+NM,New Mexico,35,Chaves County,005,NM,61.6
+NM,New Mexico,35,Cibola County,006,NM,46.4
+NM,New Mexico,35,Colfax County,007,NM,43.2
+NM,New Mexico,35,Curry County,009,NM,51.6
+NM,New Mexico,35,De Baca County,011,NM,53.4
+NM,New Mexico,35,Doña Ana County,013,NM,46.4
+NM,New Mexico,35,Eddy County,015,NM,43
+NM,New Mexico,35,Grant County,017,NM,72.4
+NM,New Mexico,35,Guadalupe County,019,NM,39.4
+NM,New Mexico,35,Harding County,021,NM,70.2
+NM,New Mexico,35,Hidalgo County,023,NM,48.6
+NM,New Mexico,35,Lea County,025,NM,49.6
+NM,New Mexico,35,Lincoln County,027,NM,47.2
+NM,New Mexico,35,Los Alamos County,028,NM,75
+NM,New Mexico,35,Luna County,029,NM,48
+NM,New Mexico,35,McKinley County,031,NM,36.6
+NM,New Mexico,35,Mora County,033,NM,66
+NM,New Mexico,35,Otero County,035,NM,47.4
+NM,New Mexico,35,Quay County,037,NM,28.4
+NM,New Mexico,35,Rio Arriba,039,NM,55
+NM,New Mexico,35,Roosevelt,041,NM,64.2
+NM,New Mexico,35,Sandoval,043,NM,52
+NM,New Mexico,35,San Juan,045,NM,42.8
+NM,New Mexico,35,San Miguel,047,NM,54.6
+NM,New Mexico,35,Santa Fe,049,NM,54.8
+NM,New Mexico,35,Sierra,051,NM,50.8
+NM,New Mexico,35,Socorro,053,NM,62.4
+NM,New Mexico,35,Taos,055,NM,44.2
+NM,New Mexico,35,Torrance,057,NM,52.2
+NM,New Mexico,35,Union,059,NM,52
+NM,New Mexico,35,Valencia,061,NM,60.2
+NY,New York,36,Albany County,001,NY,60
+NY,New York,36,Allegany County,003,NY,56.4
+NY,New York,36,Bronx County,005,NY,52.8
+NY,New York,36,Broome County,007,NY,47
+NY,New York,36,Cattaraugus County,009,NY,63.8
+NY,New York,36,Cayuga County,011,NY,46.4
+NY,New York,36,Chautauqua County,013,NY,22
+NY,New York,36,Chemung County,015,NY,69
+NY,New York,36,Chenango County,017,NY,51.2
+NY,New York,36,Clinton County,019,NY,68.4
+NY,New York,36,Columbia County,021,NY,56.2
+NY,New York,36,Cortland County,023,NY,46.2
+NY,New York,36,Delaware County,025,NY,61.4
+NY,New York,36,Dutchess County,027,NY,58
+NY,New York,36,Erie County,029,NY,62.4
+NY,New York,36,Essex County,031,NY,57.2
+NY,New York,36,Franklin County,033,NY,58.2
+NY,New York,36,Fulton County,035,NY,42
+NY,New York,36,Genesee County,037,NY,60.6
+NY,New York,36,Greene County,039,NY,76.6
+NY,New York,36,Hamilton County,041,NY,51.8
+NY,New York,36,Herkimer County,043,NY,54.8
+NY,New York,36,Jefferson County,045,NY,27.6
+NY,New York,36,Kings County,047,NY,37.6
+NY,New York,36,Lewis County,049,NY,45.4
+NY,New York,36,Livingston County,051,NY,34.8
+NY,New York,36,Madison County,053,NY,50.6
+NY,New York,36,Monroe County,055,NY,34
+NY,New York,36,Montgomery County,057,NY,51.6
+NY,New York,36,Nassau County,059,NY,47.6
+NY,New York,36,New York County,061,NY,28.6
+NY,New York,36,Niagara County,063,NY,58.8
+NY,New York,36,Oneida County,065,NY,62.2
+NY,New York,36,Onondaga County,067,NY,67.8
+NY,New York,36,Ontario County,069,NY,60.2
+NY,New York,36,Orange County,071,NY,51.2
+NY,New York,36,Orleans County,073,NY,45.8
+NY,New York,36,Oswego County,075,NY,46.8
+NY,New York,36,Otsego County,077,NY,56.4
+NY,New York,36,Putnam County,079,NY,44.6
+NY,New York,36,Queens County,081,NY,42.4
+NY,New York,36,Rensselaer County,083,NY,31.6
+NY,New York,36,Richmond County,085,NY,46.6
+NY,New York,36,Rockland County,087,NY,49.4
+NY,New York,36,St. Lawrence County,089,NY,38.4
+NY,New York,36,Saratoga County,091,NY,56.8
+NY,New York,36,Schenectady County,093,NY,37.6
+NY,New York,36,Schoharie County,095,NY,48.6
+NY,New York,36,Schuyler County,097,NY,36
+NY,New York,36,Seneca County,099,NY,55.8
+NY,New York,36,Steuben County,101,NY,44.4
+NY,New York,36,Suffolk County,103,NY,39.2
+NY,New York,36,Sullivan County,105,NY,49.6
+NY,New York,36,Tioga County,107,NY,56.6
+NY,New York,36,Tompkins County,109,NY,56.2
+NY,New York,36,Ulster County,111,NY,70.6
+NY,New York,36,Warren County,113,NY,74.2
+NY,New York,36,Washington County,115,NY,45.8
+NY,New York,36,Wayne County,117,NY,50.8
+NY,New York,36,Westchester County,119,NY,60
+NY,New York,36,Wyoming County,121,NY,58
+NY,New York,36,Yates County,123,NY,54.2
+NC,North Carolina,37,Alamance County,001,NC,50.8
+NC,North Carolina,37,Alexander County,003,NC,52
+NC,North Carolina,37,Alleghany County,005,NC,72
+NC,North Carolina,37,Anson County,007,NC,60.6
+NC,North Carolina,37,Ashe County,009,NC,33.4
+NC,North Carolina,37,Avery County,011,NC,81.6
+NC,North Carolina,37,Beaufort County,013,NC,67
+NC,North Carolina,37,Bertie County,015,NC,30
+NC,North Carolina,37,Bladen County,017,NC,48.4
+NC,North Carolina,37,Brunswick County,019,NC,36.8
+NC,North Carolina,37,Buncombe County,021,NC,49.2
+NC,North Carolina,37,Burke County,023,NC,59.6
+NC,North Carolina,37,Cabarrus County,025,NC,65.8
+NC,North Carolina,37,Caldwell County,027,NC,68.6
+NC,North Carolina,37,Camden County,029,NC,60
+NC,North Carolina,37,Carteret County,031,NC,56
+NC,North Carolina,37,Caswell County,033,NC,49.2
+NC,North Carolina,37,Catawba County,035,NC,42.4
+NC,North Carolina,37,Chatham County,037,NC,60.6
+NC,North Carolina,37,Cherokee County,039,NC,51.4
+NC,North Carolina,37,Chowan County,041,NC,53.8
+NC,North Carolina,37,Clay County,043,NC,58.4
+NC,North Carolina,37,Cleveland County,045,NC,68.8
+NC,North Carolina,37,Columbus County,047,NC,50.8
+NC,North Carolina,37,Craven County,049,NC,75.4
+NC,North Carolina,37,Cumberland County,051,NC,40.4
+NC,North Carolina,37,Currituck County,053,NC,49.4
+NC,North Carolina,37,Dare County,055,NC,28.6
+NC,North Carolina,37,Davidson County,057,NC,47.4
+NC,North Carolina,37,Davie County,059,NC,71.4
+NC,North Carolina,37,Duplin County,061,NC,53
+NC,North Carolina,37,Durham County,063,NC,80.8
+NC,North Carolina,37,Edgecombe County,065,NC,48
+NC,North Carolina,37,Forsyth County,067,NC,59.2
+NC,North Carolina,37,Franklin County,069,NC,66.2
+NC,North Carolina,37,Gaston County,071,NC,52
+NC,North Carolina,37,Gates County,073,NC,60.4
+NC,North Carolina,37,Graham County,075,NC,29.2
+NC,North Carolina,37,Granville County,077,NC,54.2
+NC,North Carolina,37,Greene County,079,NC,21.4
+NC,North Carolina,37,Guilford County,081,NC,64
+NC,North Carolina,37,Halifax County,083,NC,49.4
+NC,North Carolina,37,Harnett County,085,NC,28.8
+NC,North Carolina,37,Haywood County,087,NC,41
+NC,North Carolina,37,Henderson County,089,NC,41
+NC,North Carolina,37,Hertford County,091,NC,51.8
+NC,North Carolina,37,Hoke County,093,NC,50
+NC,North Carolina,37,Hyde County,095,NC,40.2
+NC,North Carolina,37,Iredell County,097,NC,62.8
+NC,North Carolina,37,Jackson County,099,NC,54.4
+NC,North Carolina,37,Johnston County,101,NC,57.4
+NC,North Carolina,37,Jones County,103,NC,48.6
+NC,North Carolina,37,Lee County,105,NC,86.8
+NC,North Carolina,37,Lenoir County,107,NC,59.2
+NC,North Carolina,37,Lincoln County,109,NC,45.6
+NC,North Carolina,37,McDowell County,111,NC,57.4
+NC,North Carolina,37,Macon County,113,NC,23.6
+NC,North Carolina,37,Madison County,115,NC,45.8
+NC,North Carolina,37,Martin County,117,NC,65.4
+NC,North Carolina,37,Mecklenburg County,119,NC,43.4
+NC,North Carolina,37,Mitchell County,121,NC,49.2
+NC,North Carolina,37,Montgomery County,123,NC,34.6
+NC,North Carolina,37,Moore County,125,NC,43
+NC,North Carolina,37,Nash County,127,NC,69.4
+NC,North Carolina,37,New Hanover County,129,NC,35.4
+NC,North Carolina,37,Northampton County,131,NC,44.6
+NC,North Carolina,37,Onslow County,133,NC,55
+NC,North Carolina,37,Orange County,135,NC,26.6
+NC,North Carolina,37,Pamlico County,137,NC,47.6
+NC,North Carolina,37,Pasquotank County,139,NC,38.6
+NC,North Carolina,37,Pender County,141,NC,70.4
+NC,North Carolina,37,Perquimans County,143,NC,53.2
+NC,North Carolina,37,Person County,145,NC,51.8
+NC,North Carolina,37,Pitt County,147,NC,58.2
+NC,North Carolina,37,Polk County,149,NC,55.2
+NC,North Carolina,37,Randolph County,151,NC,37.8
+NC,North Carolina,37,Richmond County,153,NC,70.4
+NC,North Carolina,37,Robeson County,155,NC,57.8
+NC,North Carolina,37,Rockingham County,157,NC,46.4
+NC,North Carolina,37,Rowan County,159,NC,59.4
+NC,North Carolina,37,Rutherford County,161,NC,55.2
+NC,North Carolina,37,Sampson County,163,NC,31.6
+NC,North Carolina,37,Scotland County,165,NC,61.2
+NC,North Carolina,37,Stanly County,167,NC,61.6
+NC,North Carolina,37,Stokes County,169,NC,57.2
+NC,North Carolina,37,Surry County,171,NC,60.6
+NC,North Carolina,37,Swain County,173,NC,45.6
+NC,North Carolina,37,Transylvania County,175,NC,32.4
+NC,North Carolina,37,Tyrrell County,177,NC,58
+NC,North Carolina,37,Union County,179,NC,73.8
+NC,North Carolina,37,Vance County,181,NC,35.2
+NC,North Carolina,37,Wake County,183,NC,31.6
+NC,North Carolina,37,Warren County,185,NC,42.4
+NC,North Carolina,37,Washington County,187,NC,32.6
+NC,North Carolina,37,Watauga County,189,NC,51.6
+NC,North Carolina,37,Wayne County,191,NC,48.8
+NC,North Carolina,37,Wilkes County,193,NC,39.6
+NC,North Carolina,37,Wilson County,195,NC,62.4
+NC,North Carolina,37,Yadkin County,197,NC,67.4
+NC,North Carolina,37,Yancey County,199,NC,59.6
+ND,North Dakota,38,Adams County,001,ND,35.2
+ND,North Dakota,38,Barnes County,003,ND,41
+ND,North Dakota,38,Benson County,005,ND,64.6
+ND,North Dakota,38,Billings County,007,ND,38
+ND,North Dakota,38,Bottineau County,009,ND,21.4
+ND,North Dakota,38,Bowman County,011,ND,65.8
+ND,North Dakota,38,Burke County,013,ND,31.8
+ND,North Dakota,38,Burleigh County,015,ND,43
+ND,North Dakota,38,Cass County,017,ND,29.8
+ND,North Dakota,38,Cavalier County,019,ND,46.2
+ND,North Dakota,38,Dickey County,021,ND,59
+ND,North Dakota,38,Divide County,023,ND,57
+ND,North Dakota,38,Dunn County,025,ND,72.8
+ND,North Dakota,38,Eddy County,027,ND,40.4
+ND,North Dakota,38,Emmons County,029,ND,34.2
+ND,North Dakota,38,Foster County,031,ND,27.8
+ND,North Dakota,38,Golden Valley County,033,ND,39.2
+ND,North Dakota,38,Grand Forks County,035,ND,56.6
+ND,North Dakota,38,Grant County,037,ND,44
+ND,North Dakota,38,Griggs County,039,ND,41.4
+ND,North Dakota,38,Hettinger County,041,ND,36.6
+ND,North Dakota,38,Kidder County,043,ND,52.6
+ND,North Dakota,38,LaMoure County,045,ND,45
+ND,North Dakota,38,Logan County,047,ND,52.6
+ND,North Dakota,38,McHenry County,049,ND,19.6
+ND,North Dakota,38,McIntosh County,051,ND,30
+ND,North Dakota,38,McKenzie County,053,ND,63.8
+ND,North Dakota,38,McLean County,055,ND,68.4
+ND,North Dakota,38,Mercer County,057,ND,60.8
+ND,North Dakota,38,Morton County,059,ND,71
+ND,North Dakota,38,Mountrail County,061,ND,49.4
+ND,North Dakota,38,Nelson County,063,ND,17.8
+ND,North Dakota,38,Oliver County,065,ND,47.6
+ND,North Dakota,38,Pembina County,067,ND,39.6
+ND,North Dakota,38,Pierce County,069,ND,66.2
+ND,North Dakota,38,Ramsey County,071,ND,44.8
+ND,North Dakota,38,Ransom County,073,ND,52.6
+ND,North Dakota,38,Renville County,075,ND,58.4
+ND,North Dakota,38,Richland County,077,ND,48.8
+ND,North Dakota,38,Rolette County,079,ND,56
+ND,North Dakota,38,Sargent County,081,ND,48.4
+ND,North Dakota,38,Sheridan County,083,ND,69.4
+ND,North Dakota,38,Sioux County,085,ND,42.2
+ND,North Dakota,38,Slope County,087,ND,45.8
+ND,North Dakota,38,Stark County,089,ND,66.8
+ND,North Dakota,38,Steele County,091,ND,47.4
+ND,North Dakota,38,Stutsman County,093,ND,47.6
+ND,North Dakota,38,Towner County,095,ND,31.6
+ND,North Dakota,38,Traill County,097,ND,57.8
+ND,North Dakota,38,Walsh County,099,ND,67.8
+ND,North Dakota,38,Ward County,101,ND,47
+ND,North Dakota,38,Wells County,103,ND,59.2
+ND,North Dakota,38,Williams County,105,ND,46.2
+OH,Ohio,39,Adams County,001,OH,58.6
+OH,Ohio,39,Allen County,003,OH,46.8
+OH,Ohio,39,Ashland County,005,OH,63.8
+OH,Ohio,39,Ashtabula County,007,OH,74.6
+OH,Ohio,39,Athens County,009,OH,65.2
+OH,Ohio,39,Auglaize County,011,OH,58
+OH,Ohio,39,Belmont County,013,OH,71.8
+OH,Ohio,39,Brown County,015,OH,47.6
+OH,Ohio,39,Butler County,017,OH,54.8
+OH,Ohio,39,Carroll County,019,OH,28.8
+OH,Ohio,39,Champaign County,021,OH,54.2
+OH,Ohio,39,Clark County,023,OH,61.8
+OH,Ohio,39,Clermont County,025,OH,37.2
+OH,Ohio,39,Clinton County,027,OH,30.4
+OH,Ohio,39,Columbiana County,029,OH,65.4
+OH,Ohio,39,Coshocton County,031,OH,50.8
+OH,Ohio,39,Crawford County,033,OH,63.8
+OH,Ohio,39,Cuyahoga County,035,OH,52.2
+OH,Ohio,39,Darke County,037,OH,42.6
+OH,Ohio,39,Defiance County,039,OH,48
+OH,Ohio,39,Delaware County,041,OH,41
+OH,Ohio,39,Erie County,043,OH,40.6
+OH,Ohio,39,Fairfield County,045,OH,28.6
+OH,Ohio,39,Fayette County,047,OH,56.4
+OH,Ohio,39,Franklin County,049,OH,54.6
+OH,Ohio,39,Fulton County,051,OH,33.8
+OH,Ohio,39,Gallia County,053,OH,67.4
+OH,Ohio,39,Geauga County,055,OH,35.8
+OH,Ohio,39,Greene County,057,OH,37.2
+OH,Ohio,39,Guernsey County,059,OH,38.6
+OH,Ohio,39,Hamilton County,061,OH,55.4
+OH,Ohio,39,Hancock County,063,OH,56
+OH,Ohio,39,Hardin County,065,OH,50.8
+OH,Ohio,39,Harrison County,067,OH,46.4
+OH,Ohio,39,Henry County,069,OH,33.8
+OH,Ohio,39,Highland County,071,OH,63.6
+OH,Ohio,39,Hocking County,073,OH,57.4
+OH,Ohio,39,Holmes County,075,OH,23.6
+OH,Ohio,39,Huron County,077,OH,34.2
+OH,Ohio,39,Jackson County,079,OH,44.8
+OH,Ohio,39,Jefferson County,081,OH,62.4
+OH,Ohio,39,Knox County,083,OH,49.6
+OH,Ohio,39,Lake County,085,OH,49
+OH,Ohio,39,Lawrence County,087,OH,54.8
+OH,Ohio,39,Licking County,089,OH,35.2
+OH,Ohio,39,Logan County,091,OH,47.2
+OH,Ohio,39,Lorain County,093,OH,46.6
+OH,Ohio,39,Lucas County,095,OH,42.8
+OH,Ohio,39,Madison County,097,OH,48.2
+OH,Ohio,39,Mahoning County,099,OH,56.4
+OH,Ohio,39,Marion County,101,OH,51.6
+OH,Ohio,39,Medina County,103,OH,28.2
+OH,Ohio,39,Meigs County,105,OH,59.8
+OH,Ohio,39,Mercer County,107,OH,50
+OH,Ohio,39,Miami County,109,OH,45.4
+OH,Ohio,39,Monroe County,111,OH,36.6
+OH,Ohio,39,Montgomery County,113,OH,52.8
+OH,Ohio,39,Morgan County,115,OH,54.8
+OH,Ohio,39,Morrow County,117,OH,42.8
+OH,Ohio,39,Muskingum County,119,OH,40.8
+OH,Ohio,39,Noble County,121,OH,70.4
+OH,Ohio,39,Ottawa County,123,OH,38.8
+OH,Ohio,39,Paulding County,125,OH,66.2
+OH,Ohio,39,Perry County,127,OH,63.8
+OH,Ohio,39,Pickaway County,129,OH,60
+OH,Ohio,39,Pike County,131,OH,33.4
+OH,Ohio,39,Portage County,133,OH,59
+OH,Ohio,39,Preble County,135,OH,42.8
+OH,Ohio,39,Putnam County,137,OH,48.8
+OH,Ohio,39,Richland County,139,OH,51.2
+OH,Ohio,39,Ross County,141,OH,49.2
+OH,Ohio,39,Sandusky County,143,OH,41.6
+OH,Ohio,39,Scioto County,145,OH,51.6
+OH,Ohio,39,Seneca County,147,OH,51.4
+OH,Ohio,39,Shelby County,149,OH,43.2
+OH,Ohio,39,Stark County,151,OH,43.6
+OH,Ohio,39,Summit County,153,OH,50
+OH,Ohio,39,Trumbull County,155,OH,40.4
+OH,Ohio,39,Tuscarawas County,157,OH,27
+OH,Ohio,39,Union County,159,OH,43.8
+OH,Ohio,39,Van Wert County,161,OH,44.8
+OH,Ohio,39,Vinton County,163,OH,47.2
+OH,Ohio,39,Warren County,165,OH,65.4
+OH,Ohio,39,Washington County,167,OH,27.4
+OH,Ohio,39,Wayne County,169,OH,56.4
+OH,Ohio,39,Williams County,171,OH,44.8
+OH,Ohio,39,Wood County,173,OH,54.2
+OH,Ohio,39,Wyandot County,175,OH,57.4
+OK,Oklahoma,40,Adair County,001,OK,45
+OK,Oklahoma,40,Alfalfa County,003,OK,63.8
+OK,Oklahoma,40,Atoka County,005,OK,54.4
+OK,Oklahoma,40,Beaver County,007,OK,29.4
+OK,Oklahoma,40,Beckham County,009,OK,53.6
+OK,Oklahoma,40,Blaine County,011,OK,58
+OK,Oklahoma,40,Bryan County,013,OK,26
+OK,Oklahoma,40,Caddo County,015,OK,46.8
+OK,Oklahoma,40,Canadian County,017,OK,45.6
+OK,Oklahoma,40,Carter County,019,OK,46.2
+OK,Oklahoma,40,Cherokee County,021,OK,44.6
+OK,Oklahoma,40,Choctaw County,023,OK,61.8
+OK,Oklahoma,40,Cimarron County,025,OK,64.2
+OK,Oklahoma,40,Cleveland County,027,OK,60.6
+OK,Oklahoma,40,Coal County,029,OK,30.8
+OK,Oklahoma,40,Comanche County,031,OK,60.8
+OK,Oklahoma,40,Cotton County,033,OK,59.6
+OK,Oklahoma,40,Craig County,035,OK,46
+OK,Oklahoma,40,Creek County,037,OK,52.8
+OK,Oklahoma,40,Custer County,039,OK,68
+OK,Oklahoma,40,Delaware County,041,OK,41
+OK,Oklahoma,40,Dewey County,043,OK,49.4
+OK,Oklahoma,40,Ellis County,045,OK,19.8
+OK,Oklahoma,40,Garfield County,047,OK,59.6
+OK,Oklahoma,40,Garvin County,049,OK,45
+OK,Oklahoma,40,Grady County,051,OK,62
+OK,Oklahoma,40,Grant County,053,OK,48.8
+OK,Oklahoma,40,Greer County,055,OK,68
+OK,Oklahoma,40,Harmon County,057,OK,50.4
+OK,Oklahoma,40,Harper County,059,OK,60.6
+OK,Oklahoma,40,Haskell County,061,OK,47.8
+OK,Oklahoma,40,Hughes County,063,OK,63.4
+OK,Oklahoma,40,Jackson County,065,OK,34.4
+OK,Oklahoma,40,Jefferson County,067,OK,41
+OK,Oklahoma,40,Johnston County,069,OK,60.2
+OK,Oklahoma,40,Kay County,071,OK,33.2
+OK,Oklahoma,40,Kingfisher County,073,OK,53.2
+OK,Oklahoma,40,Kiowa County,075,OK,29.4
+OK,Oklahoma,40,Latimer County,077,OK,52.8
+OK,Oklahoma,40,Le Flore County,079,OK,54.4
+OK,Oklahoma,40,Lincoln County,081,OK,49
+OK,Oklahoma,40,Logan County,083,OK,38.8
+OK,Oklahoma,40,Love County,085,OK,56
+OK,Oklahoma,40,McClain County,087,OK,51
+OK,Oklahoma,40,McCurtain County,089,OK,56.6
+OK,Oklahoma,40,McIntosh County,091,OK,37
+OK,Oklahoma,40,Major County,093,OK,49
+OK,Oklahoma,40,Marshall County,095,OK,60.6
+OK,Oklahoma,40,Mayes County,097,OK,65.4
+OK,Oklahoma,40,Murray County,099,OK,50
+OK,Oklahoma,40,Muskogee County,101,OK,40.4
+OK,Oklahoma,40,Noble County,103,OK,49.2
+OK,Oklahoma,40,Nowata County,105,OK,33.4
+OK,Oklahoma,40,Okfuskee County,107,OK,50.4
+OK,Oklahoma,40,Oklahoma County,109,OK,28.4
+OK,Oklahoma,40,Okmulgee County,111,OK,78
+OK,Oklahoma,40,Osage County,113,OK,56.2
+OK,Oklahoma,40,Ottawa County,115,OK,63.8
+OK,Oklahoma,40,Pawnee County,117,OK,52
+OK,Oklahoma,40,Payne County,119,OK,48.8
+OK,Oklahoma,40,Pittsburg County,121,OK,45.2
+OK,Oklahoma,40,Pontotoc County,123,OK,43.2
+OK,Oklahoma,40,Pottawatomie County,125,OK,30.8
+OK,Oklahoma,40,Pushmataha County,127,OK,40.6
+OK,Oklahoma,40,Roger Mills County,129,OK,40.8
+OK,Oklahoma,40,Rogers County,131,OK,53.6
+OK,Oklahoma,40,Seminole County,133,OK,46.2
+OK,Oklahoma,40,Sequoyah County,135,OK,28.6
+OK,Oklahoma,40,Stephens County,137,OK,50.6
+OK,Oklahoma,40,Texas County,139,OK,64.4
+OK,Oklahoma,40,Tillman County,141,OK,37.4
+OK,Oklahoma,40,Tulsa County,143,OK,50.2
+OK,Oklahoma,40,Wagoner County,145,OK,59.6
+OK,Oklahoma,40,Washington County,147,OK,12.8
+OK,Oklahoma,40,Washita County,149,OK,51.8
+OK,Oklahoma,40,Woods County,151,OK,70
+OK,Oklahoma,40,Woodward County,153,OK,49.2
+OR,Oregon,41,Baker County,001,OR,48.6
+OR,Oregon,41,Benton County,003,OR,54.6
+OR,Oregon,41,Clackamas County,005,OR,51
+OR,Oregon,41,Clatsop County,007,OR,51.2
+OR,Oregon,41,Columbia County,009,OR,44.4
+OR,Oregon,41,Coos County,011,OR,59.8
+OR,Oregon,41,Crook County,013,OR,66.2
+OR,Oregon,41,Curry County,015,OR,46.8
+OR,Oregon,41,Deschutes County,017,OR,47.2
+OR,Oregon,41,Douglas County,019,OR,48.4
+OR,Oregon,41,Gilliam County,021,OR,48.6
+OR,Oregon,41,Grant County,023,OR,48
+OR,Oregon,41,Harney County,025,OR,46.6
+OR,Oregon,41,Hood River County,027,OR,38
+OR,Oregon,41,Jackson County,029,OR,34.4
+OR,Oregon,41,Jefferson County,031,OR,50
+OR,Oregon,41,Josephine County,033,OR,58.8
+OR,Oregon,41,Klamath County,035,OR,55.8
+OR,Oregon,41,Lake County,037,OR,58.4
+OR,Oregon,41,Lane County,039,OR,61.2
+OR,Oregon,41,Lincoln County,041,OR,40.4
+OR,Oregon,41,Linn County,043,OR,67.4
+OR,Oregon,41,Malheur County,045,OR,38.6
+OR,Oregon,41,Marion County,047,OR,53.8
+OR,Oregon,41,Morrow County,049,OR,36.8
+OR,Oregon,41,Multnomah County,051,OR,39.6
+OR,Oregon,41,Polk County,053,OR,57.6
+OR,Oregon,41,Sherman County,055,OR,63.2
+OR,Oregon,41,Tillamook County,057,OR,65.2
+OR,Oregon,41,Umatilla County,059,OR,38
+OR,Oregon,41,Union County,061,OR,50.2
+OR,Oregon,41,Wallowa County,063,OR,67.4
+OR,Oregon,41,Wasco County,065,OR,25
+OR,Oregon,41,Washington County,067,OR,54.4
+OR,Oregon,41,Wheeler County,069,OR,23.2
+OR,Oregon,41,Yamhill County,071,OR,58.8
+PA,Pennsylvania,42,Adams County,001,PA,60.6
+PA,Pennsylvania,42,Allegheny County,003,PA,59
+PA,Pennsylvania,42,Armstrong County,005,PA,74.2
+PA,Pennsylvania,42,Beaver County,007,PA,43.8
+PA,Pennsylvania,42,Bedford County,009,PA,55.8
+PA,Pennsylvania,42,Berks County,011,PA,52.4
+PA,Pennsylvania,42,Blair County,013,PA,66
+PA,Pennsylvania,42,Bradford County,015,PA,56
+PA,Pennsylvania,42,Bucks County,017,PA,47
+PA,Pennsylvania,42,Butler County,019,PA,33.2
+PA,Pennsylvania,42,Cambria County,021,PA,53.4
+PA,Pennsylvania,42,Cameron County,023,PA,56.8
+PA,Pennsylvania,42,Carbon County,025,PA,45.6
+PA,Pennsylvania,42,Centre County,027,PA,49
+PA,Pennsylvania,42,Chester County,029,PA,31.6
+PA,Pennsylvania,42,Clarion County,031,PA,40.2
+PA,Pennsylvania,42,Clearfield County,033,PA,68.8
+PA,Pennsylvania,42,Clinton County,035,PA,41.8
+PA,Pennsylvania,42,Columbia County,037,PA,48.4
+PA,Pennsylvania,42,Crawford County,039,PA,50
+PA,Pennsylvania,42,Cumberland County,041,PA,62.4
+PA,Pennsylvania,42,Dauphin County,043,PA,61.6
+PA,Pennsylvania,42,Delaware County,045,PA,33
+PA,Pennsylvania,42,Elk County,047,PA,68
+PA,Pennsylvania,42,Erie County,049,PA,34.4
+PA,Pennsylvania,42,Fayette County,051,PA,58.6
+PA,Pennsylvania,42,Forest County,053,PA,30.2
+PA,Pennsylvania,42,Franklin County,055,PA,60.6
+PA,Pennsylvania,42,Fulton County,057,PA,35.4
+PA,Pennsylvania,42,Greene County,059,PA,49.4
+PA,Pennsylvania,42,Huntingdon County,061,PA,56.4
+PA,Pennsylvania,42,Indiana County,063,PA,58.2
+PA,Pennsylvania,42,Jefferson County,065,PA,62.4
+PA,Pennsylvania,42,Juniata County,067,PA,53.8
+PA,Pennsylvania,42,Lackawanna County,069,PA,55.4
+PA,Pennsylvania,42,Lancaster County,071,PA,53
+PA,Pennsylvania,42,Lawrence County,073,PA,48
+PA,Pennsylvania,42,Lebanon County,075,PA,58.2
+PA,Pennsylvania,42,Lehigh County,077,PA,49.2
+PA,Pennsylvania,42,Luzerne County,079,PA,50.6
+PA,Pennsylvania,42,Lycoming County,081,PA,57.4
+PA,Pennsylvania,42,McKean County,083,PA,45.4
+PA,Pennsylvania,42,Mercer County,085,PA,86
+PA,Pennsylvania,42,Mifflin County,087,PA,44.8
+PA,Pennsylvania,42,Monroe County,089,PA,51.6
+PA,Pennsylvania,42,Montgomery County,091,PA,49.6
+PA,Pennsylvania,42,Montour County,093,PA,51
+PA,Pennsylvania,42,Northampton County,095,PA,65
+PA,Pennsylvania,42,Northumberland County,097,PA,38.6
+PA,Pennsylvania,42,Perry County,099,PA,50.2
+PA,Pennsylvania,42,Philadelphia County,101,PA,41.4
+PA,Pennsylvania,42,Pike County,103,PA,60.6
+PA,Pennsylvania,42,Potter County,105,PA,42.4
+PA,Pennsylvania,42,Schuylkill County,107,PA,49
+PA,Pennsylvania,42,Snyder County,109,PA,55
+PA,Pennsylvania,42,Somerset County,111,PA,37.4
+PA,Pennsylvania,42,Sullivan County,113,PA,37.2
+PA,Pennsylvania,42,Susquehanna County,115,PA,48.6
+PA,Pennsylvania,42,Tioga County,117,PA,43.6
+PA,Pennsylvania,42,Union County,119,PA,50.2
+PA,Pennsylvania,42,Venango County,121,PA,65.4
+PA,Pennsylvania,42,Warren County,123,PA,60.6
+PA,Pennsylvania,42,Washington County,125,PA,61
+PA,Pennsylvania,42,Wayne County,127,PA,46.2
+PA,Pennsylvania,42,Westmoreland County,129,PA,60
+PA,Pennsylvania,42,Wyoming County,131,PA,63.6
+PA,Pennsylvania,42,York County,133,PA,59.6
+RI,Rhode Island,44,Bristol County,001,RI,34
+RI,Rhode Island,44,Kent County,003,RI,34
+RI,Rhode Island,44,Newport County,005,RI,42.2
+RI,Rhode Island,44,Providence County,007,RI,56.8
+RI,Rhode Island,44,Washington County,009,RI,38
+SC,South Carolina,45,Abbeville County,001,SC,38.4
+SC,South Carolina,45,Aiken County,003,SC,69.8
+SC,South Carolina,45,Allendale County,005,SC,34.4
+SC,South Carolina,45,Anderson County,007,SC,59.2
+SC,South Carolina,45,Bamberg County,009,SC,54
+SC,South Carolina,45,Barnwell County,011,SC,53.2
+SC,South Carolina,45,Beaufort County,013,SC,60
+SC,South Carolina,45,Berkeley County,015,SC,51.2
+SC,South Carolina,45,Calhoun County,017,SC,53.2
+SC,South Carolina,45,Charleston County,019,SC,52.4
+SC,South Carolina,45,Cherokee County,021,SC,60.2
+SC,South Carolina,45,Chester County,023,SC,46.2
+SC,South Carolina,45,Chesterfield County,025,SC,75
+SC,South Carolina,45,Clarendon County,027,SC,54
+SC,South Carolina,45,Colleton County,029,SC,34.2
+SC,South Carolina,45,Darlington County,031,SC,66.8
+SC,South Carolina,45,Dillon County,033,SC,48.4
+SC,South Carolina,45,Dorchester County,035,SC,38
+SC,South Carolina,45,Edgefield County,037,SC,62.2
+SC,South Carolina,45,Fairfield County,039,SC,65.8
+SC,South Carolina,45,Florence County,041,SC,56.2
+SC,South Carolina,45,Georgetown County,043,SC,60.8
+SC,South Carolina,45,Greenville County,045,SC,69.2
+SC,South Carolina,45,Greenwood County,047,SC,33.8
+SC,South Carolina,45,Hampton County,049,SC,77.2
+SC,South Carolina,45,Horry County,051,SC,74.4
+SC,South Carolina,45,Jasper County,053,SC,57.8
+SC,South Carolina,45,Kershaw County,055,SC,70.4
+SC,South Carolina,45,Lancaster County,057,SC,39.8
+SC,South Carolina,45,Laurens County,059,SC,37
+SC,South Carolina,45,Lee County,061,SC,47.8
+SC,South Carolina,45,Lexington County,063,SC,44
+SC,South Carolina,45,McCormick County,065,SC,68.2
+SC,South Carolina,45,Marion County,067,SC,30.4
+SC,South Carolina,45,Marlboro County,069,SC,76.8
+SC,South Carolina,45,Newberry County,071,SC,68.4
+SC,South Carolina,45,Oconee County,073,SC,40
+SC,South Carolina,45,Orangeburg County,075,SC,52.4
+SC,South Carolina,45,Pickens County,077,SC,69.2
+SC,South Carolina,45,Richland County,079,SC,39
+SC,South Carolina,45,Saluda County,081,SC,71
+SC,South Carolina,45,Spartanburg County,083,SC,49.2
+SC,South Carolina,45,Sumter County,085,SC,25.8
+SC,South Carolina,45,Union County,087,SC,64.4
+SC,South Carolina,45,Williamsburg County,089,SC,32
+SC,South Carolina,45,York County,091,SC,47.2
+SD,South Dakota,46,Aurora County,003,SD,46.4
+SD,South Dakota,46,Beadle County,005,SD,63.4
+SD,South Dakota,46,Bennett County,007,SD,45.4
+SD,South Dakota,46,Bon Homme County,009,SD,55.4
+SD,South Dakota,46,Brookings County,011,SD,47.8
+SD,South Dakota,46,Brown County,013,SD,44
+SD,South Dakota,46,Brule County,015,SD,47.6
+SD,South Dakota,46,Buffalo County,017,SD,56
+SD,South Dakota,46,Butte County,019,SD,60.6
+SD,South Dakota,46,Campbell County,021,SD,65.8
+SD,South Dakota,46,Charles Mix County,023,SD,67.4
+SD,South Dakota,46,Clark County,025,SD,45.2
+SD,South Dakota,46,Clay County,027,SD,27.2
+SD,South Dakota,46,Codington County,029,SD,57
+SD,South Dakota,46,Corson County,031,SD,47.2
+SD,South Dakota,46,Custer County,033,SD,67.2
+SD,South Dakota,46,Davison County,035,SD,44.2
+SD,South Dakota,46,Day County,037,SD,49
+SD,South Dakota,46,Deuel County,039,SD,58.2
+SD,South Dakota,46,Dewey County,041,SD,72.2
+SD,South Dakota,46,Douglas County,043,SD,71.4
+SD,South Dakota,46,Edmunds County,045,SD,38
+SD,South Dakota,46,Fall River County,047,SD,33
+SD,South Dakota,46,Faulk County,049,SD,64.6
+SD,South Dakota,46,Grant County,051,SD,49.8
+SD,South Dakota,46,Gregory County,053,SD,35.2
+SD,South Dakota,46,Haakon County,055,SD,39
+SD,South Dakota,46,Hamlin County,057,SD,43.4
+SD,South Dakota,46,Hand County,059,SD,56.4
+SD,South Dakota,46,Hanson County,061,SD,61.8
+SD,South Dakota,46,Harding County,063,SD,41.4
+SD,South Dakota,46,Hughes County,065,SD,26
+SD,South Dakota,46,Hutchinson County,067,SD,39.4
+SD,South Dakota,46,Hyde County,069,SD,80.8
+SD,South Dakota,46,Jackson County,071,SD,62.2
+SD,South Dakota,46,Jerauld County,073,SD,55.4
+SD,South Dakota,46,Jones County,075,SD,70.2
+SD,South Dakota,46,Kingsbury County,077,SD,45.4
+SD,South Dakota,46,Lake County,079,SD,47
+SD,South Dakota,46,Lawrence County,081,SD,57.2
+SD,South Dakota,46,Lincoln County,083,SD,40.6
+SD,South Dakota,46,Lyman County,085,SD,66.2
+SD,South Dakota,46,McCook County,087,SD,82.4
+SD,South Dakota,46,McPherson County,089,SD,47.8
+SD,South Dakota,46,Marshall County,091,SD,71.4
+SD,South Dakota,46,Meade County,093,SD,56.8
+SD,South Dakota,46,Mellette County,095,SD,49.8
+SD,South Dakota,46,Miner County,097,SD,41.4
+SD,South Dakota,46,Minnehaha County,099,SD,79.4
+SD,South Dakota,46,Moody County,101,SD,59.4
+SD,South Dakota,46,Oglala Lakota County,103,SD,46.8
+SD,South Dakota,46,Pennington County,105,SD,44.2
+SD,South Dakota,46,Perkins County,107,SD,62.4
+SD,South Dakota,46,Potter County,109,SD,44.6
+SD,South Dakota,46,Roberts County,111,SD,44
+SD,South Dakota,46,Sanborn County,113,SD,45.4
+SD,South Dakota,46,Spink County,115,SD,45.4
+SD,South Dakota,46,Stanley County,117,SD,52.2
+SD,South Dakota,46,Sully County,119,SD,31.4
+SD,South Dakota,46,Todd County,121,SD,35.2
+SD,South Dakota,46,Tripp County,123,SD,33.4
+SD,South Dakota,46,Turner County,125,SD,56.2
+SD,South Dakota,46,Union County,127,SD,52.8
+SD,South Dakota,46,Walworth County,129,SD,65.2
+SD,South Dakota,46,Yankton County,135,SD,51.8
+SD,South Dakota,46,Ziebach County,137,SD,23.8
+TN,Tennessee,47,Anderson County,001,TN,68.6
+TN,Tennessee,47,Bedford County,003,TN,58.4
+TN,Tennessee,47,Benton County,005,TN,41.4
+TN,Tennessee,47,Bledsoe County,007,TN,47.4
+TN,Tennessee,47,Blount County,009,TN,56.4
+TN,Tennessee,47,Bradley County,011,TN,59
+TN,Tennessee,47,Campbell County,013,TN,34.4
+TN,Tennessee,47,Cannon County,015,TN,71.4
+TN,Tennessee,47,Carroll County,017,TN,48
+TN,Tennessee,47,Carter County,019,TN,55.4
+TN,Tennessee,47,Cheatham County,021,TN,42.4
+TN,Tennessee,47,Chester County,023,TN,53.8
+TN,Tennessee,47,Claiborne County,025,TN,53.4
+TN,Tennessee,47,Clay County,027,TN,40
+TN,Tennessee,47,Cocke County,029,TN,60.4
+TN,Tennessee,47,Coffee County,031,TN,30.4
+TN,Tennessee,47,Crockett County,033,TN,40.4
+TN,Tennessee,47,Cumberland County,035,TN,63.2
+TN,Tennessee,47,Davidson County,037,TN,46
+TN,Tennessee,47,Decatur County,039,TN,49.6
+TN,Tennessee,47,DeKalb County,041,TN,83.4
+TN,Tennessee,47,Dickson County,043,TN,67.2
+TN,Tennessee,47,Dyer County,045,TN,40.4
+TN,Tennessee,47,Fayette County,047,TN,34.8
+TN,Tennessee,47,Fentress County,049,TN,62.2
+TN,Tennessee,47,Franklin County,051,TN,42.8
+TN,Tennessee,47,Gibson County,053,TN,58.4
+TN,Tennessee,47,Giles County,055,TN,58.6
+TN,Tennessee,47,Grainger County,057,TN,51.6
+TN,Tennessee,47,Greene County,059,TN,65.8
+TN,Tennessee,47,Grundy County,061,TN,58.6
+TN,Tennessee,47,Hamblen County,063,TN,69.4
+TN,Tennessee,47,Hamilton County,065,TN,54.4
+TN,Tennessee,47,Hancock County,067,TN,73.2
+TN,Tennessee,47,Hardeman County,069,TN,61.4
+TN,Tennessee,47,Hardin County,071,TN,81.4
+TN,Tennessee,47,Hawkins County,073,TN,61
+TN,Tennessee,47,Haywood County,075,TN,50.2
+TN,Tennessee,47,Henderson County,077,TN,82.6
+TN,Tennessee,47,Henry County,079,TN,61.4
+TN,Tennessee,47,Hickman County,081,TN,62.4
+TN,Tennessee,47,Houston County,083,TN,45.4
+TN,Tennessee,47,Humphreys County,085,TN,34.6
+TN,Tennessee,47,Jackson County,087,TN,52.8
+TN,Tennessee,47,Jefferson County,089,TN,41.6
+TN,Tennessee,47,Johnson County,091,TN,48.2
+TN,Tennessee,47,Knox County,093,TN,70.8
+TN,Tennessee,47,Lake County,095,TN,46
+TN,Tennessee,47,Lauderdale County,097,TN,23
+TN,Tennessee,47,Lawrence County,099,TN,42.6
+TN,Tennessee,47,Lewis County,101,TN,34.6
+TN,Tennessee,47,Lincoln County,103,TN,55.2
+TN,Tennessee,47,Loudon County,105,TN,54
+TN,Tennessee,47,McMinn County,107,TN,38
+TN,Tennessee,47,McNairy County,109,TN,60.8
+TN,Tennessee,47,Macon County,111,TN,70.2
+TN,Tennessee,47,Madison County,113,TN,25.6
+TN,Tennessee,47,Marion County,115,TN,58.8
+TN,Tennessee,47,Marshall County,117,TN,31.2
+TN,Tennessee,47,Maury County,119,TN,50.2
+TN,Tennessee,47,Meigs County,121,TN,50.2
+TN,Tennessee,47,Monroe County,123,TN,47
+TN,Tennessee,47,Montgomery County,125,TN,51.8
+TN,Tennessee,47,Moore County,127,TN,63.6
+TN,Tennessee,47,Morgan County,129,TN,32.2
+TN,Tennessee,47,Obion County,131,TN,38.2
+TN,Tennessee,47,Overton County,133,TN,17.4
+TN,Tennessee,47,Perry County,135,TN,38.6
+TN,Tennessee,47,Pickett County,137,TN,51.6
+TN,Tennessee,47,Polk County,139,TN,67.4
+TN,Tennessee,47,Putnam County,141,TN,42
+TN,Tennessee,47,Rhea County,143,TN,46.4
+TN,Tennessee,47,Roane County,145,TN,67.4
+TN,Tennessee,47,Robertson County,147,TN,70
+TN,Tennessee,47,Rutherford County,149,TN,64.2
+TN,Tennessee,47,Scott County,151,TN,49.8
+TN,Tennessee,47,Sequatchie County,153,TN,47.8
+TN,Tennessee,47,Sevier County,155,TN,44.6
+TN,Tennessee,47,Shelby County,157,TN,42.2
+TN,Tennessee,47,Smith County,159,TN,61.6
+TN,Tennessee,47,Stewart County,161,TN,52.4
+TN,Tennessee,47,Sullivan County,163,TN,34.2
+TN,Tennessee,47,Sumner County,165,TN,23
+TN,Tennessee,47,Tipton County,167,TN,56.8
+TN,Tennessee,47,Trousdale County,169,TN,52.8
+TN,Tennessee,47,Unicoi County,171,TN,61.2
+TN,Tennessee,47,Union County,173,TN,66.6
+TN,Tennessee,47,Van Buren County,175,TN,42.2
+TN,Tennessee,47,Warren County,177,TN,53.6
+TN,Tennessee,47,Washington County,179,TN,68.6
+TN,Tennessee,47,Wayne County,181,TN,48
+TN,Tennessee,47,Weakley County,183,TN,46.6
+TN,Tennessee,47,White County,185,TN,60.2
+TN,Tennessee,47,Williamson County,187,TN,52.4
+TN,Tennessee,47,Wilson County,189,TN,77
+TX,Texas,48,Anderson County,001,TX,22
+TX,Texas,48,Andrews County,003,TX,49.6
+TX,Texas,48,Angelina County,005,TX,71.2
+TX,Texas,48,Aransas County,007,TX,43.8
+TX,Texas,48,Archer County,009,TX,40
+TX,Texas,48,Armstrong County,011,TX,51.8
+TX,Texas,48,Atascosa County,013,TX,53.4
+TX,Texas,48,Austin County,015,TX,51.8
+TX,Texas,48,Bailey County,017,TX,32
+TX,Texas,48,Bandera County,019,TX,80
+TX,Texas,48,Bastrop County,021,TX,50.2
+TX,Texas,48,Baylor County,023,TX,11.8
+TX,Texas,48,Bee County,025,TX,50.6
+TX,Texas,48,Bell County,027,TX,63.6
+TX,Texas,48,Bexar County,029,TX,52.6
+TX,Texas,48,Blanco County,031,TX,48.2
+TX,Texas,48,Borden County,033,TX,64.4
+TX,Texas,48,Bosque County,035,TX,38.2
+TX,Texas,48,Bowie County,037,TX,58.4
+TX,Texas,48,Brazoria County,039,TX,37.8
+TX,Texas,48,Brazos County,041,TX,37.2
+TX,Texas,48,Brewster County,043,TX,55.6
+TX,Texas,48,Briscoe County,045,TX,46.4
+TX,Texas,48,Brooks County,047,TX,46
+TX,Texas,48,Brown County,049,TX,34
+TX,Texas,48,Burleson County,051,TX,39.4
+TX,Texas,48,Burnet County,053,TX,61.2
+TX,Texas,48,Caldwell County,055,TX,27.2
+TX,Texas,48,Calhoun County,057,TX,54.8
+TX,Texas,48,Callahan County,059,TX,28.4
+TX,Texas,48,Cameron County,061,TX,53.8
+TX,Texas,48,Camp County,063,TX,45
+TX,Texas,48,Carson County,065,TX,49.6
+TX,Texas,48,Cass County,067,TX,35.6
+TX,Texas,48,Castro County,069,TX,52
+TX,Texas,48,Chambers County,071,TX,67.8
+TX,Texas,48,Cherokee County,073,TX,43.4
+TX,Texas,48,Childress County,075,TX,22
+TX,Texas,48,Clay County,077,TX,71
+TX,Texas,48,Cochran County,079,TX,65.6
+TX,Texas,48,Coke County,081,TX,40
+TX,Texas,48,Coleman County,083,TX,42.8
+TX,Texas,48,Collin County,085,TX,40.2
+TX,Texas,48,Collingsworth County,087,TX,52.8
+TX,Texas,48,Colorado County,089,TX,37
+TX,Texas,48,Comal County,091,TX,40.8
+TX,Texas,48,Comanche County,093,TX,37.6
+TX,Texas,48,Concho County,095,TX,38.4
+TX,Texas,48,Cooke County,097,TX,32.6
+TX,Texas,48,Coryell County,099,TX,62.2
+TX,Texas,48,Cottle County,101,TX,46.8
+TX,Texas,48,Crane County,103,TX,73
+TX,Texas,48,Crockett County,105,TX,28.8
+TX,Texas,48,Crosby County,107,TX,52.8
+TX,Texas,48,Culberson County,109,TX,53.8
+TX,Texas,48,Dallam County,111,TX,34.2
+TX,Texas,48,Dallas County,113,TX,62.2
+TX,Texas,48,Dawson County,115,TX,51
+TX,Texas,48,Deaf Smith County,117,TX,62.8
+TX,Texas,48,Delta County,119,TX,49.8
+TX,Texas,48,Denton County,121,TX,58.2
+TX,Texas,48,DeWitt County,123,TX,66.6
+TX,Texas,48,Dickens County,125,TX,71.2
+TX,Texas,48,Dimmit County,127,TX,61
+TX,Texas,48,Donley County,129,TX,52.4
+TX,Texas,48,Duval County,131,TX,64.6
+TX,Texas,48,Eastland County,133,TX,58.8
+TX,Texas,48,Ector County,135,TX,76.6
+TX,Texas,48,Edwards County,137,TX,62.8
+TX,Texas,48,Ellis County,139,TX,42.8
+TX,Texas,48,El Paso County,141,TX,62.6
+TX,Texas,48,Erath County,143,TX,67.6
+TX,Texas,48,Falls County,145,TX,63.2
+TX,Texas,48,Fannin County,147,TX,39.6
+TX,Texas,48,Fayette County,149,TX,43.8
+TX,Texas,48,Fisher County,151,TX,39.6
+TX,Texas,48,Floyd County,153,TX,47.2
+TX,Texas,48,Foard County,155,TX,46.4
+TX,Texas,48,Fort Bend County,157,TX,61
+TX,Texas,48,Franklin County,159,TX,54
+TX,Texas,48,Freestone County,161,TX,39.4
+TX,Texas,48,Frio County,163,TX,35.2
+TX,Texas,48,Gaines County,165,TX,70.4
+TX,Texas,48,Galveston County,167,TX,49
+TX,Texas,48,Garza County,169,TX,29.2
+TX,Texas,48,Gillespie County,171,TX,28.4
+TX,Texas,48,Glasscock County,173,TX,30.4
+TX,Texas,48,Goliad County,175,TX,24.6
+TX,Texas,48,Gonzales County,177,TX,46
+TX,Texas,48,Gray County,179,TX,46.8
+TX,Texas,48,Grayson County,181,TX,63.2
+TX,Texas,48,Gregg County,183,TX,52.6
+TX,Texas,48,Grimes County,185,TX,68.4
+TX,Texas,48,Guadalupe County,187,TX,50
+TX,Texas,48,Hale County,189,TX,63
+TX,Texas,48,Hall County,191,TX,34
+TX,Texas,48,Hamilton County,193,TX,46
+TX,Texas,48,Hansford County,195,TX,37.8
+TX,Texas,48,Hardeman County,197,TX,60
+TX,Texas,48,Hardin County,199,TX,28.6
+TX,Texas,48,Harris County,201,TX,55.6
+TX,Texas,48,Harrison County,203,TX,29
+TX,Texas,48,Hartley County,205,TX,66.4
+TX,Texas,48,Haskell County,207,TX,58.4
+TX,Texas,48,Hays County,209,TX,43.8
+TX,Texas,48,Hemphill County,211,TX,45
+TX,Texas,48,Henderson County,213,TX,64.8
+TX,Texas,48,Hidalgo County,215,TX,44.6
+TX,Texas,48,Hill County,217,TX,64.4
+TX,Texas,48,Hockley County,219,TX,43
+TX,Texas,48,Hood County,221,TX,54.4
+TX,Texas,48,Hopkins County,223,TX,46.2
+TX,Texas,48,Houston County,225,TX,36.8
+TX,Texas,48,Howard County,227,TX,47.8
+TX,Texas,48,Hudspeth County,229,TX,63.6
+TX,Texas,48,Hunt County,231,TX,45.4
+TX,Texas,48,Hutchinson County,233,TX,49.8
+TX,Texas,48,Irion County,235,TX,29.6
+TX,Texas,48,Jack County,237,TX,44.2
+TX,Texas,48,Jackson County,239,TX,30.8
+TX,Texas,48,Jasper County,241,TX,61.2
+TX,Texas,48,Jeff Davis County,243,TX,59
+TX,Texas,48,Jefferson County,245,TX,75.8
+TX,Texas,48,Jim Hogg County,247,TX,41.4
+TX,Texas,48,Jim Wells County,249,TX,50.6
+TX,Texas,48,Johnson County,251,TX,35
+TX,Texas,48,Jones County,253,TX,78
+TX,Texas,48,Karnes County,255,TX,47.4
+TX,Texas,48,Kaufman County,257,TX,78.8
+TX,Texas,48,Kendall County,259,TX,48.4
+TX,Texas,48,Kenedy County,261,TX,61.2
+TX,Texas,48,Kent County,263,TX,47.8
+TX,Texas,48,Kerr County,265,TX,45.6
+TX,Texas,48,Kimble County,267,TX,45.6
+TX,Texas,48,King County,269,TX,43.4
+TX,Texas,48,Kinney County,271,TX,72
+TX,Texas,48,Kleberg County,273,TX,56.2
+TX,Texas,48,Knox County,275,TX,45.4
+TX,Texas,48,Lamar County,277,TX,41.8
+TX,Texas,48,Lamb County,279,TX,57.4
+TX,Texas,48,Lampasas County,281,TX,51
+TX,Texas,48,La Salle County,283,TX,41.6
+TX,Texas,48,Lavaca County,285,TX,39.4
+TX,Texas,48,Lee County,287,TX,54.4
+TX,Texas,48,Leon County,289,TX,49.4
+TX,Texas,48,Liberty County,291,TX,58
+TX,Texas,48,Limestone County,293,TX,66.8
+TX,Texas,48,Lipscomb County,295,TX,65.6
+TX,Texas,48,Live Oak County,297,TX,44
+TX,Texas,48,Llano County,299,TX,74.4
+TX,Texas,48,Loving County,301,TX,22.8
+TX,Texas,48,Lubbock County,303,TX,42.2
+TX,Texas,48,Lynn County,305,TX,60.6
+TX,Texas,48,McCulloch County,307,TX,41
+TX,Texas,48,McLennan County,309,TX,59.2
+TX,Texas,48,McMullen County,311,TX,49.6
+TX,Texas,48,Madison County,313,TX,43
+TX,Texas,48,Marion County,315,TX,42.8
+TX,Texas,48,Martin County,317,TX,54.6
+TX,Texas,48,Mason County,319,TX,50.2
+TX,Texas,48,Matagorda County,321,TX,51
+TX,Texas,48,Maverick County,323,TX,46
+TX,Texas,48,Medina County,325,TX,71.8
+TX,Texas,48,Menard County,327,TX,47.6
+TX,Texas,48,Midland County,329,TX,64.2
+TX,Texas,48,Milam County,331,TX,38.6
+TX,Texas,48,Mills County,333,TX,74.8
+TX,Texas,48,Mitchell County,335,TX,63.2
+TX,Texas,48,Montague County,337,TX,20.4
+TX,Texas,48,Montgomery County,339,TX,61.8
+TX,Texas,48,Moore County,341,TX,74.6
+TX,Texas,48,Morris County,343,TX,27.8
+TX,Texas,48,Motley County,345,TX,30.6
+TX,Texas,48,Nacogdoches County,347,TX,60.4
+TX,Texas,48,Navarro County,349,TX,59.4
+TX,Texas,48,Newton County,351,TX,52.2
+TX,Texas,48,Nolan County,353,TX,58.4
+TX,Texas,48,Nueces County,355,TX,46.2
+TX,Texas,48,Ochiltree County,357,TX,28.4
+TX,Texas,48,Oldham County,359,TX,46.2
+TX,Texas,48,Orange County,361,TX,48
+TX,Texas,48,Palo Pinto County,363,TX,59.4
+TX,Texas,48,Panola County,365,TX,41.6
+TX,Texas,48,Parker County,367,TX,66.2
+TX,Texas,48,Parmer County,369,TX,66.4
+TX,Texas,48,Pecos County,371,TX,50.4
+TX,Texas,48,Polk County,373,TX,39.4
+TX,Texas,48,Potter County,375,TX,68.2
+TX,Texas,48,Presidio County,377,TX,68.2
+TX,Texas,48,Rains County,379,TX,54.8
+TX,Texas,48,Randall County,381,TX,64
+TX,Texas,48,Reagan County,383,TX,43.8
+TX,Texas,48,Real County,385,TX,38.2
+TX,Texas,48,Red River County,387,TX,30.4
+TX,Texas,48,Reeves County,389,TX,39.6
+TX,Texas,48,Refugio County,391,TX,55.2
+TX,Texas,48,Roberts County,393,TX,64.4
+TX,Texas,48,Robertson County,395,TX,53
+TX,Texas,48,Rockwall County,397,TX,32.4
+TX,Texas,48,Runnels County,399,TX,64.4
+TX,Texas,48,Rusk County,401,TX,38.6
+TX,Texas,48,Sabine County,403,TX,55.8
+TX,Texas,48,San Augustine County,405,TX,49
+TX,Texas,48,San Jacinto County,407,TX,65.8
+TX,Texas,48,San Patricio County,409,TX,55
+TX,Texas,48,San Saba County,411,TX,37
+TX,Texas,48,Schleicher County,413,TX,67.2
+TX,Texas,48,Scurry County,415,TX,40.8
+TX,Texas,48,Shackelford County,417,TX,42.2
+TX,Texas,48,Shelby County,419,TX,45.6
+TX,Texas,48,Sherman County,421,TX,51.8
+TX,Texas,48,Smith County,423,TX,53.2
+TX,Texas,48,Somervell County,425,TX,47.6
+TX,Texas,48,Starr County,427,TX,57.4
+TX,Texas,48,Stephens County,429,TX,46.6
+TX,Texas,48,Sterling County,431,TX,57.8
+TX,Texas,48,Stonewall County,433,TX,53.6
+TX,Texas,48,Sutton County,435,TX,23.8
+TX,Texas,48,Swisher County,437,TX,60
+TX,Texas,48,Tarrant County,439,TX,38.6
+TX,Texas,48,Taylor County,441,TX,51.6
+TX,Texas,48,Terrell County,443,TX,30.2
+TX,Texas,48,Terry County,445,TX,53.6
+TX,Texas,48,Throckmorton County,447,TX,27
+TX,Texas,48,Titus County,449,TX,25.6
+TX,Texas,48,Tom Green County,451,TX,53.6
+TX,Texas,48,Travis County,453,TX,39.6
+TX,Texas,48,Trinity County,455,TX,64.8
+TX,Texas,48,Tyler County,457,TX,55.8
+TX,Texas,48,Upshur County,459,TX,70.6
+TX,Texas,48,Upton County,461,TX,63.4
+TX,Texas,48,Uvalde County,463,TX,34
+TX,Texas,48,Val Verde County,465,TX,54.4
+TX,Texas,48,Van Zandt County,467,TX,16.6
+TX,Texas,48,Victoria County,469,TX,27.4
+TX,Texas,48,Walker County,471,TX,64.2
+TX,Texas,48,Waller County,473,TX,52.2
+TX,Texas,48,Ward County,475,TX,52.8
+TX,Texas,48,Washington County,477,TX,58.2
+TX,Texas,48,Webb County,479,TX,66.2
+TX,Texas,48,Wharton County,481,TX,62
+TX,Texas,48,Wheeler County,483,TX,39
+TX,Texas,48,Wichita County,485,TX,62.8
+TX,Texas,48,Wilbarger County,487,TX,42.2
+TX,Texas,48,Willacy County,489,TX,25.2
+TX,Texas,48,Williamson County,491,TX,73.8
+TX,Texas,48,Wilson County,493,TX,50.2
+TX,Texas,48,Winkler County,495,TX,50.6
+TX,Texas,48,Wise County,497,TX,59.4
+TX,Texas,48,Wood County,499,TX,35.8
+TX,Texas,48,Yoakum County,501,TX,36.6
+TX,Texas,48,Young County,503,TX,56
+TX,Texas,48,Zapata County,505,TX,60.6
+TX,Texas,48,Zavala County,507,TX,42.8
+UT,Utah,49,Beaver County,001,UT,40.4
+UT,Utah,49,Box Elder County,003,UT,31.2
+UT,Utah,49,Cache County,005,UT,52.8
+UT,Utah,49,Carbon County,007,UT,55.4
+UT,Utah,49,Daggett County,009,UT,61.2
+UT,Utah,49,Davis County,011,UT,42.8
+UT,Utah,49,Duchesne County,013,UT,61.6
+UT,Utah,49,Emery County,015,UT,51.4
+UT,Utah,49,Garfield County,017,UT,41.2
+UT,Utah,49,Grand County,019,UT,41.4
+UT,Utah,49,Iron County,021,UT,32.2
+UT,Utah,49,Juab County,023,UT,75.8
+UT,Utah,49,Kane County,025,UT,54.6
+UT,Utah,49,Millard County,027,UT,30
+UT,Utah,49,Morgan County,029,UT,63
+UT,Utah,49,Piute County,031,UT,51
+UT,Utah,49,Rich County,033,UT,36.2
+UT,Utah,49,Salt Lake County,035,UT,48.8
+UT,Utah,49,San Juan County,037,UT,38.8
+UT,Utah,49,Sanpete County,039,UT,64.8
+UT,Utah,49,Sevier County,041,UT,62.4
+UT,Utah,49,Summit County,043,UT,33.4
+UT,Utah,49,Tooele County,045,UT,28.8
+UT,Utah,49,Uintah County,047,UT,49
+UT,Utah,49,Utah County,049,UT,71.8
+UT,Utah,49,Wasatch County,051,UT,69.2
+UT,Utah,49,Washington County,053,UT,41.6
+UT,Utah,49,Wayne County,055,UT,32.6
+UT,Utah,49,Weber County,057,UT,21.6
+VT,Vermont,50,Addison County,001,VT,64
+VT,Vermont,50,Bennington County,003,VT,38
+VT,Vermont,50,Caledonia County,005,VT,55.4
+VT,Vermont,50,Chittenden County,007,VT,66.6
+VT,Vermont,50,Essex County,009,VT,57.8
+VT,Vermont,50,Franklin County,011,VT,37
+VT,Vermont,50,Grand Isle County,013,VT,40
+VT,Vermont,50,Lamoille County,015,VT,37.6
+VT,Vermont,50,Orange County,017,VT,38.8
+VT,Vermont,50,Orleans County,019,VT,39.6
+VT,Vermont,50,Rutland County,021,VT,54
+VT,Vermont,50,Washington County,023,VT,29.6
+VT,Vermont,50,Windham County,025,VT,63.2
+VT,Vermont,50,Windsor County,027,VT,61.4
+VA,Virginia,51,Accomack,001,VA,53
+VA,Virginia,51,Albemarle,003,VA,32
+VA,Virginia,51,Alleghany,005,VA,69.8
+VA,Virginia,51,Amelia,007,VA,34
+VA,Virginia,51,Amherst,009,VA,36.4
+VA,Virginia,51,Appomattox,011,VA,42.2
+VA,Virginia,51,Arlington,013,VA,55.6
+VA,Virginia,51,Augusta,015,VA,59.8
+VA,Virginia,51,Bath,017,VA,46.6
+VA,Virginia,51,Bedford,019,VA,71.8
+VA,Virginia,51,Bland,021,VA,36
+VA,Virginia,51,Botetourt,023,VA,53.6
+VA,Virginia,51,Brunswick,025,VA,70.6
+VA,Virginia,51,Buchanan,027,VA,39.8
+VA,Virginia,51,Buckingham,029,VA,69.8
+VA,Virginia,51,Campbell,031,VA,55.2
+VA,Virginia,51,Caroline,033,VA,47.2
+VA,Virginia,51,Carroll,035,VA,61.6
+VA,Virginia,51,Charles City,036,VA,53.8
+VA,Virginia,51,Charlotte,037,VA,62.4
+VA,Virginia,51,Chesterfield,041,VA,54.8
+VA,Virginia,51,Clarke,043,VA,63.2
+VA,Virginia,51,Craig,045,VA,38.6
+VA,Virginia,51,Culpeper,047,VA,39.2
+VA,Virginia,51,Cumberland,049,VA,74.2
+VA,Virginia,51,Dickenson,051,VA,62.8
+VA,Virginia,51,Dinwiddie,053,VA,52.8
+VA,Virginia,51,Essex,057,VA,59
+VA,Virginia,51,Fairfax,059,VA,28.4
+VA,Virginia,51,Fauquier,061,VA,54.6
+VA,Virginia,51,Floyd,063,VA,57.6
+VA,Virginia,51,Fluvanna,065,VA,43.4
+VA,Virginia,51,Franklin,067,VA,58.2
+VA,Virginia,51,Frederick,069,VA,54
+VA,Virginia,51,Giles,071,VA,47.2
+VA,Virginia,51,Gloucester,073,VA,41.4
+VA,Virginia,51,Goochland,075,VA,55.4
+VA,Virginia,51,Grayson,077,VA,58
+VA,Virginia,51,Greene,079,VA,55.6
+VA,Virginia,51,Greensville,081,VA,80
+VA,Virginia,51,Halifax,083,VA,65
+VA,Virginia,51,Hanover,085,VA,49.4
+VA,Virginia,51,Henrico,087,VA,40
+VA,Virginia,51,Henry,089,VA,51.2
+VA,Virginia,51,Highland,091,VA,61.2
+VA,Virginia,51,Isle of Wight,093,VA,41
+VA,Virginia,51,James City,095,VA,67.8
+VA,Virginia,51,King and Queen,097,VA,38.6
+VA,Virginia,51,King George,099,VA,48
+VA,Virginia,51,King William,101,VA,67.4
+VA,Virginia,51,Lancaster,103,VA,47.2
+VA,Virginia,51,Lee,105,VA,72.4
+VA,Virginia,51,Loudoun,107,VA,61.8
+VA,Virginia,51,Louisa,109,VA,55.8
+VA,Virginia,51,Lunenburg,111,VA,77.6
+VA,Virginia,51,Madison,113,VA,48.8
+VA,Virginia,51,Mathews,115,VA,40.4
+VA,Virginia,51,Mecklenburg,117,VA,53.8
+VA,Virginia,51,Middlesex,119,VA,52.8
+VA,Virginia,51,Montgomery,121,VA,31.4
+VA,Virginia,51,Nelson,125,VA,56
+VA,Virginia,51,New Kent,127,VA,54.6
+VA,Virginia,51,Northampton,131,VA,35.2
+VA,Virginia,51,Northumberland,133,VA,58.2
+VA,Virginia,51,Nottoway,135,VA,54
+VA,Virginia,51,Orange,137,VA,63.4
+VA,Virginia,51,Page,139,VA,37.2
+VA,Virginia,51,Patrick,141,VA,30.4
+VA,Virginia,51,Pittsylvania,143,VA,53.6
+VA,Virginia,51,Powhatan,145,VA,65.4
+VA,Virginia,51,Prince Edward,147,VA,35.8
+VA,Virginia,51,Prince George,149,VA,62.4
+VA,Virginia,51,Prince William,153,VA,52.4
+VA,Virginia,51,Pulaski,155,VA,63.8
+VA,Virginia,51,Rappahannock,157,VA,77
+VA,Virginia,51,Richmond,159,VA,70.4
+VA,Virginia,51,Roanoke,161,VA,54.8
+VA,Virginia,51,Rockbridge,163,VA,42.4
+VA,Virginia,51,Rockingham,165,VA,55.4
+VA,Virginia,51,Russell,167,VA,59.2
+VA,Virginia,51,Scott,169,VA,47.2
+VA,Virginia,51,Shenandoah,171,VA,44.6
+VA,Virginia,51,Smyth,173,VA,46.4
+VA,Virginia,51,Southampton,175,VA,38
+VA,Virginia,51,Spotsylvania,177,VA,31.2
+VA,Virginia,51,Stafford,179,VA,41.6
+VA,Virginia,51,Surry,181,VA,51.8
+VA,Virginia,51,Sussex,183,VA,62.8
+VA,Virginia,51,Tazewell,185,VA,58.2
+VA,Virginia,51,Warren,187,VA,47.4
+VA,Virginia,51,Washington,191,VA,47.8
+VA,Virginia,51,Westmoreland,193,VA,45.2
+VA,Virginia,51,Wise,195,VA,62.8
+VA,Virginia,51,Wythe,197,VA,45.4
+VA,Virginia,51,York,199,VA,43.8
+VA,Virginia,51,Alexandria City,510,VA,67
+VA,Virginia,51,Bedford City,515,VA,52.4
+VA,Virginia,51,Bristol City,520,VA,29.6
+VA,Virginia,51,Buena Vista City,530,VA,70.2
+VA,Virginia,51,Charlottesville City,540,VA,46.8
+VA,Virginia,51,Chesapeake City,550,VA,50
+VA,Virginia,51,Clifton Forge City,560,VA,49.4
+VA,Virginia,51,Colonial Heights City,570,VA,64
+VA,Virginia,51,Covington City,580,VA,52.6
+VA,Virginia,51,Danville City,590,VA,37.4
+VA,Virginia,51,Emporia City,595,VA,58.6
+VA,Virginia,51,Fairfax City,600,VA,52.2
+VA,Virginia,51,Falls Church City,610,VA,67
+VA,Virginia,51,Franklin City,620,VA,39.6
+VA,Virginia,51,Fredericksburg City,630,VA,73.4
+VA,Virginia,51,Galax City,640,VA,57
+VA,Virginia,51,Hampton City,650,VA,66.8
+VA,Virginia,51,Harrisonburg City,660,VA,29.4
+VA,Virginia,51,Hopewell City,670,VA,59.6
+VA,Virginia,51,Lexington City,678,VA,42.2
+VA,Virginia,51,Lynchburg City,680,VA,40.4
+VA,Virginia,51,Manassas City,683,VA,66.2
+VA,Virginia,51,Manassas Park City,685,VA,41.2
+VA,Virginia,51,Martinsville City,690,VA,52.6
+VA,Virginia,51,Newport News City,700,VA,36.8
+VA,Virginia,51,Norfolk City,710,VA,61.6
+VA,Virginia,51,Norton City,720,VA,33.4
+VA,Virginia,51,Petersburg City,730,VA,59
+VA,Virginia,51,Poquoson City,735,VA,39.8
+VA,Virginia,51,Portsmouth City,740,VA,60.4
+VA,Virginia,51,Radford,750,VA,60
+VA,Virginia,51,Richmond City,760,VA,46.4
+VA,Virginia,51,Roanoke City,770,VA,37.6
+VA,Virginia,51,Salem City,775,VA,43.2
+VA,Virginia,51,South Boston City,780,VA,51.4
+VA,Virginia,51,Staunton City,790,VA,53.6
+VA,Virginia,51,Suffolk City,800,VA,49.8
+VA,Virginia,51,Virginia Beach City,810,VA,74
+VA,Virginia,51,Waynesboro City,820,VA,57.6
+VA,Virginia,51,Williamsburg City,830,VA,16.6
+VA,Virginia,51,Winchester City,840,VA,47
+WA,Washington,53,Adams County,001,WA,69.8
+WA,Washington,53,Asotin County,003,WA,29.8
+WA,Washington,53,Benton County,005,WA,52.4
+WA,Washington,53,Chelan County,007,WA,69
+WA,Washington,53,Clallam County,009,WA,32.8
+WA,Washington,53,Clark County,011,WA,39.2
+WA,Washington,53,Columbia County,013,WA,48
+WA,Washington,53,Cowlitz County,015,WA,56.6
+WA,Washington,53,Douglas County,017,WA,63.4
+WA,Washington,53,Ferry County,019,WA,33
+WA,Washington,53,Franklin County,021,WA,34.4
+WA,Washington,53,Garfield County,023,WA,28.6
+WA,Washington,53,Grant County,025,WA,54.6
+WA,Washington,53,Grays Harbor County,027,WA,37.8
+WA,Washington,53,Island County,029,WA,68
+WA,Washington,53,Jefferson County,031,WA,70
+WA,Washington,53,King County,033,WA,45.2
+WA,Washington,53,Kitsap County,035,WA,49.2
+WA,Washington,53,Kittitas County,037,WA,63
+WA,Washington,53,Klickitat County,039,WA,41.8
+WA,Washington,53,Lewis County,041,WA,22.2
+WA,Washington,53,Lincoln County,043,WA,54.8
+WA,Washington,53,Mason County,045,WA,49.2
+WA,Washington,53,Okanogan County,047,WA,57.6
+WA,Washington,53,Pacific County,049,WA,49.8
+WA,Washington,53,Pend Oreille County,051,WA,62.6
+WA,Washington,53,Pierce County,053,WA,33.4
+WA,Washington,53,San Juan County,055,WA,38.6
+WA,Washington,53,Skagit County,057,WA,40.8
+WA,Washington,53,Skamania County,059,WA,42
+WA,Washington,53,Snohomish County,061,WA,51.8
+WA,Washington,53,Spokane County,063,WA,44.8
+WA,Washington,53,Stevens County,065,WA,59.4
+WA,Washington,53,Thurston County,067,WA,47.8
+WA,Washington,53,Wahkiakum County,069,WA,64.4
+WA,Washington,53,Walla Walla County,071,WA,38.8
+WA,Washington,53,Whatcom County,073,WA,47.8
+WA,Washington,53,Whitman County,075,WA,62.4
+WA,Washington,53,Yakima County,077,WA,40
+WV,West Virginia,54,Barbour County,001,WV,56
+WV,West Virginia,54,Berkeley County,003,WV,63.6
+WV,West Virginia,54,Boone County,005,WV,50.2
+WV,West Virginia,54,Braxton County,007,WV,49
+WV,West Virginia,54,Brooke County,009,WV,54
+WV,West Virginia,54,Cabell County,011,WV,53.6
+WV,West Virginia,54,Calhoun County,013,WV,55.6
+WV,West Virginia,54,Clay County,015,WV,38.8
+WV,West Virginia,54,Doddridge County,017,WV,36.2
+WV,West Virginia,54,Fayette County,019,WV,56
+WV,West Virginia,54,Gilmer County,021,WV,40.4
+WV,West Virginia,54,Grant County,023,WV,45
+WV,West Virginia,54,Greenbrier County,025,WV,31.6
+WV,West Virginia,54,Hampshire County,027,WV,55.8
+WV,West Virginia,54,Hancock County,029,WV,85.8
+WV,West Virginia,54,Hardy County,031,WV,64.2
+WV,West Virginia,54,Harrison County,033,WV,49.8
+WV,West Virginia,54,Jackson County,035,WV,41
+WV,West Virginia,54,Jefferson County,037,WV,37.2
+WV,West Virginia,54,Kanawha County,039,WV,48.8
+WV,West Virginia,54,Lewis County,041,WV,56.8
+WV,West Virginia,54,Lincoln County,043,WV,51.8
+WV,West Virginia,54,Logan County,045,WV,38
+WV,West Virginia,54,McDowell County,047,WV,71
+WV,West Virginia,54,Marion County,049,WV,33.2
+WV,West Virginia,54,Marshall County,051,WV,60.4
+WV,West Virginia,54,Mason County,053,WV,47
+WV,West Virginia,54,Mercer County,055,WV,44.2
+WV,West Virginia,54,Mineral County,057,WV,38.2
+WV,West Virginia,54,Mingo County,059,WV,66
+WV,West Virginia,54,Monongalia County,061,WV,71
+WV,West Virginia,54,Monroe County,063,WV,31.8
+WV,West Virginia,54,Morgan County,065,WV,64.8
+WV,West Virginia,54,Nicholas County,067,WV,42.4
+WV,West Virginia,54,Ohio County,069,WV,52.8
+WV,West Virginia,54,Pendleton County,071,WV,69.8
+WV,West Virginia,54,Pleasants County,073,WV,55.6
+WV,West Virginia,54,Pocahontas County,075,WV,62.8
+WV,West Virginia,54,Preston County,077,WV,59
+WV,West Virginia,54,Putnam County,079,WV,60.2
+WV,West Virginia,54,Raleigh County,081,WV,28.4
+WV,West Virginia,54,Randolph County,083,WV,65.8
+WV,West Virginia,54,Ritchie County,085,WV,35
+WV,West Virginia,54,Roane County,087,WV,59.4
+WV,West Virginia,54,Summers County,089,WV,67.8
+WV,West Virginia,54,Taylor County,091,WV,60.2
+WV,West Virginia,54,Tucker County,093,WV,46.4
+WV,West Virginia,54,Tyler County,095,WV,57
+WV,West Virginia,54,Upshur County,097,WV,56.4
+WV,West Virginia,54,Wayne County,099,WV,48.2
+WV,West Virginia,54,Webster County,101,WV,48.6
+WV,West Virginia,54,Wetzel County,103,WV,65.4
+WV,West Virginia,54,Wirt County,105,WV,49.4
+WV,West Virginia,54,Wood County,107,WV,71
+WV,West Virginia,54,Wyoming County,109,WV,62.6
+WI,Wisconsin,55,Adams County,001,WI,68.6
+WI,Wisconsin,55,Ashland County,003,WI,56.6
+WI,Wisconsin,55,Barron County,005,WI,54.2
+WI,Wisconsin,55,Bayfield County,007,WI,41.6
+WI,Wisconsin,55,Brown County,009,WI,68.8
+WI,Wisconsin,55,Buffalo County,011,WI,39.8
+WI,Wisconsin,55,Burnett County,013,WI,38.4
+WI,Wisconsin,55,Calumet County,015,WI,32.8
+WI,Wisconsin,55,Chippewa County,017,WI,54.8
+WI,Wisconsin,55,Clark County,019,WI,51.8
+WI,Wisconsin,55,Columbia County,021,WI,42.8
+WI,Wisconsin,55,Crawford County,023,WI,63
+WI,Wisconsin,55,Dane County,025,WI,45.8
+WI,Wisconsin,55,Dodge County,027,WI,43.8
+WI,Wisconsin,55,Door County,029,WI,64.6
+WI,Wisconsin,55,Douglas County,031,WI,50
+WI,Wisconsin,55,Dunn County,033,WI,55.2
+WI,Wisconsin,55,Eau Claire County,035,WI,59.4
+WI,Wisconsin,55,Florence County,037,WI,26.2
+WI,Wisconsin,55,Fond du Lac County,039,WI,43.2
+WI,Wisconsin,55,Forest County,041,WI,49.2
+WI,Wisconsin,55,Grant County,043,WI,54
+WI,Wisconsin,55,Green County,045,WI,32.8
+WI,Wisconsin,55,Green Lake County,047,WI,35.8
+WI,Wisconsin,55,Iowa County,049,WI,47.2
+WI,Wisconsin,55,Iron County,051,WI,44.4
+WI,Wisconsin,55,Jackson County,053,WI,62.4
+WI,Wisconsin,55,Jefferson County,055,WI,50.6
+WI,Wisconsin,55,Juneau County,057,WI,71
+WI,Wisconsin,55,Kenosha County,059,WI,62.2
+WI,Wisconsin,55,Kewaunee County,061,WI,63
+WI,Wisconsin,55,La Crosse County,063,WI,46.2
+WI,Wisconsin,55,Lafayette County,065,WI,60.6
+WI,Wisconsin,55,Langlade County,067,WI,72.6
+WI,Wisconsin,55,Lincoln County,069,WI,47.6
+WI,Wisconsin,55,Manitowoc County,071,WI,47.8
+WI,Wisconsin,55,Marathon County,073,WI,32.2
+WI,Wisconsin,55,Marinette County,075,WI,65.8
+WI,Wisconsin,55,Marquette County,077,WI,44.6
+WI,Wisconsin,55,Menominee County,078,WI,61.8
+WI,Wisconsin,55,Milwaukee County,079,WI,18.4
+WI,Wisconsin,55,Monroe County,081,WI,33.2
+WI,Wisconsin,55,Oconto County,083,WI,54.6
+WI,Wisconsin,55,Oneida County,085,WI,36
+WI,Wisconsin,55,Outagamie County,087,WI,40
+WI,Wisconsin,55,Ozaukee County,089,WI,38.6
+WI,Wisconsin,55,Pepin County,091,WI,52.2
+WI,Wisconsin,55,Pierce County,093,WI,29.4
+WI,Wisconsin,55,Polk County,095,WI,47.2
+WI,Wisconsin,55,Portage County,097,WI,35.4
+WI,Wisconsin,55,Price County,099,WI,39
+WI,Wisconsin,55,Racine County,101,WI,36.8
+WI,Wisconsin,55,Richland County,103,WI,26.2
+WI,Wisconsin,55,Rock County,105,WI,55.4
+WI,Wisconsin,55,Rusk County,107,WI,71.4
+WI,Wisconsin,55,St. Croix County,109,WI,53.8
+WI,Wisconsin,55,Sauk County,111,WI,56.4
+WI,Wisconsin,55,Sawyer County,113,WI,53.8
+WI,Wisconsin,55,Shawano County,115,WI,56.4
+WI,Wisconsin,55,Sheboygan County,117,WI,27
+WI,Wisconsin,55,Taylor County,119,WI,46.8
+WI,Wisconsin,55,Trempealeau County,121,WI,46.4
+WI,Wisconsin,55,Vernon County,123,WI,43.8
+WI,Wisconsin,55,Vilas County,125,WI,65.8
+WI,Wisconsin,55,Walworth County,127,WI,36.6
+WI,Wisconsin,55,Washburn County,129,WI,37.2
+WI,Wisconsin,55,Washington County,131,WI,71.2
+WI,Wisconsin,55,Waukesha County,133,WI,56
+WI,Wisconsin,55,Waupaca County,135,WI,74.4
+WI,Wisconsin,55,Waushara County,137,WI,41.2
+WI,Wisconsin,55,Winnebago County,139,WI,31.8
+WI,Wisconsin,55,Wood County,141,WI,36.2
+WY,Wyoming,56,Albany County,001,WY,58.2
+WY,Wyoming,56,Big Horn County,003,WY,43.8
+WY,Wyoming,56,Campbell County,005,WY,53.6
+WY,Wyoming,56,Carbon County,007,WY,63.4
+WY,Wyoming,56,Converse County,009,WY,30.8
+WY,Wyoming,56,Crook County,011,WY,54.8
+WY,Wyoming,56,Fremont County,013,WY,71.4
+WY,Wyoming,56,Goshen County,015,WY,55.2
+WY,Wyoming,56,Hot Springs County,017,WY,51
+WY,Wyoming,56,Johnson County,019,WY,31.6
+WY,Wyoming,56,Laramie County,021,WY,36
+WY,Wyoming,56,Lincoln County,023,WY,63.6
+WY,Wyoming,56,Natrona County,025,WY,41
+WY,Wyoming,56,Niobrara County,027,WY,57.4
+WY,Wyoming,56,Park County,029,WY,57.2
+WY,Wyoming,56,Platte County,031,WY,64.2
+WY,Wyoming,56,Sheridan County,033,WY,31.2
+WY,Wyoming,56,Sublette County,035,WY,63.6
+WY,Wyoming,56,Sweetwater County,037,WY,54.4
+WY,Wyoming,56,Teton County,039,WY,44.4
+WY,Wyoming,56,Uinta County,041,WY,57
+WY,Wyoming,56,Washakie County,043,WY,53.6
+WY,Wyoming,56,Weston County,045,WY,67.6
