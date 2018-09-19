@@ -16,9 +16,6 @@ class US_County_Inline(admin.TabularInline):
 class US_State_Admin(admin.ModelAdmin):
     inlines = (US_County_Inline,)
 
-    def __str__(self):
-        return "US State"
-
 @admin.register(US_County)
 class US_Counties_Admin(admin.ModelAdmin):
     inlines = (Data_Point_Inline,)
