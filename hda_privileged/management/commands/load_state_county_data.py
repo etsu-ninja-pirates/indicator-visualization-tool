@@ -19,6 +19,9 @@ Then, run `python manage.py migrate` for a new empty
 database with tables
 """
 
+STATE_FILENAME = "./data/states_territories_2010.csv"
+COUNTY_FILENAME = "./data/counties_and_equivalents_2010.csv"
+
 class Command(BaseCommand):
     # Return the message below when Help is types
     help = "Loads the data from \"your_filename.csv\" into the models "
@@ -37,22 +40,22 @@ class Command(BaseCommand):
 
         print("Loading US State Data ")
 
-        for row in csv.DictReader(open('./data/states.csv')):
+        for row in csv.DictReader(open(STATE_FILENAME)):
             # easier to make a brand new state object every iteration
             a_state = US_State(
-                full=row['full'],
-                short=row['short'],
-                fips=row['fips']
+                full=row['NAME'],
+                short=row['USPS'],
+                fips=row['FIPS']
             )
             a_state.save()
 
         print("Loading US County Data ")
 
         # TODO can we speed this up with some kind of bulk insert?
-        for row in csv.DictReader(open('./data/counties.csv')):
-            fips = row['fips']
-            name = row['name']
-            state = row['state_id']
+        for row in csv.DictReader(open(COUNTY_FILENAME)):
+            fips = row['FIPS']
+            name = row['NAME']
+            state = row['STATE_USPS']
 
             # use whatever the primary key field of US_State is to
             # get exactly one state object
