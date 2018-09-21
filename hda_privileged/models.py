@@ -55,7 +55,7 @@ class Document(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET(get_sentinel_user))
 
     # the file
-    file = models.FileField(upload_to=get_upload_path)
+    #file = models.FileField(upload_to=get_upload_path, null=True)
 
 
 class Data_Set(models.Model):
@@ -75,11 +75,11 @@ class Data_Set(models.Model):
         MaxValueValidator(9999, message="If it really is later than the year 9999, you should get someone to update this program"),
     ])
 
-    source_document = models.ForeignKey(Document,
-        on_delete=models.SET_NULL,
-        null=True,
-        related_name='data_sets'
-    )
+    #source_document = models.ForeignKey(Document,
+     #   on_delete=models.SET_NULL,
+      #  null=True,
+       # related_name='data_sets'
+    #)
 
     def __str__(self):
         return f"Dataset {self.id} for indicator {self.indicator!s} and year {self.year:d}"
@@ -141,3 +141,6 @@ class Data_Point(models.Model):
 
     class Meta:
         verbose_name='Data point'
+
+    #def __str__(self):
+        #return self.data_set

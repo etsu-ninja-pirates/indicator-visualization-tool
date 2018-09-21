@@ -1,0 +1,187 @@
+[{
+"model": "hda_privileged.data_point",
+"pk": 1,
+"fields": {
+"value": 40.0,
+"percentile": 25.0,
+"county": 16,
+"data_set": 1
+}
+}, {
+"model": "hda_privileged.data_point",
+"pk": 2,
+"fields": {
+"value": 25.0,
+"percentile": 17.0,
+"county": 101,
+"data_set": 1
+}
+}, {
+"model": "hda_privileged.data_point",
+"pk": 3,
+"fields": {
+"value": 60.0,
+"percentile": 23.0,
+"county": 176,
+"data_set": 1
+}
+}, {
+"model": "hda_privileged.data_point",
+"pk": 4,
+"fields": {
+"value": 49.0,
+"percentile": 49.0,
+"county": 1701,
+"data_set": 2
+}
+}, {
+"model": "hda_privileged.data_point",
+"pk": 5,
+"fields": {
+"value": 87.0,
+"percentile": 75.0,
+"county": 765,
+"data_set": 2
+}
+}, {
+"model": "hda_privileged.data_point",
+"pk": 6,
+"fields": {
+"value": 33.0,
+"percentile": 21.0,
+"county": 485,
+"data_set": 2
+}
+}, {
+"model": "hda_privileged.data_point",
+"pk": 7,
+"fields": {
+"value": 86.0,
+"percentile": 18.0,
+"county": 1471,
+"data_set": 2
+}
+}, {
+"model": "hda_privileged.data_point",
+"pk": 8,
+"fields": {
+"value": 52.0,
+"percentile": 60.0,
+"county": 2328,
+"data_set": 2
+}
+}, {
+"model": "hda_privileged.data_point",
+"pk": 9,
+"fields": {
+"value": 68.0,
+"percentile": 42.0,
+"county": 2446,
+"data_set": 2
+}
+}, {
+"model": "hda_privileged.data_point",
+"pk": 10,
+"fields": {
+"value": 26.0,
+"percentile": 85.0,
+"county": 1991,
+"data_set": 2
+}
+}, {
+"model": "hda_privileged.data_point",
+"pk": 11,
+"fields": {
+"value": 32.0,
+"percentile": 67.0,
+"county": 2786,
+"data_set": 1
+}
+}, {
+"model": "hda_privileged.data_point",
+"pk": 12,
+"fields": {
+"value": 49.0,
+"percentile": 54.0,
+"county": 1714,
+"data_set": 1
+}
+}, {
+"model": "hda_privileged.data_point",
+"pk": 13,
+"fields": {
+"value": 21.0,
+"percentile": 90.0,
+"county": 2329,
+"data_set": 1
+}
+}, {
+"model": "hda_privileged.data_point",
+"pk": 14,
+"fields": {
+"value": 76.0,
+"percentile": 8.0,
+"county": 26,
+"data_set": 2
+}
+}, {
+"model": "hda_privileged.data_point",
+"pk": 15,
+"fields": {
+"value": 37.0,
+"percentile": 14.0,
+"county": 1544,
+"data_set": 2
+}
+}, {
+"model": "hda_privileged.data_point",
+"pk": 16,
+"fields": {
+"value": 56.0,
+"percentile": 40.0,
+"county": 2384,
+"data_set": 2
+}
+}, {
+"model": "hda_privileged.data_point",
+"pk": 17,
+"fields": {
+"value": 76.0,
+"percentile": 8.0,
+"county": 26,
+"data_set": 2
+}
+}, {
+"model": "hda_privileged.data_point",
+"pk": 18,
+"fields": {
+"value": 37.0,
+"percentile": 14.0,
+"county": 1544,
+"data_set": 2
+}
+}, {
+"model": "hda_privileged.data_point",
+"pk": 19,
+"fields": {
+"value": 56.0,
+"percentile": 40.0,
+"county": 2384,
+"data_set": 2
+}
+}, {
+"model": "hda_privileged.data_point",
+"pk": 20,
+"fields": {
+"value": 71.0,
+"percentile": 14.0,
+"county": 2920,
+"data_set": 1
+}
+}, {
+"model": "hda_privileged.health_indicator",
+"pk": 1,
+"fields": {
+"name": "Obesity"
+}
+}]
