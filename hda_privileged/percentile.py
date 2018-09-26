@@ -1,4 +1,5 @@
 from math import ceil, floor
+from itertools import dropwhile
 
 class PercentileBoundsError(ArithmeticError):
     """
@@ -124,7 +125,7 @@ def add_percentiles_to_points(points, plist=None):
     percentiles = plist if plist else [n / 1000 for n in range(1,1000)]
 
     # extract the values so we can use them to calculate percentile results
-    values = [pt.value for pr in points]
+    values = [pt.value for pt in points]
     # create our list of tuples (p, pv)
     percentile_values = get_percentile_values(percentiles, values)
 
@@ -132,6 +133,11 @@ def add_percentiles_to_points(points, plist=None):
     for pt in points:
         # skip percentiles until we find one with a value larger than the point's value
         percentile_values = list(dropwhile(lambda pv: pv[1] < pt.value, percentile_values))
-        # assign that percentile (between 0 and 1) to the point
-        (p, _) = percentile_values[0]
-        pt.percentile = p
+        # it's possible that some value are larger than the largest percentile value we were asked to calculate!
+        # in that case they don't fit in any of the "buckets" we have, so we'll run out of values here
+        if len(percentile_values) == 0:
+            break
+        else:
+            # assign that percentile (between 0 and 1) to the point
+            (p, _) = percentile_values[0]
+            pt.percentile = p
