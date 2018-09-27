@@ -99,10 +99,11 @@ class US_State(models.Model):
     fips = models.CharField(max_length=2)
 
     def __str__(self):
-        return self.fips + ' - '+ self.short +' - '+ self.full
+        return self.fips + ' - ' + self.short + ' - ' + self.full
 
     class Meta:
         verbose_name='US state'
+
 
 class US_County(models.Model):
     """
@@ -119,6 +120,7 @@ class US_County(models.Model):
     class Meta:
         verbose_name='US county'
         verbose_name_plural='US counties'
+
 
 class Data_Point(models.Model):
     """
@@ -141,3 +143,4 @@ class Data_Point(models.Model):
 
     class Meta:
         verbose_name='Data point'
+
