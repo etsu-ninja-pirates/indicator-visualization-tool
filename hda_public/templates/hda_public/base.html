@@ -29,15 +29,18 @@
 
     <!-- Our CSS on top of Bootstrap -->
    <link href="{% static 'css/theme.css'%}" rel="stylesheet">
+   {% comment %} <script src="{% static 'js/graph.css'%}"></script> {% endcomment %}
+   {% comment %} {% block jqurey %}{% endblock %} {% endcomment %}
 
    <title>{% block title %}{% endblock %}</title>
+
 </head>
 <body>
   <div class="container">
     <h1>ETSU College of Public Health</h1>
 
     {% block nav %}
-    <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default">
       <div class="container-fluid">
 
           <!-- "Hamburger" that shows when collapsed -->
@@ -93,8 +96,8 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Table</a></li>
-                <li><a href="#">Chart</a></li>
+                <li><a href="{% url 'table' %}">Table</a></li>
+                <li><a href="{% url 'chart-data' %}">Chart</a></li>
                 <li><a href="#">Clear</a></li>
               </ul>
             </li>
@@ -107,7 +110,9 @@
   </div><!-- /container -->
 
   <div class="container">
+
     {% block content %}
+
     {% endblock %}
   </div>
 
@@ -121,15 +126,24 @@
   </footer>
   {% endblock %}
 
-
   <!-- Bootstrap's JS (again, note that this is 3.3.x) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>
-
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js'></script>
+  
+  {% comment %} Highchart script CDN  {% endcomment %}
+  <script src="https://code.highcharts.com/highcharts.src.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
   <!-- Place for child pages to add more Javascript if needed -->
-  {% block extra_scripts %}
-  {% endblock %}
+ 
+
+  <script>
+    $(document).ready(function(){
+      {% block jquery %}{% endblock %}
+    })
+    </script>
 </body>
 </html>

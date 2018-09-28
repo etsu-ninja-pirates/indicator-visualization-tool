@@ -1,0 +1,38 @@
+{% extends 'hda_public/base.html' %}
+{%block title%}Data Rep{%endblock%}
+{% comment %} 
+    This is the template I was trying to use to display Highcharts.chart graphs 
+  
+{% endcomment %}
+{%block content%}
+<div id="container2">
+{% block js_content %}
+<script src="https://code.highcharts.com/highcharts.src.js"></script>
+<script>
+    Highcharts.chart('container', {
+        chart: {
+            type: 'line'
+        },
+        title: {
+            text: 'Indicator'
+        },
+        xAxis: {
+                list_percentiles_data: {{ list_percentiles_data | safe }}         
+        },
+        series: [{
+            name: 'Percentile',
+            data: {{list_percentiles_data}}, 
+            color: 'green'
+        }
+        }
+        ]
+    });
+    
+</script>
+<script src="https://code.highcharts.com/highcharts.src.js"></script>
+    <script>
+        Highcharts.chart('container2', {{ chart|safe }});
+</script>
+  {% endblock %}
+  </div>
+{%endblock%}
