@@ -21,4 +21,5 @@ urlpatterns = [
     path('', include('hda_public.urls')),
     path('priv/', include('hda_privileged.urls')),
     path('admin/', admin.site.urls),
+    path('upload/', include('hda_privileged.urls')),
 ]
