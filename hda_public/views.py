@@ -13,12 +13,12 @@ class ChartView(TemplateView):
         This class will be used to display Json content that will be return
         from the char_data function 
     """
-    template_name = 'hda_public/chart.html'
+    template_name = 'hda_public/sample2.html'
 
 
     def get_chart(self, request): 
-        datasets = Data_Point.objects.all() 
-
+        chartdata = json.dumps([[pt.percentile, pt.value] for pt in Data_Point.objects.all()])
+        return render(request, self.template_name, {'chartdata': chartdata})
         list_counties_data = list()
         list_values_data = list() 
         list_percentiles_data = list()

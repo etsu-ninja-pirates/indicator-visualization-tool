@@ -6,4 +6,5 @@ urlpatterns = [
     path('', DashboardView.as_view(), name='dashboard'),
     path('chart/', ChartView.as_view(), name='chart-data'),
     path('table/', TableView.as_view(), name='table'),
+    path('mychart/', ChartView.as_view(), name='mychart'),
 ]
