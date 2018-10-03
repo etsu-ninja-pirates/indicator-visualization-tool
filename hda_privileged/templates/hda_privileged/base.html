@@ -1,0 +1,82 @@
+{% load staticfiles %}
+{%block header %}
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Meta stuff, from: https://getbootstrap.com/docs/3.3/getting-started/#template -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--
+    Bootstrap's base CSS via CDN - previously we hosted this ourselves but
+    I think I've been converted: https://stackoverflow.com/q/24132951
+    NOTE that this is Bootstrap 3.3.x!
+    -->
+  <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+    <!-- FontAwesome icon fonts -->
+   <link rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css"
+    integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW"
+    crossorigin="anonymous">
+   <link rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css"
+    integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7"
+    crossorigin="anonymous">
+
+    <!-- Our CSS on top of Bootstrap -->
+   <link href="{% static 'css/theme.css'%}" rel="stylesheet">
+</head>
+{% endblock %}
+
+<body>
+<div class="container">
+<h1>ETSU College of Public Health</h1>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+    </div>
+
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">       
+		<li><a href="https://www.etsu.edu/cph/"><i class="fa fa-home" style="font-size:20px"></i></a></li>
+		<li></li><li></li>
+		<li style="font-size:20px"><a href="#">Manage Data</a></li>
+
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" style="font-size:20px"></i><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">File Upload</a></li><li><a href="#">Logout</a></li>          
+          </ul>
+        </li>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+
+	<hr>
+	<footer class="application-footer">
+		<div class="container" style="bottom:0">
+			              
+		</div>			
+	</footer>
+</body>
+</html>
+
