@@ -1,10 +1,6 @@
 from django.views.generic import TemplateView
 from django.shortcuts import render
-from django.http import HttpResponse
 from hda_privileged.models import Data_Point, Data_Set
-# from django.db.models import Count, Q
-from django.http import JsonResponse
-from django.core import serializers
 import json
 
 
