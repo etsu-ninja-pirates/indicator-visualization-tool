@@ -13,7 +13,7 @@ class ChartView(TemplateView):
         This class will be used to display Json content that will be return
         from the char_data function
     """
-    template_name = 'hda_public/sample2.html'
+    template_name = 'hda_public/chart.html'
 
 
     def get(self, request):

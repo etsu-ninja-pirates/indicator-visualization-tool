@@ -1,116 +1,59 @@
 {% extends "hda_public/base.html" %}
 
-{% comment %} This is the template I that was used to display charts.js graphs {% endcomment %}
+{% block content %}
 
-{% comment %} {% block extrahead %}
-    <!-- Load in jQuery and HighCharts -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="http://code.highcharts.com/highcharts.js"></script>
-    
+<div id="chartdiv"></div>
+
 {% endblock %}
 
-{% block title %}Analysis{% endblock %}
 
-{% block content %}
-    <div id={{ chartID|safe }} class="chart"></div>
-{% endblock %} {% endcomment %}
+{% block extra_scripts %}
 
-{% comment %} {% block overwrite %} {% endcomment %}
-<!-- Overwrite the base.html jQuery load and put in head for Highcharts to work -->
-{% comment %} {% endblock %} {% endcomment %}
-
-{% comment %} {% block extrajs %} {% endcomment %}
-<!-- Maps the Python template context variables from views.py to the Highchart js variables -->
-{% comment %} <script>
-    var chart_id = {{ chartID|safe }}
-    var chart = {{ chart|safe }}
-    var title = {{ title|safe }}
-    var xAxis = {{ xAxis|safe }}
-    var yAxis = {{ yAxis|safe }}
-    var series = {{ series|safe }}
-</script> {% endcomment %}
-
-<!-- Highchart js. Variable map shown above -->
-
-{% comment %} {% endblock %} {% endcomment %}
-
-{% comment %} https://www.youtube.com/watch?v=B4Vmm3yZPgc {% endcomment %}
-
+{% comment %} Highchart script CDN  {% endcomment %}
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+<!-- optional -->
+<script src="http://code.highcharts.com/modules/offline-exporting.js"></script>
+<script src="http://code.highcharts.com/modules/export-data.js"></script>
 
 <script>
-
-{% block jquery %}
-    var endpoint = '/chart/data/'   // {% url "chart-data"%}
-    var datapoints = []
-    var labels = []
-    $.ajax({
-        method:"GET", 
-        url: endpoint, 
-        success: function(data){
-            {% comment %} labels = data.labels {% endcomment %}
-            datapoints = data.data_points
-            {% comment %} function call to display the graph  {% endcomment %}
-            setChart()
-        }, 
-        error: function(error_data){
-            console.log("error")
-            console.log(error_data)
+(function() {
+  Highcharts.chart('chartdiv', {
+      plotOptions: {
+        series: {
+          turboThreshold: 3500
         }
-    })
-
-    function setChart(){
-    var ctx = document.getElementById("myChart");
-    var myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            {% comment %} labels: labels, {% endcomment %}
-            datasets: [{
-                label: '# of Votes',
-                data: datapoints,
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255,99,132,1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero:true
-                    }
-                }]
-            }
+      },
+      chart: {
+          type: 'scatter'
+      },
+      title: {
+          text: 'Sample'
+      },
+      xAxis: {
+        title: {
+            enabled: true,
+            text: 'Percentile'
         }
-    });
+      },
+      yAxis: {
+      },
+      series: [{
+          name: 'Percentile',
+          data: {{ chartdata | safe }},
+          color: 'green',
+          tooltip: {
+            pointFormat: "{point.name}<br/>p: <b>{point.x}</b><br/>v: <b>{point.y}</b><br/>",
+            valueDecimals: 2,
+            valueSuffix: "%"
+          },
+          marker: {
+            radius: 3
+          }
+      }]
+  });
+})();
 
-    }
-
-   
+</script>
 
 {% endblock %}
-</script>
-{% block content %}
-    <div class='row'>
-        <div class='col-sm-12' url-endpoint='{% url "chart-data" %}'>
-            <h1>Hello World</h>
-
-            <canvas id="myChart" width="400" height="400"></canvas>
-            
-
-        </div>
-    </div>
-{% endblock%}
