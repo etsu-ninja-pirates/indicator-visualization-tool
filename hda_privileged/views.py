@@ -51,11 +51,6 @@ def manage_metrics(request):
 def sampleNavBar(request):
     return render(request, 'hda_privileged/sample.html')
 
-
-#def upload_metric(request):
- #   return render(request, 'hda_privileged/upload_metric.html')
-
-
 def upload_metric(request):
 
     if request.method == 'POST' and request.FILES['myfile']:
@@ -72,7 +67,7 @@ def upload_metric(request):
                 messages.success(request, "Error in File Upload, Try Again.")
         else:
             messages.success(request, "Error in File Upload, File not CSV.")
-                    
+
         return render(request,'hda_privileged/upload_metric.html')
         #return render(request, 'core/simple_upload.html', { 3 line from here down commented before
         #   'uploaded_file_url': uploaded_file_url
