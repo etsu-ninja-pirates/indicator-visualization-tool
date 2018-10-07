@@ -7,42 +7,63 @@
 <div class="container">
   <div class="jumbotron">
     <h2>Upload your Metric data here</h2>
-      <div class = form-group>
-          {% if messages %}
+
+      {% comment %}
+      Show any messages added to the context
+      by using Bootstrap alert components
+      {% endcomment %}
+      <div class='form-group'>
+        {% if messages %}
           <ul class="messages">
-              {% for message in messages %}
-              <div class = "alert alert-success">{{ message }} </div>
-           {% endfor %}
-           </ul>
-           {% endif %}
+            {% for message in messages %}
+              <div
+                class="alert alert-{{ message.level_tag }}"
+                role="alert">
+                {{ message }}
+              </div>
+            {% endfor %}
+          </ul>
+        {% endif %}
       </div>
-      <form method="POST" enctype="multipart/form-data">
-          {% csrf_token %}
-
-          <div class="form-group">
-           <label name = "Health" class="mr-sm-2" for="inlineFormCustomSelect">Select Health Metric</label>
-             <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
-               <option selected>Select...</option>
-               <option value="1">Obesity</option>
-               <option value="2">Life Expectancy</option>
-                 option value="2">Life Expectancy</option>
-               <option value="3">Select</option>
-             </select>
-
-         </div>
-         <div class="form-group">
-            <label for="exampleInputPassword1">Select Year</label>
-             <input name="year" max="2099" maxlength="4" type="year" class="form-control" id="exampleInputPassword1" placeholder="2018" required>
-         </div>
 
 
-         <div class="form-group">
-            <label for="exampleInputFile">File Upload</label>
-            <input name="myfile" type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" required>
-            <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
-         </div>
+      <form
+        class="form-horizontal"
+        method="POST"
+        enctype="multipart/form-data"
+        action="{% url 'upload_metric'%}">
+        {% csrf_token %}
 
-         <button type="submit" class="btn btn-primary">Upload</button>
+        {% for field in form.visible_fields %}
+          {% comment %}
+          An unordered list of validation messages
+          {% endcomment %}
+          {{ field.errors }}
+
+          <div {% if field.errors %} class="form-group has-error" {% else %} class="form-group" {% endif %}>
+
+            {% comment %}
+            Label associated to the input w/ id_for_label
+            {% endcomment %}
+            <label class="col-sm-2 control-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+
+            {% comment %}
+            The actual field/input element
+            {% endcomment %}
+            <div class="col-sm-10">
+              {{ field }}
+            </div>
+
+            {% comment %}
+            Not using aria-describedby (but should be!) to link the field to its help text - not sure how to inject that attribute into the django field output above
+            {% endcomment %}
+            {% if field.help_text %}
+              <span class="help-block">{{ field.help_text | safe }}</span>
+            {% endif %}
+          </div>
+        {% endfor %}
+
+        <button type="submit" class="btn btn-primary">Upload</button>
 
       </form>
   </div>
