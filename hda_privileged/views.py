@@ -1,15 +1,16 @@
+import os.path
+
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from django.shortcuts import render, redirect
-
 from django.template import Context
 from django.template.loader import get_template
 from django.core.files.storage import FileSystemStorage
+from django.views import View
 
-
-from hda_privileged.forms import LoginForm, DocumentForm
+from .forms import LoginForm, DocumentForm, UploadNewDataForm
 from .models import Document
 
 #------------------------------------------------
@@ -51,6 +52,8 @@ def manage_metrics(request):
 def sampleNavBar(request):
     return render(request, 'hda_privileged/sample.html')
 
+
+
 def upload_metric(request):
 
     if request.method == 'POST' and request.FILES['myfile']:
@@ -78,5 +81,63 @@ def upload_metric(request):
         return render(request, 'hda_privileged/upload_metric.html', {'form': form})
     #return render(request, 'core/simple_upload.html')
 
+class UploadNewDataView(View):
+
+    form_class = UploadNewDataForm
+    template_name = 'hda_privileged/upload_metric.html'
+    file_field_name = 'file'
 
 
+    def _get_uploaded_file(self, request):
+        return request.FILES[self.file_field_name]
+
+
+    def _check_file_ext(self, request):
+        uploaded_file = self._get_uploaded_file(request)
+
+        okay = uploaded_file is not None and \
+            uploaded_file.name.lower().endswith(('.csv'))
+
+        if not okay:
+            messages.error(request, "Error in file upload, file was not CSV")
+
+        return okay
+
+
+    def _handle_form_submission(self, request, form):
+        myfile = self._get_uploaded_file(request)
+
+        # create a Document class instance
+        doc = Document(
+            file=myfile,
+            user=request.user,
+            source=form.cleaned_data['source']
+        )
+
+        # this saves the file in the directory specified
+        # in the Document model FileField.upload_to attribute
+        # and saves the rest of the model in the database
+        doc.save()
+        messages.success(request, "Document uploaded successfully")
+
+        ## TODO ##
+        ## Create and save a Data Set here! ##
+        indicator = form.cleaned_data['indicator']
+        messages.debug(request, "Indicator was {indicator!s}")
+
+
+    def get(self, request, *args, **kwargs):
+        # unbound form
+        form = self.form_class()
+        return render(request, self.template_name, {'form': form})
+
+
+    def post(self, request, *args, **kwargs):
+        # bind the form
+        form = self.form_class(request.POST, request.FILES)
+
+        if form.is_valid() and self._check_file_ext(request):
+            # Is there a Django-y way of adding more validation?
+            self._handle_form_submission(request, form)
+
+        return render(request, self.template_name, {'form': form})
