@@ -1,10 +1,9 @@
-from time import gmtime
+from time import gmtime, strftime
 
 from django.db import models
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.core.validators import MinValueValidator, MaxValueValidator
-from django.contrib.auth.models import User
 from django.contrib.auth.models import User, AnonymousUser
 
 # helper functions
@@ -54,7 +53,11 @@ class Document(models.Model):
 
     # user who uploaded the file (must be set in the view handling the upload)
     # is reset to a sentinel object if original user is deleted from the DB
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET(get_sentinel_user))
+    user = models.ForeignKey(settings.AUTH_USER_MODEL,
+        blank=True,
+        null=True,
+        on_delete=models.SET(get_sentinel_user)
+    )
 
     # the file
     file = models.FileField(upload_to=get_upload_path)
@@ -145,19 +148,3 @@ class Data_Point(models.Model):
 
     class Meta:
         verbose_name='Data point'
-        #return self.fips + ' - ' + self.name + ' - ' + self.state_id
-
-
-
-
-#class Document(models.Model):
- #   description = models.CharField(max_length=255, blank=True)
- #   document = models.FileField(upload_to='documments/')
-  #  uploaded_at = models.DateTimeField(auto_now_add=True)
-    #SelectHealthMetric = models.CharField(max_length=255, blank=True)
-    #SelectYear = models.CharField(max_length=4,blank=True)
-    #FileUpload = models.lookups
-
-
-
-
