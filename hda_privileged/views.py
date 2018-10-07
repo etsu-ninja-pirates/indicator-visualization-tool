@@ -1,13 +1,13 @@
 import os.path
 
 from django.contrib import messages
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, get_user
+from django.core.files.storage import FileSystemStorage
 from django.http import HttpResponse, HttpResponseRedirect
-from django.urls import reverse
 from django.shortcuts import render, redirect
 from django.template import Context
 from django.template.loader import get_template
-from django.core.files.storage import FileSystemStorage
+from django.urls import reverse
 from django.views import View
 
 from .forms import LoginForm, DocumentForm, UploadNewDataForm
@@ -99,7 +99,7 @@ class UploadNewDataView(View):
             uploaded_file.name.lower().endswith(('.csv'))
 
         if not okay:
-            messages.error(request, "Error in file upload, file was not CSV")
+            messages.warning(request, "Error in file upload, file was not CSV")
 
         return okay
 
@@ -110,9 +110,12 @@ class UploadNewDataView(View):
         # create a Document class instance
         doc = Document(
             file=myfile,
-            user=request.user,
             source=form.cleaned_data['source']
         )
+
+        # add a user if we have one
+        if request.user.is_authenticated:
+            doc.user = get_user(request)
 
         # this saves the file in the directory specified
         # in the Document model FileField.upload_to attribute
@@ -123,7 +126,7 @@ class UploadNewDataView(View):
         ## TODO ##
         ## Create and save a Data Set here! ##
         indicator = form.cleaned_data['indicator']
-        messages.debug(request, "Indicator was {indicator!s}")
+        messages.info(request, f"Indicator was {indicator!s}")
 
 
     def get(self, request, *args, **kwargs):
