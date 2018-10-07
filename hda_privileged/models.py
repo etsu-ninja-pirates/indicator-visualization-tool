@@ -4,6 +4,8 @@ from django.db import models
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.core.validators import MinValueValidator, MaxValueValidator
+from django.contrib.auth.models import User
+from django.contrib.auth.models import User, AnonymousUser
 
 # helper functions
 
@@ -143,4 +145,19 @@ class Data_Point(models.Model):
 
     class Meta:
         verbose_name='Data point'
+        #return self.fips + ' - ' + self.name + ' - ' + self.state_id
+
+
+
+
+#class Document(models.Model):
+ #   description = models.CharField(max_length=255, blank=True)
+ #   document = models.FileField(upload_to='documments/')
+  #  uploaded_at = models.DateTimeField(auto_now_add=True)
+    #SelectHealthMetric = models.CharField(max_length=255, blank=True)
+    #SelectYear = models.CharField(max_length=4,blank=True)
+    #FileUpload = models.lookups
+
+
+
 
