@@ -44,9 +44,12 @@ class UploadNewDataForm(forms.Form):
         widget=forms.Textarea
     )
 
+    ## TODO ##
+    # The default value should not be hardcoded!
     year = forms.IntegerField(
         label='Data year',
         help_text='Year this data is from',
+        initial=2018,
         min_value=1000,
         max_value=9999
     )
