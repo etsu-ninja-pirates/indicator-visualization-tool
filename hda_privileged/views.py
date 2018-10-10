@@ -15,6 +15,7 @@ from django.core.management import BaseCommand
 
 from .forms import LoginForm, DocumentForm, UploadNewDataForm
 from .models import Document,US_County, Health_Indicator, Data_Set,Data_Point
+from .percentile import add_percentiles_to_points, get_percentile_values
 
 #------------------------------------------------
 #The user_log-in function will handle the log in
@@ -127,7 +128,7 @@ class UploadNewDataView(View):
         saved_document = doc.save()
         messages.success(request, "Document uploaded successfully")
 
-        ## TODO ##
+
         ## Create and save a Data Set here! ##
         indicator = form.cleaned_data['indicator']
         year = form.cleaned_data['year']
@@ -141,6 +142,8 @@ class UploadNewDataView(View):
 
         data_set.save()
 
+        data_points = []
+
         # reading the value from the selected file
         f = open('.' + data_set.source_document.file.url, 'r')
         for row in csv.DictReader(f):
@@ -151,16 +154,22 @@ class UploadNewDataView(View):
             # get associated county
             associated_county = US_County.objects.get(name=county, state=state)
 
+
+
             # build Data_Point instance
             data_point = Data_Point(
-                value=row['Value'],
+                value=int(row['Value']),
                 county=associated_county,
                 data_set=data_set
             )
+            data_points.append(data_point)
 
-            data_point.save()
 
-        print("Loading Data_Set")
+        percentile = add_percentiles_to_points(data_points, plist=None)
+
+        for point in data_points:
+                point.save()
+        f.close()
 
 
 
