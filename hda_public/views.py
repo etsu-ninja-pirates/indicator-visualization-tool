@@ -22,9 +22,9 @@ class ChartView(TemplateView):
             }
 
         # for demo purposes, grab the first data set
-        ds = Data_Set.objects.first()
+        # ds = Data_Set.objects.first()
         # filter for the data points from counties in New York state
-        points = ds.data_points.filter(county__state__short='NY')
+        # points = ds.data_points.filter(county__state__short='TN')
         # transform the points into a list of objects for Highcharts
         chartdata = json.dumps([trans(pt) for pt in points])
 
@@ -45,3 +45,14 @@ class TableView(TemplateView):
         datasets = Data_Point.objects.all()
         args = {'datasets': datasets}
         return render(request,self.template_name, args)
+
+# This class will be used to test the return of all the data sets poining to a particular year 
+class SampleView(TemplateView):
+    template_name = 'hda_public/Sample.html'
+
+    def get(self, request):
+        # for demo purposes, grab the first data set
+        hi_name = 'Obisity'
+        ds = Data_Set.objects.all().filter(indicator__name = hi_name)
+        years = [i.year for i in ds]
+        return render(request,self.template_name, { 'years': years})
