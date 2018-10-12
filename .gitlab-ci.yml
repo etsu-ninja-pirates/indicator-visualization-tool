@@ -1,0 +1,58 @@
+# Based on: https://gitlab.com/gitlab-org/gitlab-ce/blob/master/lib/gitlab/ci/templates/Python.gitlab-ci.yml
+# Official language image. Look for the different tagged releases at:
+# https://hub.docker.com/r/library/python/tags/
+image: python:latest
+
+# https://docs.gitlab.com/ee/ci/yaml/#stages
+# run test jobs before ci_status jobs
+stages:
+  - test
+  - ci_status
+
+# Change pip's cache directory to be inside the project directory since we can
+# only cache local items.
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+# Pip's cache doesn't store the python packages
+# https://pip.pypa.io/en/stable/reference/pip_install/#caching
+#
+# If you want to also cache the installed packages, you have to install
+# them in a virtualenv and cache it as well.
+cache:
+  paths:
+    - .cache/pip
+    - venv/
+
+# install dependencies and run tests
+test:
+  before_script:
+    - python -V # Print out python version for debugging
+    - pip install virtualenv
+    - virtualenv venv
+    - source venv/bin/activate
+    - pip install -r requirements.txt
+  script:
+    - python manage.py migrate
+    - python manage.py test
+
+# these run the "build_status" script, which sends updates to the BitBucket API
+success:
+  stage: ci_status
+  before_script:
+    - ""
+  after_script:
+    - ""
+  script:
+    - BUILD_STATUS=passed BUILD_KEY=push ./build_status
+  when: on_success
+
+failure:
+  stage: ci_status
+  before_script:
+    - ""
+  after_script:
+    - ""
+  script:
+    - BUILD_STATUS=failed BUILD_KEY=push ./build_status
+  when: on_failure
