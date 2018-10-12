@@ -1,7 +1,7 @@
 # Based on: https://gitlab.com/gitlab-org/gitlab-ce/blob/master/lib/gitlab/ci/templates/Python.gitlab-ci.yml
 # Official language image. Look for the different tagged releases at:
 # https://hub.docker.com/r/library/python/tags/
-image: python:latest
+image: python:3.6
 
 # https://docs.gitlab.com/ee/ci/yaml/#stages
 # run test jobs before ci_status jobs
@@ -44,6 +44,8 @@ success:
   after_script:
     - ""
   script:
+    # permissions are wrong inside the docker image; not sure how to fix it permanently
+    - chmod +x build_status
     - BUILD_STATUS=passed BUILD_KEY=push ./build_status
   when: on_success
 
