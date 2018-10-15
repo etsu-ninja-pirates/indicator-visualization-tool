@@ -16,10 +16,9 @@ def _create_data_set(indicator, year):
         # https://docs.djangoproject.com/en/2.1/topics/db/queries/#additional-methods-to-handle-related-objects
         return indicator.data_sets.create(year=year)
 
-def _create_data_points(data_set, max_points):
-    count = max_points if max_points else US_County.objects.count()
-    make_point = lambda c: Data_Point(value=random.random(), county=c, data_set=data_set)
-    counties = US_County.objects.all()[:count]
+def _create_data_points(data_set, max_points, mean, stddev):
+    make_point = lambda c: Data_Point(value=random.gauss(mean, stddev), county=c, data_set=data_set)
+    counties = US_County.objects.all()[:max_points]
     return [make_point(c) for c in counties.iterator()]
 
 class Command(BaseCommand):
@@ -27,12 +26,16 @@ class Command(BaseCommand):
     def add_arguments(self, parser):
         parser.add_argument('-i', '--indicator', default='Test Indicator')
         parser.add_argument('-y', '--year', type=int, default=2018)
-        parser.add_argument('-m', '--max', type=int, default=None)
+        parser.add_argument('-c', '--count', type=int, default=None)
+        parser.add_argument('-m', '--mean', type=float, default=0.5)
+        parser.add_argument('-s', '--sigma', type=float, default=None)
 
     def handle(self, *args, **options):
         indicator_name = options['indicator']
         year = options['year']
-        max_points = options["max"]
+        max_points = options['count'] if options['count'] else US_County.objects.count()
+        mean = options['mean']
+        stddev = options['sigma'] if options['sigma'] else mean / 5
 
         self.stdout.write(f"Creating random data for {indicator_name}, {year}")
 
@@ -44,7 +47,7 @@ class Command(BaseCommand):
 
         random.seed()
 
-        points = _create_data_points(data_set, max_points)
+        points = _create_data_points(data_set, max_points, mean, stddev)
         self.stdout.write(f"Created {len(points)} new data points")
 
         self.stdout.write("Adding percentiles...")
