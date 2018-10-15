@@ -9,9 +9,13 @@ from django.template import Context
 from django.template.loader import get_template
 from django.urls import reverse
 from django.views import View
+import csv
+from csv import DictReader
+from django.core.management import BaseCommand
 
 from .forms import LoginForm, DocumentForm, UploadNewDataForm
-from .models import Document
+from .models import Document,US_County, Health_Indicator, Data_Set,Data_Point
+from .percentile import add_percentiles_to_points, get_percentile_values
 
 #------------------------------------------------
 #The user_log-in function will handle the log in
@@ -54,6 +58,7 @@ def sampleNavBar(request):
 
 
 
+'''
 def upload_metric(request):
 
     if request.method == 'POST' and request.FILES['myfile']:
@@ -80,7 +85,7 @@ def upload_metric(request):
         #messages.success(request, "Error in File Upload, Try Again")
         return render(request, 'hda_privileged/upload_metric.html', {'form': form})
     #return render(request, 'core/simple_upload.html')
-
+'''
 class UploadNewDataView(View):
 
     form_class = UploadNewDataForm
@@ -120,15 +125,61 @@ class UploadNewDataView(View):
         # this saves the file in the directory specified
         # in the Document model FileField.upload_to attribute
         # and saves the rest of the model in the database
-        doc.save()
+        saved_document = doc.save()
         messages.success(request, "Document uploaded successfully")
 
-        ## TODO ##
+
         ## Create and save a Data Set here! ##
         indicator = form.cleaned_data['indicator']
+        year = form.cleaned_data['year']
+        data_source = form.cleaned_data['source']
+
+        data_set = Data_Set(
+            indicator=indicator,
+            year=year,
+            source_document=doc
+        )
+
+        data_set.save()
+
+        data_points = []
+
+        # reading the value from the selected file
+        f = open('.' + data_set.source_document.file.url, 'r')
+        for row in csv.DictReader(f):
+            # get county and state from csv row
+            county = row['NAME']
+            state = row['STATE_USPS']
+
+            # get associated county
+            associated_county = US_County.objects.get(name=county, state=state)
+
+
+
+            # build Data_Point instance
+            data_point = Data_Point(
+                value=int(row['Value']),
+                county=associated_county,
+                data_set=data_set
+            )
+            data_points.append(data_point)
+
+
+        percentile = add_percentiles_to_points(data_points, plist=None)
+
+        for point in data_points:
+                point.save()
+        f.close()
+
+
+
         messages.info(request, f"Indicator was {indicator!s}")
+    '''
+    @receiver(post_save, sender=Data_Set)
+    def my_handler(sender,instance, **kwargs):
+        print('post save callback')
 
-
+    '''
     def get(self, request, *args, **kwargs):
         # unbound form
         form = self.form_class()

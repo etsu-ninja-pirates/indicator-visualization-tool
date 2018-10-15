@@ -9,7 +9,7 @@ import math
 from itertools import dropwhile
 
 def _create_data_set(indicator, year):
-    # don't overwrite an exisitng data set!
+    # don't overwrite an existing data set!
     if indicator.data_sets.filter(year=year).exists():
         raise CommandError(f'Indicator {indicator.name} already has a data set for year {year}, aborting')
     else:
