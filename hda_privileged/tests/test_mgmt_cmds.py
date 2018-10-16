@@ -43,7 +43,7 @@ class LoadRandomDataSetTestCase(TestCase):
 
         call_command(
             'load_random_data_set',
-            f'--max={size}',
+            f'--count={size}',
             indicator=name,
             stdout=self.outstr)
 
