@@ -56,4 +56,18 @@
 
 </script>
 
+    <div class="container">
+     <div class="jumbotron">
+       {% if showallYears %} <!-- view function name created by Jean in the graph section -->
+             <ul>
+                {% for handle in years %}
+                    <li> name {{ handle }} </li> <!-- this shouldnt be handle.year as this will not work -->
+                {% endfor %}
+            </ul>
+<!--            {% else %}
+                <p>No need for this </p>
+      {% endif %} -->
+    </div>
+   </div>
+
 {% endblock %}

@@ -34,7 +34,7 @@ class ChartView(TemplateView):
         # transform the points into a list of objects for Highcharts
         chartdata = json.dumps([trans(pt) for pt in points])
 
-        return render(request, self.template_name, { 'chartdata': chartdata})
+        return render(request, self.template_name, { 'chartdata': chartdata, 'years': years})
 
 
 class DashboardView(TemplateView):
