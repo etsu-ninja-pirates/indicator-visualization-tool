@@ -15,7 +15,7 @@ def dataSetForYear(year, indicator_name=DEMO_INDICATOR):
         # in any other case (including MultipleObjectsReturned), re-raise the exception
         raise
 
-# This method will be used to test the return of all the data sets poining to a particular year
+# This method will be used to test the return of all the data sets pointing to a particular year
 def dataSetYearsForIndicator(indicator_name=DEMO_INDICATOR):
     """ This function takes in a KPI name then returns all the years liked to it """
     results = Data_Set.objects.all().filter(indicator__name = indicator_name).order_by('year')
