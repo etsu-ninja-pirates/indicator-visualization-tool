@@ -1,38 +1,11 @@
+import json
+
 from django.views import View
 from django.views.generic import TemplateView
 from django.shortcuts import render
+
+from hda_public.queries import dataSetYearsForIndicator, dataSetForYear
 from hda_privileged.models import Data_Point, Data_Set
-import json
-
-
-# Example of using URL parameter in a class-based view subclassing "django.views.generic.base.View"
-# The "get" method becomes equivalent to a function-based view: it is called with the URL
-# parameter as a keyword argument, so the parameter needs to be declared as part of the
-# function signature for "get".
-# https://docs.djangoproject.com/en/2.0/ref/class-based-views/base/#view
-#
-# (We *can* access self.kwargs here, but "get" is called with the parameter and Python will crash
-# if you call a function with an undeclared keyword parameter.)
-class TestView(View):
-    def get(self, request, year=None):
-        return render(request, 'hda_public/dashboard.html', {'year': year})
-
-# Example of using URL parameter in a class based view subclassing "django.views.generic.base.TemplateView"
-# TemplateView is intended to abstract over the HTTP methods, and allows you to override "get_context_data"
-# to determine the context that gets passed to the template.
-# https://docs.djangoproject.com/en/2.0/ref/class-based-views/base/#templateview
-#
-# Whenever class-based views are called Django populates the properties `self.request`, `self.args`, and
-# `self.kwargs` - we can pull URL parameters out of self.args (positional) and self.kwargs (keyword),
-# and use them to add to the context object sent to the template.
-# https://docs.djangoproject.com/en/2.1/topics/class-based-views/generic-display/#dynamic-filtering
-class TestTemplateView(TemplateView):
-    template_name = 'hda_public/dashboard.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['year'] = self.kwargs.get('year', None)
-        return context
 
 
 class ChartView(TemplateView):
@@ -42,30 +15,47 @@ class ChartView(TemplateView):
     """
     template_name = 'hda_public/chart.html'
 
-
-    def get(self, request):
-        # this ne doesn't plot even though the data is delivered - is it because th object keys end up quoted?
-        def trans(pt):
+    # things that need to go into the context:
+    # 1. Is a year selected? (If not, we won't show a chart because we can't query data)
+    # 2. The selectable years
+    # 3. Series data for the chart, if a year was selected
+    def get_context_data(self, **kwargs):
+        # helper function to transform data points into plot series data
+        def transform(pt):
             return {
                 'x': pt.percentile * 100,
                 'y': pt.value * 100,
                 'name': pt.county.name,
             }
 
-        kpi_name = 'Obisity'
+        # call super to get the base context
+        context = super().get_context_data(**kwargs)
 
-        # function call that returns all the years based on the KPI that is passed to it
-        years = showallYears(kpi_name)
+        # did the URL specify a year?
+        selected_year = self.kwargs.get('year', None)
+        context['selected_year'] = selected_year
 
-        # for demo purposes, grab the first data set
-        ds = Data_Set.objects.first()
-        # filter for the data points from counties in New York state
-        points = ds.data_points.filter(county__state__short='NY')
-        # pts = ds.data_points.all()
-        # transform the points into a list of objects for Highcharts
-        chartdata = json.dumps([trans(pt) for pt in points])
+        # query the model for the available years (matching data sets we have)
+        # use default indicator name for demo
+        year_options = dataSetYearsForIndicator()
+        context['available_years'] = year_options
 
-        return render(request, self.template_name, { 'chartdata': chartdata, 'years': years})
+        if selected_year is not None:
+            data_set = dataSetForYear(selected_year)
+            if data_set is not None:
+                # in this branch, the user selected a year and we successfully
+                # retrieved the data set for that year
+                points = data_set.data_points.filter(county__state__short='TN')
+                chart_data = json.dumps([transform(pt) for pt in points])
+                context['data_series'] = chart_data
+            else:
+                # in this branch, they selected a year, but we couldn't find that data set (?!)
+                # ...what to do?
+                # we'll reset the selected year to None - the page will render like they did not select a year
+                context['selected_year'] = None
+
+        # return the context dictionary to the template can use it
+        return context
 
 
 class DashboardView(TemplateView):

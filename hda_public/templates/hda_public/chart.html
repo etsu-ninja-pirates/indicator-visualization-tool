@@ -2,7 +2,23 @@
 {%block title%}Health Chart{%endblock%}
 {% block content %}
 
-<div id="chartdiv"></div>
+<div class="row">
+  <ul class="nav nav-pills">
+    {% for year in available_years %}
+    <li role="presentation" class="{% if selected_year and selected_year == year %}active{% endif %}">
+      <a href="{% url 'chart' year %}">{{ year }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="row">
+  {% if data_series %}
+  <div id="chartdiv"></div>
+  {% else %}
+  <p>Please select a year to display data for</p>
+  {% endif %}
+</div>
 
 {% endblock %}
 
@@ -16,6 +32,7 @@
 <script src="http://code.highcharts.com/modules/offline-exporting.js"></script>
 <script src="http://code.highcharts.com/modules/export-data.js"></script>
 
+{% if data_series %}
 <script>
 (function() {
   Highcharts.chart('chartdiv', {
@@ -40,7 +57,7 @@
       },
       series: [{
           name: 'Percentile',
-          data: {{ chartdata | safe }},
+          data: {{ data_series | safe }},
           color: 'green',
           tooltip: {
             pointFormat: "{point.name}<br/>p: <b>{point.x}</b><br/>v: <b>{point.y}</b><br/>",
@@ -55,19 +72,6 @@
 })();
 
 </script>
-
-    <div class="container">
-     <div class="jumbotron">
-       {% if showallYears %} <!-- view function name created by Jean in the graph section -->
-             <ul>
-                {% for handle in years %}
-                    <li> name {{ handle }} </li> <!-- this shouldnt be handle.year as this will not work -->
-                {% endfor %}
-            </ul>
-<!--            {% else %}
-                <p>No need for this </p>
-      {% endif %} -->
-    </div>
-   </div>
+{% endif %}
 
 {% endblock %}
