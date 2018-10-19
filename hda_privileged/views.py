@@ -138,8 +138,8 @@ class UploadNewDataView(View):
 
         percentile = add_percentiles_to_points(data_points, plist=None)
 
-        for point in data_points:
-                point.save()
+        Data_Point.objects.bulk_create(data_points)
+
         f.close()
 
 
