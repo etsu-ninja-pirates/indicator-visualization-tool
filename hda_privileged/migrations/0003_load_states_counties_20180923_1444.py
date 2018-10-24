@@ -57,7 +57,7 @@ def load_states_and_counties(apps, schema_editor):
     state_map = {s.short: s for s in states}
     # load county objects from CSV file
     counties = load_data(COUNTY_FILENAME, make_county(US_County, state_map))
-    # create all the county objects in a single query, otherwise this will take foreve
+    # create all the county objects in a single query, otherwise this will take forever
     US_County.objects.bulk_create(counties)
 
 

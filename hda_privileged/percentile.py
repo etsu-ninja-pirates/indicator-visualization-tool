@@ -107,13 +107,13 @@ def add_percentiles_to_points(points, plist=None):
 
     If no list/sequence of percentiles to calculate (plist) is given, then uses
     the 0.1% through 99.9% percentiles in steps of 0.1% (this is much to granular
-    to be meanigful for data sets of less than 1000 points!)
+    to be meaningful for data sets of less than 1000 points!)
 
     The list of points is mutated in place.
 
     Changes to the data model are *not* saved.
 
-    Technically sunce python uses Duck Typing, the points can be *any* object
+    Technically since python uses Duck Typing, the points can be *any* object
     that has both a "value" attribute and a "percentile" attribute.
     """
 
