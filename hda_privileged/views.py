@@ -57,35 +57,6 @@ def sampleNavBar(request):
     return render(request, 'hda_privileged/sample.html')
 
 
-
-'''
-def upload_metric(request):
-
-    if request.method == 'POST' and request.FILES['myfile']:
-        form = DocumentForm(request.POST, request.FILES)
-        myfile = request.FILES['myfile']
-
-        if myfile.name.lower().endswith(('.csv')):
-            fs = FileSystemStorage()
-            filename = fs.save(myfile.name, myfile)
-            fs.url(filename)
-            if filename:
-                messages.success(request, 'File Successfully Uploaded.')
-            else:
-                messages.success(request, "Error in File Upload, Try Again.")
-        else:
-            messages.success(request, "Error in File Upload, File not CSV.")
-
-        return render(request,'hda_privileged/upload_metric.html')
-        #return render(request, 'core/simple_upload.html', { 3 line from here down commented before
-        #   'uploaded_file_url': uploaded_file_url
-        #})
-    else:
-        form = DocumentForm()
-        #messages.success(request, "Error in File Upload, Try Again")
-        return render(request, 'hda_privileged/upload_metric.html', {'form': form})
-    #return render(request, 'core/simple_upload.html')
-'''
 class UploadNewDataView(View):
 
     form_class = UploadNewDataForm
