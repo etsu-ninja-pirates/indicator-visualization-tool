@@ -1,6 +1,6 @@
 from django.core.management import BaseCommand, CommandError
 from hda_privileged.models import *
-from hda_privileged.percentile import add_percentiles_to_points
+from hda_privileged.percentile import get_percentiles_for_points, assign_percentiles_to_points
 
 import argparse
 import random
@@ -51,11 +51,14 @@ class Command(BaseCommand):
         self.stdout.write(f"Created {len(points)} new data points")
 
         self.stdout.write("Adding percentiles...")
-        add_percentiles_to_points(points)
+        percentile_values = get_percentiles_for_points(points)
+        assign_percentiles_to_points(points, percentile_values)
 
-        # this may not work properly? Docs are hazy:
+        pv_models = [Percentile(rank=p, value=pv, data_set=data_set) for (p, pv) in percentile_values]
+
         # https://docs.djangoproject.com/en/2.1/ref/models/querysets/#bulk-create
         # it mentions several caveats, but it seems sufficient for this use case
         self.stdout.write("Saving data points")
         Data_Point.objects.bulk_create(points)
+        Percentile.objects.bulk_create(pv_models)
 

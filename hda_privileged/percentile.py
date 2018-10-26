@@ -99,43 +99,36 @@ def get_percentile_values(plist, values):
     """
     return [(p, percentile(p, values)) for p in plist]
 
-def add_percentiles_to_points(points, plist=None):
+def get_percentiles_for_points(points):
     """
-    Takes a list of data points, sorts them base on their "value" attribute,
-    calculates the percentiles for every p in plist, and sets the "percentile"
-    attribute on each data point object to the percentile where it fits.
-
-    If no list/sequence of percentiles to calculate (plist) is given, then uses
-    the 0.1% through 99.9% percentiles in steps of 0.1% (this is much to granular
-    to be meaningful for data sets of less than 1000 points!)
-
-    The list of points is mutated in place.
-
-    Changes to the data model are *not* saved.
-
-    Technically since python uses Duck Typing, the points can be *any* object
-    that has both a "value" attribute and a "percentile" attribute.
+    Calculate percentile values for the 0.1% through 99.9% percentiles
+    using the values from the given points.
+    Parameters:
+    points :: List<Point>, where "Point" is an object with a "value" attribute
     """
+    # generate 0.001 to 0.999 in steps of 0.001
+    percentiles = [p / 1000 for p in range(1,1000)]
+    # take the values out of the points, and
+    # make sure they are in ascending order by value
+    values = sorted([pt.value for pt in points])
+    # calculate a value for each of the percentiles
+    return get_percentile_values(percentiles, values)
 
-    # sort the list of points in place by value
+def assign_percentiles_to_points(points, percentile_values):
+    # ensure the point list is in ascending order
     points.sort(key=lambda pt: pt.value)
-
-    # percentiles - use argument or default
-    # default produces 0.1 through 99.9 shifted 2 decimal places so values are in (0,1)
-    percentiles = plist if plist else [n / 1000 for n in range(1,1000)]
-
-    # extract the values so we can use them to calculate percentile results
-    values = [pt.value for pt in points]
-    # create our list of tuples (p, pv)
-    percentile_values = get_percentile_values(percentiles, values)
-
-    # assign a percentile to each point
+    # now for each point, find the percentile with
+    # the closest percentile-value >= the point's value
     for pt in points:
         # skip percentiles until we find one with a value larger than the point's value
+        # when this stops, the first element in the percentile-value list should have a
+        # value >= the value of the point:
         percentile_values = list(dropwhile(lambda pv: pv[1] < pt.value, percentile_values))
         # it's possible that some value are larger than the largest percentile value we were asked to calculate!
         # in that case they don't fit in any of the "buckets" we have, so we'll run out of values here
         if len(percentile_values) == 0:
+            # we'll cheat and assign it "1" since it's technically correct
+            pt.percentile = 1
             break
         else:
             # assign that percentile (between 0 and 1) to the point

@@ -251,21 +251,24 @@ class AddToPointsTestCase(TestCase):
 
     # the function should sort the points
     def test_sorts_points(self):
-        value_key = lambda pt: pt.value
+        vk = lambda pt: pt.value
         pts = [MockPoint(n) for n in range(10,1,-1)]
-        self.assertFalse(is_sorted(pts, key=value_key))
+        pvs = get_percentiles_for_points(pts)
 
-        add_percentiles_to_points(pts)
-        self.assertTrue(is_sorted(pts, key=value_key))
+        self.assertFalse(is_sorted(pts, key=vk))
+
+        assign_percentiles_to_points(pts, pvs)
+        self.assertTrue(is_sorted(pts, key=vk))
 
     # the percentile properties should be set
     def test_adds_percentiles(self):
         pts = [MockPoint(n) for n in range(10,1,-1)]
+        pvs =get_percentiles_for_points(pts)
 
         none_have_percentile = reduce(lambda sofar, this: sofar and (this.percentile is None), pts)
         self.assertTrue(none_have_percentile)
 
-        add_percentiles_to_points(pts)
+        assign_percentiles_to_points(pts, pvs)
 
         all_have_percentiles = reduce(lambda sofar, this: sofar and (this.percentile is not None), pts)
         self.assertTrue(all_have_percentiles)
@@ -277,55 +280,39 @@ class AddToPointsTestCase(TestCase):
     # be assigned to a percentile bucket! Two values in our range (96 and 100) are *larger*
     # than the value at the 90th percentile (93.6)
     def test_uses_given_percentiles(self):
-        ps = [n / 10 for n in range(1, 10)]
+        ps = [n / 1000 for n in range(1, 1000)]
         ps_check = set(ps)
         checkset = lambda v: v is None or v in ps_check
 
         pts = [MockPoint(n) for n in range(100, 3, -4)]
+        pvs = get_percentiles_for_points(pts)
 
-        add_percentiles_to_points(pts, ps)
+        assign_percentiles_to_points(pts, pvs)
 
         all_in_set = reduce(lambda sofar, this: sofar and checkset(this.percentile), pts)
         self.assertTrue(all_in_set)
 
     # after assigning a percentile to a point, the value in that
     # point should be less than the percentile value for that percentile
-    # we can check this by independently calculating the perentile values
+    # we can check this by independently calculating the percentile values
     # and checking against that
     def values_less_than_their_percentile(self):
-        # percentiles to use (1% to 99%)
-        ps = [n / 100 for n in range(1,100)]
-        # values to use (1 to 50)
-        vs = [v for v in range(1,51)]
+        # create points for our values (1-100)
+        pts = [MockPoint(v) for v in range(1,101)]
+        pvs = get_percentiles_for_points(pts)
 
-        # this should be the same as the ones used in add_percentiles_to_points
-        # turn it into a dictionary for fast lookups
-        percentile_values = { p: pv for (p, pv) in get_percentile_values(ps, vs) }
+        # turn these into into a dictionary for fast lookups
+        percentile_values = { p: pv for (p, pv) in pvs }
 
-        # create points for our values and add percentiles to them
-        points = [MockPoint(v) for v in vs]
-        add_percentiles_to_points(points)
+        assign_percentiles_to_points(pts)
 
         # now, for each point, we can lookup the cut off for the percentile it was assigned,
         # and check that this value is larger than the value of the point (i.e. confirm that
         # the point fits inside the bucket it was assigned to)
-        for pt in points:
+        for pt in pts:
             with self.subTest(value=pt.value):
                 value = pt.value
                 percentile = pt.percentile
                 if percentile is not None: # because this can happen...
                     percentile_value = percentile_values[percentile]
                     self.assertLessEqual(value, percentile_value)
-
-
-
-
-
-
-
-
-
-
-
-
-
