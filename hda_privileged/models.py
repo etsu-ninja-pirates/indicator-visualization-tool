@@ -80,6 +80,7 @@ class Data_Set(models.Model):
         MaxValueValidator(9999, message="If it really is later than the year 9999, you should get someone to update this program"),
     ])
 
+    # the document this data set was generated from
     source_document = models.ForeignKey(Document,
         on_delete=models.SET_NULL,
         null=True,
@@ -148,3 +149,31 @@ class Data_Point(models.Model):
 
     class Meta:
         verbose_name='Data point'
+
+
+# As an alternative to this, if we need more efficiency we can pack arrays of percentile values
+# into a bytearray (using the struct module) and save that in a model.ByteField.
+class Percentile(models.Model):
+    """
+    Stores *one* of the percentile values associated with a particular data set.
+    What I'm calling a "percentile value" is the value such that some percent of
+    the other values in the data set are <= that value, e.g.
+    p = 0.86, v = 490 -> 86% of the values in the data set are <= 490
+    """
+
+    # the "name" of this percentile - e.g. for instance to represent the 86th percentile, this value should be 0.86
+    # while for the 25.1 percentile, it would be .251
+    rank = models.FloatField()
+
+    # the value in the data set that marks the boundary for the rank. For example,
+    # if our rank is 0.86 and 86% of the values in the data set are <= 456, then this
+    # value would be 456. It needs to be a float field because we are not constraining
+    # the kind of numbers in a data set - they may be integers or floats
+    value = models.FloatField()
+
+    # pointer back to the data set we belong to. This establishes a one-to-many relationship from
+    # Data_Set to Percentile, where was say "One Data_Set has many Percentiles". After calculating
+    # the percentile values using the Data_Points in a Data_Set, we can save them in the database
+    # by creating instances of this class that reference a specific Data_Set instance.
+    # To read them back, use the property 'percentiles' on a Data_Set instance.
+    data_set = models.ForeignKey(Data_Set, models.CASCADE, related_name='percentiles')
