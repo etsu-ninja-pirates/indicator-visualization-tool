@@ -1,5 +1,5 @@
 {% extends "hda_public/base.html" %}
-{%block title%}Health Chart{%endblock%}
+{% block title %}Health Chart{% endblock %}
 {% block content %}
 
 <div class="row">
@@ -41,9 +41,6 @@
           turboThreshold: 3500
         }
       },
-      chart: {
-          type: 'scatter'
-      },
       title: {
           text: 'Sample'
       },
@@ -55,20 +52,35 @@
       },
       yAxis: {
       },
-      series: [{
-          name: 'Percentile',
+      series: [
+        {
+          name: 'Percentiles',
+          type: "spline",
+          data: {{ data_percentiles | safe }},
+          color: "gray",
+          enableMouseTracking: false,
+          marker: {
+            enabled: false
+          }
+        },
+        {
+          name: 'Values',
+          type: "scatter",
           data: {{ data_series | safe }},
-          color: 'green',
+          color: 'red',
+          allowPointSelect: true,
           tooltip: {
-            pointFormat: "{point.name}<br/>p: <b>{point.x}</b><br/>v: <b>{point.y}</b><br/>",
-            valueDecimals: 2,
-            valueSuffix: "%"
+            pointFormat: "{point.name}<br/>p: <b>{point.x}%</b><br/>v: <b>{point.y}</b><br/>",
+            valueDecimals: 1,
           },
           marker: {
-            radius: 3
+            radius: 3,
+            symbol: "circle"
           }
-      }]
-  });
+        }
+      ]
+    }
+  );
 })();
 
 </script>

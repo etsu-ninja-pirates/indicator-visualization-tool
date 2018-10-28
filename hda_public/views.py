@@ -1,11 +1,10 @@
 import json
 
-from django.views import View
 from django.views.generic import TemplateView
 from django.shortcuts import render
 
 from hda_public.queries import dataSetYearsForIndicator, dataSetForYear
-from hda_privileged.models import Data_Point, Data_Set
+from hda_privileged.models import Data_Point
 
 
 class ChartView(TemplateView):
@@ -46,12 +45,17 @@ class ChartView(TemplateView):
                 # in this branch, the user selected a year and we successfully
                 # retrieved the data set for that year
                 points = data_set.data_points.filter(county__state__short='TN')
-                chart_data = json.dumps([transform(pt) for pt in points])
-                context['data_series'] = chart_data
+                percentiles = data_set.percentiles.all().order_by('rank')
+                
+                value_data = json.dumps([transform(pt) for pt in points])
+                percentile_data = json.dumps([(p.rank * 100, p.value) for p in percentiles])
+                
+                context['data_series'] = value_data
+                context['data_percentiles'] = percentile_data
             else:
                 # in this branch, they selected a year, but we couldn't find that data set (?!)
-                # ...what to do?
-                # we'll reset the selected year to None - the page will render like they did not select a year
+                # ...what to do? we'll reset the selected year to None - the page will render 
+                # like they did not select a year
                 context['selected_year'] = None
 
         # return the context dictionary to the template can use it
@@ -62,7 +66,7 @@ class DashboardView(TemplateView):
     template_name = 'hda_public/dashboard.html'
 
     def get_view(self, request):
-        return render(request,self.template_name)
+        return render(request, self.template_name)
 
 
 class TableView(TemplateView):
@@ -71,5 +75,4 @@ class TableView(TemplateView):
     def get(self, request):
         datasets = Data_Point.objects.all()
         args = {'datasets': datasets}
-        return render(request,self.template_name, args)
-
+        return render(request, self.template_name, args)
