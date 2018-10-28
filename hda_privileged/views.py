@@ -14,8 +14,8 @@ from csv import DictReader
 from django.core.management import BaseCommand
 
 from .forms import LoginForm, DocumentForm, UploadNewDataForm
-from .models import Document,US_County, Health_Indicator, Data_Set,Data_Point
-from .percentile import add_percentiles_to_points, get_percentile_values
+from .models import Document,US_County, Health_Indicator, Data_Set, Data_Point, Percentile
+from .percentile import get_percentiles_for_points, assign_percentiles_to_points
 
 #------------------------------------------------
 #The user_log-in function will handle the log in
@@ -57,35 +57,6 @@ def sampleNavBar(request):
     return render(request, 'hda_privileged/sample.html')
 
 
-
-'''
-def upload_metric(request):
-
-    if request.method == 'POST' and request.FILES['myfile']:
-        form = DocumentForm(request.POST, request.FILES)
-        myfile = request.FILES['myfile']
-
-        if myfile.name.lower().endswith(('.csv')):
-            fs = FileSystemStorage()
-            filename = fs.save(myfile.name, myfile)
-            fs.url(filename)
-            if filename:
-                messages.success(request, 'File Successfully Uploaded.')
-            else:
-                messages.success(request, "Error in File Upload, Try Again.")
-        else:
-            messages.success(request, "Error in File Upload, File not CSV.")
-
-        return render(request,'hda_privileged/upload_metric.html')
-        #return render(request, 'core/simple_upload.html', { 3 line from here down commented before
-        #   'uploaded_file_url': uploaded_file_url
-        #})
-    else:
-        form = DocumentForm()
-        #messages.success(request, "Error in File Upload, Try Again")
-        return render(request, 'hda_privileged/upload_metric.html', {'form': form})
-    #return render(request, 'core/simple_upload.html')
-'''
 class UploadNewDataView(View):
 
     form_class = UploadNewDataForm
@@ -154,8 +125,6 @@ class UploadNewDataView(View):
             # get associated county
             associated_county = US_County.objects.get(name=county, state=state)
 
-
-
             # build Data_Point instance
             data_point = Data_Point(
                 value=int(row['Value']),
@@ -164,22 +133,26 @@ class UploadNewDataView(View):
             )
             data_points.append(data_point)
 
-
-        percentile = add_percentiles_to_points(data_points, plist=None)
-
-        for point in data_points:
-                point.save()
+        # we are done reading from the file
         f.close()
 
+        # calculate the percentile-values for this data set
+        percentile_values = get_percentiles_for_points(data_points)
+
+        # assign a percentile to each data point
+        assign_percentiles_to_points(data_points, percentile_values)
+
+        # transform our list of tuples List<(P, PV)> into a list of Percentile model objects
+        percentile_models = [Percentile(rank=p, value=pv, data_set=data_set) for (p, pv) in percentile_values]
 
 
+        # save all the data points and percentile values using bulk_create, for speed
+        Data_Point.objects.bulk_create(data_points)
+        Percentile.objects.bulk_create(percentile_models)
+
+        # This is mostly for debugging, but it's a useful example of using the messages API
         messages.info(request, f"Indicator was {indicator!s}")
-    '''
-    @receiver(post_save, sender=Data_Set)
-    def my_handler(sender,instance, **kwargs):
-        print('post save callback')
 
-    '''
     def get(self, request, *args, **kwargs):
         # unbound form
         form = self.form_class()
