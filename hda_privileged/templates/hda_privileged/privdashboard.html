@@ -1,0 +1,77 @@
+{% extends 'hda_privileged/base.html' %}
+
+{% load staticfiles %}
+  
+	<!-- Make health indicator selected obvious -->
+	<style>
+		a:active{
+			background-color: yellow;
+		}
+    </style>
+  </head>
+  
+{% block content %}
+
+<!-- Column to list clickable indicators from db -->
+<div class="row">
+  <div class="col-sm-3">
+	<div class="page-header"><h1><small>Health Indicators</small></h1></div>
+	<ul class="list-group">
+	  <li class="list-group-item" style="border:none"><a href="#">Obesity</a></li>
+	  <li class="list-group-item" style="border:none"><a href="#">Some College</a></li>
+	  <li class="list-group-item" style="border:none"><a href="#">Life Expectancy</a></li>
+	</ul>  
+    </div>
+  
+  
+  <!-- Space between columns -->
+  <div class="col-sm-1"></div>
+  
+  <!-- File list viewable by clickable indicators -->
+  <div class="col-sm-8">
+  <div class="page-header"><h1><small>Data Files</small></h1></div>
+	<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Year</th>
+      <th scope="col">Indicator</th>
+      <th scope="col">File Name</th>
+      <th scope="col">Upload Date</th>
+	  <th scope="col">User</th>
+	  <th scope="col">File</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">2018</th>
+      <td>Obesity</td>
+      <td>Data Indicators_Rank</td>
+      <td>01/29/2019</td>
+	  <td>Anna Littical</td>
+	  <td>Data Indicators_Rank.xlsx</td>
+    </tr>
+    <tr>
+      <th scope="row">2017</th>
+      <td>Obesity</td>
+      <td>Data Indicators_Rank</td>
+      <td>01/13/2018</td>
+	  <td>Wiley Waites</td>
+	  <td>Data Indicators_Rank.xlsx</td>
+    </tr>
+    <tr>
+      <th scope="row">2016</th>
+      <td>Obesity</td>
+      <td>Data Indicators_Rank</td>
+      <td>01/27/2017</td>
+	  <td>Arthur Rightus</td>
+	  <td>Data Indicators_Rank.xlsx</td>
+    </tr>
+  </tbody>
+</table> 
+</div>
+
+
+  </div>
+
+
+{%endblock%}

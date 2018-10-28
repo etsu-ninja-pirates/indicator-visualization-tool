@@ -36,6 +36,8 @@
 <body>
 <div class="container">
 <h1>ETSU College of Public Health</h1>
+
+{%block nav%}
 <nav class="navbar navbar-default">
   <div class="container-fluid">
 
@@ -69,6 +71,14 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+{% endblock %}
+
+  <div class="container">
+
+    {% block content %}
+    {% endblock %}
+    
+  </div>
 </div>
 
 	<hr>
