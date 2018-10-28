@@ -23,8 +23,8 @@ class ChartView(TemplateView):
         # helper function to transform data points into plot series data
         def transform(pt):
             return {
-                'x': pt.percentile * 100,
-                'y': pt.value * 100,
+                'x': pt.rank * 100,
+                'y': pt.value,
                 'name': pt.county.name,
             }
 

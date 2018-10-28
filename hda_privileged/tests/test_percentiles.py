@@ -167,16 +167,16 @@ class PercentileValuesTestCase(TestCase):
 class MockPoint(object):
     def __init__(self, value, *, percentile=None):
         self.value = value
-        self.percentile = percentile
+        self.rank = percentile
 
     def __eq__(self, other):
         if hasattr(other, 'value') and hasattr(other, 'percentile'):
-            return self.value == other.value and self.percentile == other.percentile
+            return self.value == other.value and self.rank == other.rank
         else:
             return False
 
     def __str__(self):
-        return f"Point v:{self.value} p:{self.percentile}"
+        return f"Point v:{self.value} p:{self.rank}"
 
 # helper for checking if a list is sorted
 # we could also copy the list, sort the copy, and use comparison,
@@ -265,12 +265,12 @@ class AddToPointsTestCase(TestCase):
         pts = [MockPoint(n) for n in range(10,1,-1)]
         pvs =get_percentiles_for_points(pts)
 
-        none_have_percentile = reduce(lambda sofar, this: sofar and (this.percentile is None), pts)
+        none_have_percentile = reduce(lambda sofar, this: sofar and (this.rank is None), pts)
         self.assertTrue(none_have_percentile)
 
         assign_percentiles_to_points(pts, pvs)
 
-        all_have_percentiles = reduce(lambda sofar, this: sofar and (this.percentile is not None), pts)
+        all_have_percentiles = reduce(lambda sofar, this: sofar and (this.rank is not None), pts)
         self.assertTrue(all_have_percentiles)
 
     # if we provide percentiles to use, the percentile assigned to every point
@@ -289,7 +289,7 @@ class AddToPointsTestCase(TestCase):
 
         assign_percentiles_to_points(pts, pvs)
 
-        all_in_set = reduce(lambda sofar, this: sofar and checkset(this.percentile), pts)
+        all_in_set = reduce(lambda sofar, this: sofar and checkset(this.rank), pts)
         self.assertTrue(all_in_set)
 
     # after assigning a percentile to a point, the value in that
@@ -312,7 +312,7 @@ class AddToPointsTestCase(TestCase):
         for pt in pts:
             with self.subTest(value=pt.value):
                 value = pt.value
-                percentile = pt.percentile
-                if percentile is not None: # because this can happen...
-                    percentile_value = percentile_values[percentile]
+                rank = pt.rank
+                if rank is not None:  # because this can happen...
+                    percentile_value = percentile_values[rank]
                     self.assertLessEqual(value, percentile_value)

@@ -114,7 +114,7 @@ def get_percentiles_for_points(points):
     # calculate a value for each of the percentiles
     return get_percentile_values(percentiles, values)
 
-def assign_percentiles_to_points(points, percentile_values):
+def assign_percentiles_to_points(points, percentiles):
     # ensure the point list is in ascending order
     points.sort(key=lambda pt: pt.value)
     # now for each point, find the percentile with
@@ -123,14 +123,14 @@ def assign_percentiles_to_points(points, percentile_values):
         # skip percentiles until we find one with a value larger than the point's value
         # when this stops, the first element in the percentile-value list should have a
         # value >= the value of the point:
-        percentile_values = list(dropwhile(lambda pv: pv[1] < pt.value, percentile_values))
+        percentiles = list(dropwhile(lambda pv: pv[1] < pt.value, percentiles))
         # it's possible that some value are larger than the largest percentile value we were asked to calculate!
         # in that case they don't fit in any of the "buckets" we have, so we'll run out of values here
-        if len(percentile_values) == 0:
+        if len(percentiles) == 0:
             # we'll cheat and assign it "1" since it's technically correct
-            pt.percentile = 1
+            pt.rank = 1
             break
         else:
             # assign that percentile (between 0 and 1) to the point
-            (p, _) = percentile_values[0]
-            pt.percentile = p
+            (p, _) = percentiles[0]
+            pt.rank = p

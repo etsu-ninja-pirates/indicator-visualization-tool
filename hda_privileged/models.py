@@ -130,13 +130,13 @@ class US_County(models.Model):
 
 class Data_Point(models.Model):
     """
-    A single measurement for a particulr county and data set
+    A single measurement for a particular county and data set
     """
     value = models.FloatField(default=0,
         help_text="The measured value for this county for this data set"
     )
 
-    percentile = models.FloatField(default=0,
+    rank = models.FloatField(default=0,
         help_text="The percentile for this value, calculated against the other data points in the data set",
         validators=[
             MinValueValidator(0, message="Percentiles cannot be less than 0")
