@@ -1,5 +1,6 @@
-from math import ceil, floor
+from math import floor
 from itertools import dropwhile
+
 
 class PercentileBoundsError(ArithmeticError):
     """
@@ -13,6 +14,7 @@ class PercentileBoundsError(ArithmeticError):
 
     def __str__(self):
         return self.message
+
 
 def rank(percentile, sample_size):
     """
@@ -37,8 +39,9 @@ def rank(percentile, sample_size):
     upper_bound = sample_size / (sample_size + 1)
 
     # bounds checking: cannot calculate rank for 0% or 100%
-    if percentile in (0,1):
-        raise PercentileBoundsError(f"Cannot calculate percentile rank for p = 0 or p = 1 (was {percentile:d})")
+    if percentile in (0, 1):
+        msg = f"Cannot calculate percentile rank for p = 0 or p = 1 (was {percentile:d})"
+        raise PercentileBoundsError(msg)
 
     # edge conditions: cannot calculate a 'real' rank for all
     # percentiles and all sample sizes - percentile.exc has a restricted range
@@ -48,6 +51,7 @@ def rank(percentile, sample_size):
         return sample_size
     else:
         return percentile * (sample_size + 1)
+
 
 def percentile(p, values):
     """
@@ -83,6 +87,7 @@ def percentile(p, values):
         upper = values[index + 1]
         return lower + fraction * (upper - lower)
 
+
 def get_percentile_values(plist, values):
     """
     Produce a list of (rank, value) given a list of percentiles to calculate
@@ -99,6 +104,7 @@ def get_percentile_values(plist, values):
     """
     return [(p, percentile(p, values)) for p in plist]
 
+
 def get_percentiles_for_points(points):
     """
     Calculate percentile values for the 0.1% through 99.9% percentiles
@@ -107,12 +113,13 @@ def get_percentiles_for_points(points):
     points :: List<Point>, where "Point" is an object with a "value" attribute
     """
     # generate 0.001 to 0.999 in steps of 0.001
-    percentiles = [p / 1000 for p in range(1,1000)]
+    percentiles = [p / 1000 for p in range(1, 1000)]
     # take the values out of the points, and
     # make sure they are in ascending order by value
     values = sorted([pt.value for pt in points])
     # calculate a value for each of the percentiles
     return get_percentile_values(percentiles, values)
+
 
 def assign_percentiles_to_points(points, percentiles):
     # ensure the point list is in ascending order
@@ -124,8 +131,9 @@ def assign_percentiles_to_points(points, percentiles):
         # when this stops, the first element in the percentile-value list should have a
         # value >= the value of the point:
         percentiles = list(dropwhile(lambda pv: pv[1] < pt.value, percentiles))
-        # it's possible that some value are larger than the largest percentile value we were asked to calculate!
-        # in that case they don't fit in any of the "buckets" we have, so we'll run out of values here
+        # it's possible that some value are larger than the largest percentile value we were asked
+        #  to calculate! in that case they don't fit in any of the "buckets" we have, so we'll run
+        # out of values here:
         if len(percentiles) == 0:
             # we'll cheat and assign it "1" since it's technically correct
             pt.rank = 1
