@@ -25,8 +25,10 @@ def user_login(request):
                                 password=cd['password'])
             if user is not None:
                 if user.is_active:
-                    login(request, user)
-                    return HttpResponse('You Successfully Logged in')
+                    login(request,user)
+                    # The 'sample' routing will be changed to the desired landing page
+                    # that will be displayed after authenticated user logs in
+                    return HttpResponseRedirect(reverse('priv:sample'))
                 else:
                     return HttpResponse('Disabled account')
             else:

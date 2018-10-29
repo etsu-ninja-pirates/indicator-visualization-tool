@@ -8,7 +8,7 @@
     <div class="signin-row row">
         <div class="col-md-offset-3 col-md-6">
             <div class="container-signin panel panel-info">
-                <form action="{% url 'login' %}" method='POST' id='loginForm' class='form-horizontal' autocomplete='off'>
+                <form action="{% url 'priv:login' %}" method='POST' id='loginForm' class='form-horizontal' autocomplete='off'>
                     {% csrf_token %}
                     {% for hidden_field in form.hidden_fields %}
                     {{ hidden_field }}
