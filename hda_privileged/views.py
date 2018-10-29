@@ -9,9 +9,11 @@ from django.template import Context
 from django.template.loader import get_template
 from django.urls import reverse
 from django.views import View
+from django.views.generic import TemplateView
 import csv
 from csv import DictReader
 from django.core.management import BaseCommand
+from django.shortcuts import render
 
 from .forms import LoginForm, DocumentForm, UploadNewDataForm
 from .models import Document,US_County, Health_Indicator, Data_Set, Data_Point, Percentile
@@ -57,8 +59,14 @@ def sampleNavBar(request):
     return render(request, 'hda_privileged/sample.html')
 
 
-class UploadNewDataView(View):
+class PrivDashboardView(TemplateView):
+    template_name = 'hda_privileged/privdashboard.html'
 
+    #def get_view(self, request):
+        #return render(request,self.template_name)
+    
+ 
+class UploadNewDataView(View):
     form_class = UploadNewDataForm
     template_name = 'hda_privileged/upload_metric.html'
     file_field_name = 'file'

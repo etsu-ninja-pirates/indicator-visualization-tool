@@ -17,6 +17,9 @@
     href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- FontAwesome icon fonts -->
    <link rel="stylesheet"
@@ -36,6 +39,8 @@
 <body>
 <div class="container">
 <h1>ETSU College of Public Health</h1>
+
+{%block nav%}
 <nav class="navbar navbar-default">
   <div class="container-fluid">
 
@@ -51,11 +56,11 @@
 
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">       
-		<li><a href="https://www.etsu.edu/cph/"><i class="fa fa-home" style="font-size:20px"></i></a></li>
-		<li></li><li></li>
-		<li style="font-size:20px"><a href="#">Manage Data</a></li>
 
+    <ul class="nav navbar-nav">       
+      <li><a href="https://www.etsu.edu/cph/"><i class="fa fa-home" style="font-size:20px"></i></a></li>
+      <li></li><li></li>
+      <li style="font-size:20px"><a href="#">Manage Data</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
@@ -64,11 +69,18 @@
             <li><a href="#">File Upload</a></li><li><a href="#">Logout</a></li>          
           </ul>
         </li>
-
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+{% endblock %}
+
+  <div class="container">
+
+    {% block content %}
+    {% endblock %}
+    
+  </div>
 </div>
 
 	<hr>
