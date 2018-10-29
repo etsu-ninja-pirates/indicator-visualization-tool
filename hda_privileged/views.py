@@ -62,12 +62,11 @@ def sampleNavBar(request):
 class PrivDashboardView(TemplateView):
     template_name = 'hda_privileged/privdashboard.html'
 
-    def get_view(self, request):
-        return render(request,self.template_name)
- 
- 
- class UploadNewDataView(View):   
+    #def get_view(self, request):
+        #return render(request,self.template_name)
     
+ 
+class UploadNewDataView(View):
     form_class = UploadNewDataForm
     template_name = 'hda_privileged/upload_metric.html'
     file_field_name = 'file'
