@@ -1,31 +1,22 @@
-import os.path
+import csv
 
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, get_user
-from django.core.files.storage import FileSystemStorage
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from django.template import Context
-from django.template.loader import get_template
-from django.urls import reverse
 from django.views import View
 from django.views.generic import TemplateView
-import csv
-from csv import DictReader
-from django.core.management import BaseCommand
-from django.shortcuts import render
 
-from .forms import LoginForm, DocumentForm, UploadNewDataForm
-from .models import Document,US_County, Health_Indicator, Data_Set, Data_Point, Percentile
+from .forms import LoginForm, UploadNewDataForm
+from .models import Document, US_County, Data_Set, Data_Point, Percentile
 from .percentile import get_percentiles_for_points, assign_percentiles_to_points
 
-#------------------------------------------------
-#The user_log-in function will handle the log in
+
+# ------------------------------------------------
+# The user_log-in function will handle the log in
 # functionality and redirect the loggedin user to
 # desired page
-#------------------------------------------------
-
-
+# ------------------------------------------------
 def user_login(request):
     if request.method == 'POST':
         form = LoginForm(request.POST)
@@ -35,7 +26,7 @@ def user_login(request):
                                 password=cd['password'])
             if user is not None:
                 if user.is_active:
-                    login(request,user)
+                    login(request, user)
                     return HttpResponse('You Successfully Logged in')
                 else:
                     return HttpResponse('Disabled account')
@@ -64,17 +55,15 @@ class PrivDashboardView(TemplateView):
 
     #def get_view(self, request):
         #return render(request,self.template_name)
-    
- 
+  
+
 class UploadNewDataView(View):
     form_class = UploadNewDataForm
     template_name = 'hda_privileged/upload_metric.html'
     file_field_name = 'file'
 
-
     def _get_uploaded_file(self, request):
         return request.FILES[self.file_field_name]
-
 
     def _check_file_ext(self, request):
         uploaded_file = self._get_uploaded_file(request)
@@ -86,7 +75,6 @@ class UploadNewDataView(View):
             messages.warning(request, "Error in file upload, file was not CSV")
 
         return okay
-
 
     def _handle_form_submission(self, request, form):
         myfile = self._get_uploaded_file(request)
@@ -104,14 +92,12 @@ class UploadNewDataView(View):
         # this saves the file in the directory specified
         # in the Document model FileField.upload_to attribute
         # and saves the rest of the model in the database
-        saved_document = doc.save()
+        doc.save()
         messages.success(request, "Document uploaded successfully")
 
-
-        ## Create and save a Data Set here! ##
+        # Create and save a Data Set here! ##
         indicator = form.cleaned_data['indicator']
         year = form.cleaned_data['year']
-        data_source = form.cleaned_data['source']
 
         data_set = Data_Set(
             indicator=indicator,
@@ -153,7 +139,6 @@ class UploadNewDataView(View):
         # transform our list of tuples List<(P, PV)> into a list of Percentile model objects
         percentile_models = [Percentile(rank=p, value=pv, data_set=data_set) for (p, pv) in percentile_values]
 
-
         # save all the data points and percentile values using bulk_create, for speed
         Data_Point.objects.bulk_create(data_points)
         Percentile.objects.bulk_create(percentile_models)
@@ -165,7 +150,6 @@ class UploadNewDataView(View):
         # unbound form
         form = self.form_class()
         return render(request, self.template_name, {'form': form})
-
 
     def post(self, request, *args, **kwargs):
         # bind the form
