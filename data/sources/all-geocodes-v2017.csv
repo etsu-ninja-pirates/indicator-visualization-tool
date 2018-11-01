@@ -1,4 +1,4 @@
-Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS),Place Code (FIPS),Consolidtated City Code (FIPS),Area Name (including legal/statistical area description)
+ÔªøSummary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS),Place Code (FIPS),Consolidtated City Code (FIPS),Area Name (including legal/statistical area description)
 010,00,000,00000,00000,00000,United States
 040,01,000,00000,00000,00000,Alabama
 050,01,001,00000,00000,00000,Autauga County
@@ -238,7 +238,7 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,01,000,00000,29992,00000,Glencoe city
 162,01,000,00000,30160,00000,Glenwood town
 162,01,000,00000,30448,00000,Goldville town
-162,01,000,00000,30496,00000,Good Hope town
+162,01,000,00000,30496,00000,Good Hope city
 162,01,000,00000,30640,00000,Goodwater town
 162,01,000,00000,30736,00000,Gordo town
 162,01,000,00000,30760,00000,Gordon town
@@ -429,7 +429,7 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,01,000,00000,64368,00000,Repton town
 162,01,000,00000,64656,00000,Ridgeville town
 162,01,000,00000,64776,00000,River Falls town
-162,01,000,00000,64920,00000,Riverside town
+162,01,000,00000,64920,00000,Riverside city
 162,01,000,00000,65016,00000,Riverview town
 162,01,000,00000,65040,00000,Roanoke city
 162,01,000,00000,65208,00000,Robertsdale city
@@ -988,7 +988,6 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,05,000,00000,14140,00000,Clarksville city
 162,05,000,00000,14260,00000,Clinton city
 162,05,000,00000,14500,00000,Coal Hill city
-162,05,000,00000,14770,00000,College City city
 162,05,000,00000,14950,00000,Colt city
 162,05,000,00000,15100,00000,Concord town
 162,05,000,00000,15190,00000,Conway city
@@ -1653,7 +1652,7 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,06,000,00000,38226,00000,Kerman city
 162,06,000,00000,38520,00000,King City city
 162,06,000,00000,38562,00000,Kingsburg city
-162,06,000,00000,39003,00000,La CaÒada Flintridge city
+162,06,000,00000,39003,00000,La Ca√±ada Flintridge city
 162,06,000,00000,39122,00000,Lafayette city
 162,06,000,00000,39178,00000,Laguna Beach city
 162,06,000,00000,39220,00000,Laguna Hills city
@@ -2031,7 +2030,7 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,08,000,00000,10600,00000,Burlington city
 162,08,000,00000,11260,00000,Calhan town
 162,08,000,00000,11645,00000,Campo town
-162,08,000,00000,11810,00000,CaÒon City city
+162,08,000,00000,11810,00000,Ca√±on City city
 162,08,000,00000,12045,00000,Carbondale town
 162,08,000,00000,12387,00000,Castle Pines city
 162,08,000,00000,12415,00000,Castle Rock town
@@ -3001,6 +3000,7 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,12,000,00000,75625,00000,Weeki Wachee city
 162,12,000,00000,75750,00000,Welaka town
 162,12,000,00000,75812,00000,Wellington village
+162,12,000,00000,76417,00000,Westlake city
 162,12,000,00000,76500,00000,West Melbourne city
 162,12,000,00000,76525,00000,West Miami city
 162,12,000,00000,76582,00000,Weston city
@@ -3589,10 +3589,9 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,13,000,00000,65016,00000,Richland city
 162,13,000,00000,65044,00000,Richmond Hill city
 162,13,000,00000,65156,00000,Riddleville town
-162,13,000,00000,65296,00000,Rincon town
+162,13,000,00000,65296,00000,Rincon city
 162,13,000,00000,65324,00000,Ringgold city
 162,13,000,00000,65464,00000,Riverdale city
-162,13,000,00000,65604,00000,Riverside town
 162,13,000,00000,65856,00000,Roberta city
 162,13,000,00000,66024,00000,Rochelle city
 162,13,000,00000,66276,00000,Rockmart city
@@ -3634,6 +3633,7 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,13,000,00000,73312,00000,Statham city
 162,13,000,00000,73620,00000,Stillmore city
 162,13,000,00000,73704,00000,Stockbridge city
+162,13,000,00000,73784,00000,Stonecrest city
 162,13,000,00000,73816,00000,Stone Mountain city
 162,13,000,00000,74180,00000,Sugar Hill city
 162,13,000,00000,74348,00000,Summertown city
@@ -3666,7 +3666,7 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,13,000,00000,76952,00000,Toomsboro city
 162,13,000,00000,77372,00000,Trenton city
 162,13,000,00000,77540,00000,Trion town
-162,13,000,00000,77625,00000,Tucker city
+162,13,000,00000,77652,00000,Tucker city
 162,13,000,00000,77736,00000,Tunnel Hill city
 162,13,000,00000,77764,00000,Turin town
 162,13,000,00000,77988,00000,Twin City city
@@ -4283,7 +4283,7 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 061,17,031,14000,00000,00000,Chicago city
 061,17,031,14364,00000,00000,Cicero township
 061,17,031,23243,00000,00000,Elk Grove township
-061,17,031,24595,00000,00000,Evanston township
+061,17,031,24582,00000,00000,Evanston city
 061,17,031,32694,00000,00000,Hanover township
 061,17,031,42808,00000,00000,Lemont township
 061,17,031,43120,00000,00000,Leyden township
@@ -6552,6 +6552,7 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,17,000,00000,66950,00000,St. Joseph village
 162,17,000,00000,66989,00000,St. Libory village
 162,17,000,00000,67132,00000,St. Peter village
+162,17,000,00000,67158,00000,St. Rose village
 162,17,000,00000,67236,00000,Salem city
 162,17,000,00000,67372,00000,Sammons Point village
 162,17,000,00000,67444,00000,Sandoval village
@@ -8803,7 +8804,7 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,19,000,00000,20125,00000,Derby city
 162,19,000,00000,21000,00000,Des Moines city
 162,19,000,00000,21045,00000,De Soto city
-162,19,000,00000,21180,00000,De Witt city
+162,19,000,00000,21180,00000,DeWitt city
 162,19,000,00000,21225,00000,Dexter city
 162,19,000,00000,21270,00000,Diagonal city
 162,19,000,00000,21360,00000,Dickens city
@@ -9649,7 +9650,6 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 061,20,003,40475,00000,00000,Lincoln township
 061,20,003,42450,00000,00000,Lone Elm township
 061,20,003,47725,00000,00000,Monroe township
-061,20,003,51325,00000,00000,North Rich township
 061,20,003,53900,00000,00000,Ozark township
 061,20,003,58000,00000,00000,Putnam township
 061,20,003,58825,00000,00000,Reeder township
@@ -12234,11 +12234,9 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,21,000,00000,79590,00000,Vicco city
 162,21,000,00000,79698,00000,Villa Hills city
 162,21,000,00000,79734,00000,Vine Grove city
-162,21,000,00000,80310,00000,Wallins Creek city
 162,21,000,00000,80490,00000,Walton city
 162,21,000,00000,80616,00000,Warfield city
 162,21,000,00000,80706,00000,Warsaw city
-162,21,000,00000,80832,00000,Water Valley city
 162,21,000,00000,80913,00000,Watterson Park city
 162,21,000,00000,80958,00000,Waverly city
 162,21,000,00000,81012,00000,Wayland city
@@ -12723,7 +12721,6 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 061,23,003,54385,00000,00000,Oakfield town
 061,23,003,55435,00000,00000,Orient town
 061,23,003,56205,00000,00000,Oxbow plantation
-061,23,003,57936,00000,00000,Penobscot Indian Island Reservation
 061,23,003,58060,00000,00000,Perham town
 061,23,003,60300,00000,00000,Portage Lake town
 061,23,003,60825,00000,00000,Presque Isle city
@@ -16463,6 +16460,7 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 061,27,023,41210,00000,00000,Maynard city
 061,27,023,42146,00000,00000,Milan city
 061,27,023,43720,00000,00000,Montevideo city
+061,27,023,53296,00000,00000,Raymond city
 061,27,023,53962,00000,00000,Rheiderland township
 061,27,023,55870,00000,00000,Rosewood township
 061,27,023,61582,00000,00000,Sparta township
@@ -17547,7 +17545,6 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 061,27,103,33920,00000,00000,Lafayette city
 061,27,103,33938,00000,00000,Lafayette township
 061,27,103,34856,00000,00000,Lake Prairie township
-061,27,103,36746,00000,00000,Le Sueur city
 061,27,103,39878,00000,00000,Mankato city
 061,27,103,45988,00000,00000,New Sweden township
 061,27,103,46150,00000,00000,Nicollet city
@@ -20345,18 +20342,6 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 061,29,207,52040,00000,00000,New Lisbon township
 061,29,207,57548,00000,00000,Pike township
 061,29,207,61616,00000,00000,Richland township
-061,29,211,07678,00000,00000,Bowman township
-061,29,211,09280,00000,00000,Buchanan township
-061,29,211,14536,00000,00000,Clay township
-061,29,211,20386,00000,00000,Duncan township
-061,29,211,36152,00000,00000,Jackson township
-061,29,211,42374,00000,00000,Liberty township
-061,29,211,50024,00000,00000,Morris township
-061,29,211,56918,00000,00000,Penn township
-061,29,211,58430,00000,00000,Pleasant Hill township
-061,29,211,58880,00000,00000,Polk township
-061,29,211,72538,00000,00000,Taylor township
-061,29,211,75022,00000,00000,Union township
 061,29,215,07246,00000,00000,Boone township
 061,29,215,09766,00000,00000,Burdine township
 061,29,215,11548,00000,00000,Carroll township
@@ -20452,7 +20437,7 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,29,000,00000,04132,00000,Bell City city
 162,29,000,00000,04150,00000,Belle city
 162,29,000,00000,04222,00000,Bellefontaine Neighbors city
-162,29,000,00000,04240,00000,Bellerive village
+162,29,000,00000,04248,00000,Bellerive Acres city
 162,29,000,00000,04330,00000,Bellflower city
 162,29,000,00000,04348,00000,Bel-Nor village
 162,29,000,00000,04366,00000,Bel-Ridge village
@@ -20737,7 +20722,6 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,29,000,00000,27874,00000,Goodman town
 162,29,000,00000,27900,00000,Goodnight village
 162,29,000,00000,27928,00000,Gordonville village
-162,29,000,00000,28000,00000,Goss town
 162,29,000,00000,28036,00000,Gower city
 162,29,000,00000,28072,00000,Graham town
 162,29,000,00000,28090,00000,Grain Valley city
@@ -21340,7 +21324,6 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,29,000,00000,81124,00000,Wright City city
 162,29,000,00000,81142,00000,Wyaconda city
 162,29,000,00000,81178,00000,Wyatt city
-162,29,000,00000,81430,00000,Zalma village
 040,30,000,00000,00000,00000,Montana
 050,30,001,00000,00000,00000,Beaverhead County
 050,30,003,00000,00000,00000,Big Horn County
@@ -23830,7 +23813,7 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 050,35,007,00000,00000,00000,Colfax County
 050,35,009,00000,00000,00000,Curry County
 050,35,011,00000,00000,00000,De Baca County
-050,35,013,00000,00000,00000,DoÒa Ana County
+050,35,013,00000,00000,00000,Do√±a Ana County
 050,35,015,00000,00000,00000,Eddy County
 050,35,017,00000,00000,00000,Grant County
 050,35,019,00000,00000,00000,Guadalupe County
@@ -23889,7 +23872,7 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,35,000,00000,22720,00000,Elephant Butte city
 162,35,000,00000,23000,00000,Elida town
 162,35,000,00000,24610,00000,Encino village
-162,35,000,00000,25170,00000,EspaÒola city
+162,35,000,00000,25170,00000,Espa√±ola city
 162,35,000,00000,25380,00000,Estancia town
 162,35,000,00000,25450,00000,Eunice city
 162,35,000,00000,25800,00000,Farmington city
@@ -24151,7 +24134,6 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 061,36,013,13035,00000,00000,Cattaraugus Reservation
 061,36,013,13860,00000,00000,Charlotte town
 061,36,013,14069,00000,00000,Chautauqua town
-061,36,013,14072,00000,00000,Chautauqua Lake UT
 061,36,013,15198,00000,00000,Cherry Creek town
 061,36,013,16595,00000,00000,Clymer town
 061,36,013,21105,00000,00000,Dunkirk city
@@ -25216,7 +25198,6 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,36,000,00000,26319,00000,Florida village
 162,36,000,00000,26352,00000,Flower Hill village
 162,36,000,00000,26462,00000,Fonda village
-162,36,000,00000,26649,00000,Forestville village
 162,36,000,00000,26704,00000,Fort Ann village
 162,36,000,00000,26770,00000,Fort Edward village
 162,36,000,00000,26880,00000,Fort Johnson village
@@ -25301,7 +25282,6 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,36,000,00000,38781,00000,Johnstown city
 162,36,000,00000,38825,00000,Jordan village
 162,36,000,00000,38934,00000,Kaser village
-162,36,000,00000,39089,00000,Keeseville village
 162,36,000,00000,39232,00000,Kenmore village
 162,36,000,00000,39309,00000,Kensington village
 162,36,000,00000,39562,00000,Kinderhook village
@@ -25516,7 +25496,6 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,36,000,00000,64485,00000,Sag Harbor village
 162,36,000,00000,64639,00000,St. Johnsville village
 162,36,000,00000,64749,00000,Salamanca city
-162,36,000,00000,64771,00000,Salem village
 162,36,000,00000,64881,00000,Saltaire village
 162,36,000,00000,65035,00000,Sands Point village
 162,36,000,00000,65068,00000,Sandy Creek village
@@ -26199,7 +26178,6 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,37,000,00000,63680,00000,Sparta town
 162,37,000,00000,63720,00000,Speed town
 162,37,000,00000,63760,00000,Spencer town
-162,37,000,00000,63780,00000,Spencer Mountain town
 162,37,000,00000,63880,00000,Spindale town
 162,37,000,00000,64160,00000,Spring Hope town
 162,37,000,00000,64180,00000,Spring Lake town
@@ -27239,7 +27217,6 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 061,38,055,03820,00000,00000,Aurena township
 061,38,055,05980,00000,00000,Benedict city
 061,38,055,07500,00000,00000,Blackwater township
-061,38,055,08060,00000,00000,Blue Hill township
 061,38,055,11180,00000,00000,Butte city
 061,38,055,11220,00000,00000,Butte township
 061,38,055,11420,00000,00000,Byersville township
@@ -28917,7 +28894,7 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 061,39,041,76617,00000,00000,Thompson township
 061,39,041,77336,00000,00000,Trenton township
 061,39,041,77560,00000,00000,Troy township
-061,39,041,81203,00000,00000,Washington township
+061,39,041,81242,00000,00000,Washington township
 061,39,041,83349,00000,00000,Westerville City township
 061,39,043,05228,00000,00000,Bellevue city
 061,39,043,05802,00000,00000,Berlin township
@@ -28963,7 +28940,6 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 061,39,049,09442,00000,00000,Brown township
 061,39,049,16112,00000,00000,Clinton township
 061,39,049,18000,00000,00000,Columbus city
-061,39,049,22694,00000,00000,Dublin city
 061,39,049,28280,00000,00000,Franklin township
 061,39,049,31304,00000,00000,Grandview Heights city
 061,39,049,33026,00000,00000,Hamilton township
@@ -29035,6 +29011,7 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 061,39,057,05102,00000,00000,Bellbrook city
 061,39,057,10856,00000,00000,Caesarscreek township
 061,39,057,12798,00000,00000,Cedarville township
+061,39,057,21000,00000,00000,Dayton city
 061,39,057,38626,00000,00000,Jefferson township
 061,39,057,40040,00000,00000,Kettering city
 061,39,057,49336,00000,00000,Miami township
@@ -29991,6 +29968,7 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 061,39,159,59864,00000,00000,Paris township
 061,39,159,76194,00000,00000,Taylor township
 061,39,159,78582,00000,00000,Union township
+061,39,159,81242,00000,00000,Washington township
 061,39,159,81662,00000,00000,Washington township
 061,39,159,87122,00000,00000,York township
 061,39,161,34034,00000,00000,Harrison township
@@ -30280,7 +30258,6 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,39,000,00000,13554,00000,Chardon city
 162,39,000,00000,13694,00000,Chatfield village
 162,39,000,00000,13778,00000,Chauncey village
-162,39,000,00000,13834,00000,Cherry Fork village
 162,39,000,00000,13904,00000,Chesapeake village
 162,39,000,00000,13932,00000,Cheshire village
 162,39,000,00000,14086,00000,Chesterhill village
@@ -30861,7 +30838,6 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,39,000,00000,69680,00000,St. Marys city
 162,39,000,00000,69708,00000,St. Paris village
 162,39,000,00000,69834,00000,Salem city
-162,39,000,00000,70072,00000,Salesville village
 162,39,000,00000,70100,00000,Salineville village
 162,39,000,00000,70380,00000,Sandusky city
 162,39,000,00000,70520,00000,Sarahsville village
@@ -30895,7 +30871,6 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,39,000,00000,72788,00000,Smithville village
 162,39,000,00000,72928,00000,Solon city
 162,39,000,00000,72977,00000,Somerset village
-162,39,000,00000,72998,00000,Somerville village
 162,39,000,00000,73040,00000,South Amherst village
 162,39,000,00000,73068,00000,South Bloomfield village
 162,39,000,00000,73124,00000,South Charleston village
@@ -30962,7 +30937,6 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,39,000,00000,78470,00000,Union city
 162,39,000,00000,78624,00000,Union City village
 162,39,000,00000,78834,00000,Unionville Center village
-162,39,000,00000,78848,00000,Uniopolis village
 162,39,000,00000,78932,00000,University Heights city
 162,39,000,00000,79002,00000,Upper Arlington city
 162,39,000,00000,79044,00000,Upper Sandusky city
@@ -32436,7 +32410,6 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 061,42,011,70880,00000,00000,Sinking Spring borough
 061,42,011,72208,00000,00000,South Heidelberg township
 061,42,011,72824,00000,00000,Spring township
-061,42,011,74744,00000,00000,Strausstown borough
 061,42,011,76712,00000,00000,Tilden township
 061,42,011,77104,00000,00000,Topton borough
 061,42,011,77752,00000,00000,Tulpehocken township
@@ -35507,7 +35480,6 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,42,000,00000,74672,00000,Stoystown borough
 162,42,000,00000,74712,00000,Strasburg borough
 162,42,000,00000,74728,00000,Strattanville borough
-162,42,000,00000,74744,00000,Strausstown borough
 162,42,000,00000,74888,00000,Stroudsburg borough
 162,42,000,00000,75000,00000,Sugarcreek borough
 162,42,000,00000,75024,00000,Sugar Grove borough
@@ -36808,6 +36780,7 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 061,46,077,60940,00000,00000,Spring Lake township
 061,46,077,71540,00000,00000,Whitewood township
 061,46,079,03180,00000,00000,Badus township
+061,46,079,07040,00000,00000,Brant Lake city
 061,46,079,11700,00000,00000,Chester township
 061,46,079,12380,00000,00000,Clarno township
 061,46,079,13660,00000,00000,Concord township
@@ -37392,6 +37365,7 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,46,000,00000,06660,00000,Bradley town
 162,46,000,00000,06840,00000,Brandon city
 162,46,000,00000,06940,00000,Brandt town
+162,46,000,00000,07040,00000,Brant Lake city
 162,46,000,00000,07060,00000,Brentford town
 162,46,000,00000,07180,00000,Bridgewater city
 162,46,000,00000,07300,00000,Bristol city
@@ -39753,6 +39727,7 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,49,000,00000,49710,00000,Midvale city
 162,49,000,00000,49820,00000,Midway city
 162,49,000,00000,50040,00000,Milford city
+162,49,000,00000,50150,00000,Millcreek city
 162,49,000,00000,50370,00000,Millville city
 162,49,000,00000,50590,00000,Minersville town
 162,49,000,00000,50700,00000,Moab city
@@ -40360,7 +40335,6 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,51,000,00000,17952,00000,Coeburn town
 162,51,000,00000,18400,00000,Colonial Beach town
 162,51,000,00000,18448,00000,Colonial Heights city
-162,51,000,00000,18624,00000,Columbia town
 162,51,000,00000,19600,00000,Courtland town
 162,51,000,00000,19728,00000,Covington city
 162,51,000,00000,19904,00000,Craigsville town
@@ -43079,6 +43053,7 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 061,55,139,02375,00000,00000,Appleton city
 061,55,139,08000,00000,00000,Black Wolf town
 061,55,139,15150,00000,00000,Clayton town
+061,55,139,26982,00000,00000,Fox Crossing village
 061,55,139,50825,00000,00000,Menasha city
 061,55,139,50850,00000,00000,Menasha town
 061,55,139,55750,00000,00000,Neenah city
@@ -43323,6 +43298,7 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 162,55,000,00000,26625,00000,Forestville village
 162,55,000,00000,26675,00000,Fort Atkinson city
 162,55,000,00000,26850,00000,Fountain City city
+162,55,000,00000,26982,00000,Fox Crossing village
 162,55,000,00000,27000,00000,Fox Lake city
 162,55,000,00000,27075,00000,Fox Point village
 162,55,000,00000,27125,00000,Francis Creek village
@@ -43860,30 +43836,30 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 050,72,005,00000,00000,00000,Aguadilla Municipio
 050,72,007,00000,00000,00000,Aguas Buenas Municipio
 050,72,009,00000,00000,00000,Aibonito Municipio
-050,72,011,00000,00000,00000,AÒasco Municipio
+050,72,011,00000,00000,00000,A√±asco Municipio
 050,72,013,00000,00000,00000,Arecibo Municipio
 050,72,015,00000,00000,00000,Arroyo Municipio
 050,72,017,00000,00000,00000,Barceloneta Municipio
 050,72,019,00000,00000,00000,Barranquitas Municipio
-050,72,021,00000,00000,00000,BayamÛn Municipio
+050,72,021,00000,00000,00000,Bayam√≥n Municipio
 050,72,023,00000,00000,00000,Cabo Rojo Municipio
 050,72,025,00000,00000,00000,Caguas Municipio
 050,72,027,00000,00000,00000,Camuy Municipio
-050,72,029,00000,00000,00000,CanÛvanas Municipio
+050,72,029,00000,00000,00000,Can√≥vanas Municipio
 050,72,031,00000,00000,00000,Carolina Municipio
-050,72,033,00000,00000,00000,CataÒo Municipio
+050,72,033,00000,00000,00000,Cata√±o Municipio
 050,72,035,00000,00000,00000,Cayey Municipio
 050,72,037,00000,00000,00000,Ceiba Municipio
 050,72,039,00000,00000,00000,Ciales Municipio
 050,72,041,00000,00000,00000,Cidra Municipio
 050,72,043,00000,00000,00000,Coamo Municipio
-050,72,045,00000,00000,00000,ComerÌo Municipio
+050,72,045,00000,00000,00000,Comer√≠o Municipio
 050,72,047,00000,00000,00000,Corozal Municipio
 050,72,049,00000,00000,00000,Culebra Municipio
 050,72,051,00000,00000,00000,Dorado Municipio
 050,72,053,00000,00000,00000,Fajardo Municipio
 050,72,054,00000,00000,00000,Florida Municipio
-050,72,055,00000,00000,00000,Gu·nica Municipio
+050,72,055,00000,00000,00000,Gu√°nica Municipio
 050,72,057,00000,00000,00000,Guayama Municipio
 050,72,059,00000,00000,00000,Guayanilla Municipio
 050,72,061,00000,00000,00000,Guaynabo Municipio
@@ -43893,35 +43869,35 @@ Summary Level,State Code (FIPS),County Code (FIPS),County Subdivision Code (FIPS
 050,72,069,00000,00000,00000,Humacao Municipio
 050,72,071,00000,00000,00000,Isabela Municipio
 050,72,073,00000,00000,00000,Jayuya Municipio
-050,72,075,00000,00000,00000,Juana DÌaz Municipio
+050,72,075,00000,00000,00000,Juana D√≠az Municipio
 050,72,077,00000,00000,00000,Juncos Municipio
 050,72,079,00000,00000,00000,Lajas Municipio
 050,72,081,00000,00000,00000,Lares Municipio
-050,72,083,00000,00000,00000,Las MarÌas Municipio
+050,72,083,00000,00000,00000,Las Mar√≠as Municipio
 050,72,085,00000,00000,00000,Las Piedras Municipio
-050,72,087,00000,00000,00000,LoÌza Municipio
+050,72,087,00000,00000,00000,Lo√≠za Municipio
 050,72,089,00000,00000,00000,Luquillo Municipio
-050,72,091,00000,00000,00000,ManatÌ Municipio
+050,72,091,00000,00000,00000,Manat√≠ Municipio
 050,72,093,00000,00000,00000,Maricao Municipio
 050,72,095,00000,00000,00000,Maunabo Municipio
-050,72,097,00000,00000,00000,Mayag¸ez Municipio
+050,72,097,00000,00000,00000,Mayag√ºez Municipio
 050,72,099,00000,00000,00000,Moca Municipio
 050,72,101,00000,00000,00000,Morovis Municipio
 050,72,103,00000,00000,00000,Naguabo Municipio
 050,72,105,00000,00000,00000,Naranjito Municipio
 050,72,107,00000,00000,00000,Orocovis Municipio
 050,72,109,00000,00000,00000,Patillas Municipio
-050,72,111,00000,00000,00000,PeÒuelas Municipio
+050,72,111,00000,00000,00000,Pe√±uelas Municipio
 050,72,113,00000,00000,00000,Ponce Municipio
 050,72,115,00000,00000,00000,Quebradillas Municipio
-050,72,117,00000,00000,00000,RincÛn Municipio
-050,72,119,00000,00000,00000,RÌo Grande Municipio
+050,72,117,00000,00000,00000,Rinc√≥n Municipio
+050,72,119,00000,00000,00000,R√≠o Grande Municipio
 050,72,121,00000,00000,00000,Sabana Grande Municipio
 050,72,123,00000,00000,00000,Salinas Municipio
-050,72,125,00000,00000,00000,San Germ·n Municipio
+050,72,125,00000,00000,00000,San Germ√°n Municipio
 050,72,127,00000,00000,00000,San Juan Municipio
 050,72,129,00000,00000,00000,San Lorenzo Municipio
-050,72,131,00000,00000,00000,San Sebasti·n Municipio
+050,72,131,00000,00000,00000,San Sebasti√°n Municipio
 050,72,133,00000,00000,00000,Santa Isabel Municipio
 050,72,135,00000,00000,00000,Toa Alta Municipio
 050,72,137,00000,00000,00000,Toa Baja Municipio

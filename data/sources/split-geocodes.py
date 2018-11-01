@@ -1,7 +1,7 @@
 import os
 import csv
 
-INPUT_FILENAME = "all-geocodes-v2016.csv"
+INPUT_FILENAME = "all-geocodes-v2017.csv"
 STATE_OUTPUT_FILENAME = "states.csv"
 COUNTY_OUTPUT_FILENAME = "counties.csv"
 
