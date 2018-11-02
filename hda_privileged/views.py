@@ -8,8 +8,9 @@ from django.views import View
 from django.views.generic import TemplateView
 
 from .forms import LoginForm, UploadNewDataForm
-from .models import Document, US_County, Data_Set, Data_Point, Percentile
+from .models import Document, US_County, US_State, Data_Set, Data_Point, Percentile
 from .percentile import get_percentiles_for_points, assign_percentiles_to_points
+from .upload_reading import read_data_points_from_file
 
 
 # ------------------------------------------------
@@ -107,28 +108,10 @@ class UploadNewDataView(View):
 
         data_set.save()
 
-        data_points = []
-
-        # reading the value from the selected file
-        f = open('.' + data_set.source_document.file.url, 'r')
-        for row in csv.DictReader(f):
-            # get county and state from csv row
-            county = row['NAME']
-            state = row['STATE_USPS']
-
-            # get associated county
-            associated_county = US_County.objects.get(name=county, state=state)
-
-            # build Data_Point instance
-            data_point = Data_Point(
-                value=int(row['Value']),
-                county=associated_county,
-                data_set=data_set
-            )
-            data_points.append(data_point)
-
-        # we are done reading from the file
-        f.close()
+        format_choice = form.cleaned_data['column_format']
+        doc.file.open(mode='rt')
+        data_points = read_data_points_from_file(doc.file, format_choice, data_set)
+        doc.file.close()
 
         # calculate the percentile-values for this data set
         percentile_values = get_percentiles_for_points(data_points)

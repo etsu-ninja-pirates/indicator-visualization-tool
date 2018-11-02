@@ -1,17 +1,19 @@
 from django import forms
-from .models import Document, Health_Indicator
+from .models import Health_Indicator
+from .upload_reading import UPLOAD_FORMAT_CHOICES, CHOICE_NAME
 
 
 class LoginForm(forms.Form):
-    username = forms.CharField(widget=forms.TextInput(attrs={'class':"form-control", 'placeholder': "Username"}))
-    password = forms.CharField(widget=forms.PasswordInput(attrs={'class':"form-control", 'placeholder': "Password"}))
-
-
-class DocumentForm(forms.ModelForm):
-
-    class Meta:
-        model = Document
-        fields = ('source', 'file',)
+    username = forms.CharField(
+        widget=forms.TextInput(
+            attrs={'class': "form-control", 'placeholder': "Username"}
+        )
+    )
+    password = forms.CharField(
+        widget=forms.PasswordInput(
+            attrs={'class': "form-control", 'placeholder': "Password"}
+        )
+    )
 
 
 # Not using a ModelForm because this needs to include data for
@@ -28,8 +30,17 @@ class UploadNewDataForm(forms.Form):
         help_text='File containing data in CSV format'
     )
 
-    ## TODO ##
-    ## This needs to be required once we have a way to create new ones ##
+    column_format = forms.ChoiceField(
+        label='CSV file format',
+        help_text='What columns to use to identify counties in the uploaded CSV file',
+        widget=forms.RadioSelect, 
+        choices=UPLOAD_FORMAT_CHOICES,
+        required=True,
+        initial=CHOICE_NAME
+    )
+
+    # TODO #
+    # This needs to be required once we have a way to create new ones #
     indicator = forms.ModelChoiceField(
         queryset=Health_Indicator.objects.all(),
         label='Health indicator',
@@ -41,10 +52,10 @@ class UploadNewDataForm(forms.Form):
         label='Data source',
         help_text='The source/provenance of the data',
         required=False,
-        widget=forms.Textarea
+        widget=forms.Textarea(attrs={'rows': 3})
     )
 
-    ## TODO ##
+    # TODO #
     # The default value should not be hardcoded!
     year = forms.IntegerField(
         label='Data year',
@@ -53,4 +64,3 @@ class UploadNewDataForm(forms.Form):
         min_value=1000,
         max_value=9999
     )
-
