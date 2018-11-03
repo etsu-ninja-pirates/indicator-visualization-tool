@@ -1,8 +1,8 @@
 # Logic for reading data points out of a CSV file
 
 import csv
-from django.core.exceptions import EmptyResultSet
-from hda_privileged.models import US_State, Data_Point
+
+from hda_privileged.models import US_State, US_County, Data_Point
 
 # constants
 
@@ -62,7 +62,7 @@ def get_county_reader(choice):
             # return the first county (shortest name)
             return shortest_first[0]
         else:
-            raise EmptyResultSet(f'Could not find county {county_name} in state {state_name}')
+            raise US_County.DoesNotExist(f'Could not find county {county_name} in state {state_name}')
 
     if choice == CHOICE_NAME:
         return get_county_name
