@@ -54,8 +54,8 @@ def get_county_reader(choice):
         if possible_counties.count() == 1:
             return possible_counties.first()
         elif possible_counties.count() > 1:
-            # if we matched a substring of multiple  county names, prefer the shortest as being the most exact
-            # evaluate the query
+            # if we matched a substring of multiple  county names, prefer the shortest as being
+            # the most exact; first evaluate the query
             county_iter = possible_counties.iterator()
             # sort in ascending order of name length, returning a list
             shortest_first = sorted(county_iter, key=lambda c: len(c.name))

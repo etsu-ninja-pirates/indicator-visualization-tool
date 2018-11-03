@@ -1,5 +1,3 @@
-import csv
-
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, get_user
 from django.http import HttpResponse
@@ -8,7 +6,7 @@ from django.views import View
 from django.views.generic import TemplateView
 
 from .forms import LoginForm, UploadNewDataForm
-from .models import Document, US_County, US_State, Data_Set, Data_Point, Percentile
+from .models import Document, Data_Set, Data_Point, Percentile
 from .percentile import get_percentiles_for_points, assign_percentiles_to_points
 from .upload_reading import read_data_points_from_file
 
@@ -56,7 +54,7 @@ class PrivDashboardView(TemplateView):
 
     #def get_view(self, request):
         #return render(request,self.template_name)
-  
+
 
 class UploadNewDataView(View):
     form_class = UploadNewDataForm
