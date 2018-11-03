@@ -13,7 +13,7 @@ def load_data(filename, fn):
     and pass each row read from the file into the function. Return a list
     of the results, i.e. map(f, rows)
     """
-    with open(filename) as csvf:
+    with open(filename, encoding='utf-8') as csvf:
         return [fn(r) for r in DictReader(csvf)]
 
 
