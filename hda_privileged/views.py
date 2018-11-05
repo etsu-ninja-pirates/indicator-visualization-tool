@@ -17,7 +17,11 @@ from .upload_reading import read_data_points_from_file
 # desired page
 # ------------------------------------------------
 def user_login(request):
-    if request.method == 'POST':
+    form = LoginForm()
+    next = ""
+    if request.GET:
+        next = request.GET['next']
+    if request.POST:
         form = LoginForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
@@ -25,15 +29,22 @@ def user_login(request):
                                 password=cd['password'])
             if user is not None:
                 if user.is_active:
-                    login(request,user)
+                    login(request, user)
+                    if next == "":
                     # The 'sample' routing will be changed to the desired landing page
                     # that will be displayed after authenticated user logs in
+                    # If there is no next page to rout to, the routing will go to the
+                    # Default landing page
                     return HttpResponseRedirect(reverse('priv:sample'))
+                else:
+                    # If there is a next page, the routing will automatical go to the
+                    # next page after a user is authenticated
+                        return HttpResponseRedirect(next)
                 else:
                     return HttpResponse('Disabled account')
             else:
                 return HttpResponse('Invalid login')
-    else:
+    args = {'form': form, 'next': next}
         form = LoginForm()
         args = {'form': form}
     return render(request, 'hda_privileged/login.html', args)
