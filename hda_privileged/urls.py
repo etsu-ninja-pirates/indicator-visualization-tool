@@ -1,8 +1,8 @@
 from django.urls import path
 from hda_privileged.views import PrivDashboardView
 from django.contrib.auth.decorators import login_required
-
 from . import views
+
 app_name = 'priv'
 urlpatterns = [
     path('home/', PrivDashboardView.as_view(), name='privdashboard'),
