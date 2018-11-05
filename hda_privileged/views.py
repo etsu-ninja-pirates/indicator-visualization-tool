@@ -69,10 +69,16 @@ def sampleNavBar(request):
 class PrivDashboardView(TemplateView):
     template_name = 'hda_privileged/privdashboard.html'
 
-    #def get_view(self, request):
-        #return render(request,self.template_name)
-
-
+    def get(self, request):
+        #get indicators for left side of view
+        datasets = Data_Point.objects.all()
+        ds = []       
+        for i in datasets:
+            if i.data_set.indicator.name not in ds:
+                ds.append(i.data_set.indicator.name)
+    
+        return render(request, self.template_name, {'datasets': ds})   
+ 
 class UploadNewDataView(View):
     form_class = UploadNewDataForm
     template_name = 'hda_privileged/upload_metric.html'

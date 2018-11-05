@@ -17,9 +17,9 @@
   <div class="col-sm-3">
 	<div class="page-header"><h1><small>Health Indicators</small></h1></div>
 	<ul class="list-group">
-	  <li class="list-group-item" style="border:none"><a href="#">Obesity</a></li>
-	  <li class="list-group-item" style="border:none"><a href="#">Some College</a></li>
-	  <li class="list-group-item" style="border:none"><a href="#">Life Expectancy</a></li>
+    {% for dataset in datasets %}
+    <li class="list-group-item" style="border:none" id="choose_indicator"><a href="#"></a>{{ dataset }}</a></li>	  
+    {% endfor %}
 	</ul>  
     </div>
   
