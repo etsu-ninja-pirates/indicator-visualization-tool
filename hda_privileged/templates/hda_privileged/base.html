@@ -57,7 +57,7 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-    <ul class="nav navbar-nav">       
+    <ul class="nav navbar-nav">
       <li><a href="https://www.etsu.edu/cph/"><i class="fa fa-home" style="font-size:20px"></i></a></li>
       <li></li><li></li>
       <li style="font-size:20px"><a href="#">Manage Data</a></li>
@@ -66,7 +66,8 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" style="font-size:20px"></i><span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">File Upload</a></li><li><a href="#">Logout</a></li>          
+            <li><a href="#">File Upload</a></li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
           </ul>
         </li>
       </ul>
@@ -79,15 +80,15 @@
 
     {% block content %}
     {% endblock %}
-    
+
   </div>
 </div>
 
 	<hr>
 	<footer class="application-footer">
 		<div class="container" style="bottom:0">
-			              
-		</div>			
+
+		</div>
 	</footer>
 </body>
 </html>
