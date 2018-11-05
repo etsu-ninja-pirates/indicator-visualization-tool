@@ -1,7 +1,0 @@
-Downloadable state and county lists as of 2010:
-https://www.census.gov/geo/reference/ansi.html
-Perfect format - all I had to do was tweak the column names, and change pipe separators to commas in the states file
-
-Newer list but does not include outlying territories; also needs to be split into separate state and county lists:
-https://www.census.gov/geographies/reference-files/2016/demo/popest/2016-fips.html
-I included this data and a script for processing it in the 'alt' folders
