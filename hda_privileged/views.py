@@ -50,7 +50,8 @@ def user_login(request):
 
 def logout_view(request):
     logout(request)
-    return render(request, 'hda_privileged/login.html',)
+    #return render(request, 'hda_privileged/login.html',)
+    return redirect('login')
 
 
 def create_metric(request):
