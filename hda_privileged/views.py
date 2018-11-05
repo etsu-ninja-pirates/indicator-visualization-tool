@@ -2,6 +2,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, get_user
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
+from django.urls import reverse
 from django.views import View
 from django.views.generic import TemplateView
 
@@ -17,7 +18,11 @@ from .upload_reading import read_data_points_from_file
 # desired page
 # ------------------------------------------------
 def user_login(request):
-    if request.method == 'POST':
+    form = LoginForm()
+    next = ""
+    if request.GET:
+        next = request.GET['next']
+    if request.POST:
         form = LoginForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
@@ -26,14 +31,21 @@ def user_login(request):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return HttpResponse('You Successfully Logged in')
+                    # The 'sample' routing will be changed to the desired landing page
+                    # that will be displayed after authenticated user logs in
+                    # If there is no next page to rout to, the routing will go to the
+                    # Default landing page
+                    if next == "":
+                        return redirect(reverse('priv:privdashboard'))
+                    else:
+                        # If there is a next page, the routing will automatical go to the
+                        # next page after a user is authenticated
+                        return redirect(next)
                 else:
                     return HttpResponse('Disabled account')
             else:
                 return HttpResponse('Invalid login')
-    else:
-        form = LoginForm()
-        args = {'form': form}
+    args = {'form': form, 'next': next}
     return render(request, 'hda_privileged/login.html', args)
 
 
