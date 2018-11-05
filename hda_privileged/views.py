@@ -2,6 +2,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, get_user
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
+from django.urls import reverse
 from django.views import View
 from django.views.generic import TemplateView
 
@@ -35,11 +36,11 @@ def user_login(request):
                     # If there is no next page to rout to, the routing will go to the
                     # Default landing page
                     if next == "":
-                        return HttpResponseRedirect(reverse('priv:sample') )
+                        return redirect(reverse('priv:privdashboard'))
                     else:
                         # If there is a next page, the routing will automatical go to the
                         # next page after a user is authenticated
-                        return HttpResponseRedirect(next)
+                        return redirect(next)
                 else:
                     return HttpResponse('Disabled account')
             else:
