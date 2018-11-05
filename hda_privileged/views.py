@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, get_user, logout
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.views import View
@@ -48,9 +48,9 @@ def user_login(request):
     args = {'form': form, 'next': next}
     return render(request, 'hda_privileged/login.html', args)
 
+
 def logout_view(request):
     logout(request)
-    #return render(request, 'hda_privileged/login.html',)
     return redirect('login')
 
 
