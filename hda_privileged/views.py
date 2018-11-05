@@ -1,5 +1,5 @@
 from django.contrib import messages
-from django.contrib.auth import authenticate, login, get_user
+from django.contrib.auth import authenticate, login, get_user, logout
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.urls import reverse
@@ -47,6 +47,11 @@ def user_login(request):
                 return HttpResponse('Invalid login')
     args = {'form': form, 'next': next}
     return render(request, 'hda_privileged/login.html', args)
+
+
+def logout_view(request):
+    logout(request)
+    return redirect('login')
 
 
 def create_metric(request):
