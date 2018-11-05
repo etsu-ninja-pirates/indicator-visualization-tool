@@ -45,8 +45,6 @@ def user_login(request):
             else:
                 return HttpResponse('Invalid login')
     args = {'form': form, 'next': next}
-        form = LoginForm()
-        args = {'form': form}
     return render(request, 'hda_privileged/login.html', args)
 
 
