@@ -51,7 +51,7 @@ def user_login(request):
 
 def logout_view(request):
     logout(request)
-    return redirect('login')
+    return redirect('priv:login')
 
 
 def create_metric(request):
