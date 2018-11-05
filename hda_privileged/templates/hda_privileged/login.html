@@ -10,7 +10,6 @@
             <div class="container-signin panel panel-info">
                 {% if next %}
                     <form action="./?next={{next}}" method="post" id='loginForm' class='form-horizontal' autocomplete='off'>
-                    {% comment %} <form action="priv/login/?next={{next}}" method="post" id='loginForm' class='form-horizontal' autocomplete='off'> {% endcomment %}
                 {% else %}
                 <form action="{% url 'priv:login' %}" method='POST' id='loginForm' class='form-horizontal' autocomplete='off'>
                 {% endif %}
