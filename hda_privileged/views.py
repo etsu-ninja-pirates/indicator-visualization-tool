@@ -30,15 +30,15 @@ def user_login(request):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    if next == "":
                     # The 'sample' routing will be changed to the desired landing page
                     # that will be displayed after authenticated user logs in
                     # If there is no next page to rout to, the routing will go to the
                     # Default landing page
-                    return HttpResponseRedirect(reverse('priv:sample'))
-                else:
-                    # If there is a next page, the routing will automatical go to the
-                    # next page after a user is authenticated
+                    if next == "":
+                        return HttpResponseRedirect(reverse('priv:sample') )
+                    else:
+                        # If there is a next page, the routing will automatical go to the
+                        # next page after a user is authenticated
                         return HttpResponseRedirect(next)
                 else:
                     return HttpResponse('Disabled account')
