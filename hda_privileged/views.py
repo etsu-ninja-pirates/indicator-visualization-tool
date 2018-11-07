@@ -71,11 +71,11 @@ class PrivDashboardView(TemplateView):
 
     def get(self, request):
         #get indicators for left side of view
-        datasets = Data_Point.objects.all()
+        datasets = Data_Set.objects.all()
         ds = []       
         for i in datasets:
-            if i.data_set.indicator.name not in ds:
-                ds.append(i.data_set.indicator.name)
+            if i.indicator.name not in ds:
+                ds.append(i.indicator.name)
     
         return render(request, self.template_name, {'datasets': ds})   
  
