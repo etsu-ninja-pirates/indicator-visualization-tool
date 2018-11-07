@@ -5,10 +5,9 @@ from . import views
 
 app_name = 'priv'
 urlpatterns = [
-    path('home/', login_required(views.PrivDashboardView.as_view(), login_url='priv:login'), name='privdashboard'),
-    path('login/', views.user_login, name='login'),
+    path('home/', views.PrivDashboardView.as_view(), name='privdashboard'),    
     path('metric/', views.manage_metrics, name='manage_metrics'),
     path('metric/create/', views.create_metric, name='create_metric'),
     path('upload/', login_required(views.UploadNewDataView.as_view(), login_url='priv:login'), name='upload_metric'),
-    path('logout/', views.logout_view, name='logout'),
+    path('logout/', views.logout_view, name='logout'),    
 ]
