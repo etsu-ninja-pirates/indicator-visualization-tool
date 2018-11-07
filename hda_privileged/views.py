@@ -75,9 +75,16 @@ class PrivDashboardView(TemplateView):
         ds = []       
         for i in datasets:
             if i.indicator.name not in ds:
-                ds.append(i.indicator.name)
+                ds.append(i.indicator.name)           
+
+        #get file data for right side of view
+        temp_data = Data_Set.objects.all()     
+        fls = []        
+        for td in temp_data:
+            fls.append(td)
+        return render(request, self.template_name, {'datasets': ds, 'files': fls})   
+
     
-        return render(request, self.template_name, {'datasets': ds})   
  
 class UploadNewDataView(View):
     form_class = UploadNewDataForm
