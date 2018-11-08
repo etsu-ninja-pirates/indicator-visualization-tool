@@ -1,0 +1,15 @@
+{% extends 'hda_public/base.html' %}
+{%block title%}Health Indicators{%endblock%}
+{% block content %}
+	<div id="container">
+    <h3> Health Indicators </h3>
+
+    <form>
+        {% for indicator in indicators %}
+            <input type="checkbox" name = "Indicator"/> {{ indicator.name}} <br>
+        {% endfor %}
+    </form>
+
+    </div>
+
+{% endblock %}

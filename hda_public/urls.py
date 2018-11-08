@@ -3,7 +3,10 @@ from hda_public.views import (
     DashboardView,
     SingleCountyChartView,
     SingleStateChartView,
-    TableView
+    TableView,
+    StateView,
+    CountyView,
+    HealthView
 )
 from hda_public.converters import StateUSPSConverter, FIPS3Converter
 
@@ -26,4 +29,8 @@ urlpatterns = [
     path('chart/<usps:state>/<int:indicator>', SingleStateChartView.as_view(), name='chart'),
     # old data table view
     path('table/', TableView.as_view(), name='table'),
+    path('state/', StateView.as_view(), name='state'),
+    path('state/<str:short>', CountyView.as_view(), name='county'),
+    path('state/<str:short>/<int:fips>', HealthView.as_view(), name='metric'),
+
 ]

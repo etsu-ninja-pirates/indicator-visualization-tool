@@ -1,5 +1,5 @@
 import json
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
 from django.shortcuts import render
 
 from hda_public.queries import (
@@ -7,7 +7,9 @@ from hda_public.queries import (
     dataSetForYear,
     mostRecentDataSetForIndicator
 )
-from hda_privileged.models import Data_Point, US_State, Health_Indicator
+from hda_privileged.models import (
+    Data_Point, US_State, US_County, Health_Indicator, Data_Set
+)
 
 
 # TODO: this has almost no error handling!
@@ -125,4 +127,76 @@ class TableView(TemplateView):
     def get(self, request):
         datasets = Data_Point.objects.all()
         args = {'datasets': datasets}
+        return render(request, self.template_name, args)
+
+
+class StateView(ListView):
+    template_name = 'hda_public/state.html'
+    paginate_by = '15'
+    model = US_State
+    context_object_name = "states"
+
+    def get_queryset(self):
+        states = US_State.objects.all()
+        return states
+
+    def get_context_data(self, **kwargs):
+        context = super(StateView, self).get_context_data(**kwargs)
+        context['range'] = range(context['paginator'].num_pages)
+        return context
+
+
+class CountyView(ListView):
+    template_name = 'hda_public/county.html'
+    paginate_by = '15'
+    model = US_County
+    context_object_name = "counties"
+
+    def get_context_data(self, **kwargs):
+        context = super(CountyView, self).get_context_data(**kwargs)
+        context['range'] = range(context['paginator'].num_pages)
+        state_short_name = self.kwargs.get('short', None)
+
+        if state_short_name is not None:
+            context['state'] = US_State.objects.filter(short=state_short_name).first().full
+            context['state_short_name'] = state_short_name
+
+        return context
+
+    def get_queryset(self):
+        state_short_name = self.kwargs.get('short', None)
+        counties = None
+
+        if state_short_name is not None:
+            associated_state = US_State.objects.filter(short=state_short_name).first()
+            counties = US_County.objects.filter(state=associated_state)
+
+        return counties
+
+
+class HealthView(TemplateView):
+    template_name = 'hda_public/health_indicator.html'
+
+    #to make the county unique in the list
+    def get(self, request, **kwargs):
+        fips = self.kwargs.get('fips', None)
+        state_short = self.kwargs.get('state_id', None)
+        args = None
+
+        # if fips is not None and state_short is not None:
+        # state = US_State.objects.filter(short=state_short).first()
+        # data_points = Data_Point.objects.filter(county__fips=fips)
+        # health_indicators = data_points.all()
+        # args = {'indicators': health_indicators}
+
+        if fips is not None and state_short is not None:
+            state = US_County.objects.filter(state=state_short).first()
+            #county_dp = Data_Point.objects.filter(county=US_County.state, data_set=Data_Set.indicator, data_set__year=Data_Set.year)
+            #county_dp_ds = Data_Point.objects.filter(dataset_id=Data_Set)
+            #county_metric = Data_Set.objects.filter(indicator_id=Data_Set.indicator)
+            #indicators = Health_Indicator.objects.filter(indicator_id= Health_Indicator.id)
+            test=Data_Point.objects.filter(county=US_County.state,data_set=Data_Set.indicator) and Health_Indicator.objects.filter(name=Health_Indicator.name, data_sets=Health_Indicator.data_sets)
+
+            return test
+
         return render(request, self.template_name, args)
