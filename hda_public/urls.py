@@ -1,10 +1,29 @@
-from django.urls import path
-from hda_public.views import DashboardView, ChartView, TableView
-from . import views
+from django.urls import path, register_converter
+from hda_public.views import (
+    DashboardView,
+    SingleCountyChartView,
+    SingleStateChartView,
+    TableView
+)
+from hda_public.converters import StateUSPSConverter, FIPS3Converter
+
+# custom path converters to validate:
+# - USPS 2-letter state codes:
+register_converter(StateUSPSConverter, 'usps')
+# - 3-digit FIPS codes.
+register_converter(FIPS3Converter, 'fips3')
+
+# we could acheive a prettier URL by slugifying the county names!
+# https://stackoverflow.com/a/837835
 
 urlpatterns = [
+    # the home page
     path('', DashboardView.as_view(), name='dashboard'),
-    path('chart/<int:year>', ChartView.as_view(), name='chart'),
-    path('chart/', ChartView.as_view(), name='chart'),
+    # displaying single charts:
+    # highlighting a single county, identified as state + county + metric
+    path('chart/<usps:state>/<fips3:county>/<int:indicator>', SingleCountyChartView.as_view(), name='chart'),
+    # highlighting the counties in a state, identified as state + metric
+    path('chart/<usps:state>/<int:indicator>', SingleStateChartView.as_view(), name='chart'),
+    # old data table view
     path('table/', TableView.as_view(), name='table'),
 ]
