@@ -64,4 +64,3 @@ class UploadNewDataForm(forms.Form):
         min_value=1000,
         max_value=9999
     )
-
