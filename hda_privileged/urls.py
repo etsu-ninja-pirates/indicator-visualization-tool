@@ -5,7 +5,8 @@ from . import views
 
 app_name = 'priv'
 urlpatterns = [
-    path('home/', views.PrivDashboardView.as_view(), name='privdashboard'),    
+    path('home/', views.PrivDashboardView.as_view(), name='privdashboard'), 
+    path('home/<indicator>/', views.PrivDashboardView.as_view(), name='dashboardselected'),   
     path('metric/', views.manage_metrics, name='manage_metrics'),
     path('metric/create/', views.create_metric, name='create_metric'),
     path('upload/', login_required(views.UploadNewDataView.as_view(), login_url='priv:login'), name='upload_metric'),
