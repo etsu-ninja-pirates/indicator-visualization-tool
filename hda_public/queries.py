@@ -1,7 +1,8 @@
-from hda_privileged.models import Data_Set
+from hda_privileged.models import Data_Set, Health_Indicator
 from django.core.exceptions import MultipleObjectsReturned, ObjectDoesNotExist
 
 DEMO_INDICATOR = 'Obesity'
+
 
 def dataSetForYear(year, indicator_name=DEMO_INDICATOR):
     try:
@@ -15,6 +16,7 @@ def dataSetForYear(year, indicator_name=DEMO_INDICATOR):
         # in any other case (including MultipleObjectsReturned), re-raise the exception
         raise
 
+
 # This method will be used to test the return of all the data sets pointing to a particular year
 def dataSetYearsForIndicator(indicator_name=DEMO_INDICATOR):
     """ This function takes in a KPI name then returns all the years liked to it """
@@ -22,3 +24,7 @@ def dataSetYearsForIndicator(indicator_name=DEMO_INDICATOR):
     return [ds.year for ds in results]
 
 
+def mostRecentDataSetForIndicator(indicator_id):
+    hi = Health_Indicator.objects.get(pk=indicator_id)
+    sets = hi.data_sets.order_by('-source_document__uploaded_at')
+    return sets.first()
