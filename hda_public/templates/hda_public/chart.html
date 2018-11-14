@@ -65,12 +65,20 @@ $(function(){
       }
       },
     title: {
+      // This will hold the name of the selected indicator. 
         text: 'Sample'
     },
       xAxis: {
+        labels: {
+          formatter: function(){
+          if (this.value > 0 && this.value == 1){return this.value + 'st';}
+          if (this.value > 1){return this.value + 'th';}
+          },
+          rotation: -45, 
+        },
         title: {
             enabled: true,
-            text: 'Percentile'
+          text: 'Percentile',
         },
         crosshair:{
           label:{
@@ -79,12 +87,17 @@ $(function(){
             },
           color: "#cccccc",
           dashStyle: "dash", 
-        }
+          width: 1,  
       },
+        min: 0,
+        max: 100,  
+        tickInterval: 5,  
+    }, 
       yAxis: {
         crosshair:{
           color: "#cccccc",
           dashStyle: "dash", 
+          width: 1,
         }
       },
       series: [
