@@ -34,29 +34,64 @@
 
 {% if data_series %}
 <script>
-(function() {
-  Highcharts.chart('chartdiv', {
+$(function(){
+  cloneToolTip = null; 
+  chart = new Highcharts.chart('chartdiv', {
       plotOptions: {
         series: {
-          turboThreshold: 3500
+        allowPointSelect: true, 
+        marker: {
+          states: {
+            select: {
+              enabled: true,
+              fillColor: '#66b3ff', 
+              symbol: 'circlepin',
+              radius: 7,
+              lineWidth: 0
         }
+          }
       },
-      title: {
-          text: 'Sample'
+        point: {
+          events: {
+            click: function() { 
+                if (cloneToolTip){                                
+                    chart.container.firstChild.removeChild(cloneToolTip);
+                }
+                cloneToolTip = this.series.chart.tooltip.label.element.cloneNode(true);
+                chart.container.firstChild.appendChild(cloneToolTip);
+            }
+          }
+        }
+      }
       },
+    title: {
+        text: 'Sample'
+    },
       xAxis: {
         title: {
             enabled: true,
             text: 'Percentile'
+        },
+        crosshair:{
+          label:{
+              enabled: true, 
+              padding: 8
+            },
+          color: "#cccccc",
+          dashStyle: "dash", 
         }
       },
       yAxis: {
+        crosshair:{
+          color: "#cccccc",
+          dashStyle: "dash", 
+        }
       },
       series: [
         {
           name: 'Percentiles',
           type: "spline",
-          data: {{ data_percentiles | safe }},
+        data: [{{ data_percentiles | safe }}],
           color: "gray",
           enableMouseTracking: false,
           marker: {
@@ -68,7 +103,7 @@
           type: "scatter",
           data: {{ data_series | safe }},
           color: 'red',
-          allowPointSelect: true,
+        enableMouseTracking: true, 
           tooltip: {
             pointFormat: "{point.name}<br/>p: <b>{point.x}%</b><br/>v: <b>{point.y}</b><br/>",
             valueDecimals: 1,
@@ -79,8 +114,8 @@
           }
         } 
       ]
-    }
-  );
+  });
+});
 })();
 
 </script>
