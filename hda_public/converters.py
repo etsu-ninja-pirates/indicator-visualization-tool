@@ -5,7 +5,7 @@
 class StateUSPSConverter():
     """ Matches USPS 2-letter state codes; exactly two alphabetic characters a-z
     """
-    # matches a pair fo lower-case characters
+    # matches a pair for lower-case characters
     regex = '[a-z]{2}'
 
     # convert the URL path string to a python value
