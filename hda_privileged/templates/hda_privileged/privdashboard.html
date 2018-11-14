@@ -14,24 +14,30 @@
 
 <!-- Column to list clickable indicators from db -->
 <div class="row">
-  <div class="col-sm-3">
-	<div class="page-header"><h1><small>Health Indicators</small></h1></div>
-	<ul class="list-group">
+  <div class="col-sm-2">
+	<div class="page-header"><h1><small>Indicators</small></h1></div>
+	<ul class="nav nav-pills nav-stacked">
+    <!--add a space to better align left and right column data-->
+    <br/>
     {% for dataset in datasets %}
-    <li class="list-group-item" style="border:none" id="choose_indicator"><a href="#"></a>{{ dataset }}</a></li>	  
+    <li role="presentation" style="border:none" class="{% if selected_indicator and selected_indicator == dataset %}active{% endif %}">
+      <a href="{% url 'priv:dashboardselected' dataset %}">{{ dataset }}</a>
+    </li>	  
     {% endfor %}
 	</ul>  
-  </div>
+  </div>  
   
   
   <!-- Space between columns -->
-  <div class="col-sm-1"></div>
+  <div class="col-sm-2"></div>
 
 
   
   <!-- File list for specific indicator viewable by clickable indicators -->
   <div class="col-sm-8">  
-  <div class="page-header"><h1><small>Data Files for (User Selected Indicator Here) <!-- user chosen indicator --></small></h1></div>  <!-- show indicator user selected -->
+  <div class="page-header">
+    <h1><small>{{indicator_message}}<!-- user chosen indicator --></small></h1>
+  </div> 
     {% csrf_token %}    
     <table class="table">      
       <thead class="thead-light">    
