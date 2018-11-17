@@ -4,7 +4,7 @@ from django.db import models
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.core.validators import MinValueValidator, MaxValueValidator
-from autoslug import AutoSlugField
+from django.template.defaultfilters import slugify
 
 
 # helper functions
@@ -30,14 +30,14 @@ class Health_Indicator(models.Model):
     e.g. obesity, mortality, education, etc.
     """
     name = models.CharField(max_length=100, unique=True)
+    slug = models.SlugField()
 
-    #cannot serialize lambda, replace with method
-    def custom_slugify(self, value):            
-        return default_slugify(value).replace(' ','-') 
+    def save(self, *args, **kwargs):
+        if self.slug is None:
+            self.slug = slugify(self.name)        
+        super(Health_Indicator, self).save(*args, **kwargs)
 
-    #slugfield for url to remove %20
-    slug = AutoSlugField(slugify=custom_slugify, max_length=20, unique=True, null=True)
-
+   
     def __str__(self):
         return f"{self.name} ({self.id})"
 
