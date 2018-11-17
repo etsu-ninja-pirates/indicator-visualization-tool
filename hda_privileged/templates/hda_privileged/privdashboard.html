@@ -1,89 +1,56 @@
 {% extends 'hda_privileged/base.html' %}
-
-{% load staticfiles %}
-  
-	<!-- Make health indicator selected obvious -->
-	<style>
-		a:active{
-			background-color: yellow;
-		}
-    </style>
-  </head>
-  
+{% load staticfiles %}  
 {% block content %}
 
   <head>
     <!-- Make health indicator selected same color as navbar -->
     <style>.nav-pills>li.active>a, .nav-pills>li.active>a:focus{ background-color: #69899f; }</style>
   </head>
+
 <!-- Column to list clickable indicators from db -->
 <div class="row">
   <div class="col-sm-2">
-	<div class="page-header"><h1><small>Indicators</small></h1></div>
-	<ul class="nav nav-pills nav-stacked">
-    <!--add a space to better align left and right column data-->
-    <br/>
-    {% for dataset in datasets %}
-    <li role="presentation" style="border:none" class="{% if selected_indicator and selected_indicator == dataset %}active{% endif %}">
-      <a href="{% url 'priv:dashboardselected' dataset %}">{{ dataset }}</a>
-    </li>	  
-    {% endfor %}
-	</ul>  
-  </div>  
+    <div class="page-header"><h1><small>Indicators</small></h1></div>
+      <ul class="nav nav-pills nav-stacked">
+        <!--add a space to better align left and right column data-->
+        <br/>
+        {% for dataset in datasets %}
+        <li role="presentation" style="border:none" class="{% if selected_indicator and selected_indicator == dataset %}active{% endif %}">
+          <a href="{% url 'priv:dashboardselected' dataset %}">{{ dataset }}</a>
+        </li>	  
+        {% endfor %}
+      </ul>  
+  </div>    
   
+    <!-- Space between columns -->
+    <div class="col-sm-2"></div>
   
-  <!-- Space between columns -->
-  <div class="col-sm-2"></div>
-
-
-  
-  <!-- File list for specific indicator viewable by clickable indicators -->
-  <div class="col-sm-8">  
-  <div class="page-header">
-    <h1><small>{{indicator_message}}<!-- user chosen indicator --></small></h1>
-  </div> 
-    {% csrf_token %}    
-    <table class="table">      
-      <thead class="thead-light">    
-        <tr>
-          <th scope="col">Year</th>             
-          <th scope="col">Upload Date</th>
-          <th scope="col">User</th>
-          <th scope="col">File</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for file in files %}
-        <tr>
-          <td>{{file.year}}</td>             
-          <td>{{file.source_document.uploaded_at}}</td>
-          <td>{{file.source_document.user}}</td>
-          <td>{{file.source_document.file}}</td>
-        </tr>
-        {% endfor %}    
-      </tbody> 
-    </table> 
-
-
-<!-- <script>
-  $("#choose_indicator").change(function(){       //indicator list from left side of view
-    var url = $("#fileschosen").attr("files-chosen-url");    //id of list on right side in view, name of url variable in view
-    var indicatorId = $(this).val();
-
-    $.ajax({
-      url: url,
-      data:{
-        'indicator':indicatorId   //get param from views
-      },
-      success:function(data){
-        $("#fileschosen").html(data);
-      }
-    });
-  });
-</script> -->
+    <!-- File list for specific indicator viewable by clickable indicators -->
+    <div class="col-sm-8">  
+      <div class="page-header">
+        <h1><small>{{indicator_message}}</small></h1>
+      </div> 
+      {% csrf_token %}    
+        <table class="table">      
+          <thead class="thead-light">    
+            <tr>
+              <th scope="col">Year</th>             
+              <th scope="col">Upload Date</th>
+              <th scope="col">User</th>
+              <th scope="col">File</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for file in files %}
+            <tr>
+              <td>{{file.year}}</td>             
+              <td>{{file.source_document.uploaded_at}}</td>
+              <td>{{file.source_document.user}}</td>
+              <td>{{file.source_document.file}}</td>
+            </tr>
+            {% endfor %}    
+          </tbody> 
+        </table> 
+    </div>
 </div>
-
-</div>
-
-
 {%endblock%}
