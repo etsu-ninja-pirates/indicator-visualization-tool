@@ -4,7 +4,7 @@ from hda_privileged.views import PrivDashboardView, logout_view
 from . import views
 
 app_name = 'priv'
-urlpatterns = [     
+urlpatterns = [
     path('home/', login_required(views.PrivDashboardView.as_view(), login_url='priv:login'), name='privdashboard'),
     path('login/', views.user_login, name='login'),
     path('metric/', views.manage_metrics, name='manage_metrics'),
