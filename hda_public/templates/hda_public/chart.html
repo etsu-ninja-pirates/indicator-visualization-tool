@@ -34,29 +34,77 @@
 
 {% if data_series %}
 <script>
-(function() {
-  Highcharts.chart('chartdiv', {
+$(function(){
+  cloneToolTip = null; 
+  chart = new Highcharts.chart('chartdiv', {
       plotOptions: {
         series: {
-          turboThreshold: 3500
+        allowPointSelect: true, 
+        marker: {
+          states: {
+            select: {
+              enabled: true,
+              fillColor: '#66b3ff', 
+              symbol: 'circlepin',
+              radius: 7,
+              lineWidth: 0
         }
+          }
       },
-      title: {
-          text: 'Sample'
+        point: {
+          events: {
+            click: function() { 
+                if (cloneToolTip){                                
+                    chart.container.firstChild.removeChild(cloneToolTip);
+                }
+                cloneToolTip = this.series.chart.tooltip.label.element.cloneNode(true);
+                chart.container.firstChild.appendChild(cloneToolTip);
+            }
+          }
+        }
+      }
       },
+    title: {
+      // This will hold the name of the selected indicator. 
+        text: 'Sample'
+    },
       xAxis: {
+        labels: {
+          formatter: function(){
+          if (this.value > 0 && this.value == 1){return this.value + 'st';}
+          if (this.value > 1){return this.value + 'th';}
+          },
+          rotation: -45, 
+        },
         title: {
             enabled: true,
-            text: 'Percentile'
-        }
+          text: 'Percentile',
+        },
+        crosshair:{
+          label:{
+              enabled: true, 
+              padding: 8
+            },
+          color: "#cccccc",
+          dashStyle: "dash", 
+          width: 1,  
       },
+        min: 0,
+        max: 100,  
+        tickInterval: 5,  
+    }, 
       yAxis: {
+        crosshair:{
+          color: "#cccccc",
+          dashStyle: "dash", 
+          width: 1,
+        }
       },
       series: [
         {
           name: 'Percentiles',
           type: "spline",
-          data: {{ data_percentiles | safe }},
+        data: {{ data_percentiles | safe }},
           color: "gray",
           enableMouseTracking: false,
           marker: {
@@ -68,7 +116,7 @@
           type: "scatter",
           data: {{ data_series | safe }},
           color: 'red',
-          allowPointSelect: true,
+        enableMouseTracking: true, 
           tooltip: {
             pointFormat: "{point.name}<br/>p: <b>{point.x}%</b><br/>v: <b>{point.y}</b><br/>",
             valueDecimals: 1,
@@ -77,10 +125,10 @@
             radius: 3,
             symbol: "circle"
           }
-        }
+        } 
       ]
-    }
-  );
+  });
+});
 })();
 
 </script>
