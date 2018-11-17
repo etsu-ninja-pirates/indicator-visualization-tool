@@ -11,4 +11,5 @@ urlpatterns = [
     path('metric/create/', views.create_metric, name='create_metric'),
     path('upload/', login_required(views.UploadNewDataView.as_view(), login_url='priv:login'), name='upload_metric'),
     path('logout/', views.logout_view, name='logout'),
+    path('home/<slug>/', views.PrivDashboardView.as_view(), name='dashboardselected'),
 ]

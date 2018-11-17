@@ -1,77 +1,61 @@
 {% extends 'hda_privileged/base.html' %}
-
-{% load staticfiles %}
-  
-	<!-- Make health indicator selected obvious -->
-	<style>
-		a:active{
-			background-color: yellow;
-		}
-    </style>
-  </head>
-  
+{% load staticfiles %}  
 {% block content %}
+
+  <head>
+    <!-- Make health indicator selected same color as navbar -->
+    <style>.nav-pills>li.active>a, .nav-pills>li.active>a:focus{ background-color: #69899f; color: #d7e2e9;}</style>
+  </head>
 
 <!-- Column to list clickable indicators from db -->
 <div class="row">
-  <div class="col-sm-3">
-	<div class="page-header"><h1><small>Health Indicators</small></h1></div>
-	<ul class="list-group">
-    {% for dataset in datasets %}
-    <li class="list-group-item" style="border:none" id="choose_indicator"><a href="#"></a>{{ dataset }}</a></li>	  
-    {% endfor %}
-	</ul>  
+  <div class="col-sm-2">
+    <div class="page-header"><h1><small>Indicators</small></h1></div>
+      <ul class="nav nav-pills nav-stacked">
+        <!--add a space to better align left and right column data-->
+        <br/>
+        <!--button to reset and display all indicators-->
+        <li></li><button type="button" class="btn btn-primary btn-med" style="background-color:#69899f">
+            <a href="{% url 'priv:privdashboard' %}" style="color: #d7e2e9;">Reset Indicators</a>
+          </button></li>
+        <li></li>
+        {% for dataset in datasets %}
+        <li role="presentation" style="border:none" class="{% if selected_indicator and selected_indicator == dataset %}active{% endif %}">
+          <a href="{% url 'priv:dashboardselected' dataset.indicator.slug %}">{{ dataset.indicator.name }}</a>
+        </li>	  
+        {% endfor %}
+      </ul>  
+  </div>    
+  
+    <!-- Space between columns -->
+    <div class="col-sm-2"></div>
+  
+    <!-- File list for specific indicator viewable by clickable indicators -->
+    <div class="col-sm-8">  
+      <div class="page-header">
+        <h1><small>{{indicator_message}}</small></h1>
+      </div> 
+      {% csrf_token %}    
+        <table class="table">      
+          <thead class="thead-light">    
+            <tr>
+              <th scope="col">Year</th>             
+              <th scope="col">Upload Date</th>
+              <th scope="col">User</th>
+              <th scope="col">File</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for file in files %}
+            <tr>
+              <td>{{file.year}}</td>             
+              <td>{{file.source_document.uploaded_at}}</td>
+              <td>{{file.source_document.user}}</td>
+              <td>{{file.source_document.file}}</td>
+            </tr>
+            {% endfor %}    
+          </tbody> 
+        </table> 
     </div>
-  
-  
-  <!-- Space between columns -->
-  <div class="col-sm-1"></div>
-  
-  <!-- File list viewable by clickable indicators -->
-  <div class="col-sm-8">
-  <div class="page-header"><h1><small>Data Files</small></h1></div>
-	<table class="table">
-  <thead class="thead-light">
-    <tr>
-      <th scope="col">Year</th>
-      <th scope="col">Indicator</th>
-      <th scope="col">File Name</th>
-      <th scope="col">Upload Date</th>
-	  <th scope="col">User</th>
-	  <th scope="col">File</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">2018</th>
-      <td>Obesity</td>
-      <td>Data Indicators_Rank</td>
-      <td>01/29/2019</td>
-	  <td>Anna Littical</td>
-	  <td>Data Indicators_Rank.xlsx</td>
-    </tr>
-    <tr>
-      <th scope="row">2017</th>
-      <td>Obesity</td>
-      <td>Data Indicators_Rank</td>
-      <td>01/13/2018</td>
-	  <td>Wiley Waites</td>
-	  <td>Data Indicators_Rank.xlsx</td>
-    </tr>
-    <tr>
-      <th scope="row">2016</th>
-      <td>Obesity</td>
-      <td>Data Indicators_Rank</td>
-      <td>01/27/2017</td>
-	  <td>Arthur Rightus</td>
-	  <td>Data Indicators_Rank.xlsx</td>
-    </tr>
-  </tbody>
-</table> 
 </div>
-
-
-  </div>
-
-
-{%endblock%}
+{% endblock %}

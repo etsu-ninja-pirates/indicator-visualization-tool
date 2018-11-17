@@ -6,6 +6,7 @@ from django.urls import reverse
 from django.views import View
 from django.views.generic import TemplateView
 
+
 from .forms import LoginForm, UploadNewDataForm
 from .models import Document, Data_Set, Data_Point, Percentile
 from .percentile import get_percentiles_for_points, assign_percentiles_to_points
@@ -69,15 +70,56 @@ def sampleNavBar(request):
 class PrivDashboardView(TemplateView):
     template_name = 'hda_privileged/privdashboard.html'
 
-    def get(self, request):
+    def get_context_data(self, **kwargs):
         #get indicators for left side of view
         datasets = Data_Set.objects.all()
         ds = []       
         for i in datasets:
             if i.indicator.name not in ds:
-                ds.append(i.indicator.name)
+                ds.append(i) 
+                
+
+        #call super to get the base context
+        context = super().get_context_data(**kwargs)
+
+        # did the URL specify an indicator? Get indicator and save in context
+        selected_indicator = self.kwargs.get('indicator', None) 
+        context['selected_indicator'] = selected_indicator 
+               
+
+        #retrieve all dataset objects for searching
+        temp_data = Data_Set.objects.all()  
+        fls = []      
+
+        #if user has selected an indicator
+        if selected_indicator is not None:
+            for td in temp_data:
+                #if the data set indicator matches the user indicator
+                if(td.indicator.name == selected_indicator):
+                    fls.append(td)     
+            #Create message for user
+            context['indicator_message'] = "Data Files for " + selected_indicator              
+
+        #user has not selected an indicator, display all files
+        elif selected_indicator is None:           
+            for td in temp_data:
+                fls.append(td)
+            #Create message for user
+            context['indicator_message'] = "Data File List for all Indicators"
+
+        #error retrieving files for indicator, display all files
+        else:
+            for td in temp_data:
+                fls.append(td)
+            #Create message for user
+            context['indicator_message'] = "Indicator not found: Returning all files"
+
+        #put indicators and files in context
+        context['files'] = fls
+        context ['datasets'] = ds
+        return context    
+
     
-        return render(request, self.template_name, {'datasets': ds})   
  
 class UploadNewDataView(View):
     form_class = UploadNewDataForm
