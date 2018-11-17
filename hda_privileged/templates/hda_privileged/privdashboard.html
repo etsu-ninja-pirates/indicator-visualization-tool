@@ -12,6 +12,10 @@
   
 {% block content %}
 
+  <head>
+    <!-- Make health indicator selected same color as navbar -->
+    <style>.nav-pills>li.active>a, .nav-pills>li.active>a:focus{ background-color: #69899f; }</style>
+  </head>
 <!-- Column to list clickable indicators from db -->
 <div class="row">
   <div class="col-sm-2">
