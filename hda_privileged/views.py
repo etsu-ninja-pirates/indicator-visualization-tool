@@ -5,7 +5,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.views import View
 from django.views.generic import TemplateView
-from autoslug import AutoSlugField
+
 
 from .forms import LoginForm, UploadNewDataForm
 from .models import Document, Data_Set, Data_Point, Percentile
