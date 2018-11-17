@@ -5,6 +5,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.views import View
 from django.views.generic import TemplateView
+from autoslug import AutoSlugField
 
 from .forms import LoginForm, UploadNewDataForm
 from .models import Document, Data_Set, Data_Point, Percentile
@@ -75,7 +76,8 @@ class PrivDashboardView(TemplateView):
         ds = []       
         for i in datasets:
             if i.indicator.name not in ds:
-                ds.append(i.indicator.name) 
+                ds.append(i) 
+                
 
         #call super to get the base context
         context = super().get_context_data(**kwargs)

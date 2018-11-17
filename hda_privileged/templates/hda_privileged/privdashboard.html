@@ -4,7 +4,7 @@
 
   <head>
     <!-- Make health indicator selected same color as navbar -->
-    <style>.nav-pills>li.active>a, .nav-pills>li.active>a:focus{ background-color: #69899f; }</style>
+    <style>.nav-pills>li.active>a, .nav-pills>li.active>a:focus{ background-color: #69899f; color: #d7e2e9;}</style>
   </head>
 
 <!-- Column to list clickable indicators from db -->
@@ -14,9 +14,14 @@
       <ul class="nav nav-pills nav-stacked">
         <!--add a space to better align left and right column data-->
         <br/>
+        <!--button to reset and display all indicators-->
+        <li></li><button type="button" class="btn btn-primary btn-med" style="background-color:#69899f">
+            <a href="{% url 'priv:privdashboard' %}" style="color: #d7e2e9;">Reset Indicators</a>
+          </button></li>
+        <li></li>
         {% for dataset in datasets %}
         <li role="presentation" style="border:none" class="{% if selected_indicator and selected_indicator == dataset %}active{% endif %}">
-          <a href="{% url 'priv:dashboardselected' dataset %}">{{ dataset }}</a>
+          <a href="{% url 'priv:dashboardselected' dataset.indicator.slug %}">{{ dataset.indicator.name }}</a>
         </li>	  
         {% endfor %}
       </ul>  
@@ -53,4 +58,4 @@
         </table> 
     </div>
 </div>
-{%endblock%}
+{% endblock %}
