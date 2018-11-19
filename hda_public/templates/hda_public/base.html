@@ -37,7 +37,18 @@
     {% comment %} <script src="{% static 'js/graph.css'%}"></script> {% endcomment %}
     {% comment %} {% block jqurey %}{% endblock %} {% endcomment %}
 
-    <title>{% block title %}{% endblock %}</title>
+  <script type="text/javascript">
+
+            function Redirect() {
+               window.location="{% url 'priv:privdashboard' %}";
+            }
+
+            function TimeoutNow() {
+            setTimeout('Redirect()', 5000);
+            }
+  </script>
+
+   <title>{% block title %}{% endblock %}</title>
 
 </head>
 <body>
