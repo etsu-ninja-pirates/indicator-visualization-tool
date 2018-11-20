@@ -4,7 +4,7 @@ from django.db import models
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.core.validators import MinValueValidator, MaxValueValidator
-from django.template.defaultfilters import slugify
+from django.utils.text import slugify
 
 
 # helper functions
@@ -33,11 +33,11 @@ class Health_Indicator(models.Model):
     slug = models.SlugField()
 
     def save(self, *args, **kwargs):
-        if self.slug is None:
-            self.slug = slugify(self.name)        
+        if self.slug is None or self.slug == '':
+            self.slug = slugify(self.name)
         super(Health_Indicator, self).save(*args, **kwargs)
 
-   
+
     def __str__(self):
         return f"{self.name} ({self.id})"
 
