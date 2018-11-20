@@ -1,15 +1,22 @@
 from django.urls import path
 from django.contrib.auth.decorators import login_required
-from hda_privileged.views import PrivDashboardView, logout_view
 from . import views
 
 app_name = 'priv'
 urlpatterns = [
-    path('home/', login_required(views.PrivDashboardView.as_view(), login_url='priv:login'), name='privdashboard'),
-    path('login/', views.user_login, name='login'),
-    path('metric/', views.manage_metrics, name='manage_metrics'),
+    # home/dashboard
+    path('home/<slug>/',
+         login_required(views.PrivDashboardView.as_view(), login_url='priv:login'),
+         name='dashboardselected'),
+    path('home/',
+         login_required(views.PrivDashboardView.as_view(), login_url='priv:login'),
+         name='privdashboard'),
+    # unused health indicator crud URLs
     path('metric/create/', views.create_metric, name='create_metric'),
+    path('metric/', views.manage_metrics, name='manage_metrics'),
+    # upload page
     path('upload/', login_required(views.UploadNewDataView.as_view(), login_url='priv:login'), name='upload_metric'),
+    # login/logout
+    path('login/', views.user_login, name='login'),
     path('logout/', views.logout_view, name='logout'),
-    path('home/<slug>/', views.PrivDashboardView.as_view(), name='dashboardselected'),
 ]
