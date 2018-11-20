@@ -3,10 +3,11 @@
 
 
 class StateUSPSConverter():
-    """ Matches USPS 2-letter state codes; exactly two alphabetic characters a-z
+    """ Matches USPS 2-letter state codes; exactly two alphabetic characters a-zA-Z
     """
-    # matches a pair for lower-case characters
-    regex = '[a-z]{2}'
+    # Matches either 2 lower case letters or 2 upper-case letters,
+    # but does *not* match mized case
+    regex = '[a-z]{2}|[A-Z]{2}'
 
     # convert the URL path string to a python value
     def to_python(self, value):
