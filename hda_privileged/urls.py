@@ -5,7 +5,7 @@ from . import views
 app_name = 'priv'
 urlpatterns = [
     # home/dashboard
-    path('home/<slug>/',
+    path('home/<int:indicator>/',
          login_required(views.PrivDashboardView.as_view(), login_url='priv:login'),
          name='dashboardselected'),
     path('home/',
