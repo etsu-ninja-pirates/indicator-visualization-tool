@@ -15,9 +15,11 @@
         <!--add a space to better align left and right column data-->
         <br/>
         <!--button to reset and display all indicators-->
-        <li></li><button type="button" class="btn btn-primary btn-med" style="background-color:#69899f">
-            <a href="{% url 'priv:privdashboard' %}" style="color: #d7e2e9;">Reset Indicators</a>
-          </button></li>
+        <li></li>
+        <a role="button"
+          href="{% url 'priv:privdashboard' %}"
+          class="btn btn-primary btn-med"
+          style="background-color:#69899f;color: #d7e2e9;">Reset Indicators</a>
         <li></li>
         {% for dataset in datasets %}
         <li role="presentation" style="border:none" class="{% if selected_indicator and selected_indicator == dataset %}active{% endif %}">
