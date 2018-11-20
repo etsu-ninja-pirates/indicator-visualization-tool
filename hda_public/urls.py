@@ -30,6 +30,6 @@ urlpatterns = [
     # old data table view
     path('table/', TableView.as_view(), name='table'),
     path('state/', StateView.as_view(), name='state'),
-    path('state/<str:short>', CountyView.as_view(), name='county'),
-    path('state/<str:short>/<fips3:fips>', HealthView.as_view(), name='metric'),
+    path('state/<usps:short>', CountyView.as_view(), name='county'),
+    path('state/<usps:short>/<fips3:fips>', HealthView.as_view(), name='metric'),
 ]
