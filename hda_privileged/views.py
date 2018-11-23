@@ -8,7 +8,7 @@ from django.views.generic import TemplateView
 
 
 from .forms import LoginForm, UploadNewDataForm
-from .models import Document, Data_Set, Data_Point, Percentile
+from .models import Document, Data_Set, Data_Point, Percentile, Health_Indicator
 from .percentile import get_percentiles_for_points, assign_percentiles_to_points
 from .upload_reading import read_data_points_from_file
 
@@ -71,56 +71,33 @@ class PrivDashboardView(TemplateView):
     template_name = 'hda_privileged/privdashboard.html'
 
     def get_context_data(self, **kwargs):
-        #get indicators for left side of view
-        datasets = Data_Set.objects.all()
-        ds = []       
-        for i in datasets:
-            if i.indicator.name not in ds:
-                ds.append(i) 
-                
-
-        #call super to get the base context
+        # call super to get the base context
         context = super().get_context_data(**kwargs)
 
+        # get indicators for left side of view
+        indicators = Health_Indicator.objects.all()
+        context['indicators'] = indicators
+
         # did the URL specify an indicator? Get indicator and save in context
-        selected_indicator = self.kwargs.get('indicator', None) 
-        context['selected_indicator'] = selected_indicator 
-               
+        selected_id = self.kwargs.get('indicator', None)
+        # now check if that ID is valid - is there an indicator with that ID?
+        # use filter + first because get will throw an error if the object doesn't exist;
+        # whereas this wil lhave a value of None if it doesn't exist
+        selected_indicator = indicators.filter(pk=selected_id).first()
+        context['selected_indicator'] = selected_indicator
 
-        #retrieve all dataset objects for searching
-        temp_data = Data_Set.objects.all()  
-        fls = []      
-
-        #if user has selected an indicator
         if selected_indicator is not None:
-            for td in temp_data:
-                #if the data set indicator matches the user indicator
-                if(td.indicator.name == selected_indicator):
-                    fls.append(td)     
-            #Create message for user
-            context['indicator_message'] = "Data Files for " + selected_indicator              
-
-        #user has not selected an indicator, display all files
-        elif selected_indicator is None:           
-            for td in temp_data:
-                fls.append(td)
-            #Create message for user
-            context['indicator_message'] = "Data File List for all Indicators"
-
-        #error retrieving files for indicator, display all files
+            # if a valid indiactor was selected, only show datasets from that indicator
+            context['indicator_message'] = f'Data sets for {selected_indicator.name}'
+            context['datasets'] = selected_indicator.data_sets.all()
         else:
-            for td in temp_data:
-                fls.append(td)
-            #Create message for user
-            context['indicator_message'] = "Indicator not found: Returning all files"
+            # otherwise, show all the data sets
+            context['indicator_message'] = 'Data sets for all indicators'
+            context['datasets'] = Data_Set.objects.all()
 
-        #put indicators and files in context
-        context['files'] = fls
-        context ['datasets'] = ds
-        return context    
+        return context
 
-    
- 
+
 class UploadNewDataView(View):
     form_class = UploadNewDataForm
     template_name = 'hda_privileged/upload_metric.html'

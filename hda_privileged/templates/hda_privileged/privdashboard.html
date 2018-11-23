@@ -1,5 +1,5 @@
 {% extends 'hda_privileged/base.html' %}
-{% load staticfiles %}  
+{% load staticfiles %}
 {% block content %}
 
   <head>
@@ -15,47 +15,49 @@
         <!--add a space to better align left and right column data-->
         <br/>
         <!--button to reset and display all indicators-->
-        <li></li><button type="button" class="btn btn-primary btn-med" style="background-color:#69899f">
-            <a href="{% url 'priv:privdashboard' %}" style="color: #d7e2e9;">Reset Indicators</a>
-          </button></li>
         <li></li>
-        {% for dataset in datasets %}
-        <li role="presentation" style="border:none" class="{% if selected_indicator and selected_indicator == dataset %}active{% endif %}">
-          <a href="{% url 'priv:dashboardselected' dataset.indicator.slug %}">{{ dataset.indicator.name }}</a>
-        </li>	  
+        <a role="button"
+          href="{% url 'priv:privdashboard' %}"
+          class="btn btn-primary btn-med"
+          style="background-color:#69899f;color: #d7e2e9;">Reset Indicators</a>
+        <li></li>
+        {% for ind in indicators %}
+        <li role="presentation" style="border:none" class="{% if selected_indicator and selected_indicator == ind %}active{% endif %}">
+          <a href="{% url 'priv:dashboardselected' ind.id %}">{{ ind.name }}</a>
+        </li>
         {% endfor %}
-      </ul>  
-  </div>    
-  
+      </ul>
+  </div>
+
     <!-- Space between columns -->
     <div class="col-sm-2"></div>
-  
+
     <!-- File list for specific indicator viewable by clickable indicators -->
-    <div class="col-sm-8">  
+    <div class="col-sm-8">
       <div class="page-header">
-        <h1><small>{{indicator_message}}</small></h1>
-      </div> 
-      {% csrf_token %}    
-        <table class="table">      
-          <thead class="thead-light">    
+        <h1><small>{{ indicator_message }}</small></h1>
+      </div>
+      {% csrf_token %}
+        <table class="table">
+          <thead class="thead-light">
             <tr>
-              <th scope="col">Year</th>             
+              <th scope="col">Year</th>
               <th scope="col">Upload Date</th>
               <th scope="col">User</th>
               <th scope="col">File</th>
             </tr>
           </thead>
           <tbody>
-            {% for file in files %}
+            {% for ds in datasets %}
             <tr>
-              <td>{{file.year}}</td>             
-              <td>{{file.source_document.uploaded_at}}</td>
-              <td>{{file.source_document.user}}</td>
-              <td>{{file.source_document.file}}</td>
+              <td>{{ ds.year }}</td>
+              <td>{{ ds.source_document.uploaded_at }}</td>
+              <td>{{ ds.source_document.user }}</td>
+              <td>{{ ds.source_document.file }}</td>
             </tr>
-            {% endfor %}    
-          </tbody> 
-        </table> 
+            {% endfor %}
+          </tbody>
+        </table>
     </div>
 </div>
 {% endblock %}
