@@ -21,6 +21,6 @@ class HappyUrlsTestCase(TestCase):
             ('select indicator', '/state/AL/001'),
         ]
         for (name, path) in paths_to_test:
-            with self.subTest(name):
+            with self.subTest(label=name):
                 response = self.client.get(path, follow=True)
                 self.assertEqual(response.status_code, 200, response.content)
