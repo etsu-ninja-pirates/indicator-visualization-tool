@@ -1,14 +1,18 @@
 from io import StringIO
 
-from django.test import TestCase, Client
+from django.test import TestCase
 from django.core.management import call_command
 
 
 class HappyUrlsTestCase(TestCase):
-    def setUp(self):
+
+    # setUpTestData runs once for the class, not once per test,
+    # so we can load a data set one time to speed things up IF
+    # we have multiple test methods and we don't need to reset
+    @classmethod
+    def setUpTestData(cls):
         out = StringIO()
         call_command('load_random_data_set', stdout=out)
-        self.client = Client()
 
     def testPublicUrlsLoad(self):
         paths_to_test = [
