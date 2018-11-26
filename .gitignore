@@ -11,6 +11,9 @@ db.sqlite3
 # PyCharm settings
 .idea/
 
+# Visual Studio Code folder settings
+.vscode/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

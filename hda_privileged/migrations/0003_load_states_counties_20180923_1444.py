@@ -3,8 +3,8 @@
 from django.db import migrations
 from csv import DictReader
 
-STATE_FILENAME = "./data/states_territories_2010.csv"
-COUNTY_FILENAME = "./data/counties_and_equivalents_2010.csv"
+STATE_FILENAME = "./data/states.csv"
+COUNTY_FILENAME = "./data/counties.csv"
 
 
 def load_data(filename, fn):
@@ -13,8 +13,9 @@ def load_data(filename, fn):
     and pass each row read from the file into the function. Return a list
     of the results, i.e. map(f, rows)
     """
-    with open(filename) as csvf:
+    with open(filename, encoding='utf-8') as csvf:
         return [fn(r) for r in DictReader(csvf)]
+
 
 def make_state(state_model):
     """
@@ -26,6 +27,7 @@ def make_state(state_model):
         short=row['USPS'],
         fips=row['FIPS']
     )
+
 
 def make_county(county_model, state_map):
     """
@@ -48,7 +50,8 @@ def load_states_and_counties(apps, schema_editor):
     # load state objects from CSV file
     states = load_data(STATE_FILENAME, make_state(US_State))
     # save the state instances to the DB
-    for s in states: s.save()
+    for s in states:
+        s.save()
 
     # as above: get the correct version of the county model for this migration
     US_County = apps.get_model('hda_privileged', 'US_County')

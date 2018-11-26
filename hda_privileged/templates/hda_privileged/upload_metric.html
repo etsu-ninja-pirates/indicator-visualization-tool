@@ -31,7 +31,7 @@
         class="form-horizontal"
         method="POST"
         enctype="multipart/form-data"
-        action="{% url 'upload_metric'%}">
+        action="{% url 'priv:upload_metric'%}">
         {% csrf_token %}
 
         {% for field in form.visible_fields %}
@@ -42,24 +42,30 @@
 
           <div {% if field.errors %} class="form-group has-error" {% else %} class="form-group" {% endif %}>
 
-            {% comment %}
-            Label associated to the input w/ id_for_label
-            {% endcomment %}
+            {% comment %} Label associated to the input w/ id_for_label {% endcomment %}
             <label class="col-sm-2 control-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
 
-            {% comment %}
-            The actual field/input element
-            {% endcomment %}
+            {% comment %} The actual field/input element {% endcomment %}
             <div class="col-sm-10">
+            {% if field == form.column_format %}
+              {% for radio in field %}
+              <div class="radio">
+                {{ radio }}
+              </div>
+              {% endfor %}
+            {% else %}
               {{ field }}
-            </div>
+            {% endif %}
 
             {% comment %}
-            Not using aria-describedby (but should be!) to link the field to its help text - not sure how to inject that attribute into the django field output above
+            Not using aria-describedby (but should be!) to link the field to its help text - 
+            not sure how to inject that attribute into the django field output above
             {% endcomment %}
             {% if field.help_text %}
               <span class="help-block">{{ field.help_text | safe }}</span>
             {% endif %}
+            </div>
+
           </div>
         {% endfor %}
 
