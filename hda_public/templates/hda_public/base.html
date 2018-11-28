@@ -57,51 +57,29 @@
           </button>
         </div>
 
-
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <!-- Left region of nav bar -->
-          <ul class="nav navbar-nav">
-            <!-- First dropdown code -->
-            <li class="dropdown">
-              <a href="#"
-                class="dropdown-toggle"
-                data-toggle="dropdown"
-                role="button"
-                aria-haspopup="true"
-                aria-expanded="false">Health Indicator <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Obesity</a></li>
-                <li><a href="#">Education</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Select</a></li>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+             <!-- <li class="nav navbar-nav navbar--right"> -->
+               <ul class="nav navbar-nav navbar--left">
+                   <!-- This leads to the state selection page, since we don't have a dashboard for the public yet
+                   and we are enforcing the user to select state and county before seeing the health indicator page -->
+                  <li><a href="{% url 'state' %}"><i class="fa fa-home" style="font-size:20px"></i></a></li>
+                  <li> </li><li></li>
+                   <!-- Placeholder for the name -->
+                   <li style="font-size:20px"><a href="#">Name of Product</a></li>
               </ul>
-            </li>
-          </ul>
-
-          <!-- Search form area -->
-          <form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Find County">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Year">
-            </div>
-            <button type="submit" class="btn btn-info">Go</button>
-          </form>
-
-          <!-- Right-aligned region of nav bar -->
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Placeholder</a></li>
-            <!-- Second dropdown code -->
-            <li class="dropdown">
+              <!-- Right-aligned region of nav bar -->
+               <ul class="nav navbar-nav navbar-right">
+              <!-- Dropdown code -->
+              <li class="nav navbar-nav navbar--right">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="{% url 'table' %}">Table</a></li>
-                <li><a href="#">Chart</a></li>
                 <li><a href="#">Clear</a></li>
               </ul>
-            </li>
-          </ul>
+              </li>
+               </ul>
+          </div>
+
 
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
