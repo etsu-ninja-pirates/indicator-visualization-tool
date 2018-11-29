@@ -137,7 +137,7 @@ class StateView(ListView):
     context_object_name = "states"
 
     def get_queryset(self):
-        states = US_State.objects.all()
+        states = US_State.objects.all().order_by('full')
         return states
 
     def get_context_data(self, **kwargs):
@@ -169,7 +169,7 @@ class CountyView(ListView):
 
         if state_short_name is not None:
             associated_state = US_State.objects.filter(short=state_short_name).first()
-            counties = US_County.objects.filter(state=associated_state)
+            counties = associated_state.counties.order_by('name')
 
         return counties
 
