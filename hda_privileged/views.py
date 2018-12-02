@@ -37,7 +37,7 @@ def user_login(request):
                     # If there is no next page to rout to, the routing will go to the
                     # Default landing page
                     if next == "":
-                        return redirect(reverse('priv:privdashboard'))
+                        return redirect(reverse('priv:dashboard1'))
                     else:
                         # If there is a next page, the routing will automatical go to the
                         # next page after a user is authenticated
