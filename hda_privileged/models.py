@@ -4,8 +4,8 @@ from django.db import models
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.core.validators import MinValueValidator, MaxValueValidator
-# from django.utils.text import slugify
-from django.template.defaultfilters import slugify
+from django.utils.text import slugify
+
 
 # helper functions
 def get_sentinel_user():
@@ -22,7 +22,8 @@ def get_upload_path(instance, filename):
     return "uploads/{0}/{1}-{2}".format(datestr, timestr, filename)
 
 
-# model classe
+# model classes
+
 class Health_Indicator(models.Model):
     """
     Represents some health metric that we want to store data sets for,
