@@ -4,17 +4,24 @@
 <div class="container">
   <div class="jumbotron">
     <h2>Create Health Indicator Matrix Here</h2>
-    <form action="{% url 'priv:createIndicator' %}" method="POST">
+    <form method="POST" action="{% url 'priv:manageIndicator' %}"> {% csrf_token %}
        <h4>Create Health Indicator:<br></h4>
-       <input name="title" type="text" value='Title'>
+       <input name="name" type="text" value='Title'>
        <br>
        <h4>Short Description:<br></h4>
        <textarea name="message" rows="10" cols="30">Short Description here</textarea>
        <br>
-       <button type="Create" align="right">Cancel</button>
-       <button type="Cancel" align="left">Create</button>
+        <h1>Message board homepage</h1>
+         <ul>
+             {% for health in all_indicators_created %}
+                 <li>{{ health.name }}</li>
+             {% endfor %}
+         </ul>
+
        <br>
    </form>
+       <button type="Cancel" align="right">Cancel</button>
+       <button type="Create" align="left">Create</button>
 </div>
 </div>
 {% endblock %}

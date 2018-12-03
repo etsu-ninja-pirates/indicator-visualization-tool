@@ -11,9 +11,9 @@ urlpatterns = [
     path('home/',
          login_required(views.PrivDashboardView.as_view(), login_url='priv:login'),
          name='dashboard1'),
-    # unused health indicator crud URLs
+    #  health indicator crud URLs
     path('metric/create/',
-         login_required(views.create_metric, login_url='priv:login'),
+         login_required(views.HealthIndicator.as_view(), login_url='priv:login'),
          name='createIndicator'),
     path('metric/',
          login_required(views.manage_metrics, login_url='priv:login'),

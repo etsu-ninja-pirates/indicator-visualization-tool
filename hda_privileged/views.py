@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.views import View
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
 
 
 from .forms import LoginForm, UploadNewDataForm
@@ -183,3 +183,11 @@ class UploadNewDataView(View):
             self._handle_form_submission(request, form)
 
         return render(request, self.template_name, {'form': form})
+
+class HealthIndicator(TemplateView):
+    model = Health_Indicator
+    template_name = 'hda_privileged/create_metric.html'
+    context_object_name = 'all_indicators_created'
+
+
+
