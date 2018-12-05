@@ -21,7 +21,7 @@ register_converter(FIPS3Converter, 'fips3')
 
 urlpatterns = [
     # the home page
-    path('', DashboardView.as_view(), name='dashboard'),
+    path('', DashboardView.as_view(), name='dashboard2'),
     # displaying single charts:
     # highlighting a single county, identified as state + county + metric
     path('chart/<usps:state>/<fips3:county>/<int:indicator>', SingleCountyChartView.as_view(), name='chart'),
