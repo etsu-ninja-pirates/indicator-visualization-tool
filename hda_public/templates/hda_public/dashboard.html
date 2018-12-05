@@ -1,18 +1,18 @@
 {% extends 'hda_public/base.html' %}
 
-{%block title%}Health Indicators{%endblock%}
+{% block title %} CPH Indicator Visualization Tool {% endblock %}
 
 {% block content %}
-<h4>
-   National Public Health Indicator Visualization and Ranking Tool (NPHIVR)
-</h4>
-
-
-<p>
-    <a href="/state">
-    See your county's ranking!
-    </a>
-</p>
+<div class="jumbotron">
+    <h1>Find a county</h1>
+    <p>
+        This site provides visualization and ranking of national public health indicators for counties in the United States.
+        Find your county and select an indicator to see how it compares to other counties in the nation!
+    </p>
+    <p>
+        <a class="btn btn-primary btn-lg" href="{% url 'state' %}" role="button">Find a county</a>
+    </p>
+</div>
 
 {% endblock %}
 
