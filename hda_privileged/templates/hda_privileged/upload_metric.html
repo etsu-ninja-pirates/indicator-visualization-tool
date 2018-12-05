@@ -1,4 +1,4 @@
-{% extends 'hda_public/base.html' %}
+{% extends 'hda_privileged/base.html' %}
 
 {%block title%}Upload Health Data{%endblock%}
 
@@ -31,7 +31,7 @@
         class="form-horizontal"
         method="POST"
         enctype="multipart/form-data"
-        action="{% url 'priv:upload_metric'%}">
+        action="{% url 'priv:uploadData' %}">
         {% csrf_token %}
 
         {% for field in form.visible_fields %}
@@ -69,7 +69,11 @@
           </div>
         {% endfor %}
 
-        <button type="submit" class="btn btn-primary">Upload</button>
+        <!-- <button type="submit" class="btn btn-primary">Upload</button> -->
+        <form>
+              <input type="button" value="Upload" class="btn-primary" onclick="TimeoutNow();" />
+        </form>
+
 
       </form>
   </div>

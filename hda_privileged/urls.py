@@ -10,12 +10,15 @@ urlpatterns = [
          name='dashboardselected'),
     path('home/',
          login_required(views.PrivDashboardView.as_view(), login_url='priv:login'),
-         name='privdashboard'),
-    # unused health indicator crud URLs
-    path('metric/create/', views.create_metric, name='create_metric'),
-    path('metric/', views.manage_metrics, name='manage_metrics'),
+         name='dashboard1'),
+    # creating new health indicators
+    path('indicator/add/',
+         login_required(views.HealthIndicatorCreate.as_view(), login_url='priv:login'),
+         name='createIndicator'),
     # upload page
-    path('upload/', login_required(views.UploadNewDataView.as_view(), login_url='priv:login'), name='upload_metric'),
+    path('upload/',
+         login_required(views.UploadNewDataView.as_view(), login_url='priv:login'),
+         name='uploadData'),
     # login/logout
     path('login/', views.user_login, name='login'),
     path('logout/', views.logout_view, name='logout'),

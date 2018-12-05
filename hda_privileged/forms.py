@@ -1,6 +1,23 @@
 from django import forms
+from django.forms import ModelForm
+
 from .models import Health_Indicator
 from .upload_reading import UPLOAD_FORMAT_CHOICES, CHOICE_NAME
+
+
+class HealthIndicatorForm(ModelForm):
+    class Meta:
+        model = Health_Indicator
+        fields = ['name']
+        widgets = {
+            'name': forms.TextInput(
+                attrs={
+                    'class': 'form-control',
+                    'placeholder': 'e.g. \'Poor physical health days\'',
+                    'size': 100,
+                }
+            )
+        }
 
 
 class LoginForm(forms.Form):
@@ -33,7 +50,7 @@ class UploadNewDataForm(forms.Form):
     column_format = forms.ChoiceField(
         label='CSV file format',
         help_text='What columns to use to identify counties in the uploaded CSV file',
-        widget=forms.RadioSelect, 
+        widget=forms.RadioSelect,
         choices=UPLOAD_FORMAT_CHOICES,
         required=True,
         initial=CHOICE_NAME

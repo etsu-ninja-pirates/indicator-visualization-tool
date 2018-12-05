@@ -28,7 +28,9 @@ def build_chart_context(context, state_usps, indicator_id, county_fips=None):
     dataset = mostRecentDataSetForIndicator(indicator_id)
 
     # add labels
+    context['state_id'] = state.short
     context['state_name'] = state.full
+    context['indicator_id'] = indicator.id
     context['indicator_name'] = indicator.name
 
     # add percentile values for backing spline curve
@@ -114,11 +116,8 @@ class SingleCountyChartView(TemplateView):
         return populated_context
 
 
-class DashboardView(TemplateView):
+class HomeView(TemplateView):
     template_name = 'hda_public/dashboard.html'
-
-    def get_view(self, request):
-        return render(request, self.template_name)
 
 
 class TableView(TemplateView):
@@ -137,7 +136,7 @@ class StateView(ListView):
     context_object_name = "states"
 
     def get_queryset(self):
-        states = US_State.objects.all()
+        states = US_State.objects.all().order_by('full')
         return states
 
     def get_context_data(self, **kwargs):
@@ -169,7 +168,7 @@ class CountyView(ListView):
 
         if state_short_name is not None:
             associated_state = US_State.objects.filter(short=state_short_name).first()
-            counties = US_County.objects.filter(state=associated_state)
+            counties = associated_state.counties.order_by('name')
 
         return counties
 

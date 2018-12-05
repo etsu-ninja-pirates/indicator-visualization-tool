@@ -1,6 +1,6 @@
 from django.urls import path, register_converter
 from hda_public.views import (
-    DashboardView,
+    HomeView,
     SingleCountyChartView,
     SingleStateChartView,
     TableView,
@@ -21,7 +21,7 @@ register_converter(FIPS3Converter, 'fips3')
 
 urlpatterns = [
     # the home page
-    path('', DashboardView.as_view(), name='dashboard'),
+    path('', HomeView.as_view(), name='home'),
     # displaying single charts:
     # highlighting a single county, identified as state + county + metric
     path('chart/<usps:state>/<fips3:county>/<int:indicator>', SingleCountyChartView.as_view(), name='chart'),
