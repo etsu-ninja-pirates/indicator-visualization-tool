@@ -15,6 +15,11 @@
 <div class="row">
   {% if data_series %}
   <div id="chartdiv"></div>
+    {% if county_name %}
+    <p>See all counties in this state: <a role="button"
+          href="{% url 'chart' state_id indicator_id %}"
+          class="btn btn-default btn-sm">{{ indicator_name }}: {{state_name}}</a></p>
+    {% endif %}
   {% else %}
   <p>Please select a state and health indicator to display data for</p>
   {% endif %}
