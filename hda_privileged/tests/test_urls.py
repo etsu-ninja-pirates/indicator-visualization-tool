@@ -26,8 +26,7 @@ class HappyUrlsTestCase(TestCase):
             ('home', '/priv/home'),
             ('home filtered', '/priv/home/1'),
             ('upload', '/priv/upload'),
-            ('metric', '/priv/metric'),
-            ('create metric', '/priv/metric/create'),
+            ('create indicator', '/priv/indicator/add'),
             ('login', '/priv/login'),
         ]
         # log in first
@@ -55,8 +54,7 @@ class HappyUrlsTestCase(TestCase):
         paths = [
             '/priv/home/',
             '/priv/home/1/',
-            '/priv/metric/',
-            '/priv/metric/create/',
+            '/priv/indicator/add/',
             '/priv/upload/',
         ]
         for path in paths:
