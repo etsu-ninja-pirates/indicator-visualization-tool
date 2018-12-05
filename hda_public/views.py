@@ -114,11 +114,8 @@ class SingleCountyChartView(TemplateView):
         return populated_context
 
 
-class DashboardView(TemplateView):
+class HomeView(TemplateView):
     template_name = 'hda_public/dashboard.html'
-
-    def get_view(self, request):
-        return render(request, self.template_name)
 
 
 class TableView(TemplateView):
