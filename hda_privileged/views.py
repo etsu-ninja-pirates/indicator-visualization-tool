@@ -2,12 +2,13 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, get_user, logout
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.views import View
-from django.views.generic import TemplateView, ListView
+from django.views.generic import TemplateView
+from django.views.generic.edit import CreateView
 
 
-from .forms import LoginForm, UploadNewDataForm
+from .forms import LoginForm, UploadNewDataForm, HealthIndicatorForm
 from .models import Document, Data_Set, Data_Point, Percentile, Health_Indicator
 from .percentile import get_percentiles_for_points, assign_percentiles_to_points
 from .upload_reading import read_data_points_from_file
@@ -55,16 +56,11 @@ def logout_view(request):
     return redirect('priv:login')
 
 
-def create_metric(request):
-    return render(request, 'hda_privileged/create_metric.html')
-
-
-def manage_metrics(request):
-    return render(request, 'hda_privileged/manage_metrics.html')
-
-
-def sampleNavBar(request):
-    return render(request, 'hda_privileged/sample.html')
+class HealthIndicatorCreate(CreateView):
+    template_name = 'hda_privileged/create_metric.html'
+    model = Health_Indicator
+    form_class = HealthIndicatorForm
+    success_url = reverse_lazy('priv:privdashboard')
 
 
 class PrivDashboardView(TemplateView):
