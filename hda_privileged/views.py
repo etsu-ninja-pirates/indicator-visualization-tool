@@ -59,12 +59,6 @@ def create_metric(request):
     return render(request, 'hda_privileged/create_metric.html')
 
 
-def manage_metrics(request):
-    return render(request, 'hda_privileged/manage_metrics.html')
-
-
-def sampleNavBar(request):
-    return render(request, 'hda_privileged/sample.html')
 
 
 class PrivDashboardView(TemplateView):
