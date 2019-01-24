@@ -69,6 +69,7 @@ class HealthIndicatorUpdate(UpdateView):
     template_name = 'hda_privileged/update_metric_form.html'
     pk_url_kwarg = 'post_pk'
 
+    # Django requires this method when using the UpdateView param above
     def get_success_url(self):
         return reverse_lazy('priv:dashboard1')
 
