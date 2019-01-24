@@ -15,6 +15,11 @@ urlpatterns = [
     path('indicator/add/',
          login_required(views.HealthIndicatorCreate.as_view(), login_url='priv:login'),
          name='createIndicator'),
+    # update an existing health indicator
+    path('indicator/update/<int:post_pk>/',
+         login_required(views.HealthIndicatorUpdate.as_view(),
+                        login_url='priv:login'),
+         name='updateIndicator'),
     # upload page
     path('upload/',
          login_required(views.UploadNewDataView.as_view(), login_url='priv:login'),

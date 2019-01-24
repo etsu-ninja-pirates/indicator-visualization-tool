@@ -5,7 +5,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse, reverse_lazy
 from django.views import View
 from django.views.generic import TemplateView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 
 
 from .forms import LoginForm, UploadNewDataForm, HealthIndicatorForm
@@ -61,6 +61,16 @@ class HealthIndicatorCreate(CreateView):
     model = Health_Indicator
     form_class = HealthIndicatorForm
     success_url = reverse_lazy('priv:privdashboard')
+
+
+class HealthIndicatorUpdate(UpdateView):
+    model = Health_Indicator
+    fields = ('name',)
+    template_name = 'hda_privileged/update_metric_form.html'
+    pk_url_kwarg = 'post_pk'
+
+    def get_success_url(self):
+        return reverse_lazy('priv:dashboard1')
 
 
 class PrivDashboardView(TemplateView):
