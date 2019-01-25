@@ -9,31 +9,40 @@
 
 <!-- Column to list clickable indicators from db -->
 <div class="row">
-  <div class="col-sm-2">
+  <div class="col-sm-3">
     <div class="page-header"><h1><small>Indicators</small></h1></div>
       <!--button to reset and display all indicators-->
       <a role="button"
           href="{% url 'priv:dashboard1' %}"
           class="btn btn-primary btn-med"
           style="background-color:#69899f;color: #d7e2e9;">Reset Selection</a>
+      <!-- Stack indicators vertically -->
       <ul class="nav nav-pills nav-stacked">
         <!--add a space to better align left and right column data-->
         <br/>
         {% for ind in indicators %}
-        <li role="presentation" style="border:none" class="{% if selected_indicator and selected_indicator == ind %}active{% endif %}">
-          <a href="{% url 'priv:dashboardselected' ind.id %}">{{ ind.name }}</a>
-        </li>
+        <!-- Align indicator and edit button horizontally -->
+        <ul class="nav nav-pills">
+          <li role="presentation" style="border:none" class="{% if selected_indicator and selected_indicator == ind %}active{% endif %}">
+            <a href="{% url 'priv:dashboardselected' ind.id %}">{{ ind.name }}</a>
+          </li>
+          <li role="presentation" style="border:none">
+            <a href="{% url 'priv:updateIndicator' ind.id %}"><i class="fa fa-edit" style="font-size:10px; color:#69899f;" title="Edit Indicator Name"></i></a>
+          </li>
+        </ul>
         {% endfor %}
       </ul>
+      <br/>
       <!-- Button to add a new indicator -->
       <a role="button"
         href="{% url 'priv:createIndicator' %}"
         class="btn btn-primary btn-med"
         style="background-color:#69899f;color: #d7e2e9;">Add Indicator</a>
+        <br/>
   </div>
 
     <!-- Space between columns -->
-    <div class="col-sm-2"></div>
+    <div class="col-sm-1"></div>
 
     <!-- File list for specific indicator viewable by clickable indicators -->
     <div class="col-sm-8">
