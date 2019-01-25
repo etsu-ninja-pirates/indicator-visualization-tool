@@ -6,7 +6,8 @@ from hda_public.views import (
     TableView,
     StateView,
     CountyView,
-    HealthView
+    HealthView,
+    ChartView,
 )
 from hda_public.converters import StateUSPSConverter, FIPS3Converter
 
@@ -22,6 +23,7 @@ register_converter(FIPS3Converter, 'fips3')
 urlpatterns = [
     # the home page
     path('', HomeView.as_view(), name='home'),
+    path('chart/<int:indicator>', ChartView.as_view(), name='chart'),
     # displaying single charts:
     # highlighting a single county, identified as state + county + metric
     path('chart/<usps:state>/<fips3:county>/<int:indicator>', SingleCountyChartView.as_view(), name='chart'),
