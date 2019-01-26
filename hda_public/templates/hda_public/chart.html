@@ -139,6 +139,15 @@ are not leaked into global scope and potentailly conflict with other globals.
   ];
   // full highcharts configuration object
   const config = {
+  // The tooltip settings position it in the top left corner 
+  // using x and y coordinates 
+    tooltip: {
+        positioner: function () {
+            return { x: 80, y: 50 };
+        },
+        shadow: false,
+        borderWidth: 0,
+        backgroundColor: 'rgba(255,255,255,0.8)'},
     plotOptions: plotOptionsObj,
     xAxis: xAxisObj,
     yAxis: yAxisObj,
