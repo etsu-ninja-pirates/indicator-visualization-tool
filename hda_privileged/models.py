@@ -83,7 +83,8 @@ class Data_Set(models.Model):
     # the health indicator/metric this data set is for
     indicator = models.ForeignKey(
         Health_Indicator,
-        on_delete=models.CASCADE,
+        # do not allow indicator deletion if it is a foreign key in a dataset
+        on_delete=models.PROTECT,
         related_name="data_sets"
     )
     # the year this data set covers

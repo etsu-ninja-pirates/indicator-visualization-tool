@@ -5,7 +5,10 @@ from django.shortcuts import render, redirect
 from django.urls import reverse, reverse_lazy
 from django.views import View
 from django.views.generic import TemplateView
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+# Error message for user if trying to delete a foreign key
+from django.db.models.deletion import ProtectedError
+import json
 
 
 from .forms import LoginForm, UploadNewDataForm, HealthIndicatorForm
@@ -60,7 +63,7 @@ class HealthIndicatorCreate(CreateView):
     template_name = 'hda_privileged/create_metric.html'
     model = Health_Indicator
     form_class = HealthIndicatorForm
-    success_url = reverse_lazy('priv:privdashboard')
+    success_url = reverse_lazy('priv:dashboard1')
 
 
 class HealthIndicatorUpdate(UpdateView):
@@ -70,6 +73,27 @@ class HealthIndicatorUpdate(UpdateView):
     pk_url_kwarg = 'post_pk'
 
     # Django requires this method when using the UpdateView param above
+    def get_success_url(self):
+        return reverse_lazy('priv:dashboard1')
+
+
+class HealthIndicatorDelete(DeleteView):
+    model = Health_Indicator
+    fields = ('name',)
+    template_name = 'hda_privileged/delete_metric.html'
+    pk_url_kwarg = 'post_pk'
+
+    # This method uses json to prevent the user from dealing with a long error list page
+    # in the event of a protected indicator
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        try:
+            self.object.delete()
+            data = 'The chosen indicator has been deleted.'
+        except ProtectedError:
+            data = 'The Health Indicator is tied to existing datasets and cannot be deleted.'
+        return HttpResponse(json.dumps(data), content_type="application/json")
+
     def get_success_url(self):
         return reverse_lazy('priv:dashboard1')
 

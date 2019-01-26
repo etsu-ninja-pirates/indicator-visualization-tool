@@ -29,6 +29,9 @@
           <li role="presentation" style="border:none">
             <a href="{% url 'priv:updateIndicator' ind.id %}"><i class="fa fa-edit" style="font-size:10px; color:#69899f;" title="Edit Indicator Name"></i></a>
           </li>
+          <li role="presentation" style="border:none">
+            <a href="{% url 'priv:deleteIndicator' ind.id %}"><i class="fa fa-remove" style="font-size:15px; color:red;" title="Delete Indicator"></i></a>
+          </li>
         </ul>
         {% endfor %}
       </ul>
