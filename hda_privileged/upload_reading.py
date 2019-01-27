@@ -42,9 +42,13 @@ def get_county_reader(choice):
         return get_county_with_fips(state_fips, county_fips)
 
     def get_county_name(row):
+
         state_name = row['State']
         county_name = row['County']
-        state = US_State.objects.get(full=state_name)
+        try:
+            state = US_State.objects.get(full=state_name)
+        except US_State.DoesNotExist:
+            return None
         # can't use get with startswith for counties, because of situations like:
         # Clay County, GA and Clayton County, GA
         # trying to use startswith=Clay will match both of these
@@ -62,7 +66,8 @@ def get_county_reader(choice):
             # return the first county (shortest name)
             return shortest_first[0]
         else:
-            raise US_County.DoesNotExist(f'Could not find county {county_name} in state {state_name}')
+            # raise US_County.DoesNotExist(f'Could not find county {county_name} in state {state_name}')
+            return None
 
     if choice == CHOICE_NAME:
         return get_county_name
@@ -82,7 +87,7 @@ def read_data_points_from_file(file, choice, data_set):
                 to uniquely identify the county
             - CHOICE_2FIPS : assume the State and County columns contain 2-digit and 3-digit
                 FIPS codes, respectively
-        data_set : a Data_Set model instant. Data_Points read from the file will set this instance
+        data_set : a Data_Set model instance. Data_Points read from the file will set this instance
             as their data_set attribute.
     RETURN:
         A list of Data_Point model objects, one per row in the CSV file, all pointing to
@@ -92,7 +97,24 @@ def read_data_points_from_file(file, choice, data_set):
 
     def make_dp(row):
         county = county_getter(row)
-        value = float(row['Value'])
-        return Data_Point(value=value, county=county, data_set=data_set)
+        # if county is known
+        # add county value checker
+        if county is not None:
+            value = float(row['Value'])
+            return Data_Point(value=value, county=county, data_set=data_set)
+        else:
+            return None
 
-    return [make_dp(row) for row in csv.DictReader(file)]
+    # end make_dp
+
+    unsuccessful_counties_datapoints = []
+    successful_counties_datapoints = []
+
+    for row in csv.DictReader(file):
+        data_point = make_dp(row)
+        if data_point is not None:
+            successful_counties_datapoints.append(data_point)
+        else:
+            unsuccessful_counties_datapoints.append(row['County'])
+
+    return successful_counties_datapoints, unsuccessful_counties_datapoints
