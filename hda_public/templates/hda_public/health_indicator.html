@@ -12,7 +12,7 @@
     <h4>Indicators available for {{county.name}}, {{ state.short }}</h4>
     <div class="list-group">
         {% for indicator in indicators %}
-        <a href="{% url 'chart' state.short county.fips indicator.id %}" class="list-group-item">{{ indicator.name }}</a>
+        <a href="{% url 'chart' indicator.id %}?county={{county.fips5}}" class="list-group-item">{{ indicator.name }}</a>
         {% endfor %}
     </div>
     {% endif %}
