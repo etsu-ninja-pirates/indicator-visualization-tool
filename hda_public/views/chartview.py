@@ -5,6 +5,7 @@ from django.views.generic import TemplateView
 
 from hda_privileged.models import Health_Indicator, US_State, US_County
 
+
 class ChartView(TemplateView):
     '''
     Works with URLs of the following shape:
@@ -75,6 +76,8 @@ class ChartView(TemplateView):
     # if it does, don't add the whole thing to the context, just pass it down the pipe
     # FIXME: this always gets the most recent data set, which may not include the county the user requested
     # (they may have asked for a ocunty that is only included in an older data set for the same indicator!)
+    # Possible fix: make year a part of the path! So this view will now not only what indicator to use,
+    # but what data set to use for that indicator, if there are several for different years!
     def data_set_decorator(self, context, indicator):
         '''
         Stage 2 of context processing
@@ -97,6 +100,7 @@ class ChartView(TemplateView):
             messages.error(self.request, msg)
             return (context, False)
         else:
+            context['year'] = dataset.year
             return (context, True, dataset)
 
     # 3. add the percentiles spline curve to the context
@@ -128,18 +132,11 @@ class ChartView(TemplateView):
 
     def try_get_county(self, full_fips):
         '''
-        Given a 5-digit FIPS code, split the code into state and county parts,
-        try to query the state from the database, then try to query the county
-        from the state. Returns none if either the county ot state are not matched
-        by their respective portion of the FIPS code.
+        Tries to get the county object corresponding to a 5-digit FIPS code.
         '''
-        state_fips = full_fips[0:2]
-        county_fips = full_fips[2:6]
         try:
-            state = US_State.objects.get(fips=state_fips)
-            county = state.counties.get(fips=county_fips)
-            return county
-        except (US_State.DoesNotExist, US_County.DoesNotExist):
+            return US_County.objects.get(fips5=full_fips)
+        except US_County.DoesNotExist:
             return None
 
     def fips_list_decorator(self, context, data_set):
@@ -165,8 +162,9 @@ class ChartView(TemplateView):
                 msg = f"The USPS code '{requested_state}' doesn't match a US State"
                 context['error'] = msg
                 messages.error(self.request, msg)
-                return (context, False, data_set) # stops the pipeline
+                return (context, False, data_set)  # stops the pipeline
             else:
+                context['place_name'] = state.full
                 counties = [county for county in state.counties.all().iterator()]
                 return (context, True, data_set, counties)
         else:
@@ -185,11 +183,19 @@ class ChartView(TemplateView):
             # list of FIPs that did not match a county
             missing = [fips for (fips, county) in query_results if county is None]
 
+            # include context for invalid/unknown FIPS codes
             if len(missing) > 0:
                 missing_str = ", ".join(missing)
                 context['unknown_fips'] = missing_str
                 msg = f"The following FIPS codes did not match a county: {missing_str}"
                 messages.warning(self.request, msg)
+
+            # if we are only showing a single county,
+            # add some extra context to make the view prettier
+            if len(counties) == 1:
+                c = counties[0]
+                context['place_name'] = f"{c.name}, {c.state.short}"
+                context['parent_state'] = c.state.short
 
             return (context, True, data_set, counties)
 
@@ -207,12 +213,8 @@ class ChartView(TemplateView):
 
         # check if there is a data point for each requested county
         # this returns None if the query doesn't match
-        # IMPORTANT to use both filters here, or you may get a data point for a county
-        # with the same partial fips as the one you wanted, but from the wrong state!
         def try_get_point(county):
-            state_fips = county.state.fips
-            county_fips = county.fips
-            return data_set.data_points.filter(county__state__fips=state_fips).filter(county__fips=county_fips).first()
+            return data_set.data_points.filter(county=county).first()
 
         # list of pairs (County, Data_Point or None)
         maybe_points = [(county, try_get_point(county)) for county in counties]
