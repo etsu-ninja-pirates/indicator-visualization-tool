@@ -40,7 +40,7 @@ class GetCountyReaderTestCase(TestCase):
         for case in cases:
             id = case['State'] + " + " + case['County']
             with self.subTest(county=id):
-                county = reader(case)
+                (county, _) = reader(case)
                 fips = county.state.fips + county.fips
                 self.assertEqual(fips, case['fips'])
 
@@ -56,7 +56,7 @@ class GetCountyReaderTestCase(TestCase):
         for case in cases:
             id = "{} + {}".format(case['State'], case['County'])
             with self.subTest(id=id):
-                county = reader(case)
+                (county, _) = reader(case)
                 self.assertEqual(county.state.fips, case['sfips'])
                 self.assertEqual(county.fips, case['cfips'])
                 self.assertEqual(county.name, case['County'])
@@ -73,7 +73,7 @@ class GetCountyReaderTestCase(TestCase):
         for case in cases:
             id = "{} + {}".format(case['sname'], case['cname'])
             with self.subTest(id=id):
-                county = reader(case)
+                (county, _) = reader(case)
                 fips = county.state.fips + county.fips
                 self.assertEqual(fips, case['FIPS'])
                 self.assertEqual(county.name, case['cname'])
@@ -84,7 +84,7 @@ class GetCountyReaderTestCase(TestCase):
     def test_LaSalle(self):
         reader = get_county_reader(CHOICE_NAME)
         row = {'State': 'Louisiana', 'County': 'La Salle'}
-        county = reader(row)
+        (county, _) = reader(row)
         fips = county.state.fips + county.fips
         self.assertEqual(fips, '22059')
 
@@ -92,15 +92,19 @@ class GetCountyReaderTestCase(TestCase):
         reader = get_county_reader(CHOICE_NAME)
         row = {'State': 'Virginia', 'County': 'Not a county'}
         # 29 Jan 2019 - reader changed from throwing exceptions for
-        # unmatched counties, to returning None
-        self.assertIsNone(reader(row))
+        # unmatched counties, to returning tulpes w/ errors
+        (county, error) = reader(row)
+        self.assertIsNone(county)
+        self.assertIsNotNone(error)
 
     def test_bad_state_name(self):
         reader = get_county_reader(CHOICE_NAME)
         row = {'State': 'Not a state', 'County': 'Washington'}
         # 29 Jan 2019 - reader changed from throwing exceptions for
-        # unmatched counties, to returning None
-        self.assertIsNone(reader(row))
+        # unmatched counties, to returning tuples w/ errors
+        (county, error) = reader(row)
+        self.assertIsNone(county)
+        self.assertIsNotNone(error)
 
 
 # these are happy path tests
