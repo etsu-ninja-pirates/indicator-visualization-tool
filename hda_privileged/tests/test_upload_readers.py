@@ -159,3 +159,61 @@ class ReadDataPointsFromFileTestCase(TestCase):
             self.assertEqual(successful[0].data_set, self.test_data_set)
             # check that the type of the value is float
             self.assertIsInstance(successful[0].value, float)
+
+    def file_reading_harness(self, rows, scheme, assertions):
+        '''If you find yourself writing the same test structure over and over again:
+        1. Write some sample rows to a temporary file
+        2. Read the rows back using read_data_points_from_file
+        3. Make assertions on the results of (2)
+        ...then this function is for you!
+        It does exactly as stated - just give it the rows to use, the column schema
+        to use when reading the points back, and a function containing your assertions.
+        '''
+        with tempfile.TemporaryFile(mode='w+', encoding='utf-8', newline='') as tf:
+            # setup the file contents
+            writer = csv.writer(tf)
+            writer.writerows(rows)
+            tf.seek(0)
+
+            # read data points out of the file with function under test
+            data_points, errors = read_data_points_from_file(tf, scheme, self.test_data_set)
+
+            # execute function containing assertions,
+            # passing in the results of running the function under test
+            assertions(data_points, errors)
+
+    def test_unmatched_county_name(self):
+        rows = [
+            ['State', 'County', 'Value'],
+            ['Virginia', 'Montgomery', '0.1'],
+            ['Virginia', 'Roanoke', '0.2'],
+            ['Virginia', 'Withevill', '0.3'],  # should not match!
+        ]
+
+        def asserts(data_points, errors):
+            # check that we have the right number of each result
+            self.assertEqual(len(data_points), 2)
+            self.assertEqual(len(errors), 1)
+            # check that the types of the results are what we expect
+            self.assertIsInstance(data_points[0], Data_Point)
+            self.assertIsInstance(errors[0], str)
+
+        self.file_reading_harness(rows, CHOICE_NAME, asserts)
+
+    def test_unmatched_fips(self):
+        rows = [
+            ['FIPS', 'Value'],
+            ['01001', '0.5'],  # is matched
+            ['00000', '0.5'],  # is not matched
+        ]
+
+        def asserts(matched, unmatched):
+            # should have two matched counties, one unmatched county
+            self.assertEqual(len(matched), 1)
+            self.assertEqual(len(unmatched), 1)
+            # the objects in the matched list are data points,
+            # the objects in the unmatched list are strings (error messages)
+            self.assertIsInstance(matched[0], Data_Point)
+            self.assertIsInstance(unmatched[0], str)
+
+        self.file_reading_harness(rows, CHOICE_1FIPS, asserts)
