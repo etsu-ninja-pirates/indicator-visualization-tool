@@ -91,15 +91,17 @@ class GetCountyReaderTestCase(TestCase):
     def test_bad_county_name(self):
         reader = get_county_reader(CHOICE_NAME)
         row = {'State': 'Virginia', 'County': 'Not a county'}
-        with self.assertRaises(US_County.DoesNotExist):
-            reader(row)
+        # 29 Jan 2019 - reader changed from throwing exceptions for
+        # unmatched counties, to returning None
+        self.assertIsNone(reader(row))
 
 
     def test_bad_state_name(self):
         reader = get_county_reader(CHOICE_NAME)
         row = {'State': 'Not a state', 'County': 'Washington'}
-        with self.assertRaises(US_State.DoesNotExist):
-            reader(row)
+        # 29 Jan 2019 - reader changed from throwing exceptions for
+        # unmatched counties, to returning None
+        self.assertIsNone(reader(row))
 
 
 # these are happy path tests
@@ -148,13 +150,13 @@ class ReadDataPointsFromFileTestCase(TestCase):
             writer.writerows(rows)
             fp.seek(0)
 
-            data_points = read_data_points_from_file(fp, scheme, self.test_data_set)
+            successful, unsuccessful = read_data_points_from_file(fp, scheme, self.test_data_set)
 
             # check that the points have NOT been saved
             self.assertFalse(Data_Point.objects.all().exists())
             # check that we have as many data points as we had rows
-            self.assertEqual(len(data_points), len(rows) - 1)
+            self.assertEqual(len(successful), len(rows) - 1)
             # check that at least the first data point has the data set we specified
-            self.assertEqual(data_points[0].data_set, self.test_data_set)
+            self.assertEqual(successful[0].data_set, self.test_data_set)
             # check that the type of the value is float
-            self.assertIsInstance(data_points[0].value, float)
+            self.assertIsInstance(successful[0].value, float)
