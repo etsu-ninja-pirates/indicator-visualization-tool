@@ -3,14 +3,13 @@ import tempfile
 import unittest
 
 from django.test import TestCase
-from functools import reduce
+
 from hda_privileged.models import (
-    US_State,
-    US_County,
     Health_Indicator,
     Data_Set,
     Data_Point
 )
+
 from hda_privileged.upload_reading import (
     CHOICE_NAME,
     CHOICE_1FIPS,
@@ -18,6 +17,7 @@ from hda_privileged.upload_reading import (
     get_county_reader,
     read_data_points_from_file
 )
+
 
 class GetCountyReaderTestCase(TestCase):
 
@@ -47,9 +47,9 @@ class GetCountyReaderTestCase(TestCase):
     # if you specify CHOICE_1FIPS, the function should use the 'FIPS' column
     def test_fips_choice(self):
         cases = [
-            {'FIPS': '06037', 'State': 'California', 'sfips':'06', 'cfips':'037', 'County': 'Los Angeles County'},
-            {'FIPS': '72033', 'State': 'Puerto Rico', 'sfips':'72', 'cfips':'033', 'County': 'Cataño Municipio'},
-            {'FIPS': '01001', 'State': 'Alabama', 'sfips':'01', 'cfips':'001', 'County': 'Autauga County'},
+            {'FIPS': '06037', 'State': 'California', 'sfips': '06', 'cfips': '037', 'County': 'Los Angeles County'},
+            {'FIPS': '72033', 'State': 'Puerto Rico', 'sfips': '72', 'cfips': '033', 'County': 'Cataño Municipio'},
+            {'FIPS': '01001', 'State': 'Alabama', 'sfips': '01', 'cfips': '001', 'County': 'Autauga County'},
         ]
         reader = get_county_reader(CHOICE_1FIPS)
 
@@ -95,7 +95,6 @@ class GetCountyReaderTestCase(TestCase):
         # unmatched counties, to returning None
         self.assertIsNone(reader(row))
 
-
     def test_bad_state_name(self):
         reader = get_county_reader(CHOICE_NAME)
         row = {'State': 'Not a state', 'County': 'Washington'}
@@ -121,26 +120,26 @@ class ReadDataPointsFromFileTestCase(TestCase):
 
     def test_name_scheme(self):
         rows = [
-            ('State','County','Value'),
-            ('Virginia','Washington','50.1'),
-            ('Tennessee','Washington','60.2'),
-            ('Puerto Rico','Mayagüez Municipio','70.3'),
+            ('State', 'County', 'Value'),
+            ('Virginia', 'Washington', '50.1'),
+            ('Tennessee', 'Washington', '60.2'),
+            ('Puerto Rico', 'Mayagüez Municipio', '70.3'),
         ]
         self.run_test_scheme(rows, CHOICE_NAME)
 
     def test_single_fips_scheme(self):
         rows = [
-            ('FIPS','Value'),
-            ('47179','1.0'),
-            ('72097','2.0'),
+            ('FIPS', 'Value'),
+            ('47179', '1.0'),
+            ('72097', '2.0'),
         ]
         self.run_test_scheme(rows, CHOICE_1FIPS)
 
     def test_two_fips_scheme(self):
         rows = [
-            ('State','County','Value'),
-            ('47','179','2.0'),
-            ('72','097','2.0'),
+            ('State', 'County', 'Value'),
+            ('47', '179', '2.0'),
+            ('72', '097', '2.0'),
         ]
         self.run_test_scheme(rows, CHOICE_2FIPS)
 
