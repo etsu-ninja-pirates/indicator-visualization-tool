@@ -11,19 +11,17 @@ from hda_privileged.models import (
 )
 
 from hda_privileged.upload_reading import (
-    CHOICE_NAME,
     CHOICE_1FIPS,
     CHOICE_2FIPS,
-    get_county_reader,
+    CHOICE_NAME,
+    get_county_with_1fips,
+    get_county_with_2fips,
+    get_county_with_name,
     read_data_points_from_file
 )
 
 
-class GetCountyReaderTestCase(TestCase):
-
-    # if you specify a value for choice that does not exist, return None
-    def test_invalid_choice(self):
-        self.assertIsNone(get_county_reader(""))
+class CountyReaderTestCase(TestCase):
 
     # if you specify CHOICE_NAME, this should return a function Dict -> County
     # that queries the database using state and county names from the dict
@@ -36,7 +34,7 @@ class GetCountyReaderTestCase(TestCase):
             {'fips': '13061', 'State': 'Georgia', 'County': 'Clay'},
             {'fips': '13063', 'State': 'Georgia', 'County': 'Clayton'},
         ]
-        reader = get_county_reader(CHOICE_NAME)
+        reader = get_county_with_name
         for case in cases:
             id = case['State'] + " + " + case['County']
             with self.subTest(county=id):
@@ -51,8 +49,7 @@ class GetCountyReaderTestCase(TestCase):
             {'FIPS': '72033', 'State': 'Puerto Rico', 'sfips': '72', 'cfips': '033', 'County': 'Cataño Municipio'},
             {'FIPS': '01001', 'State': 'Alabama', 'sfips': '01', 'cfips': '001', 'County': 'Autauga County'},
         ]
-        reader = get_county_reader(CHOICE_1FIPS)
-
+        reader = get_county_with_1fips
         for case in cases:
             id = "{} + {}".format(case['State'], case['County'])
             with self.subTest(id=id):
@@ -69,7 +66,7 @@ class GetCountyReaderTestCase(TestCase):
             {'FIPS': '72033', 'State': '72', 'County': '033', 'sname': 'Puerto Rico', 'cname': 'Cataño Municipio'},
             {'FIPS': '01001', 'State': '01', 'County': '001', 'sname': 'Alabama', 'cname': 'Autauga County'},
         ]
-        reader = get_county_reader(CHOICE_2FIPS)
+        reader = get_county_with_2fips
         for case in cases:
             id = "{} + {}".format(case['sname'], case['cname'])
             with self.subTest(id=id):
@@ -82,14 +79,14 @@ class GetCountyReaderTestCase(TestCase):
     # specifies this county, and I'm not sure how to handle that yet.
     @unittest.expectedFailure
     def test_LaSalle(self):
-        reader = get_county_reader(CHOICE_NAME)
+        reader = get_county_with_name
         row = {'State': 'Louisiana', 'County': 'La Salle'}
         (county, _) = reader(row)
         fips = county.state.fips + county.fips
         self.assertEqual(fips, '22059')
 
     def test_bad_county_name(self):
-        reader = get_county_reader(CHOICE_NAME)
+        reader = get_county_with_name
         row = {'State': 'Virginia', 'County': 'Not a county'}
         # 29 Jan 2019 - reader changed from throwing exceptions for
         # unmatched counties, to returning tulpes w/ errors
@@ -98,7 +95,7 @@ class GetCountyReaderTestCase(TestCase):
         self.assertIsNotNone(error)
 
     def test_bad_state_name(self):
-        reader = get_county_reader(CHOICE_NAME)
+        reader = get_county_with_name
         row = {'State': 'Not a state', 'County': 'Washington'}
         # 29 Jan 2019 - reader changed from throwing exceptions for
         # unmatched counties, to returning tuples w/ errors
