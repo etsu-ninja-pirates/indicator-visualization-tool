@@ -181,24 +181,26 @@ class UploadNewDataView(View):
 
         format_choice = form.cleaned_data['column_format']
         doc.file.open(mode='rt')
-        data_points = read_data_points_from_file(doc.file, format_choice, data_set)
+        # read_data_points_from_file returns two values: successful_datapoints, and unsuccessful datapoints
+        successful_data_points, unsuccessful_data_points = read_data_points_from_file(doc.file, format_choice, data_set)
         doc.file.close()
 
         # calculate the percentile-values for this data set
-        percentile_values = get_percentiles_for_points(data_points)
+        percentile_values = get_percentiles_for_points(successful_data_points)
 
         # assign a percentile to each data point
-        assign_percentiles_to_points(data_points, percentile_values)
+        assign_percentiles_to_points(successful_data_points, percentile_values)
 
         # transform our list of tuples List<(P, PV)> into a list of Percentile model objects
         percentile_models = [Percentile(rank=p, value=pv, data_set=data_set) for (p, pv) in percentile_values]
 
         # save all the data points and percentile values using bulk_create, for speed
-        Data_Point.objects.bulk_create(data_points)
+        Data_Point.objects.bulk_create(successful_data_points)
         Percentile.objects.bulk_create(percentile_models)
 
         # This is mostly for debugging, but it's a useful example of using the messages API
         messages.info(request, f"Indicator was {indicator!s}")
+        messages.info(request, f"The rows containing the unknown county names below were not uploaded: \n { ', '.join(unsuccessful_data_points) }")
 
     def get(self, request, *args, **kwargs):
         # unbound form
