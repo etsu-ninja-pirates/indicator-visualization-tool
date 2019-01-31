@@ -20,21 +20,22 @@
       <ul class="nav nav-pills nav-stacked">
         <!--add a space to better align left and right column data-->
         <br/>
-        {% for ind in indicators %}
-        <!-- Align indicator and edit button horizontally -->
-        <ul class="nav nav-pills">
-          <li role="presentation" style="border:none" class="{% if selected_indicator and selected_indicator == ind %}active{% endif %}">
-            <a href="{% url 'priv:dashboardselected' ind.id %}">{{ ind.name }}</a>
-          </li>
-          <li role="presentation" style="border:none">
-            <a href="{% url 'priv:updateIndicator' ind.id %}"><i class="fa fa-edit" style="font-size:10px; color:#69899f;" title="Edit Indicator Name"></i></a>
-          </li>
-          <li role="presentation" style="border:none">
-            <a href="{% url 'priv:deleteIndicator' ind.id %}"><i class="fa fa-remove" style="font-size:15px; color:red;" title="Delete Indicator"></i></a>
-          </li>
-        </ul>
-        {% endfor %}
-      </ul>
+        <table class="table">
+          {% for ind in indicators %}
+          <!-- Align indicator and edit button horizontally -->
+              <tr>
+                  <td role="presentation" style="border:none" class="{% if selected_indicator and selected_indicator == ind %}active{% endif %}">
+                    <a href="{% url 'priv:dashboardselected' ind.id %}">{{ ind.name }}</a>
+                  </td>
+                  <td role="presentation" style="border:none">
+                    <a href="{% url 'priv:updateIndicator' ind.id %}"><i class="fa fa-edit" style="font-size:10px; color:#69899f;" title="Edit Indicator Name"></i></a>
+                  </td>
+                  <td role="presentation" style="border:none">
+                    <a href="{% url 'priv:deleteIndicator' ind.id %}"><i class="fa fa-remove" style="font-size:15px; color:red;" title="Delete Indicator"></i></a>
+                  </td>
+              </tr>
+          {% endfor %}
+        </table>
       <br/>
       <!-- Button to add a new indicator -->
       <a role="button"
