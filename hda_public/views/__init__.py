@@ -9,3 +9,4 @@
 from .chartview import ChartView
 from .homeview import HomeView
 from .location_selection import StateView, CountyView, HealthView
+from .searchview import SearchView
