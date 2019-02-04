@@ -89,12 +89,16 @@
 
                 <!-- search box -->
                 <form class="navbar-form navbar-left" action={% url 'search' %} method="GET">
-                    <div class="form-group">
-                        <input id="search_box" name="query" type="search" class="form-control" placeholder="Search counties..."/>
+                    <div id='search_container' class="form-group">
+                        <input id="search_box"
+                            name="query"
+                            type="search"
+                            class="form-control"
+                            placeholder="Search counties..."/>
                     </div>
                     <button type="submit" class="btn btn-default">Search</button>
                 </form>
-                
+
                 <!-- home button -->
                 <ul class="nav navbar-nav navbar-right">
                     <li class="nav navbar-nav navbar--right">
@@ -140,5 +144,19 @@
 {% endblock %}
 
 
+<!-- autocomplete for search -->
+<!-- this loads the library: typeahead.js + bloodhound.js -->
+<script src="{% static 'js/typeahead.bundle.js' %}"></script>
+<!-- this loads a function that sets up our instance of the library -->
+<script src="{% static 'js/typeahead_config.js' %}"></script>
+<!-- this executes that function. it requires some URLs that only the template generator knows
+the canonical version of, so we construct them here and pass them in as strings -->
+<script>
+    TypeaheadSetup.init(
+        "{% url 'api:search_county_prefetch' %}",
+        "{% url 'api:search_suggestions' '%Q%' %}",
+        "{{ '%Q%' | urlencode }}"
+    );
+</script>
 </body>
 </html>

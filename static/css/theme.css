@@ -115,3 +115,34 @@ p.dashboard {
   border-radius: 5px;
   border-width: 5px 5px 5px 5px;
 }
+
+.tt-menu {
+  width: 250px;
+  background-color: #ffffff;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  margin: 6px 0;
+  padding: 4px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#search_container .tt-menu {
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.tt-suggestion {
+  padding: 3px 10px;
+  line-height: 18px;
+}
+
+.tt-suggestion:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #0097cf;
+}
+
+.tt-suggestion.tt-cursor {
+  color: #fff;
+  background-color: #0097cf;
+}
