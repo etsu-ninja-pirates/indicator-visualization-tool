@@ -36,6 +36,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'hda_privileged',
     'hda_public',
+    'app_api',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
