@@ -8,9 +8,10 @@ class SearchView(TemplateView):
 
     def find_county_results(self, query):
         # Orders results first by state, then by name. This does not put the most relevant result
-        #  first, but groups results from the same state together, which may make them easier to scan through?
-        name_matches = US_County.objects.filter(name__icontains=query).order_by('state__short', 'name')
-        return list(name_matches.iterator())[:100]
+        # first, but groups results from the same state together, which may make them easier to scan through?
+        matches = US_County.objects.filter(search_str__icontains=query).order_by('state', 'name')
+        # truncate to no more than 100 results!
+        return list(matches.iterator())[:100]
 
     def find_state_results(self, query):
         name_matches = US_State.objects.filter(full__istartswith=query)
