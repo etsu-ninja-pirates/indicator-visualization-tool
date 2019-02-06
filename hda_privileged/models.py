@@ -1,10 +1,13 @@
 from time import gmtime, strftime
 
-from django.db import models
-from django.db.models.functions import Concat
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.core.validators import MinValueValidator, MaxValueValidator
+
+from django.db import models
+from django.db.models import Value
+from django.db.models.functions import Concat
+
 from django.utils.text import slugify
 
 
@@ -144,7 +147,12 @@ class US_County_Manager(models.Manager):
     def get_queryset(self):
         """Overrides the models.Manager method"""
         qs = super(US_County_Manager, self).get_queryset()
+        # add the "fips5" property - full 5-digit FIPs code
         qs = qs.annotate(fips5=Concat('state__fips', 'fips'))
+        # add the "search_str" property - a human readable string including the state USPS code,
+        # that uniquely identifies this county (or very nearly so)
+        # used for creating search tokens and autocomplete values
+        qs = qs.annotate(search_str=Concat('name', Value(' '), 'state__short'))
         return qs
 
 
