@@ -10,3 +10,6 @@ def datum_for_county(county):
         'name': county.name,
         'state': county.state.full,
     }
+
+def datum_for_state(state):
+    return state.full
