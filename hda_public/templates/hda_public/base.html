@@ -91,6 +91,7 @@
                 <form class="navbar-form navbar-left" action={% url 'search' %} method="GET">
                     <div id='search_container' class="form-group">
                         <input id="search_box"
+                            autocomplete="off"
                             name="query"
                             type="search"
                             class="form-control"
@@ -152,11 +153,18 @@
 <!-- this executes that function. it requires some URLs that only the template generator knows
 the canonical version of, so we construct them here and pass them in as strings -->
 <script>
-    TypeaheadSetup.init(
-        "{% static 'prefetch/county.json' %}",
-        "{% url 'api:search_suggestions' '%Q%' %}",
-        "{{ '%Q%' | urlencode }}"
-    );
+    const typeahead_cfg = {
+        prefetch: {
+            county: "{% static 'prefetch/county.json' %}",
+            state: "{% static 'prefetch/state.json' %}"
+        },
+        remote: {
+            county: "{% url 'api:suggest_county' '%Q%' %}",
+            state: "{% url 'api:suggest_state' '%Q%' %}",
+            wildcard: "{{ '%Q%' | urlencode }}",
+        }
+    };
+    TypeaheadSetup.init(typeahead_cfg);
 </script>
 </body>
 </html>

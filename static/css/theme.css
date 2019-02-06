@@ -146,3 +146,11 @@ p.dashboard {
   color: #fff;
   background-color: #0097cf;
 }
+
+.suggestion-category {
+  margin: 0 10px 5px 10px;
+  padding: 6px 0 3px 0;
+  border-bottom: 1px solid #ccc;
+  font-size: smaller;
+  font-variant-caps: small-caps;
+}
