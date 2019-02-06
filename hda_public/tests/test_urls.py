@@ -17,9 +17,7 @@ class HappyUrlsTestCase(TestCase):
     def testPublicUrlsLoad(self):
         paths_to_test = [
             ('home', ''),
-            ('state chart', '/chart/al/1'),
-            ('county chart', '/chart/al/001/1'),
-            ('table', '/table'),
+            ('chart', '/chart/1?state=al'),
             ('select state', '/state'),
             ('select county', '/state/AL'),
             ('select indicator', '/state/AL/001'),

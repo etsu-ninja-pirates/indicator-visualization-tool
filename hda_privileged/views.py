@@ -5,7 +5,10 @@ from django.shortcuts import render, redirect
 from django.urls import reverse, reverse_lazy
 from django.views import View
 from django.views.generic import TemplateView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+# Error message for user if trying to delete a foreign key
+from django.db.models.deletion import ProtectedError
+import json
 
 
 from .forms import LoginForm, UploadNewDataForm, HealthIndicatorForm
@@ -60,7 +63,39 @@ class HealthIndicatorCreate(CreateView):
     template_name = 'hda_privileged/create_metric.html'
     model = Health_Indicator
     form_class = HealthIndicatorForm
-    success_url = reverse_lazy('priv:privdashboard')
+    success_url = reverse_lazy('priv:dashboard1')
+
+
+class HealthIndicatorUpdate(UpdateView):
+    model = Health_Indicator
+    fields = ('name',)
+    template_name = 'hda_privileged/update_metric_form.html'
+    pk_url_kwarg = 'post_pk'
+
+    # Django requires this method when using the UpdateView param above
+    def get_success_url(self):
+        return reverse_lazy('priv:dashboard1')
+
+
+class HealthIndicatorDelete(DeleteView):
+    model = Health_Indicator
+    fields = ('name',)
+    template_name = 'hda_privileged/delete_metric.html'
+    pk_url_kwarg = 'post_pk'
+
+    # This method uses json to prevent the user from dealing with a long error list page
+    # in the event of a protected indicator
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        try:
+            self.object.delete()
+            data = 'The chosen indicator has been deleted.'
+        except ProtectedError:
+            data = 'The Health Indicator is tied to existing datasets and cannot be deleted.'
+        return HttpResponse(json.dumps(data), content_type="application/json")
+
+    def get_success_url(self):
+        return reverse_lazy('priv:dashboard1')
 
 
 class PrivDashboardView(TemplateView):
@@ -146,24 +181,26 @@ class UploadNewDataView(View):
 
         format_choice = form.cleaned_data['column_format']
         doc.file.open(mode='rt')
-        data_points = read_data_points_from_file(doc.file, format_choice, data_set)
+        # read_data_points_from_file returns two values: successful_datapoints, and unsuccessful datapoints
+        successful_data_points, unsuccessful_data_points = read_data_points_from_file(doc.file, format_choice, data_set)
         doc.file.close()
 
         # calculate the percentile-values for this data set
-        percentile_values = get_percentiles_for_points(data_points)
+        percentile_values = get_percentiles_for_points(successful_data_points)
 
         # assign a percentile to each data point
-        assign_percentiles_to_points(data_points, percentile_values)
+        assign_percentiles_to_points(successful_data_points, percentile_values)
 
         # transform our list of tuples List<(P, PV)> into a list of Percentile model objects
         percentile_models = [Percentile(rank=p, value=pv, data_set=data_set) for (p, pv) in percentile_values]
 
         # save all the data points and percentile values using bulk_create, for speed
-        Data_Point.objects.bulk_create(data_points)
+        Data_Point.objects.bulk_create(successful_data_points)
         Percentile.objects.bulk_create(percentile_models)
 
         # This is mostly for debugging, but it's a useful example of using the messages API
         messages.info(request, f"Indicator was {indicator!s}")
+        messages.info(request, f"The rows containing the unknown county names below were not uploaded: \n { ', '.join(unsuccessful_data_points) }")
 
     def get(self, request, *args, **kwargs):
         # unbound form

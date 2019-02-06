@@ -1,6 +1,7 @@
 from time import gmtime, strftime
 
 from django.db import models
+from django.db.models.functions import Concat
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.core.validators import MinValueValidator, MaxValueValidator
@@ -82,7 +83,8 @@ class Data_Set(models.Model):
     # the health indicator/metric this data set is for
     indicator = models.ForeignKey(
         Health_Indicator,
-        on_delete=models.CASCADE,
+        # do not allow indicator deletion if it is a foreign key in a dataset
+        on_delete=models.PROTECT,
         related_name="data_sets"
     )
     # the year this data set covers
@@ -126,11 +128,35 @@ class US_State(models.Model):
         verbose_name = 'US state'
 
 
+# This overrides the default manager to add a new computed field to counties when
+# they are read from the database. We could make this more efficient by actually
+# storing the full 5-digit fips code for every county, rather than the partial code.
+# Solution from here: https://stackoverflow.com/a/42491803/5111071
+# We could add an @property to the model class, but this way we can use the property
+# to filter a queryset!
+class US_County_Manager(models.Manager):
+    """QuerySet manager for US_County class to add *non-database* fields.
+
+    A @property in the model cannot be used because QuerySets (eg. return
+    value from .all()) are directly tied to the database Fields -
+    this does not include @property attributes."""
+
+    def get_queryset(self):
+        """Overrides the models.Manager method"""
+        qs = super(US_County_Manager, self).get_queryset()
+        qs = qs.annotate(fips5=Concat('state__fips', 'fips'))
+        return qs
+
+
 class US_County(models.Model):
     """
     Represents a county or county-equivalent in a State in the U.S.
     We populate the DB with a known-good set of these; they should not be user-generated
     """
+    # overriden model manager
+    objects = US_County_Manager()
+
+    # database fields
     fips = models.CharField(max_length=3)
     name = models.CharField(max_length=200)
     state = models.ForeignKey(US_State, related_name='counties', on_delete=models.CASCADE)

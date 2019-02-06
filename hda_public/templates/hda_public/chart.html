@@ -1,28 +1,36 @@
 {% extends "hda_public/base.html" %}
-{% block title %}Health Chart{% endblock %}
-{% block content %}
 
-<div class="row">
-  <ul class="nav nav-pills">
-    {% for year in available_years %}
-    <li role="presentation" class="{% if selected_year and selected_year == year %}active{% endif %}">
-      <a href="{% url 'chart' year %}">{{ year }}</a>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
+{% block title %}{{indicator.name}} ({{year}}){% endblock %}
+
+{% block content %}
 
 <div class="row">
   {% if data_series %}
   <div id="chartdiv"></div>
-    {% if county_name %}
+    {% if parent_state %}
     <p>See all counties in this state: <a role="button"
-          href="{% url 'chart' state_id indicator_id %}"
-          class="btn btn-default btn-sm">{{ indicator_name }}: {{state_name}}</a></p>
+          href="{% url 'chart' indicator.id %}?state={{ parent_state | urlencode }}"
+          class="btn btn-default btn-sm">{{ indicator.name }}: {{parent_state}}</a></p>
     {% endif %}
   {% else %}
   <p>Please select a state and health indicator to display data for</p>
   {% endif %}
+</div>
+
+<div class="row">
+  <div class='form-group'>
+    {% if messages %}
+      <ul class="messages">
+        {% for message in messages %}
+          <div
+            class="alert alert-{{ message.level_tag }}"
+            role="alert">
+            {{ message }}
+          </div>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
 </div>
 
 {% endblock %}
@@ -39,10 +47,12 @@
 
 {% if data_series %}
 <script>
+/*
 {% comment %}
 This is a self-executing function; we wrap our JS code in these so that our variables
 are not leaked into global scope and potentailly conflict with other globals.
 {% endcomment %}
+*/
 (function() {
   // variable to hold the tooltip when we clone it
   var cloneToolTip = null;
@@ -139,12 +149,21 @@ are not leaked into global scope and potentailly conflict with other globals.
   ];
   // full highcharts configuration object
   const config = {
+  // The tooltip settings position it in the top left corner 
+  // using x and y coordinates 
+    tooltip: {
+        positioner: function () {
+            return { x: 80, y: 50 };
+        },
+        shadow: false,
+        borderWidth: 0,
+        backgroundColor: 'rgba(255,255,255,0.8)'},
     plotOptions: plotOptionsObj,
     xAxis: xAxisObj,
     yAxis: yAxisObj,
     series: seriesArr,
     title: {
-      text: '{{indicator_name}} - {{state_name}} - {{county_name}}'
+      text: '{{indicator.name}} ({{year}})' {% if place_name %} + ' {{place_name}}'{% endif %}
     }
   };
   // create the chart!
