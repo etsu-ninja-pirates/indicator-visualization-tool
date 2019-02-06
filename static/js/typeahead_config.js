@@ -9,6 +9,14 @@ var TypeaheadSetup = (function() {
             return datum.id;
         }
 
+        function render_suggestion(context) {
+            return "<div>" +
+                context.name +
+                " <small>" +
+                context.state +
+                "</small></div>";
+        }
+
         const county_source = new Bloodhound({
             queryTokenizer: Bloodhound.tokenizers.whitespace,
             datumTokenizer: get_tokens,
@@ -23,13 +31,17 @@ var TypeaheadSetup = (function() {
         $("#search_box").typeahead(
             {
                 highlight: true,
+                autoselect: true,
                 minLength: 2
             },
             {
                 name: "counties",
                 source: county_source,
-                display: "display",
-                limit: 15
+                displayKey: "value",
+                limit: 15,
+                templates: {
+                    suggestion: render_suggestion
+                }
             }
         );
     }

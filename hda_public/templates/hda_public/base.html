@@ -153,7 +153,7 @@
 the canonical version of, so we construct them here and pass them in as strings -->
 <script>
     TypeaheadSetup.init(
-        "{% url 'api:search_county_prefetch' %}",
+        "{% static 'prefetch/county.json' %}",
         "{% url 'api:search_suggestions' '%Q%' %}",
         "{{ '%Q%' | urlencode }}"
     );
