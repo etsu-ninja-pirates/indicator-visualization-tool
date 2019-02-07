@@ -5,6 +5,7 @@ from hda_public.views import (
     CountyView,
     HealthView,
     ChartView,
+    SearchView,
 )
 from hda_public.converters import StateUSPSConverter, FIPS3Converter
 
@@ -26,4 +27,6 @@ urlpatterns = [
     path('state/', StateView.as_view(), name='state'),
     path('state/<usps:short>', CountyView.as_view(), name='county'),
     path('state/<usps:short>/<fips3:fips>', HealthView.as_view(), name='metric'),
+    # search results page
+    path('search/', SearchView.as_view(), name='search'),
 ]
