@@ -197,7 +197,7 @@ class ReadDataPointsFromFileTestCase(TestCase):
             self.assertEqual(len(errors), 1)
             # check that the types of the results are what we expect
             self.assertIsInstance(data_points[0], Data_Point)
-            self.assertIsInstance(errors[0], str)
+            self.assertIsInstance(errors, dict)
 
         self.file_reading_harness(rows, CHOICE_NAME, asserts)
 
@@ -215,6 +215,6 @@ class ReadDataPointsFromFileTestCase(TestCase):
             # the objects in the matched list are data points,
             # the objects in the unmatched list are strings (error messages)
             self.assertIsInstance(matched[0], Data_Point)
-            self.assertIsInstance(unmatched[0], str)
+            self.assertIsInstance(unmatched, dict)
 
         self.file_reading_harness(rows, CHOICE_1FIPS, asserts)

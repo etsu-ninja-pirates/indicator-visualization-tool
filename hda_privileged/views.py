@@ -10,7 +10,6 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.db.models.deletion import ProtectedError
 import json
 
-
 from .forms import LoginForm, UploadNewDataForm, HealthIndicatorForm
 from .models import Document, Data_Set, Data_Point, Percentile, Health_Indicator
 from .percentile import get_percentiles_for_points, assign_percentiles_to_points
@@ -113,7 +112,7 @@ class PrivDashboardView(TemplateView):
         selected_id = self.kwargs.get('indicator', None)
         # now check if that ID is valid - is there an indicator with that ID?
         # use filter + first because get will throw an error if the object doesn't exist;
-        # whereas this wil lhave a value of None if it doesn't exist
+        # whereas this will have a value of None if it doesn't exist
         selected_indicator = indicators.filter(pk=selected_id).first()
         context['selected_indicator'] = selected_indicator
 
@@ -141,7 +140,7 @@ class UploadNewDataView(View):
         uploaded_file = self._get_uploaded_file(request)
 
         okay = uploaded_file is not None and \
-            uploaded_file.name.lower().endswith(('.csv'))
+               uploaded_file.name.lower().endswith(('.csv'))
 
         if not okay:
             messages.warning(request, "Error in file upload, file was not CSV")
@@ -182,7 +181,7 @@ class UploadNewDataView(View):
         format_choice = form.cleaned_data['column_format']
         doc.file.open(mode='rt')
         # read_data_points_from_file returns two values: successful_datapoints, and unsuccessful datapoints
-        successful_data_points, unsuccessful_data_points = read_data_points_from_file(doc.file, format_choice, data_set)
+        successful_data_points, invalid_counties_and_states = read_data_points_from_file(doc.file, format_choice, data_set)
         doc.file.close()
 
         # calculate the percentile-values for this data set
@@ -197,10 +196,12 @@ class UploadNewDataView(View):
         # save all the data points and percentile values using bulk_create, for speed
         Data_Point.objects.bulk_create(successful_data_points)
         Percentile.objects.bulk_create(percentile_models)
+        #
 
         # This is mostly for debugging, but it's a useful example of using the messages API
         messages.info(request, f"Indicator was {indicator!s}")
-        messages.info(request, f"The rows containing the unknown county names below were not uploaded: \n { ', '.join(unsuccessful_data_points) }")
+
+        return invalid_counties_and_states
 
     def get(self, request, *args, **kwargs):
         # unbound form
@@ -213,14 +214,12 @@ class UploadNewDataView(View):
 
         if form.is_valid() and self._check_file_ext(request):
             # Is there a Django-y way of adding more validation?
-            self._handle_form_submission(request, form)
+            invalid_counties_and_states = self._handle_form_submission(request, form)
 
-        return render(request, self.template_name, {'form': form})
+        return render(request, self.template_name, {'form': form,'invalid_counties_and_states':invalid_counties_and_states})
+
 
 class HealthIndicator(TemplateView):
     model = Health_Indicator
     template_name = 'hda_privileged/create_metric.html'
     context_object_name = 'all_indicators_created'
-
-
-
