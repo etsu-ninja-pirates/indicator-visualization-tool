@@ -7,6 +7,9 @@ from hda_public.views import (
     ChartView,
     SearchView,
 )
+
+# only successful method of import for this new view
+from hda_public.views.location_selection import HealthStatePathView
 from hda_public.converters import StateUSPSConverter, FIPS3Converter
 
 # custom path converters to validate:
@@ -26,7 +29,10 @@ urlpatterns = [
     # location selection pages
     path('state/', StateView.as_view(), name='state'),
     path('state/<usps:short>', CountyView.as_view(), name='county'),
-    path('state/<usps:short>/<fips3:fips>', HealthView.as_view(), name='metric'),
+    path('state/<usps:short>/<fips3:fips>',
+         HealthView.as_view(), name='metric'),
+    path('state/indicator/<usps:short>/',
+         HealthStatePathView.as_view(), name='selection_state_metric'),
     # search results page
     path('search/', SearchView.as_view(), name='search'),
 ]

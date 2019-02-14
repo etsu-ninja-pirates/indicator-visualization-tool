@@ -88,3 +88,40 @@ class HealthView(TemplateView):
             context['error'] = 'Missing a valid state or county identifier in the URL for this page'
 
         return context
+
+# User chose state path
+
+
+class HealthStatePathView(TemplateView):
+    template_name = 'hda_public/health_indicator.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        state_short = self.kwargs.get('short', None)
+
+        # user selected state from dashboard
+        if state_short is not None:
+            # get the state the user wants
+            chosen_state = US_State.objects.get(short=state_short.upper())
+            counties = US_County.objects.filter(state=chosen_state)
+            for county in counties:
+                dp = county.data_points
+            # make a list of every data set containing a data point connected to counties in this state,
+            # by starting with the county data points and going backwards.
+            # the 'select_related' does *not* affect the result of the query, only how many database queries are required.
+            available_data_sets = [
+                dp.data_set for dp in county.data_points.all().select_related('data_set')]
+            # several data sets may be for the same indicator (perhaps different datasets for different years).
+            # this extracts the indicator from each dataset into a list, then puts that list into a python set object,
+            # which can remove the duplicates for us.
+            unique_indicators = set(
+                [ds.indicator for ds in available_data_sets])
+            # pack up the context - including whole objects so we can use multiple properties in the template
+            context['state'] = chosen_state
+            context['county'] = counties
+            context['indicators'] = unique_indicators
+        else:
+            context['error'] = 'Missing a valid state or county identifier in the URL for this page'
+
+        return context

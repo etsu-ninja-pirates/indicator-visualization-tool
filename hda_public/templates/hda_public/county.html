@@ -1,5 +1,5 @@
 {% extends 'hda_public/base.html' %}
-{%block title%}Health Indicators{%endblock%}
+{%block title%}Counties{%endblock%}
 {% block content %}
 	<div id="container">
         <a href="/state"> << View all states </a> <h3>{{ state}} </h3>
@@ -14,7 +14,7 @@
         {% for county in counties %}
 				<tr>
                     <td>{{ county.fips }}</td>
-                    <td><a href="/state/{{ state_short_name }}/{{ county.fips }}">{{ county.name }}</a></td>
+                    <td><a href="/state/{{ state_short_name }}/{{ county.fips }}?choice=county">{{ county.name }}</a></td>
                 </tr>
         {% endfor %}
         </tbody>
