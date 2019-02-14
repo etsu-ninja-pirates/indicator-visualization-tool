@@ -13,8 +13,14 @@
         <tbody>
         {% for state in states %}
 				<tr>
-                    <td><a href="/state/{{ state.short }}">{{ state.short }}</a> </td>
-                    <td><a href="/state/{{ state.short }}">{{ state.full }}</a> </td>
+                    <!-- Did user click county or state button on dashboard -->
+                {% if 'choice=county' in request.GET.urlencode %}
+                    <td><a href="{% url 'county' state.short %}?choice=county">{{ state.short }}</a> </td>
+                    <td><a href="{% url 'county' state.short %}?choice=county">{{ state.full }}</a> </td>
+                {% else %}
+                    <td><a href="{% url 'selection_state_metric' state.short %}?choice=state">{{ state.short }}</a> </td>
+                    <td><a href="{% url 'selection_state_metric' state.short %}?choice=state">{{ state.full }}</a> </td>
+                {% endif %}
                 </tr>
         {% endfor %}
         </tbody>

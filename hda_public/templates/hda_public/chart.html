@@ -7,14 +7,22 @@
 <div class="row">
   {% if data_series %}
   <div id="chartdiv"></div>
-    {% if parent_state %}
-    <p>See all counties in this state: <a role="button"
-          href="{% url 'chart' indicator.id %}?state={{ parent_state | urlencode }}"
-          class="btn btn-default btn-sm">{{ indicator.name }}: {{parent_state}}</a></p>
-    {% endif %}
+  
+    {% if parent_state %}    
+      <p>See all counties in this state: <a role="button"
+            href="{% url 'chart' indicator.id %}?state={{ parent_state | urlencode }}"
+            class="btn btn-default btn-sm">{{ indicator.name }}: {{parent_state}}</a></p>
+    {% else %}
+    <!-- Future development -->
+      <p>See a county in this state: <a role="button"
+          href="#"
+          class="btn btn-default btn-sm">{{ indicator.name }}: {{state.short}}</a></p>     
+    {% endif %}    
+  
   {% else %}
   <p>Please select a state and health indicator to display data for</p>
   {% endif %}
+  
 </div>
 
 <div class="row">
