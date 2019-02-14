@@ -101,23 +101,8 @@ class ChartView(TemplateView):
             return (context, False)
         else:
             context['year'] = dataset.year
-            return (context, True, dataset)
-
-    # 3. add the percentiles spline curve to the context
-    def percentiles_decorator(self, context, data_set):
-        '''
-        Context processing stage 3:
-        Given a data set object, serializes the percentiles for that data set in a format
-        HighCharts likes and adds the serialized data to the context object for display.
-
-        Input: context, data set
-        Output: context, data_set
-        Errors: none
-        '''
-        percentiles = data_set.percentiles.all().order_by('rank')
-        percentiles_json = json.dumps([(p.rank * 100, p.value) for p in percentiles])
-        context['data_percentiles'] = percentiles_json
-        return (context, True, data_set)
+            context['data_set_id'] = dataset.id
+            return (context, True)
 
     def try_get_state(self, usps):
         '''
@@ -139,108 +124,66 @@ class ChartView(TemplateView):
         except US_County.DoesNotExist:
             return None
 
-    def fips_list_decorator(self, context, data_set):
-        '''
-        Stage 4 of context processing:
-
-        Use the GET array on the request to determine what counties are being requested.
-        Two options: either
-            ?state=TN -> use all the counties in that state
-            ?county=23001,23002,34003,... -> use the counties listed by FIPs code
-
-        Inputs: context, data set
-        Outputs: context, data set, list of US_County
-        Errors: No state matches the 'state' query string
-        Warnings: A FIPS code was given that does not match a county
-        '''
-        # if the state parameter exists then we will use that and IGNORE any county parameter
+    # 3.a: what counties were requested? (Using the 'state' parameter)
+    def state_request_decorator(self, context):
         requested_state = self.request.GET.get('state', None)
-        if requested_state is not None:
+
+        # Guard: if there is no state query string,
+        # do nothing and let the next context processing step proceed
+        if requested_state is None:
+            return (context, True)
+
+        state = self.try_get_state(requested_state)
+        if state is None:
             # the state parameter might not match an actual state!
-            state = self.try_get_state(requested_state)
-            if state is None:
-                msg = f"The USPS code '{requested_state}' doesn't match a US State"
-                context['error'] = msg
-                messages.error(self.request, msg)
-                return (context, False, data_set)  # stops the pipeline
-            else:
-                context['place_name'] = state.full
-                counties = [county for county in state.counties.all().iterator()]
-                return (context, True, data_set, counties)
+            msg = f"The USPS code '{requested_state}' doesn't match a US State"
+            context['error'] = msg
+            messages.error(self.request, msg)
+            return (context, False)  # stops the pipeline
         else:
-            # otherwise, look for a "county" parameter that lists 5-digit FIPs codes
-            fips_str = self.request.GET.get('county', None)
+            context['place_name'] = state.full
+            context['counties'] = [county.fips5 for county in state.counties.all().iterator()]
+            return (context, True)
 
-            if fips_str is None:
-                messages.warning(self.request, 'No counties were selected; this chart will only show the percentile distribution.')
-                return (context, True, data_set, [])
+    # 3.b: what counties were requested? (Using the 'county' parameter)
+    def county_request_decorator(self, context):
 
-            fips_list = fips_str.split(',')
-            # list of pairs, (FIPs, County or None)
-            query_results = [(fips, self.try_get_county(fips)) for fips in fips_list]
-            # list of County
-            counties = [county for (_, county) in query_results if county is not None]
-            # list of FIPs that did not match a county
-            missing = [fips for (fips, county) in query_results if county is None]
+        # Guard: if another decorator already added counties, do nothing!
+        # (We could change this to merge additional counties if we wanted?)
+        if 'counties' in context and len(context['counties']) > 0:
+            return (context, True)
 
-            # include context for invalid/unknown FIPS codes
-            if len(missing) > 0:
-                missing_str = ", ".join(missing)
-                context['unknown_fips'] = missing_str
-                msg = f"The following FIPS codes did not match a county: {missing_str}"
-                messages.warning(self.request, msg)
+        # No counties added yet: try to get the 'county' parameter from GET query string
+        fips_str = self.request.GET.get('county', None)
 
-            # if we are only showing a single county,
-            # add some extra context to make the view prettier
-            if len(counties) == 1:
-                c = counties[0]
-                context['place_name'] = f"{c.name}, {c.state.short}"
-                context['parent_state'] = c.state.short
+        # Guard: there was no paramater specifying what counties to show!
+        if fips_str is None:
+            messages.warning(self.request, 'No counties were selected; this chart will only show the percentile distribution.')
+            return (context, True)
 
-            return (context, True, data_set, counties)
+        fips_list = fips_str.split(',')
+        # list of pairs, (FIPs, County or None)
+        query_results = [(fips, self.try_get_county(fips)) for fips in fips_list]
+        # list of County
+        counties = [county for (_, county) in query_results if county is not None]
+        # list of FIPs that did not match a county
+        missing = [fips for (fips, county) in query_results if county is None]
 
-    def data_point_decorator(self, context, data_set, counties):
-        '''
-        Stage 5 of context processing:
-        Given a data set and list of counties, get data points for each of those counties
-        and serialize them into HighCharts-friendly format.
-
-        Inputs: context, data set, list of counties
-        Outputs: context
-        Errors: none
-        Warnings: requested counties that did not have a data point in the data set
-        '''
-
-        # check if there is a data point for each requested county
-        # this returns None if the query doesn't match
-        def try_get_point(county):
-            return data_set.data_points.filter(county=county).first()
-
-        # list of pairs (County, Data_Point or None)
-        maybe_points = [(county, try_get_point(county)) for county in counties]
-        # list of valid data points
-        have_value = [point for (_, point) in maybe_points if point is not None]
-        # list of counties that did not have a data point in this data set
-        missing_value = [county for (county, point) in maybe_points if point is None]
-
-        # now convert all the valid points to dictionaries that we can serialize for HighCharts
-        def point_to_struct(point):
-            return {
-                'x': point.rank * 100,
-                'y': point.value,
-                'name': point.county.name,
-            }
-
-        structs = [point_to_struct(p) for p in have_value]
-        context['data_series'] = json.dumps(structs)
-
-        # attach info about any counties that were not in the data set
-        if len(missing_value) > 0:
-            combined_str = ", ".join([str(c) for c in missing_value])
-            context['missing_point'] = combined_str
-            msg = f"The following counties did not have a value in this data set: {combined_str}"
+        # include context for invalid/unknown FIPS codes
+        if len(missing) > 0:
+            missing_str = ", ".join(missing)
+            context['unknown_fips'] = missing_str
+            msg = f"The following FIPS codes did not match a county: {missing_str}"
             messages.warning(self.request, msg)
 
+        # if we are only showing a single county,
+        # add some extra context to make the view prettier
+        if len(counties) == 1:
+            c = counties[0]
+            context['place_name'] = f"{c.name}, {c.state.short}"
+            context['parent_state'] = c.state.short
+
+        context['counties'] = [c.fips5 for c in counties]
         return (context, True)
 
     # A helper function for chaining together context processing functions.
@@ -256,9 +199,8 @@ class ChartView(TemplateView):
         decorators = [
             self.indicator_decorator,
             self.data_set_decorator,
-            self.percentiles_decorator,
-            self.fips_list_decorator,
-            self.data_point_decorator,
+            self.state_request_decorator,
+            self.county_request_decorator,
         ]
 
         context, keep_going, other_args = context, True, []
