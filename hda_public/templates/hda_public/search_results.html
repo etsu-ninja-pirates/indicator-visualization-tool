@@ -30,7 +30,9 @@
       <ul>
       {% for state in states %}
         {% comment %} TODO: link to page where we can choose an indicator for a state! {% endcomment %}
-        <li>{{ state.full }} ({{state.short}})</li>
+        <li>
+            <a href="{% url 'state' %}">{{ state.full }} ({{state.short}})
+        </li>
       {% endfor %}
       </ul>
     </div
