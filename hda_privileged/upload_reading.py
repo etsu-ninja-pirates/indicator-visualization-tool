@@ -30,10 +30,10 @@ def get_county_with_fips(state_fips, county_fips):
         county = state.counties.get(fips=county_fips)
         return (county, None)
     except US_State.DoesNotExist:
-        msg = f"Code '{state_fips}' did not match a US state or territory"
+        msg = {county_fips:state_fips}
         return (None, msg)
     except US_County.DoesNotExist:
-        msg = f"Code '{county_fips}' did not match a county or county equivalent in {state.full}"
+        msg = {county_fips: state_fips}
         return (None, msg)
 
 # Defines functions that can translate a DictReader row into a county model object
@@ -65,7 +65,7 @@ def get_county_with_name(row):
     try:
         state = US_State.objects.get(full=state_name)
     except US_State.DoesNotExist:
-        msg = f"'{state_name}' did not match a US state or territory"
+        msg = {county_name: state_name}
         return (None, msg)
     # can't use get with startswith for counties, because of situations like:
     # Clay County, GA and Clayton County, GA
@@ -84,9 +84,8 @@ def get_county_with_name(row):
         # return the first county (shortest name)
         return (shortest_first[0], None)
     else:
-        msg = f"'{county_name}' did not match a known county or equivalent in {state.full}"
+        msg = {county_name: state_name}
         return (None, msg)
-
 
 # map choice options to the appropriate function for parsing counties
 UPLOAD_FORMAT_FUNCTIONS = {
@@ -116,7 +115,7 @@ def read_data_points_from_file(file, choice, data_set):
     if not county_getter:
         raise TypeError(f"Choice {choice} did not match to a county parsing function")
 
-    unsuccessful_counties_datapoints = []
+    unsuccessful_counties_datapoints = {}
     successful_counties_datapoints = []
 
     count = 0
@@ -134,11 +133,7 @@ def read_data_points_from_file(file, choice, data_set):
             data_point = Data_Point(county=county, data_set=data_set, value=value)
             successful_counties_datapoints.append(data_point)
         elif error is not None:
-            unsuccessful_counties_datapoints.append(error)
-        else:
-            msg = f"Could not read county for row {count}"
-            unsuccessful_counties_datapoints.append(msg)
-
+            unsuccessful_counties_datapoints.update(error)
         # increment a row counter
         count += 1
 
