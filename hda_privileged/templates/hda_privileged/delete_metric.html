@@ -37,8 +37,8 @@ Returns an error message for user if protected. Developed by Kim Hawkins{% endco
 
     <br/>
     {% if messages %}          
-      <button type="submit" class="btn btn-success" style="background-color:#69899f;color: #d7e2e9;">
-        <a href="{% url 'priv:dashboard1' %}">Return to Dashboard</a></button>
+    <button type="submit" class="btn btn-success" style="background-color:#69899f;color:#d7e2e9;">
+      <a href="{% url 'priv:dashboard1' %}" style="color:#d7e2e9;">Return to Dashboard</a></button>
     {% else %}          
         <button type="submit" class="btn btn-success" style="background-color:#69899f;color: #d7e2e9;">
           Confirm Delete</button>

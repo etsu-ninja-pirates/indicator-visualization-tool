@@ -95,6 +95,7 @@ class HealthIndicatorDelete(DeleteView):
         except ProtectedError:
             msg = messages.add_message(
                 self.request, messages.ERROR, ' is tied to existing datasets and cannot be deleted.')
+        # This code found at https://stackoverflow.com/questions/39560175/django-redirect-to-same-page-after-post-method-using-class-based-views
         return HttpResponseRedirect(self.request.path_info, msg)
 
 
