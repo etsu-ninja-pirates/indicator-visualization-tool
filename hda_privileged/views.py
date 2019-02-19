@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, get_user, logout
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls import reverse, reverse_lazy
 from django.views import View
@@ -76,25 +76,31 @@ class HealthIndicatorUpdate(UpdateView):
         return reverse_lazy('priv:dashboard1')
 
 
+# Allows user to delete an indicator. Indicators are protected and cannot be deleted if tied to data records.
+# Developed by Kim Hawkins
 class HealthIndicatorDelete(DeleteView):
+    """
+    :param DeleteView: Generic Class-Based View Django Template
+    """
     model = Health_Indicator
     fields = ('name',)
     template_name = 'hda_privileged/delete_metric.html'
     pk_url_kwarg = 'post_pk'
 
-    # This method uses json to prevent the user from dealing with a long error list page
-    # in the event of a protected indicator
     def delete(self, request, *args, **kwargs):
+        """
+        :returns: Returns current template with protected indicator error message
+        """
         self.object = self.get_object()
         try:
             self.object.delete()
-            data = 'The chosen indicator has been deleted.'
+            # user can confirm indicator was deleted by reviewing list on dashboard
+            return HttpResponseRedirect(reverse_lazy('priv:dashboard1'))
         except ProtectedError:
-            data = 'The Health Indicator is tied to existing datasets and cannot be deleted.'
-        return HttpResponse(json.dumps(data), content_type="application/json")
-
-    def get_success_url(self):
-        return reverse_lazy('priv:dashboard1')
+            msg = messages.add_message(
+                self.request, messages.ERROR, ' is tied to existing datasets and cannot be deleted.')
+        # This code found at https://stackoverflow.com/questions/39560175/django-redirect-to-same-page-after-post-method-using-class-based-views
+        return HttpResponseRedirect(self.request.path_info, msg)
 
 
 class PrivDashboardView(TemplateView):
