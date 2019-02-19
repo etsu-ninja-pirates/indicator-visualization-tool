@@ -79,14 +79,18 @@ class HealthIndicatorUpdate(UpdateView):
 # Allows user to delete an indicator. Indicators are protected and cannot be deleted if tied to data records.
 # Developed by Kim Hawkins
 class HealthIndicatorDelete(DeleteView):
+    """
+    :param DeleteView: Generic Class-Based View Django Template
+    """
     model = Health_Indicator
     fields = ('name',)
     template_name = 'hda_privileged/delete_metric.html'
     pk_url_kwarg = 'post_pk'
 
-    # This method uses json to prevent the user from dealing with a long error list page
-    # in the event of a protected indicator
     def delete(self, request, *args, **kwargs):
+        """
+        :returns: Returns current template with protected indicator error message
+        """
         self.object = self.get_object()
         try:
             self.object.delete()

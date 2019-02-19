@@ -36,12 +36,16 @@ Returns an error message for user if protected. Developed by Kim Hawkins{% endco
 </div>
 
     <br/>
+  {% comment %}Indicator is protected and cannot be deleted if message exists{% endcomment %}
     {% if messages %}          
     <button type="submit" class="btn btn-success" style="background-color:#69899f;color:#d7e2e9;">
       <a href="{% url 'priv:dashboard1' %}" style="color:#d7e2e9;">Return to Dashboard</a></button>
+  {% comment %}Indicator is not protected and can be deleted: delete and cancel buttons{% endcomment %}
     {% else %}          
         <button type="submit" class="btn btn-success" style="background-color:#69899f;color: #d7e2e9;">
           Confirm Delete</button>
-    {% endif %}
+    <button type="submit" class="btn btn-success" style="background-color:#69899f;color:#d7e2e9;">
+      <a href="{% url 'priv:dashboard1' %}" style="color:#d7e2e9;">Cancel</a></button>
+  {% endif %}
 </div>  
 {% endblock %}
