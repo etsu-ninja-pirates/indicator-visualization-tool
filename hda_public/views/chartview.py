@@ -173,7 +173,11 @@ class ChartView(TemplateView):
             return (context, False)  # stops the pipeline
         else:
             context['place_name'] = state.full
-            context['counties'] = [county.fips5 for county in state.counties.all().iterator()]
+            # current_state added to pass in url param when user chooses to go from
+            # all counties chart to county selection page: Kim Hawkins
+            context['current_state'] = state.short
+            context['counties'] = [
+                county.fips5 for county in state.counties.all().iterator()]
             return (context, True)
 
     def county_request_decorator(self, context):
