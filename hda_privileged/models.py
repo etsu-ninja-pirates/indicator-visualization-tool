@@ -34,6 +34,11 @@ class Health_Indicator(models.Model):
     e.g. obesity, mortality, education, etc.
     """
     name = models.CharField(max_length=100, unique=True)
+    important = models.BooleanField(
+        default=False,
+        verbose_name='Show on overview',
+        help_text='Display a chart for this indicator on the overview page for a state or county'
+    )
     slug = models.SlugField()
 
     def save(self, *args, **kwargs):
