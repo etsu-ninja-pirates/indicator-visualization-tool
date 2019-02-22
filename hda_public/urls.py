@@ -6,6 +6,8 @@ from hda_public.views import (
     HealthView,
     ChartView,
     SearchView,
+    IndicatorOverviewCounty,
+    IndicatorOverviewState,
 )
 
 # only successful method of import for this new view
@@ -27,12 +29,15 @@ urlpatterns = [
     # a chart page that can show any counties given as a query parameter:
     path('chart/<int:indicator>', ChartView.as_view(), name='chart'),
     # location selection pages
-    path('state/', StateView.as_view(), name='state'),
-    path('state/<usps:short>', CountyView.as_view(), name='county'),
-    path('state/<usps:short>/<fips3:fips>',
+    path('select/', StateView.as_view(), name='state'),
+    path('select/<usps:short>', CountyView.as_view(), name='county'),
+    path('select/<usps:short>/<fips3:fips>',
          HealthView.as_view(), name='metric'),
-    path('state/indicator/<usps:short>/',
+    path('select/indicator/<usps:short>/',
          HealthStatePathView.as_view(), name='selection_state_metric'),
     # search results page
     path('search/', SearchView.as_view(), name='search'),
+    # overview pages for states and counties
+    path('state/<usps:state>', IndicatorOverviewState.as_view()),
+    path('county/<usps:state>/<fips3:county>', IndicatorOverviewCounty.as_view()),
 ]

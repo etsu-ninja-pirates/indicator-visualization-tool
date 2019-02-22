@@ -28,7 +28,7 @@ Spring 2019 - Jean-Marie Nshimiyimana, Matthew Seiler
 
 
 {% comment %} Need this to use the "static" template tag later in the file {% endcomment %}
-{% load staticfiles %}
+{% load static %}
 
 {% block title %}{{indicator.name}} ({{year}}){% endblock %}
 
@@ -39,21 +39,21 @@ Spring 2019 - Jean-Marie Nshimiyimana, Matthew Seiler
   {% if data_set_id %}
   <div id="chartdiv"></div>
     {% comment %}If user is viewing one county in a state button allows user to view all counties in state{% endcomment %}
-    {% if parent_state %}    
+    {% if parent_state %}
       <p>See all counties in this state: <a role="button"
             href="{% url 'chart' indicator.id %}?state={{ parent_state | urlencode }}"
             class="btn btn-default btn-sm">{{ indicator.name }}: {{parent_state}}</a></p>
     {% comment %}Else if user is viewing all counties in a state, give option to view one county: Kim Hawkins{% endcomment %}
-    {% elif place_name %}       
-      <p>See a county in this state: 
+    {% elif place_name %}
+      <p>See a county in this state:
         <a role="button" href="{% url 'county' current_state %}?choice=county" class="btn btn-default btn-sm">{{ indicator.name }}: {{place_name}}</a>
-      </p>         
-    {% endif %} 
-  
+      </p>
+    {% endif %}
+
   {% else %}
   <p>Please select a state and health indicator to display data for</p>
   {% endif %}
-  
+
 </div>
 
 {% comment %} Contains any alert/notification messages {% endcomment %}
@@ -109,7 +109,7 @@ Spring 2019 - Jean-Marie Nshimiyimana, Matthew Seiler
   {% endcomment %}*/
   const title = "{{indicator.name}} ({{year}})" {% if place_name %} + " {{place_name}}"{% endif %};
 
-  SingleChart.init(
+  SingleChart.large(
     'chartdiv',
     percentile_url,
     point_url,
