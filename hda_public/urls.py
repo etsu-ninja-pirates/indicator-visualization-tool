@@ -29,15 +29,11 @@ urlpatterns = [
     # a chart page that can show any counties given as a query parameter:
     path('chart/<int:indicator>', ChartView.as_view(), name='chart'),
     # location selection pages
-    path('select/', StateView.as_view(), name='state'),
-    path('select/<usps:short>', CountyView.as_view(), name='county'),
-    path('select/<usps:short>/<fips3:fips>',
-         HealthView.as_view(), name='metric'),
-    path('select/indicator/<usps:short>/',
-         HealthStatePathView.as_view(), name='selection_state_metric'),
+    path('select/', StateView.as_view(), name='state_list'),
+    path('select/<usps:short>', CountyView.as_view(), name='county_list'),
     # search results page
     path('search/', SearchView.as_view(), name='search'),
     # overview pages for states and counties
-    path('state/<usps:state>', IndicatorOverviewState.as_view()),
-    path('county/<usps:state>/<fips3:county>', IndicatorOverviewCounty.as_view()),
+    path('state/<usps:state>', IndicatorOverviewState.as_view(), name='state'),
+    path('county/<usps:state>/<fips3:county>', IndicatorOverviewCounty.as_view(), name='county'),
 ]

@@ -27,8 +27,11 @@ Spring 2019 - Jean-Marie Nshimiyimana, Matthew Seiler
 {% endcomment %}
 
 
-{% comment %} Need this to use the "static" template tag later in the file {% endcomment %}
+{# Need this to use the "static" template tag later in the file #}
 {% load static %}
+
+{# This lets us a use a custom tempate tag to encode URL query strings #}
+{% load urlparams %}
 
 {% block title %}{{indicator.name}} ({{year}}){% endblock %}
 
@@ -41,12 +44,14 @@ Spring 2019 - Jean-Marie Nshimiyimana, Matthew Seiler
     {% comment %}If user is viewing one county in a state button allows user to view all counties in state{% endcomment %}
     {% if parent_state %}
       <p>See all counties in this state: <a role="button"
-            href="{% url 'chart' indicator.id %}?state={{ parent_state | urlencode }}"
+            href="{% url 'chart' indicator.id %}{% urlparams state=parent_state %}"
             class="btn btn-default btn-sm">{{ indicator.name }}: {{parent_state}}</a></p>
     {% comment %}Else if user is viewing all counties in a state, give option to view one county: Kim Hawkins{% endcomment %}
     {% elif place_name %}
       <p>See a county in this state:
-        <a role="button" href="{% url 'county' current_state %}?choice=county" class="btn btn-default btn-sm">{{ indicator.name }}: {{place_name}}</a>
+        <a role="button"
+          href="{% url 'county_list' current_state %}{% urlparams choice='county' %}"
+          class="btn btn-default btn-sm">{{ indicator.name }}: {{place_name}}</a>
       </p>
     {% endif %}
 

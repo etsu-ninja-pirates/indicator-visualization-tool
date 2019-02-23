@@ -3,7 +3,7 @@ from django.views.generic import TemplateView, ListView
 from hda_privileged.models import US_State, US_County, Health_Indicator
 
 class StateView(ListView):
-    template_name = 'hda_public/state.html'
+    template_name = 'hda_public/state_list.html'
     paginate_by = '15'
     model = US_State
     context_object_name = "states"
@@ -19,7 +19,7 @@ class StateView(ListView):
 
 
 class CountyView(ListView):
-    template_name = 'hda_public/county.html'
+    template_name = 'hda_public/county_list.html'
     paginate_by = '15'
     model = US_County
     context_object_name = "counties"
