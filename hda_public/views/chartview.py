@@ -6,13 +6,13 @@
 from django.contrib import messages
 from django.views.generic import TemplateView
 
-from hda_privileged.models import Health_Indicator, US_State, US_County
+from hda_privileged.models import US_State, US_County, Data_Set
 
 
 class ChartView(TemplateView):
     """
     Works with URLs of the following shape:
-    - a keyword path parameter called 'indicator', which is an integer Health_Indicator ID
+    - a keyword path parameter called 'data_set', which is an integer Data_Set ID
     - one of two query strings to specify what counties to display:
        + `?state=<USPS>`, where <USPS> is a 2-letter USPS postal code for a state
        + `?county=<FIPS_LIST>`, where <FIPS_LIST> is comma-separated list of *5-digit* FIPs codes
@@ -21,12 +21,12 @@ class ChartView(TemplateView):
     * /chart/3?state=TN
     * /chart/3?county=01002,01005,01007
 
-    The view will retrieve the *most recent data set* for the requested Health Indicator, if one
-    exists. It will validate the requested counties - creating a list of FIPS codes for all the
-    counties in the requested state, or filtering requested FIPS codes to ones which match a
-    county in the database. It includes the data set ID and list of counties in the template
-    context, but *does not* query or attach the contents of the data set! (We rely on client-side
-    JavaScript to request the chart series for the data set.)
+    The view will retrieve the requested data set, if it exists. It will validate the requested
+    counties - creating a list of FIPS codes for all the counties in the requested state, or
+    filtering requested FIPS codes to ones which match a county in the database. It includes
+    the data set ID and list of counties in the template context, but *does not* query or attach
+    the contents of the data set! (We rely on client-side JavaScript to request the chart series
+    for the data set.)
 
     Each stage of context processing is broken into a separate function. Each function takes in
     the context dictionary and additional state from the previous stage, augments the context
@@ -37,74 +37,40 @@ class ChartView(TemplateView):
 
     template_name = 'hda_public/chart.html'
 
-    def indicator_decorator(self, context):
+
+    def data_set_decorator(self, context):
         """
-        Adds a health indicator object to the context based on the indicator ID given in the
-        'indicator' view keyword argument (self.kwargs). If no indicator matching the given ID
-        exists, then an error message is added to context under the 'error' key, and also added
-        to the messages framework with the 'error' tag.
-
-        Matches the signature required by the 'decorate_context' helper method - returns a tuple
-        (context, flag, *) where the first member is the augmented context, the second is a
-        boolean indicating if the next processing stage should execute, and other members are
-        arguments for the next context processor.
-
-        :param context: template context dictionary
-        :type context: dict
-        :raises TypeError: TypeError if there is no 'indicator' key in self.kwargs
-        :return: augmented context, continue flag, and indicator
-        :rtype: (dict, True, Health_Indicator) | (dict, False)
-        """
-
-        indicator_id = self.kwargs.get('indicator', None)
-
-        if indicator_id is None:
-            raise TypeError("ChartView needa a health indicator ID, but none was given")
-
-        try:
-            indicator = Health_Indicator.objects.get(id=indicator_id)
-            context['indicator'] = indicator
-            return (context, True, indicator)
-
-        except Health_Indicator.DoesNotExist:
-            msg = f"There is no health indicator matching the selected ID ({indicator_id})"
-            context['error'] = msg
-            messages.error(self.request, msg)
-            return (context, False)
-
-
-    # FIXME: this always gets the most recent data set, which may not include the county the user requested
-    # (they may have asked for a county that is only included in an older data set for the same indicator!)
-    # Possible fix: make year a part of the path! So this view will now not only what indicator to use,
-    # but what data set to use for that indicator, if there are several for different years!
-    def data_set_decorator(self, context, indicator):
-        """
-        Given a Health_Indicator, retrieves the most recent data set for that indicator, and adds
-        the data set ID and year of the data set to the context. If there are no data sets for the
-        given indicator, adds a an error message to the context (under the 'error' key) and to the
-        messages framework.
+        Given a data_set_id keyword parameter passed to the view, retrieves that data set and adds
+        information about it to the context. Attaches the data set ID, year, and associated indicator
+        (the entire Health_Indicator object).
 
         Matches the signature required by the 'decorate_context' method, but requires the previous
         decorator to pass through a health indicator object.
 
         :param context: template context
         :type context: dict
-        :param indicator: health indicator of interest
-        :type indicator: Health_Indicator
         :return: augmented context and continue flag
         :rtype: (dict, bool)
+        :raises:
         """
-        dataset = indicator.data_sets.order_by('-source_document__uploaded_at').first()
+        data_set_id = self.kwargs.get('data_set', None)
+        if data_set_id is None:
+            raise TypeError("Chart view needs a data set ID, but was not given one!")
 
-        if dataset is None:
-            msg = f"No data exists for indicator {indicator.id}"
+        try:
+            data_set = Data_Set.objects.get(pk=data_set_id)
+            context['data_set_id'] = data_set.id
+            context['year'] = data_set.year
+            context['indicator'] = data_set.indicator
+
+            return (context, True)
+
+        except Data_Set.DoesNotExist:
+            msg = f"There is no data set matching ID {data_set_id}"
             context['error'] = msg
             messages.error(self.request, msg)
+
             return (context, False)
-        else:
-            context['year'] = dataset.year
-            context['data_set_id'] = dataset.id
-            return (context, True)
 
     def try_get_state(self, usps):
         """
@@ -202,7 +168,6 @@ class ChartView(TemplateView):
         :rtype: (dict, bool)
         """
 
-
         # Guard: if another decorator already added counties, do nothing!
         # (We could change this to merge additional counties if we wanted?)
         if 'counties' in context and len(context['counties']) > 0:
@@ -264,7 +229,6 @@ class ChartView(TemplateView):
         """
 
         decorators = [
-            self.indicator_decorator,
             self.data_set_decorator,
             self.state_request_decorator,
             self.county_request_decorator,

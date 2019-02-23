@@ -27,7 +27,7 @@ urlpatterns = [
     # the home page:
     path('', HomeView.as_view(), name='home'),
     # a chart page that can show any counties given as a query parameter:
-    path('chart/<int:indicator>', ChartView.as_view(), name='chart'),
+    path('chart/<int:data_set>', ChartView.as_view(), name='chart'),
     # location selection pages
     path('select/', StateView.as_view(), name='state_list'),
     path('select/<usps:short>', CountyView.as_view(), name='county_list'),
