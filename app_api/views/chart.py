@@ -19,6 +19,7 @@ class PercentileSeries(GetJSON):
             'marker': {
                 'enabled': False,
             },
+            'zIndex': -1,
             'data': spline_points,
         }
         return {'config': config}
