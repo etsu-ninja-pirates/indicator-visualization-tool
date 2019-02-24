@@ -18,6 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('hda_public.urls')),
+    path('', include('django.contrib.auth.urls')),
     path('priv/', include('hda_privileged.urls')),
     path('api/', include('app_api.urls')),
     path('admin/', admin.site.urls),
