@@ -25,6 +25,11 @@ urlpatterns = [
          login_required(views.HealthIndicatorDelete.as_view(),
                         login_url='priv:login'),
          name='deleteIndicator'),
+    # delete an existing dataset
+    path('dataset/delete/<int:post_pk>/',
+         login_required(views.DataSetDelete.as_view(),
+                        login_url='priv:login'),
+         name='deleteDataset'),
     # upload page
     path('upload/',
          login_required(views.UploadNewDataView.as_view(), login_url='priv:login'),
