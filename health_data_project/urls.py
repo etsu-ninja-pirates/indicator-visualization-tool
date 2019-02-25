@@ -18,6 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('hda_public.urls')),
+    # https://stackoverflow.com/questions/44676880/error-reverse-for-password-reset-done-not-found-password-reset-done-is-not
     path('', include('django.contrib.auth.urls')),
     path('priv/', include('hda_privileged.urls')),
     path('api/', include('app_api.urls')),
