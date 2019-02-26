@@ -7,4 +7,5 @@ pipeline:
           - pip
         script:
           - pip install -r requirements.txt
+          - pip install behave_django
           - python manage.py test
