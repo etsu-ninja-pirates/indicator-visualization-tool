@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'hda_privileged',
     'hda_public',
     'app_api',
-    'behave_django',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
