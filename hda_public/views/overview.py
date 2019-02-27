@@ -29,10 +29,8 @@ class IndicatorOverviewBase(View):
     Note that this subclasses View, not TemplateView!
     """
 
-
     def handle_missing_parameter(self):
-        # TODO: redirect to place selection?
-        pass
+        return redirect('unknown_location')
 
     def get_chart_location_parameter(self):
         """
@@ -124,7 +122,6 @@ class IndicatorOverviewCounty(IndicatorOverviewBase):
     The IndicatorOverview View for displaying a specific county
     """
 
-
     def get_chart_location_parameter(self):
         return f"county={self.county.fips5}"
 
@@ -185,9 +182,3 @@ class IndicatorOverviewState(IndicatorOverviewBase):
             return self.handle_missing_parameter()
 
         return super(IndicatorOverviewState, self).get(request)
-
-
-class CannotFindThatPlace(View):
-    # TODO: templates and stuff
-    def get(self, request, message="Can't find that place"):
-        return django.http.response.HttpResponse(message)

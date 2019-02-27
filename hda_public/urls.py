@@ -8,6 +8,7 @@ from hda_public.views import (
     SearchView,
     IndicatorOverviewCounty,
     IndicatorOverviewState,
+    UnknownLocationView,
 )
 
 # only successful method of import for this new view
@@ -36,4 +37,5 @@ urlpatterns = [
     # overview pages for states and counties
     path('state/<usps:state>', IndicatorOverviewState.as_view(), name='state'),
     path('county/<usps:state>/<fips3:county>', IndicatorOverviewCounty.as_view(), name='county'),
+    path('unknown_location', UnknownLocationView.as_view(), name='unknown_location'),
 ]
