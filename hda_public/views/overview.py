@@ -16,32 +16,8 @@ from django.db.models import Count
 
 from hda_privileged.models import US_State, US_County, Health_Indicator, Data_Set, Data_Point
 
-def key_selector(key):
-    return lambda x: x[key]
+from util.collections import index_selector, group_by_selector
 
-def group_by_selector(items, selector):
-    '''Group a list of items by using a provided function to produce a grouping key from items in the list.
-    items :: list T
-    selector :: T -> K
-    returns :: dict K (list T)
-    i.e. each key in the dictionary maps to a list of items from the original list that matched that key.
-    The key for each item is produced by passing that item to the selector function.
-    '''
-    result = dict()
-    for item in items:
-        key = selector(item)
-        if key not in result:
-            result[key] = []
-        result[key].append(item)
-    return result
-
-def group_by(selector):
-    '''"Curried" version of group_by_selector that lets us specify the selector now to create
-    a grouping function that we can pass items to later.
-    selector :: T -> K
-    returns :: list T -> dict K (list T)
-    '''
-    return lambda items: group_by_selector(items, selector)
 
 class IndicatorOverviewBase(View):
     """
@@ -91,11 +67,11 @@ class IndicatorOverviewBase(View):
         # group these data sets by indicator
         grouped_by_indicator = group_by_selector(
             data_set_meta.iterator(),
-            key_selector('indicator')
+            index_selector('indicator')
         )
         # sort each group by year, descending
         for (_, dsm) in grouped_by_indicator.items():
-            dsm.sort(key=key_selector('year'), reverse=True)
+            dsm.sort(key=index_selector('year'), reverse=True)
         # now change the map so each indicator ID points to only the ID of the most recent data set:
         data_set_for_indicator = {ind: dsm[0]['id'] for (ind, dsm) in grouped_by_indicator.items()}
 
