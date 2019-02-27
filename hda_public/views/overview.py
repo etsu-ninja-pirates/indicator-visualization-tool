@@ -1,3 +1,14 @@
+# Views that handle displaying multiple small charts for a state or county,
+# along with a list of indicators that have data points for that location.
+#
+# The page is designed so that users can see an overview of their location's place
+# for the most important health indicators, without having to choose one.
+#
+# IndicatorOverviewBase is a base class that has State and County subclasses,
+# since the logic for those is slightly different.
+#
+# ~ Matthew Seiler
+
 from django.views import View
 from django.shortcuts import render, redirect
 from django.urls import reverse, reverse_lazy
@@ -33,6 +44,15 @@ def group_by(selector):
     return lambda items: group_by_selector(items, selector)
 
 class IndicatorOverviewBase(View):
+    """
+    Base class for overview page views; provides a framework for the state and county views
+    to fill in. The key differences are the query string used to request chart data on the page
+    (get_chart_location_parameter), the format of the name of the place being displayed,
+    (get_place_name), and which data sets are involved (get_related_data_sets).
+
+    Note that this subclasses View, not TemplateView!
+    """
+
 
     def handle_missing_parameter(self):
         # TODO: redirect to place selection?
@@ -81,7 +101,6 @@ class IndicatorOverviewBase(View):
 
         # at this point, we know what data sets and indicators are available, but we don't
         # actually have the full indicator objects queried from the database.
-        # We'll need at least the indicator names, and which ones are "important"
 
         # What has to go on this page?
         # 1. One chart for each important indicator
@@ -97,13 +116,15 @@ class IndicatorOverviewBase(View):
         indicator_ids = set(data_set_for_indicator.keys())
         indicators = Health_Indicator.objects.filter(id__in=indicator_ids)
 
-        # whew. now let's build a list of dictionaries to use in context
+        # whew. now let's build a list of dictionaries to use in context.
+        # here's a little mapping function:
         def make_indicator_ctx(indicator):
             return {
                 'name': indicator.name,
                 'data_set_id': data_set_for_indicator[indicator.id]
             }
 
+        # now use the mapping function to construct lists of dictionaries for the template context:
         all_indicator_context = []
         important_indicator_context = []
         for indicator in indicators:
@@ -123,6 +144,10 @@ class IndicatorOverviewBase(View):
 
 
 class IndicatorOverviewCounty(IndicatorOverviewBase):
+    """
+    The IndicatorOverview View for displaying a specific county
+    """
+
 
     def get_chart_location_parameter(self):
         return f"county={self.county.fips5}"
@@ -156,6 +181,10 @@ class IndicatorOverviewCounty(IndicatorOverviewBase):
 
 
 class IndicatorOverviewState(IndicatorOverviewBase):
+    """
+    The IndicatorOverview View for displaying a particular state
+    """
+
     def get_chart_location_parameter(self):
         return f"state={self.state.short}"
 
@@ -180,6 +209,7 @@ class IndicatorOverviewState(IndicatorOverviewBase):
             return self.handle_missing_parameter()
 
         return super(IndicatorOverviewState, self).get(request)
+
 
 class CannotFindThatPlace(View):
     # TODO: templates and stuff
