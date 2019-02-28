@@ -34,22 +34,8 @@
 
     <!-- Our CSS on top of Bootstrap -->
     <link href="{% static 'css/theme.css' %}" rel="stylesheet">
-    {% comment %} <script src="{% static 'js/graph.css'%}"></script> {% endcomment %}
-    {% comment %} {% block jqurey %}{% endblock %} {% endcomment %}
 
-  <script type="text/javascript">
-
-            function Redirect() {
-               window.location="{% url 'priv:dashboard1' %}";
-            }
-
-            function TimeoutNow() {
-            setTimeout('Redirect()', 3000);
-            }
-  </script>
-
-   <title> {% block title %}{% endblock %} </title>
-
+    <title> {% block title %}{% endblock %} </title>
 
 </head>
 <body>

@@ -69,7 +69,7 @@ class HealthIndicatorCreate(CreateView):
 # to update an existing health indicator
 class HealthIndicatorUpdate(UpdateView):
     model = Health_Indicator
-    fields = ('name',)
+    fields = ('name', 'important')
     template_name = 'hda_privileged/update_metric_form.html'
     pk_url_kwarg = 'post_pk'
 

@@ -1,5 +1,8 @@
 {% extends 'hda_public/base.html' %}
 
+{# This lets us a use a custom tempate tag to encode URL query strings #}
+{% load urlparams %}
+
 {% block title %} CPH Indicator Visualization Tool {% endblock %}
 
 {% block content %}
@@ -10,8 +13,16 @@
         Find your county and select an indicator to see how it compares to other counties in the nation!
     </p>
     <p>
-        <a class="btn btn-primary btn-lg" href="{% url 'state' %}?choice=county" role="button" name="selected" value="county">Find a county</a>
-        <a class="btn btn-primary btn-lg" href="{% url 'state' %}?choice=state" role="button" name="selected" value="state">Find a state</a>
+        <a class="btn btn-primary btn-lg"
+            href="{% url 'state_list' %}{% urlparams choice='county' %}"
+            role="button"
+            name="selected"
+            value="county">Find a county</a>
+        <a class="btn btn-primary btn-lg"
+            href="{% url 'state_list' %}{% urlparams choice='state' %}"
+            role="button"
+            name="selected"
+            value="state">Find a state</a>
     </p>
 </div>
 

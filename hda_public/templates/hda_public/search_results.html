@@ -17,7 +17,7 @@
       <ul>
       {% for county in counties %}
         <li>
-          <a href="{% url 'metric' county.state.short county.fips %}">{{ county.name }}, {{ county.state.short}}</a>
+          <a href="{% url 'county' county.state.short county.fips %}">{{ county.name }}, {{ county.state.short}}</a>
         </li>
       {% endfor %}
       </ul>
@@ -29,9 +29,8 @@
       <h2>States</h2>
       <ul>
       {% for state in states %}
-        {% comment %} TODO: link to page where we can choose an indicator for a state! {% endcomment %}
         <li>
-            <a href="{% url 'state' %}">{{ state.full }} ({{state.short}})
+            <a href="{% url 'state' state.short %}">{{ state.full }} ({{state.short}})
         </li>
       {% endfor %}
       </ul>
