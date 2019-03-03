@@ -5,6 +5,10 @@ secret_key.txt
 # Local development databases
 db.sqlite3
 
+# database fixtures that should not be in version control
+# (e.g. containing test user accounts)
+private_fixtures/
+
 # user-uploaded files during local development
 /media/
 

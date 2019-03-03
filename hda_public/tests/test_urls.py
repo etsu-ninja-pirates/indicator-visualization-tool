@@ -18,9 +18,10 @@ class HappyUrlsTestCase(TestCase):
         paths_to_test = [
             ('home', ''),
             ('chart', '/chart/1?state=al'),
-            ('select state', '/state'),
-            ('select county', '/state/AL'),
-            ('select indicator', '/state/AL/001'),
+            ('select state', '/select'),
+            ('select county', '/select/AL'),
+            ('show state', '/state/AL'),
+            ('show county', '/county/AL/001'),
         ]
         for (name, path) in paths_to_test:
             with self.subTest(label=name):

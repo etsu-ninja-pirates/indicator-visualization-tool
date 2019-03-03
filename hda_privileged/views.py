@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, get_user, logout
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls import reverse, reverse_lazy
 from django.views import View
@@ -58,6 +58,7 @@ def logout_view(request):
     return redirect('priv:login')
 
 
+# to create a new health indicator
 class HealthIndicatorCreate(CreateView):
     template_name = 'hda_privileged/create_metric.html'
     model = Health_Indicator
@@ -65,9 +66,10 @@ class HealthIndicatorCreate(CreateView):
     success_url = reverse_lazy('priv:dashboard1')
 
 
+# to update an existing health indicator
 class HealthIndicatorUpdate(UpdateView):
     model = Health_Indicator
-    fields = ('name',)
+    fields = ('name', 'important')
     template_name = 'hda_privileged/update_metric_form.html'
     pk_url_kwarg = 'post_pk'
 
@@ -76,27 +78,49 @@ class HealthIndicatorUpdate(UpdateView):
         return reverse_lazy('priv:dashboard1')
 
 
+# Allows user to delete an indicator. Indicators are protected and cannot be deleted if tied to data records.
+# Developed by Kim Hawkins
 class HealthIndicatorDelete(DeleteView):
+    """
+    :param DeleteView: Generic Class-Based View Django Template
+    """
     model = Health_Indicator
     fields = ('name',)
     template_name = 'hda_privileged/delete_metric.html'
     pk_url_kwarg = 'post_pk'
 
-    # This method uses json to prevent the user from dealing with a long error list page
-    # in the event of a protected indicator
     def delete(self, request, *args, **kwargs):
+        """
+        :returns: Returns current template with protected indicator error message
+        """
         self.object = self.get_object()
         try:
             self.object.delete()
-            data = 'The chosen indicator has been deleted.'
+            # user can confirm indicator was deleted by reviewing list on dashboard
+            return HttpResponseRedirect(reverse_lazy('priv:dashboard1'))
         except ProtectedError:
-            data = 'The Health Indicator is tied to existing datasets and cannot be deleted.'
-        return HttpResponse(json.dumps(data), content_type="application/json")
+            msg = messages.add_message(
+                self.request, messages.ERROR, ' is tied to existing datasets and cannot be deleted.')
+        # This code found at https://stackoverflow.com/questions/39560175/django-redirect-to-same-page-after-post-method-using-class-based-views
+        return HttpResponseRedirect(self.request.path_info, msg)
 
-    def get_success_url(self):
-        return reverse_lazy('priv:dashboard1')
 
 
+# to delete an existing dataset
+class DataSetDelete(DeleteView):
+    model = Data_Set
+    fields = ('source_document.file',)
+    template_name = 'hda_privileged/delete_dataset.html'
+    pk_url_kwarg = 'post_pk'
+    success_url = reverse_lazy('priv:dashboard1')
+
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        self.object.delete()
+        return HttpResponseRedirect(self.success_url)
+
+
+# Displays Privileged users dashboard
 class PrivDashboardView(TemplateView):
     template_name = 'hda_privileged/privdashboard.html'
 
@@ -128,6 +152,7 @@ class PrivDashboardView(TemplateView):
         return context
 
 
+# to upload New DataSet
 class UploadNewDataView(View):
     form_class = UploadNewDataForm
     template_name = 'hda_privileged/upload_metric.html'
@@ -181,7 +206,8 @@ class UploadNewDataView(View):
         format_choice = form.cleaned_data['column_format']
         doc.file.open(mode='rt')
         # read_data_points_from_file returns two values: successful_datapoints, and unsuccessful datapoints
-        successful_data_points, invalid_counties_and_states = read_data_points_from_file(doc.file, format_choice, data_set)
+        successful_data_points, invalid_counties_and_states = read_data_points_from_file(doc.file, format_choice,
+                                                                                         data_set)
         doc.file.close()
 
         # calculate the percentile-values for this data set
@@ -216,7 +242,8 @@ class UploadNewDataView(View):
             # Is there a Django-y way of adding more validation?
             invalid_counties_and_states = self._handle_form_submission(request, form)
 
-        return render(request, self.template_name, {'form': form,'invalid_counties_and_states':invalid_counties_and_states})
+        return render(request, self.template_name,
+                      {'form': form, 'invalid_counties_and_states': invalid_counties_and_states})
 
 
 class HealthIndicator(TemplateView):

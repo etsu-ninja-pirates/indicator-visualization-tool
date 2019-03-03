@@ -6,7 +6,13 @@ from hda_public.views import (
     HealthView,
     ChartView,
     SearchView,
+    IndicatorOverviewCounty,
+    IndicatorOverviewState,
+    UnknownLocationView,
 )
+
+# only successful method of import for this new view
+from hda_public.views.location_selection import HealthStatePathView
 from hda_public.converters import StateUSPSConverter, FIPS3Converter
 
 # custom path converters to validate:
@@ -22,11 +28,14 @@ urlpatterns = [
     # the home page:
     path('', HomeView.as_view(), name='home'),
     # a chart page that can show any counties given as a query parameter:
-    path('chart/<int:indicator>', ChartView.as_view(), name='chart'),
+    path('chart/<int:data_set>', ChartView.as_view(), name='chart'),
     # location selection pages
-    path('state/', StateView.as_view(), name='state'),
-    path('state/<usps:short>', CountyView.as_view(), name='county'),
-    path('state/<usps:short>/<fips3:fips>', HealthView.as_view(), name='metric'),
+    path('select/', StateView.as_view(), name='state_list'),
+    path('select/<usps:short>', CountyView.as_view(), name='county_list'),
     # search results page
     path('search/', SearchView.as_view(), name='search'),
+    # overview pages for states and counties
+    path('state/<usps:state>', IndicatorOverviewState.as_view(), name='state'),
+    path('county/<usps:state>/<fips3:county>', IndicatorOverviewCounty.as_view(), name='county'),
+    path('unknown_location', UnknownLocationView.as_view(), name='unknown_location'),
 ]

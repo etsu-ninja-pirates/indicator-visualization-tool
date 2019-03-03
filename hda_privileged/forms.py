@@ -8,7 +8,7 @@ from .upload_reading import UPLOAD_FORMAT_CHOICES, CHOICE_NAME
 class HealthIndicatorForm(ModelForm):
     class Meta:
         model = Health_Indicator
-        fields = ['name']
+        fields = ['name', 'important']
         widgets = {
             'name': forms.TextInput(
                 attrs={
