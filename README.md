@@ -26,10 +26,11 @@ These steps assume you are using virtualenvwrapper
 
 1. Clone this repository to a directory:
     - `git clone git@bitbucket.org:ninjapirates/health-data-django.git MY_DIRECTORY`
+    - The above command needs SSH configured for Bitbucket, but you can also clone using the HTTPS URL on the projeect Bitbucket page
 2. Change to the project directory:
     - `cd MY_DIRECTORY`
 2. Create a Python virtual environment for the project:
-    - `mkvirtualenv ivt -a . -r .\requirements.txt`
+    - `mkvirtualenv ivt -a . -r .\requirements\development.txt`
         - `-a` tells virtualenv wrapper to associate the project code directory with the virtual environment. Not strictly necessary, just nice for quality of life.
         - `-r` tells virtualenvwrapper to immediately install dependencies from the supplied pip requirements file after setting up the virtual environment.
 3. Activate the virtual environment:
@@ -56,7 +57,7 @@ Whatever credentials you provide can then be used to access both the Django admi
 
 ### Dependency Changes ###
 
-If the `requirements.txt` file is changed (indicating a new, removed, or updated dependency), you can simply re-run `pip install -r requirements.txt`, and pip will replace currently installed versions of packages with newere version from the requirements file. pip may not automatically remove packages that have been removed from the requirements file, but you can see what you have installed with `pip list`, and remove anything you no longer need with `pip uninstall`.
+If the `requirements\development.txt` or `requirements\base.txt` files are changed (indicating a new, removed, or updated dependency), you can simply re-run `pip install -r requirements\development.txt`, and pip will replace currently installed versions of packages with newere version from the requirements file. pip may not automatically remove packages that have been removed from the requirements file, but you can see what you have installed with `pip list`, and remove anything you no longer need with `pip uninstall`.
 
 ### Schema Changes ###
 
