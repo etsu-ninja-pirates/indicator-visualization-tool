@@ -3,12 +3,14 @@ from itertools import dropwhile
 
 
 class PercentileBoundsError(ArithmeticError):
-    """
-    We cannot calculate all percentiles for all sets of values, e.g.
+    """We cannot calculate all percentiles for all sets of values, e.g.
     p = 0 or 1 are always invalid, or we may have an empty value list.
     In these cases we throw this exception to indicate that there was
     a problem with the percentile calculation.
+
+
     """
+
     def __init__(self, msg):
         self.message = msg
 
@@ -17,23 +19,26 @@ class PercentileBoundsError(ArithmeticError):
 
 
 def rank(percentile, sample_size):
-    """
-    Returns the rank (x) for a percentile (p) in a given sample size (N).
+    """Returns the rank (x) for a percentile (p) in a given sample size (N).
     Uses the Third Variant described here:
     https://en.wikipedia.org/wiki/Percentile#Third_variant
     which is the primary variant recommended by the NIST and corresponds to
     the PERCENTILE.EXC function in Excel.
-
+    
     The percentile (p) is a floating point value between 0 and 1, exclusive
     (i.e. it cannot include 0.0 or 1.0)
-
+    
     The sample size (N) is the number of values under consideration.
-
+    
     The returned value (rank, denoted as x in the Wiki article) is the location
     in an ordered list of values of size N where the percentile value for percentile p
     is found. It is 1-based (the first rank is 1, not 0!) and may be a floating point
     value - indicating that the percentile value should be interpolated between
     two values in the list.
+
+    :param percentile: floating point value between 0 and 1, exclusive
+    :param sample_size: number of values under consideration
+
     """
     lower_bound = 1 / (sample_size + 1)
     upper_bound = sample_size / (sample_size + 1)
@@ -54,13 +59,16 @@ def rank(percentile, sample_size):
 
 
 def percentile(p, values):
-    """
-    Calculates the percentile value for a given percentile in a list of values.
+    """Calculates the percentile value for a given percentile in a list of values.
     Assumes that the values are pre-sorted in ascending order. Uses an exclusive
     range ranking function, so the percentile must not be 0 or 1. Uses linear
     interpolation to determine percentile values that fall between two values in the list.
-
+    
     See https://en.wikipedia.org/wiki/Percentile#Worked_example_of_the_third_variant
+
+    :param p: floating point value between 0 and 1, exclusive
+    :param values: values gotten from the csv file read
+
     """
 
     sample_size = len(values)
@@ -89,28 +97,32 @@ def percentile(p, values):
 
 
 def get_percentile_values(plist, values):
-    """
-    Produce a list of (rank, value) given a list of percentiles to calculate
+    """Produce a list of (rank, value) given a list of percentiles to calculate
     and values to draw percentiles from.
-
+    
     percentiles - a list of percentage ranks to get percentile values for, e.g.
     [0.1, 0.2, 0.99] would get the 10th, 20th, and 99th percentiles
-
+    
     values - a list of values to use when calculating the percentiles.
     *Must be pre-sorted in ascending order*
-
+    
     Returns a list of tuples (p, v) where p is the percentile (e.g. 10th, 25th, 99th etc.)
     and v is the value for that percentile in the provided list
+
+    :param plist: list of percentiles to calculate
+    and values to draw percentiles from
+    :param values: a list of values to use when calculating the percentiles
+
     """
     return [(p, percentile(p, values)) for p in plist]
 
 
 def get_percentiles_for_points(points):
-    """
-    Calculate percentile values for the 0.1% through 99.9% percentiles
+    """Calculate percentile values for the 0.1% through 99.9% percentiles
     using the values from the given points.
-    Parameters:
-    points :: List<Point>, where "Point" is an object with a "value" attribute
+
+    :param points: List
+
     """
     # generate 0.001 to 0.999 in steps of 0.001
     percentiles = [p / 1000 for p in range(1, 1000)]
@@ -122,6 +134,12 @@ def get_percentiles_for_points(points):
 
 
 def assign_percentiles_to_points(points, percentiles):
+    """
+
+    :param points: List
+    :param percentiles: floating point value between 0 and 1, exclusive
+
+    """
     # ensure the point list is in ascending order
     points.sort(key=lambda pt: pt.value)
     # now for each point, find the percentile with

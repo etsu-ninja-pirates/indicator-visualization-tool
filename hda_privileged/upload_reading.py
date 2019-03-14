@@ -25,6 +25,12 @@ UPLOAD_FORMAT_CHOICES = [
 # and get_county_1fips call this method after extracting the appropriate codes
 # from the CSV rows.
 def get_county_with_fips(state_fips, county_fips):
+    """
+
+    :param state_fips: eg: '01'
+    :param county_fips: eg: '001'
+
+    """
     try:
         state = US_State.objects.get(fips=state_fips)
         county = state.counties.get(fips=county_fips)
@@ -47,12 +53,22 @@ def get_county_with_fips(state_fips, county_fips):
 
 
 def get_county_with_2fips(row):
+    """
+
+    :param row: breaks the combination of state_fips and county_fips into state_fips and county_fips respectively
+
+    """
     state_fips = row['State']
     county_fips = row['County']
     return get_county_with_fips(state_fips, county_fips)
 
 
 def get_county_with_1fips(row):
+    """
+
+    :param row: combination of state_fips and county_fips
+
+    """
     fips = row['FIPS']
     state_fips = fips[0:2]
     county_fips = fips[2:5]
@@ -60,6 +76,11 @@ def get_county_with_1fips(row):
 
 
 def get_county_with_name(row):
+    """
+
+    :param row: reads the state and county name
+
+    """
     state_name = row['State']
     county_name = row['County']
     try:
@@ -96,20 +117,17 @@ UPLOAD_FORMAT_FUNCTIONS = {
 
 
 def read_data_points_from_file(file, choice, data_set):
-    """ Reads all the data points from a CSV file, adding them to the given data set.
-    PARAMETERS:
-        file : an *open* file descriptor, that can be passed to csv.DictReader
-        choice : one of the choice codes from UPLOAD_FORMAT_CHOICES, either
-            - CHOICE_NAME : assume the State and County columns contain full names in each row
-            - CHOICE_1FIPS : assume there is one column, FIPS, with a single 5-digit FIPS code
-                to uniquely identify the county
-            - CHOICE_2FIPS : assume the State and County columns contain 2-digit and 3-digit
-                FIPS codes, respectively
-        data_set : a Data_Set model instance. Data_Points read from the file will set this instance
-            as their data_set attribute.
-    RETURN:
-        A list of Data_Point model objects, one per row in the CSV file, all pointing to
+    """Reads all the data points from a CSV file, adding them to the given data set.
+
+    :param file: user's selected csv file
+    :param choice: one of the choice codes from UPLOAD_FORMAT_CHOICES
+    :param CHOICE_NAME: assume the State and County columns contain full names in each row
+    :param CHOICE_1FIPS: assume there is one column to uniquely identify the county
+    :param CHOICE_2FIPS: assume the State and County columns contain 2 FIPS: codes
+    :param data_set: a Data_Set model instance
+    :returns: A list of Data_Point model objects, one per row in the CSV file, all pointing to
         the indicated Data_Set instance.
+
     """
     county_getter = UPLOAD_FORMAT_FUNCTIONS.get(choice, None)
     if not county_getter:

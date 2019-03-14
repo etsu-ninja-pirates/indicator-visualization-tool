@@ -22,6 +22,11 @@ from .upload_reading import read_data_points_from_file
 # desired page
 # ------------------------------------------------
 def user_login(request):
+    """
+
+    :param request: 
+
+    """
     form = LoginForm()
     next = ""
     if request.GET:
@@ -54,20 +59,29 @@ def user_login(request):
 
 
 def logout_view(request):
+    """
+
+    :param request: 
+
+    """
     logout(request)
     return redirect('priv:login')
 
 
-# to create a new health indicator
 class HealthIndicatorCreate(CreateView):
+    """
+    creates new health indicator
+    """
     template_name = 'hda_privileged/create_metric.html'
     model = Health_Indicator
     form_class = HealthIndicatorForm
     success_url = reverse_lazy('priv:dashboard1')
 
 
-# to update an existing health indicator
 class HealthIndicatorUpdate(UpdateView):
+    """
+    updates an existing health indicator
+    """
     model = Health_Indicator
     fields = ('name', 'important')
     template_name = 'hda_privileged/update_metric_form.html'
@@ -75,6 +89,10 @@ class HealthIndicatorUpdate(UpdateView):
 
     # Django requires this method when using the UpdateView param above
     def get_success_url(self):
+        """
+        :param self
+
+        """
         return reverse_lazy('priv:dashboard1')
 
 
@@ -82,7 +100,9 @@ class HealthIndicatorUpdate(UpdateView):
 # Developed by Kim Hawkins
 class HealthIndicatorDelete(DeleteView):
     """
+
     :param DeleteView: Generic Class-Based View Django Template
+
     """
     model = Health_Indicator
     fields = ('name',)
@@ -91,7 +111,12 @@ class HealthIndicatorDelete(DeleteView):
 
     def delete(self, request, *args, **kwargs):
         """
+
+        :param request: 
+        :param *args: 
+        :param **kwargs: 
         :returns: Returns current template with protected indicator error message
+
         """
         self.object = self.get_object()
         try:
@@ -105,9 +130,11 @@ class HealthIndicatorDelete(DeleteView):
         return HttpResponseRedirect(self.request.path_info, msg)
 
 
-
 # to delete an existing dataset
 class DataSetDelete(DeleteView):
+    """
+    deletes existing dataset
+    """
     model = Data_Set
     fields = ('source_document.file',)
     template_name = 'hda_privileged/delete_dataset.html'
@@ -115,16 +142,30 @@ class DataSetDelete(DeleteView):
     success_url = reverse_lazy('priv:dashboard1')
 
     def delete(self, request, *args, **kwargs):
+        """
+
+        :param request: 
+        :param *args: 
+        :param **kwargs: 
+
+        """
         self.object = self.get_object()
         self.object.delete()
         return HttpResponseRedirect(self.success_url)
 
 
-# Displays Privileged users dashboard
 class PrivDashboardView(TemplateView):
+    """
+    displays privileged user's dashboard
+    """
     template_name = 'hda_privileged/privdashboard.html'
 
     def get_context_data(self, **kwargs):
+        """
+
+        :param **kwargs: 
+
+        """
         # call super to get the base context
         context = super().get_context_data(**kwargs)
 
@@ -152,16 +193,28 @@ class PrivDashboardView(TemplateView):
         return context
 
 
-# to upload New DataSet
 class UploadNewDataView(View):
+    """
+    upload new dataset
+    """
     form_class = UploadNewDataForm
     template_name = 'hda_privileged/upload_metric.html'
     file_field_name = 'file'
 
     def _get_uploaded_file(self, request):
+        """
+
+        :param request: 
+
+        """
         return request.FILES[self.file_field_name]
 
     def _check_file_ext(self, request):
+        """
+
+        :param request: 
+
+        """
         uploaded_file = self._get_uploaded_file(request)
 
         okay = uploaded_file is not None and \
@@ -173,6 +226,12 @@ class UploadNewDataView(View):
         return okay
 
     def _handle_form_submission(self, request, form):
+        """
+
+        :param request: 
+        :param form: 
+
+        """
         myfile = self._get_uploaded_file(request)
 
         # create a Document class instance
@@ -230,11 +289,25 @@ class UploadNewDataView(View):
         return invalid_counties_and_states
 
     def get(self, request, *args, **kwargs):
+        """
+
+        :param request: 
+        :param *args: 
+        :param **kwargs: 
+
+        """
         # unbound form
         form = self.form_class()
         return render(request, self.template_name, {'form': form})
 
     def post(self, request, *args, **kwargs):
+        """
+
+        :param request: 
+        :param *args: 
+        :param **kwargs: 
+
+        """
         # bind the form
         form = self.form_class(request.POST, request.FILES)
 
@@ -247,6 +320,9 @@ class UploadNewDataView(View):
 
 
 class HealthIndicator(TemplateView):
+    """
+    template view for health indiicators
+    """
     model = Health_Indicator
     template_name = 'hda_privileged/create_metric.html'
     context_object_name = 'all_indicators_created'

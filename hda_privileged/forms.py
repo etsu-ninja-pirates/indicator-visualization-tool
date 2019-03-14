@@ -6,7 +6,11 @@ from .upload_reading import UPLOAD_FORMAT_CHOICES, CHOICE_NAME
 
 
 class HealthIndicatorForm(ModelForm):
+    """
+    health indicator form (for multichart view)
+    """
     class Meta:
+        """ """
         model = Health_Indicator
         fields = ['name', 'important']
         widgets = {
@@ -21,6 +25,10 @@ class HealthIndicatorForm(ModelForm):
 
 
 class LoginForm(forms.Form):
+    """
+    login form for user management
+
+    """
     username = forms.CharField(
         widget=forms.TextInput(
             attrs={'class': "form-control", 'placeholder': "Username"}
@@ -56,7 +64,6 @@ class UploadNewDataForm(forms.Form):
         initial=CHOICE_NAME
     )
 
-    # TODO #
     # This needs to be required once we have a way to create new ones #
     indicator = forms.ModelChoiceField(
         queryset=Health_Indicator.objects.all(),
@@ -72,7 +79,6 @@ class UploadNewDataForm(forms.Form):
         widget=forms.Textarea(attrs={'rows': 3})
     )
 
-    # TODO #
     # The default value should not be hardcoded!
     year = forms.IntegerField(
         label='Data year',

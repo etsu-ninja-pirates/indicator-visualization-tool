@@ -15,11 +15,18 @@ from django.utils.text import slugify
 def get_sentinel_user():
     """
     Returns a special user object to represent a user that is no longer in the system
+
     """
     return get_user_model().objects.get_or_create(username='deleted user').first()
 
 
 def get_upload_path(instance, filename):
+    """
+
+    :param instance: 
+    :param filename: 
+
+    """
     nowgmt = gmtime()
     datestr = strftime("%Y-%m-%d", nowgmt)
     timestr = strftime("%H-%M-%S", nowgmt)
@@ -32,6 +39,7 @@ class Health_Indicator(models.Model):
     """
     Represents some health metric that we want to store data sets for,
     e.g. obesity, mortality, education, etc.
+
     """
     name = models.CharField(max_length=100, unique=True)
     important = models.BooleanField(
@@ -42,6 +50,12 @@ class Health_Indicator(models.Model):
     slug = models.SlugField()
 
     def save(self, *args, **kwargs):
+        """
+
+        :param *args: 
+        :param **kwargs: 
+
+        """
         if self.slug is None or self.slug == '':
             self.slug = slugify(self.name)
         super(Health_Indicator, self).save(*args, **kwargs)
@@ -51,6 +65,7 @@ class Health_Indicator(models.Model):
         return f"{self.name} ({self.id})"
 
     class Meta:
+        """ """
         verbose_name = 'Health indicator'
 
 
@@ -117,6 +132,9 @@ class Data_Set(models.Model):
         return f"Dataset {self.id} for indicator {self.indicator!s} and year {self.year:d}"
 
     class Meta:
+        """
+
+        """
         verbose_name = 'Data set'
 
 
@@ -124,6 +142,7 @@ class US_State(models.Model):
     """
     Represents a state in the U.S. (e.g. Wyoming, Virginia)
     We populate the DB with a known-good set of these; they should not be user-generated
+
     """
     short = models.CharField(primary_key=True, max_length=2)
     full = models.CharField(max_length=100)
@@ -134,6 +153,8 @@ class US_State(models.Model):
         return self.fips + ' - ' + self.short + ' - ' + self.full
 
     class Meta:
+        """
+        """
         verbose_name = 'US state'
 
 
@@ -144,14 +165,19 @@ class US_State(models.Model):
 # We could add an @property to the model class, but this way we can use the property
 # to filter a queryset!
 class US_County_Manager(models.Manager):
-    """QuerySet manager for US_County class to add *non-database* fields.
-
+    """
+    QuerySet manager for US_County class to add *non-database* fields.
+    
     A @property in the model cannot be used because QuerySets (eg. return
     value from .all()) are directly tied to the database Fields -
-    this does not include @property attributes."""
+    this does not include @property attributes.
+
+    """
 
     def get_queryset(self):
-        """Overrides the models.Manager method"""
+        """
+        Overrides the models.Manager method
+        """
         qs = super(US_County_Manager, self).get_queryset()
         # add the "fips5" property - full 5-digit FIPs code
         qs = qs.annotate(fips5=Concat('state__fips', 'fips'))
@@ -166,6 +192,7 @@ class US_County(models.Model):
     """
     Represents a county or county-equivalent in a State in the U.S.
     We populate the DB with a known-good set of these; they should not be user-generated
+
     """
     # overriden model manager
     objects = US_County_Manager()
@@ -179,6 +206,9 @@ class US_County(models.Model):
         return f'{self.fips} - {self.name} - {self.state_id}'
 
     class Meta:
+        """
+
+        """
         verbose_name = 'US county'
         verbose_name_plural = 'US counties'
 
@@ -186,6 +216,7 @@ class US_County(models.Model):
 class Data_Point(models.Model):
     """
     A single measurement for a particular county and data set
+
     """
     value = models.FloatField(
         default=0,
@@ -205,6 +236,9 @@ class Data_Point(models.Model):
     data_set = models.ForeignKey(Data_Set, models.CASCADE, related_name='data_points')
 
     class Meta:
+        """
+
+        """
         verbose_name = 'Data point'
 
 
@@ -216,6 +250,7 @@ class Percentile(models.Model):
     What I'm calling a "percentile value" is the value such that some percent of
     the other values in the data set are <= that value, e.g.
     p = 0.86, v = 490 -> 86% of the values in the data set are <= 490
+
     """
 
     # the "name" of this percentile - e.g. for instance to represent the 86th percentile,
