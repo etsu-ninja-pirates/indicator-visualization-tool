@@ -54,19 +54,6 @@ var SingleChart = (function(context, Highcharts) {
                             lineWidth: 0
                         }
                     }
-                },
-                // Apply to all points in all series
-                // https://api.highcharts.com/highcharts/plotOptions.series.point
-                point: {
-                    events: {
-                        click: function() {
-                            if (cloneToolTip){
-                                chart.container.firstChild.removeChild(cloneToolTip);
-                            }
-                            cloneToolTip = this.series.chart.tooltip.label.element.cloneNode(true);
-                            chart.container.firstChild.appendChild(cloneToolTip);
-                        }
-                    }
                 }
             }
         },
