@@ -2,11 +2,15 @@ from time import gmtime, strftime
 
 from django.conf import settings
 from django.contrib.auth import get_user_model
+from django.contrib.auth.models import User
 from django.core.validators import MinValueValidator, MaxValueValidator
 
 from django.db import models
 from django.db.models import Value
 from django.db.models.functions import Concat
+from django.db.models.signals import post_save
+
+from django.dispatch import receiver
 
 from django.utils.text import slugify
 
@@ -17,6 +21,28 @@ def get_sentinel_user():
     Returns a special user object to represent a user that is no longer in the system
     """
     return get_user_model().objects.get_or_create(username='deleted user').first()
+
+# Extend User Model Using a One-To-One Link
+
+
+class Profile(models.Model):
+    # Uses a onetoone User model extension field as a choice field, with 2 choices available
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    USER_TYPE = (('AD', 'Administrator'), ('AS', 'Assistant'),)
+    utype = models.CharField(max_length=2, choices=USER_TYPE, default='AS')
+
+    # post_save signal hooks create_user_profile and save_user_profile methods
+    # to User model when save event occurs
+    # signals ensure Profile model is automatically created/updated when we
+    # create/update User instances
+    @receiver(post_save, sender=User)
+    def create_user_profile(sender, instance, created, **kwargs):
+        if created:
+            Profile.objects.create(user=instance)
+
+    @receiver(post_save, sender=User)
+    def save_user_profile(sender, instance, **kwargs):
+        instance.profile.save()
 
 
 def get_upload_path(instance, filename):

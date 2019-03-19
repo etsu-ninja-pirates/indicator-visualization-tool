@@ -1,7 +1,10 @@
 from django import forms
 from django.forms import ModelForm
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
+from django.utils.translation import gettext_lazy as _
 
-from .models import Health_Indicator
+from .models import Health_Indicator, Profile
 from .upload_reading import UPLOAD_FORMAT_CHOICES, CHOICE_NAME
 
 
@@ -31,6 +34,35 @@ class LoginForm(forms.Form):
             attrs={'class': "form-control", 'placeholder': "Password"}
         )
     )
+
+
+# This form needed to get user first and last name and email for creating a new user
+# Django default create user form only covers username and password
+# Developed by Kim Hawkins
+"""param:UserCreationForm: A Django ModelForm for creating a new user"""
+
+
+class NewUserForm(UserCreationForm):
+    first_name = forms.CharField(max_length=30, required=True)
+    last_name = forms.CharField(max_length=30, required=True)
+    email = forms.EmailField(max_length=254)
+
+    class Meta:
+        model = User
+        fields = ('username', 'first_name', 'last_name',
+                  'email', 'password1', 'password2',)
+
+# This form ensures Profile model is included when creating a new user: Hawkins
+# Choice of user type: administrator or assistant
+
+
+class ProfileForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        # Field class assumes the value is required and will raise a Validation Error exception
+        fields = ('utype',)
+        # override label else it displays 'utype'
+        labels = {'utype': _('User Type'), }
 
 
 # Not using a ModelForm because this needs to include data for

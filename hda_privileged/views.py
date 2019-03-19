@@ -1,17 +1,23 @@
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, get_user, logout
+from django.contrib.auth.decorators import login_required, user_passes_test
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls import reverse, reverse_lazy
 from django.views import View
 from django.views.generic import TemplateView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.db import transaction
 # Error message for user if trying to delete a foreign key
 from django.db.models.deletion import ProtectedError
+# wraps import for custom decorator
+from functools import wraps
 import json
 
-from .forms import LoginForm, UploadNewDataForm, HealthIndicatorForm
-from .models import Document, Data_Set, Data_Point, Percentile, Health_Indicator
+from .forms import LoginForm, UploadNewDataForm, HealthIndicatorForm, NewUserForm, ProfileForm
+from .models import Document, Data_Set, Data_Point, Percentile, Health_Indicator, Profile
 from .percentile import get_percentiles_for_points, assign_percentiles_to_points
 from .upload_reading import read_data_points_from_file
 
@@ -57,8 +63,75 @@ def logout_view(request):
     logout(request)
     return redirect('priv:login')
 
+# custom decorator to check if user is admin for user management module: Hawkins
+# tutorial followed: https://gist.github.com/canokay/7c76e38b1c403f24768583e49d22871c
+
+
+"""param:view_func: a python function that Django uses as an object
+   returns: the python function as decorator for admin or superuser: or redirects to dashboard: returns a wrapped response"""
+
+
+def user_is_admin_decorator(view_func):
+    def wrap(request, *args, **kwargs):
+        # Get user then get user's profile
+        p = request.user.profile.utype
+        if p == 'AD' or request.user.is_superuser:
+            return view_func(request, *args, **kwargs)
+        # User is not admin or superuser but is assistant, redirect to dashboard
+        else:
+            return redirect('priv:dashboard1')
+    return wrap
+
+
+# Simple template with links for user management options: Hawkins
+
+
+class user_management(TemplateView):
+    template_name = 'hda_privileged/usr_mgmt.html'
+
+
+# Allows a specified user to create new user accounts.
+# https://simpleisbetterthancomplex.com/tutorial/2017/02/18/how-to-create-user-sign-up-view.html
+# Developed by Kim Hawkins
+
+
+"""param:request: request objects pass state through the system
+   returns: save user and redirect to login if POST request, else return create user form"""
+
+
+# controls transactions explicitly
+# If successful, changes are committed to db
+# If exception, changes are rolled back
+@transaction.atomic
+@user_is_admin_decorator
+def CreateNewPrivUser(request):
+    # If the user has clicked 'create user', get user data from form
+    if request.method == 'POST':
+        form = NewUserForm(request.POST)
+        profile_form = ProfileForm(request.POST)
+        # if user entries in both forms are valid
+        if form.is_valid() and profile_form.is_valid():
+            user = form.save()
+            # extra steps to tie custom profile field to new user
+            # varied from tutorial here because of integrity error with user_id
+            for field in profile_form.changed_data:
+                setattr(user.profile, field,
+                        profile_form.cleaned_data.get(field))
+            user.profile.save()
+            return redirect('priv:dashboard1')
+    # else the user has not clicked 'create user', return blank form
+    else:
+        users = User.objects.all().select_related('profile')
+        current = request.user
+        p = users.filter(username=current.username)
+        form = NewUserForm()
+        profile_form = ProfileForm()
+    return render(request, 'hda_privileged/create_user.html', {'form': form, 'profile_form': profile_form, 'p': p})
+
 
 # to create a new health indicator
+
+
 class HealthIndicatorCreate(CreateView):
     template_name = 'hda_privileged/create_metric.html'
     model = Health_Indicator

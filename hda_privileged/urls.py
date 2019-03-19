@@ -37,4 +37,8 @@ urlpatterns = [
     # login/logout
     path('login/', views.user_login, name='login'),
     path('logout/', views.logout_view, name='logout'),
+    # user management: Kim Hawkins
+    path('usermanagement/',
+         login_required(views.user_management.as_view()), name='user_mgmt'),
+    path('user/create', login_required(views.CreateNewPrivUser), name='create_user'),
 ]

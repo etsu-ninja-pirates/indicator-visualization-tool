@@ -1,0 +1,24 @@
+{% extends 'hda_privileged/base.html' %}
+
+{% block content %}
+
+{% comment %}User management template lists 3 options for superuser: create new user, reset a passord, and manage inactive 
+user accounts. Developed by Kim Hawkins{% endcomment %}
+
+{% comment %} Wrap the form in a panel for appearance {% endcomment %}
+<div class='panel panel-primary'>
+
+  <div class="panel-heading" style="background-color:#69899f;color: #d7e2e9;">
+    <h3 class="panel-title">User Management</h3>
+  </div>
+
+  <div class="panel-body">
+    <h4 style="color:#69899f;">What would you like to do?</h4>
+    <ul class = "list-group">
+      {% for p in p %}<li>{{ p.utype }}</li>{% endfor %}
+        <li class = "list-group-item" style="border:none;"><a href="{% url 'priv:create_user' %}" style="color:#69899f;">Create a New User</a></li>
+        <li class = "list-group-item" style="border:none;"><a href="{% url 'priv:create_user' %}" style="color:#69899f;">Reset a User's Password</a></li>
+        <li class = "list-group-item" style="border:none;"><a href="{% url 'priv:create_user' %}" style="color:#69899f;">Manage Inactive User Accounts</a></li>
+    </ul>
+</div>  
+{% endblock %}
